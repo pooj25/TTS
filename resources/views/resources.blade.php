@@ -1,61 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources | Track Tech Solution</title>
+@extends('layouts.app')
 
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+@section('title', 'Resources | Track Tech Solution')
 
-<body class="bg-white text-gray-900">
-
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
-            <a href="/" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-black text-white rounded-lg flex items-center justify-center font-bold">
-                    T
-                </div>
-
-                <div>
-                    <h1 class="font-bold text-lg leading-none">Track Tech</h1>
-                    <p class="text-xs text-gray-500">Solution</p>
-                </div>
-            </a>
-
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="/" class="hover:text-gray-600">Home</a>
-                <a href="/about" class="hover:text-gray-600">About</a>
-                <a href="/solutions" class="hover:text-gray-600">Solutions</a>
-                <a href="/products" class="hover:text-gray-600">Products</a>
-                <a href="/industries" class="hover:text-gray-600">Industries</a>
-                <a href="/resources" class="text-black font-semibold">Resources</a>
-            </div>
-
-            <a href="/contact"
-               class="hidden md:block bg-black text-white px-5 py-3 rounded-full text-sm font-semibold hover:bg-gray-800">
-                Book a Demo
-            </a>
-        </div>
-    </nav>
-
+@section('content')
 
     <!-- Hero -->
-    <section class="pt-36 pb-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 text-center">
+    <section class="pt-36 pb-20 relative">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
 
-            <span class="inline-block px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium mb-6">
+            <span class="inline-block px-4 py-2 glass-panel border border-white/10 rounded-full text-sm font-medium mb-6 text-sky-400">
                 Resources
             </span>
 
-            <h2 class="text-5xl md:text-6xl font-bold tracking-tight max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold tracking-tight max-w-4xl mx-auto text-white">
                 Insights for the
-                <span class="text-gray-500">Connected Factory</span>
+                <span class="text-gradient">Connected Factory</span>
             </h2>
 
-            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
                 Explore industry insights, manufacturing trends and practical
                 knowledge to help transform your factory with digital technology.
             </p>
@@ -65,28 +27,28 @@
 
 
     <!-- Featured Article -->
-    <section class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
+    <section class="py-24 relative border-t border-white/5 bg-black/20">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-                <div class="rounded-3xl overflow-hidden">
+                <div class="rounded-3xl overflow-hidden glass-card border border-white/10 group">
                     <img
                         src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
-                        class="w-full h-[420px] object-cover"
+                        class="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100"
                         alt="Smart Factory">
                 </div>
 
                 <div>
-                    <span class="text-sm font-semibold text-gray-500">
+                    <span class="text-sm font-semibold text-sky-400">
                         FEATURED INSIGHT
                     </span>
 
-                    <h3 class="text-4xl font-bold mt-4 leading-tight">
+                    <h3 class="text-4xl font-bold mt-4 leading-tight text-white">
                         How Digital Technology is Transforming Apparel Manufacturing
                     </h3>
 
-                    <p class="mt-6 text-gray-600 leading-7">
+                    <p class="mt-6 text-gray-400 leading-7">
                         Discover how connected systems, real-time production
                         tracking and intelligent factory solutions are helping
                         apparel manufacturers improve visibility and efficiency.
@@ -97,14 +59,14 @@
                             Manufacturing
                         </span>
 
-                        <span class="text-gray-300">•</span>
+                        <span class="text-gray-600">•</span>
 
                         <span class="text-sm text-gray-500">
                             8 min read
                         </span>
                     </div>
 
-                    <button class="mt-8 px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-800">
+                    <button class="mt-8 px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-full font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition">
                         Read Article →
                     </button>
                 </div>
@@ -116,21 +78,21 @@
 
 
     <!-- Resources Grid -->
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
                 <div>
-                    <span class="text-sm font-semibold text-gray-500">
+                    <span class="text-sm font-semibold text-sky-400">
                         LATEST RESOURCES
                     </span>
 
-                    <h3 class="text-4xl font-bold mt-3">
+                    <h3 class="text-4xl font-bold mt-3 text-white">
                         Learn. Explore. Transform.
                     </h3>
                 </div>
 
-                <p class="text-gray-500 mt-4 md:mt-0">
+                <p class="text-gray-400 mt-4 md:mt-0">
                     Latest insights from Track Tech Solution
                 </p>
             </div>
@@ -139,29 +101,31 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Card 1 -->
-                <article class="bg-white rounded-3xl overflow-hidden border border-gray-100">
+                <article class="glass-card rounded-3xl overflow-hidden border border-white/10 group hover:-translate-y-2 transition duration-300">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
-                        class="w-full h-56 object-cover"
-                        alt="Digital Transformation">
+                    <div class="overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
+                            alt="Digital Transformation">
+                    </div>
 
                     <div class="p-7">
 
-                        <span class="text-xs font-semibold text-gray-500 uppercase">
+                        <span class="text-xs font-semibold text-sky-400 uppercase">
                             Digital Transformation
                         </span>
 
-                        <h4 class="text-2xl font-bold mt-3">
+                        <h4 class="text-2xl font-bold mt-3 text-white">
                             Why Apparel Factories Need Digital Transformation
                         </h4>
 
-                        <p class="text-gray-600 mt-4 leading-6">
+                        <p class="text-gray-400 mt-4 leading-6">
                             Understand the importance of digitisation in modern
                             apparel manufacturing.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold">
+                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-white transition">
                             Read More →
                         </a>
 
@@ -170,29 +134,31 @@
 
 
                 <!-- Card 2 -->
-                <article class="bg-white rounded-3xl overflow-hidden border border-gray-100">
+                <article class="glass-card rounded-3xl overflow-hidden border border-white/10 group hover:-translate-y-2 transition duration-300">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80"
-                        class="w-full h-56 object-cover"
-                        alt="Production Tracking">
+                    <div class="overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
+                            alt="Production Tracking">
+                    </div>
 
                     <div class="p-7">
 
-                        <span class="text-xs font-semibold text-gray-500 uppercase">
+                        <span class="text-xs font-semibold text-sky-400 uppercase">
                             Production
                         </span>
 
-                        <h4 class="text-2xl font-bold mt-3">
+                        <h4 class="text-2xl font-bold mt-3 text-white">
                             The Importance of Real-Time Production Tracking
                         </h4>
 
-                        <p class="text-gray-600 mt-4 leading-6">
+                        <p class="text-gray-400 mt-4 leading-6">
                             Learn how real-time data can improve production
                             visibility and decision making.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold">
+                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-white transition">
                             Read More →
                         </a>
 
@@ -201,29 +167,31 @@
 
 
                 <!-- Card 3 -->
-                <article class="bg-white rounded-3xl overflow-hidden border border-gray-100">
+                <article class="glass-card rounded-3xl overflow-hidden border border-white/10 group hover:-translate-y-2 transition duration-300">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"
-                        class="w-full h-56 object-cover"
-                        alt="IoT Factory">
+                    <div class="overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
+                            alt="IoT Factory">
+                    </div>
 
                     <div class="p-7">
 
-                        <span class="text-xs font-semibold text-gray-500 uppercase">
+                        <span class="text-xs font-semibold text-sky-400 uppercase">
                             IoT
                         </span>
 
-                        <h4 class="text-2xl font-bold mt-3">
+                        <h4 class="text-2xl font-bold mt-3 text-white">
                             Building a Smarter and Connected Factory
                         </h4>
 
-                        <p class="text-gray-600 mt-4 leading-6">
+                        <p class="text-gray-400 mt-4 leading-6">
                             Explore how IoT and connected machines can create
                             smarter manufacturing environments.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold">
+                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-white transition">
                             Read More →
                         </a>
 
@@ -232,29 +200,31 @@
 
 
                 <!-- Card 4 -->
-                <article class="bg-white rounded-3xl overflow-hidden border border-gray-100">
+                <article class="glass-card rounded-3xl overflow-hidden border border-white/10 group hover:-translate-y-2 transition duration-300">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1586528116493-da8b9b5c6f68?auto=format&fit=crop&w=900&q=80"
-                        class="w-full h-56 object-cover"
-                        alt="Inventory Management">
+                    <div class="overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1586528116493-da8b9b5c6f68?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
+                            alt="Inventory Management">
+                    </div>
 
                     <div class="p-7">
 
-                        <span class="text-xs font-semibold text-gray-500 uppercase">
+                        <span class="text-xs font-semibold text-sky-400 uppercase">
                             Inventory
                         </span>
 
-                        <h4 class="text-2xl font-bold mt-3">
+                        <h4 class="text-2xl font-bold mt-3 text-white">
                             Improving Fabric Inventory Visibility
                         </h4>
 
-                        <p class="text-gray-600 mt-4 leading-6">
+                        <p class="text-gray-400 mt-4 leading-6">
                             See how digital inventory systems can reduce errors
                             and improve material control.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold">
+                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-white transition">
                             Read More →
                         </a>
 
@@ -263,29 +233,31 @@
 
 
                 <!-- Card 5 -->
-                <article class="bg-white rounded-3xl overflow-hidden border border-gray-100">
+                <article class="glass-card rounded-3xl overflow-hidden border border-white/10 group hover:-translate-y-2 transition duration-300">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1516321318427-8b5a2b7b3e5c?auto=format&fit=crop&w=900&q=80"
-                        class="w-full h-56 object-cover"
-                        alt="Data Analytics">
+                    <div class="overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1516321318427-8b5a2b7b3e5c?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
+                            alt="Data Analytics">
+                    </div>
 
                     <div class="p-7">
 
-                        <span class="text-xs font-semibold text-gray-500 uppercase">
+                        <span class="text-xs font-semibold text-sky-400 uppercase">
                             Analytics
                         </span>
 
-                        <h4 class="text-2xl font-bold mt-3">
+                        <h4 class="text-2xl font-bold mt-3 text-white">
                             Using Factory Data to Make Better Decisions
                         </h4>
 
-                        <p class="text-gray-600 mt-4 leading-6">
+                        <p class="text-gray-400 mt-4 leading-6">
                             Learn how manufacturing analytics can turn factory
                             data into actionable insights.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold">
+                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-white transition">
                             Read More →
                         </a>
 
@@ -294,29 +266,31 @@
 
 
                 <!-- Card 6 -->
-                <article class="bg-white rounded-3xl overflow-hidden border border-gray-100">
+                <article class="glass-card rounded-3xl overflow-hidden border border-white/10 group hover:-translate-y-2 transition duration-300">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
-                        class="w-full h-56 object-cover"
-                        alt="Factory Management">
+                    <div class="overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                            class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
+                            alt="Factory Management">
+                    </div>
 
                     <div class="p-7">
 
-                        <span class="text-xs font-semibold text-gray-500 uppercase">
+                        <span class="text-xs font-semibold text-sky-400 uppercase">
                             Smart Factory
                         </span>
 
-                        <h4 class="text-2xl font-bold mt-3">
+                        <h4 class="text-2xl font-bold mt-3 text-white">
                             From Manual Processes to Smart Manufacturing
                         </h4>
 
-                        <p class="text-gray-600 mt-4 leading-6">
+                        <p class="text-gray-400 mt-4 leading-6">
                             A practical look at moving traditional factory
                             processes into a connected digital environment.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold">
+                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-white transition">
                             Read More →
                         </a>
 
@@ -329,37 +303,39 @@
 
 
     <!-- Newsletter -->
-    <section class="py-24">
-        <div class="max-w-5xl mx-auto px-6">
+    <section class="py-24 relative border-t border-white/5 bg-black/20">
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
 
-            <div class="bg-black text-white rounded-3xl p-10 md:p-16 text-center">
+            <div class="glass-panel rounded-3xl p-10 md:p-16 text-center border border-white/10 relative overflow-hidden group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-sky-500 to-blue-600 rounded-[2rem] blur opacity-0 group-hover:opacity-20 transition duration-1000"></div>
 
-                <span class="text-gray-400 text-sm font-semibold">
-                    STAY UPDATED
-                </span>
+                <div class="relative z-10">
+                    <span class="text-sky-400 text-sm font-semibold">
+                        STAY UPDATED
+                    </span>
 
-                <h3 class="text-4xl font-bold mt-4">
-                    Get the latest manufacturing insights
-                </h3>
+                    <h3 class="text-4xl font-bold mt-4 text-white">
+                        Get the latest manufacturing insights
+                    </h3>
 
-                <p class="text-gray-400 mt-4 max-w-xl mx-auto">
-                    Stay informed about digital manufacturing,
-                    smart factories and industry technology.
-                </p>
+                    <p class="text-gray-300 mt-4 max-w-xl mx-auto">
+                        Stay informed about digital manufacturing,
+                        smart factories and industry technology.
+                    </p>
 
-                <div class="max-w-lg mx-auto mt-8 flex flex-col sm:flex-row gap-3">
+                    <div class="max-w-lg mx-auto mt-8 flex flex-col sm:flex-row gap-3">
 
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        class="flex-1 px-5 py-4 rounded-full text-black outline-none">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            class="flex-1 px-5 py-4 rounded-full text-white bg-white/5 border border-white/10 outline-none focus:ring-2 focus:ring-sky-500 placeholder-gray-500">
 
-                    <button class="px-7 py-4 bg-white text-black rounded-full font-semibold">
-                        Subscribe
-                    </button>
+                        <button class="px-7 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-full font-semibold hover:-translate-y-1 transition shadow-lg shadow-sky-500/20">
+                            Subscribe
+                        </button>
 
+                    </div>
                 </div>
-
             </div>
 
         </div>
@@ -367,97 +343,29 @@
 
 
     <!-- CTA -->
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6 text-center">
+    <section class="py-24 relative border-t border-white/5">
+        
+        <div class="absolute inset-0 flex justify-center items-center pointer-events-none -z-10">
+            <div class="w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[100px]"></div>
+        </div>
 
-            <h3 class="text-4xl md:text-5xl font-bold">
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+
+            <h3 class="text-4xl md:text-5xl font-bold text-white">
                 Ready to digitize your factory?
             </h3>
 
-            <p class="mt-5 text-gray-600 max-w-2xl mx-auto">
+            <p class="mt-5 text-gray-400 max-w-2xl mx-auto">
                 Let's build a smarter, more connected and efficient
                 manufacturing operation together.
             </p>
 
             <a href="/contact"
-               class="inline-block mt-8 px-8 py-4 bg-black text-white rounded-full font-semibold">
+               class="inline-block mt-8 px-8 py-4 bg-white text-black rounded-full font-semibold hover:-translate-y-1 transition">
                 Talk to Our Experts →
             </a>
 
         </div>
     </section>
 
-
-    <!-- Footer -->
-    <footer class="bg-black text-white py-14">
-
-        <div class="max-w-7xl mx-auto px-6">
-
-            <div class="grid md:grid-cols-4 gap-10">
-
-                <div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-white text-black rounded-lg flex items-center justify-center font-bold">
-                            T
-                        </div>
-
-                        <div>
-                            <h4 class="font-bold">Track Tech</h4>
-                            <p class="text-xs text-gray-400">Solution</p>
-                        </div>
-                    </div>
-
-                    <p class="text-gray-400 mt-5 text-sm leading-6">
-                        Intelligent digital solutions for modern
-                        apparel manufacturing.
-                    </p>
-                </div>
-
-
-                <div>
-                    <h4 class="font-semibold mb-4">Company</h4>
-
-                    <div class="space-y-3 text-sm text-gray-400">
-                        <a href="/about" class="block hover:text-white">About</a>
-                        <a href="/solutions" class="block hover:text-white">Solutions</a>
-                        <a href="/products" class="block hover:text-white">Products</a>
-                        <a href="/industries" class="block hover:text-white">Industries</a>
-                    </div>
-                </div>
-
-
-                <div>
-                    <h4 class="font-semibold mb-4">Resources</h4>
-
-                    <div class="space-y-3 text-sm text-gray-400">
-                        <a href="/resources" class="block hover:text-white">Blog</a>
-                        <a href="#" class="block hover:text-white">Case Studies</a>
-                        <a href="#" class="block hover:text-white">White Papers</a>
-                    </div>
-                </div>
-
-
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-
-                    <p class="text-sm text-gray-400">
-                        Let's transform your factory with technology.
-                    </p>
-
-                    <a href="/contact"
-                       class="inline-block mt-5 px-5 py-3 bg-white text-black rounded-full text-sm font-semibold">
-                        Contact Us
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="border-t border-gray-800 mt-12 pt-6 text-sm text-gray-500">
-                © 2026 Track Tech Solution. All rights reserved.
-            </div>
-
-        </div>
-    </footer>
-
-</body>
-</html>
+@endsection

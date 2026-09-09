@@ -1,122 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.app')
 
-    <title>Products | Track Tech Solutions</title>
+@section('title', 'Products | Track Tech Solutions')
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-
-<body class="bg-white text-gray-900">
-
-    <!-- ===============================
-         NAVBAR
-    ================================ -->
-
-    <nav class="fixed top-0 left-0 right-0 z-50
-                bg-white/95 backdrop-blur
-                border-b border-gray-100">
-
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-            <div class="h-20 flex items-center justify-between">
-
-                <!-- LOGO -->
-
-                <a href="/" class="flex items-center gap-3">
-
-                    <div class="w-11 h-11 rounded-xl bg-black text-white
-                                flex items-center justify-center
-                                font-bold text-xl">
-                        T
-                    </div>
-
-                    <div>
-
-                        <div class="font-bold text-lg leading-none">
-                            TRACK TECH
-                        </div>
-
-                        <div class="text-xs text-gray-500 tracking-widest">
-                            SOLUTIONS
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-                <!-- MENU -->
-
-                <div class="hidden md:flex items-center gap-8
-                            text-sm font-medium">
-
-                    <a href="/"
-                       class="hover:text-gray-500 transition">
-                        Home
-                    </a>
-
-                    <a href="/about"
-                       class="hover:text-gray-500 transition">
-                        About
-                    </a>
-
-                    <a href="/solutions"
-                       class="hover:text-gray-500 transition">
-                        Solutions
-                    </a>
-
-                    <a href="/products"
-                       class="text-black">
-                        Products
-                    </a>
-
-                    <a href="/#industries"
-                       class="hover:text-gray-500 transition">
-                        Industries
-                    </a>
-
-                    <a href="/#resources"
-                       class="hover:text-gray-500 transition">
-                        Resources
-                    </a>
-
-                </div>
-
-
-                <!-- CTA -->
-
-                <a href="/#contact"
-                   class="hidden md:inline-flex
-                          bg-black text-white
-                          px-6 py-3 rounded-full
-                          text-sm font-semibold
-                          hover:bg-gray-800 transition">
-
-                    Book a Demo
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </nav>
-
+@section('content')
 
     <!-- ===============================
          HERO
     ================================ -->
 
-    <section class="pt-32 pb-20 bg-gray-50">
+    <section class="pt-32 pb-20 relative">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -124,10 +16,10 @@
 
                 <div class="inline-flex items-center gap-2
                             px-4 py-2
-                            bg-white border border-gray-200
+                            glass-panel
                             rounded-full text-sm font-medium mb-7">
 
-                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
 
                     Our Products
 
@@ -135,11 +27,11 @@
 
 
                 <h1 class="text-5xl lg:text-7xl
-                           font-bold leading-tight tracking-tight">
+                           font-bold leading-tight tracking-tight text-white">
 
                     Digital products built for
 
-                    <span class="text-gray-400">
+                    <span class="text-gradient">
                         modern factories.
                     </span>
 
@@ -147,7 +39,7 @@
 
 
                 <p class="mt-7 text-lg lg:text-xl
-                          text-gray-600 leading-8 max-w-3xl">
+                          text-gray-300 leading-8 max-w-3xl">
 
                     Powerful software products designed to simplify
                     apparel manufacturing, improve productivity and
@@ -166,7 +58,7 @@
          PRODUCTS
     ================================ -->
 
-    <section class="py-24">
+    <section class="py-24 relative">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -176,7 +68,7 @@
             <div class="text-center max-w-3xl mx-auto">
 
                 <p class="text-sm font-semibold uppercase
-                          tracking-widest text-gray-500">
+                          tracking-widest text-sky-400">
 
                     Product Ecosystem
 
@@ -184,7 +76,7 @@
 
 
                 <h2 class="text-4xl lg:text-5xl
-                           font-bold mt-4">
+                           font-bold mt-4 text-white">
 
                     One platform.
                     Multiple possibilities.
@@ -192,7 +84,7 @@
                 </h2>
 
 
-                <p class="mt-6 text-gray-600 text-lg leading-8">
+                <p class="mt-6 text-gray-400 text-lg leading-8">
 
                     Connect your factory operations through
                     purpose-built digital products.
@@ -218,22 +110,22 @@
                              DARK PRODUCT CARD
                         ================================ -->
 
-                        <div class="group border border-gray-200
+                        <div class="group border border-white/20
                                     rounded-3xl overflow-hidden
-                                    bg-black text-white
+                                    glass-panel
                                     hover:-translate-y-1
                                     transition duration-300">
 
 
                             <!-- PRODUCT ICON -->
 
-                            <div class="h-64 bg-white/10
-                                        flex items-center justify-center">
+                            <div class="h-64 bg-white/5
+                                        flex items-center justify-center border-b border-white/10">
 
                                 <div class="w-28 h-28 rounded-3xl
-                                            bg-white text-black
+                                            glass-card
                                             flex items-center justify-center
-                                            text-5xl">
+                                            text-5xl border border-white/20 shadow-xl shadow-sky-500/20 group-hover:scale-110 transition">
 
                                     {{ $product->icon ?? '📊' }}
 
@@ -246,7 +138,7 @@
 
                             <div class="p-8">
 
-                                <p class="text-sm text-gray-500
+                                <p class="text-sm text-sky-400
                                           font-semibold">
 
                                     PRODUCT
@@ -255,14 +147,14 @@
                                 </p>
 
 
-                                <h3 class="text-3xl font-bold mt-3">
+                                <h3 class="text-3xl font-bold mt-3 text-white">
 
                                     {{ $product->name }}
 
                                 </h3>
 
 
-                                <p class="mt-5 text-gray-400 leading-7">
+                                <p class="mt-5 text-gray-300 leading-7">
 
                                     {{ $product->short_description
                                         ?? $product->description
@@ -278,7 +170,7 @@
                                     <div class="mt-7 flex flex-wrap gap-2">
 
                                         <span class="px-3 py-2
-                                                     bg-white/10
+                                                     bg-sky-500/20 border border-sky-500/30 text-sky-400
                                                      rounded-full
                                                      text-xs
                                                      font-medium">
@@ -296,8 +188,8 @@
 
                                 <a href="{{ route('products.show', $product->slug) }}"
                                    class="inline-block mt-8
-                                          font-semibold
-                                          hover:underline">
+                                          font-semibold text-sky-400
+                                          hover:text-white transition">
 
                                     View Product →
 
@@ -314,21 +206,21 @@
                              NORMAL PRODUCT CARD
                         ================================ -->
 
-                        <div class="group border border-gray-200
+                        <div class="group border border-white/10
                                     rounded-3xl overflow-hidden
-                                    hover:shadow-xl
+                                    glass-card
                                     transition duration-300">
 
 
                             <!-- PRODUCT ICON -->
 
-                            <div class="h-64 bg-gray-100
-                                        flex items-center justify-center">
+                            <div class="h-64 bg-white/5
+                                        flex items-center justify-center border-b border-white/10">
 
                                 <div class="w-28 h-28 rounded-3xl
-                                            bg-black text-white
+                                            glass-panel
                                             flex items-center justify-center
-                                            text-5xl">
+                                            text-5xl border border-white/20 shadow-lg group-hover:scale-110 transition">
 
                                     {{ $product->icon ?? '📦' }}
 
@@ -341,7 +233,7 @@
 
                             <div class="p-8">
 
-                                <p class="text-sm text-gray-400
+                                <p class="text-sm text-sky-400
                                           font-semibold">
 
                                     PRODUCT
@@ -350,14 +242,14 @@
                                 </p>
 
 
-                                <h3 class="text-3xl font-bold mt-3">
+                                <h3 class="text-3xl font-bold mt-3 text-white">
 
                                     {{ $product->name }}
 
                                 </h3>
 
 
-                                <p class="mt-5 text-gray-600 leading-7">
+                                <p class="mt-5 text-gray-300 leading-7">
 
                                     {{ $product->short_description
                                         ?? $product->description
@@ -373,7 +265,7 @@
                                     <div class="mt-7 flex flex-wrap gap-2">
 
                                         <span class="px-3 py-2
-                                                     bg-gray-100
+                                                     bg-white/10 border border-white/10 text-gray-300
                                                      rounded-full
                                                      text-xs
                                                      font-medium">
@@ -391,8 +283,7 @@
 
                                 <a href="{{ route('products.show', $product->slug) }}"
                                    class="inline-block mt-8
-                                          font-semibold
-                                          hover:underline">
+                                          font-semibold text-sky-400 hover:text-white transition">
 
                                     View Product →
 
@@ -412,24 +303,24 @@
                     ================================ -->
 
                     <div class="md:col-span-2
-                                border border-gray-200
+                                border border-white/10 glass-panel
                                 rounded-3xl
                                 p-12
                                 text-center">
 
-                        <div class="text-5xl mb-5">
+                        <div class="text-5xl mb-5 opacity-50">
                             📦
                         </div>
 
 
-                        <h3 class="text-2xl font-bold">
+                        <h3 class="text-2xl font-bold text-white">
 
                             No products available
 
                         </h3>
 
 
-                        <p class="mt-3 text-gray-500">
+                        <p class="mt-3 text-gray-400">
 
                             Products will appear here once they
                             are added from the admin panel.
@@ -452,7 +343,7 @@
          PRODUCT BENEFITS
     ================================ -->
 
-    <section class="py-24 bg-gray-50">
+    <section class="py-24 relative border-t border-white/10 bg-black/20">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -464,7 +355,7 @@
                 <div>
 
                     <p class="text-sm font-semibold uppercase
-                              tracking-widest text-gray-500">
+                              tracking-widest text-sky-400">
 
                         Built for Manufacturing
 
@@ -472,7 +363,7 @@
 
 
                     <h2 class="text-4xl lg:text-5xl
-                               font-bold mt-4 leading-tight">
+                               font-bold mt-4 leading-tight text-white">
 
                         Technology that works
                         on the factory floor.
@@ -480,7 +371,7 @@
                     </h2>
 
 
-                    <p class="mt-6 text-gray-600 text-lg leading-8">
+                    <p class="mt-6 text-gray-400 text-lg leading-8">
 
                         Our products are designed around real
                         manufacturing workflows, making digital
@@ -498,18 +389,17 @@
 
                     <!-- BENEFIT 1 -->
 
-                    <div class="bg-white p-7 rounded-2xl
-                                border border-gray-200">
+                    <div class="glass-panel p-7 rounded-2xl">
 
-                        <div class="text-2xl">
+                        <div class="text-2xl mb-4 bg-sky-500/20 w-12 h-12 flex items-center justify-center rounded-xl border border-sky-500/30 shadow-lg shadow-sky-500/10">
                             ⚡
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5">
+                        <h3 class="font-bold text-lg mt-5 text-white">
                             Real-time
                         </h3>
 
-                        <p class="text-gray-600 mt-2
+                        <p class="text-gray-400 mt-2
                                   text-sm leading-6">
 
                             Access operational information instantly.
@@ -521,18 +411,17 @@
 
                     <!-- BENEFIT 2 -->
 
-                    <div class="bg-white p-7 rounded-2xl
-                                border border-gray-200">
+                    <div class="glass-panel p-7 rounded-2xl md:translate-y-8">
 
-                        <div class="text-2xl">
+                        <div class="text-2xl mb-4 bg-purple-500/20 w-12 h-12 flex items-center justify-center rounded-xl border border-purple-500/30 shadow-lg shadow-purple-500/10">
                             📱
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5">
+                        <h3 class="font-bold text-lg mt-5 text-white">
                             Mobile Ready
                         </h3>
 
-                        <p class="text-gray-600 mt-2
+                        <p class="text-gray-400 mt-2
                                   text-sm leading-6">
 
                             Access factory information from anywhere.
@@ -544,18 +433,17 @@
 
                     <!-- BENEFIT 3 -->
 
-                    <div class="bg-white p-7 rounded-2xl
-                                border border-gray-200">
+                    <div class="glass-panel p-7 rounded-2xl">
 
-                        <div class="text-2xl">
+                        <div class="text-2xl mb-4 bg-indigo-500/20 w-12 h-12 flex items-center justify-center rounded-xl border border-indigo-500/30 shadow-lg shadow-indigo-500/10">
                             🔒
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5">
+                        <h3 class="font-bold text-lg mt-5 text-white">
                             Secure
                         </h3>
 
-                        <p class="text-gray-600 mt-2
+                        <p class="text-gray-400 mt-2
                                   text-sm leading-6">
 
                             Keep your business data protected.
@@ -567,18 +455,17 @@
 
                     <!-- BENEFIT 4 -->
 
-                    <div class="bg-white p-7 rounded-2xl
-                                border border-gray-200">
+                    <div class="glass-panel p-7 rounded-2xl md:translate-y-8">
 
-                        <div class="text-2xl">
+                        <div class="text-2xl mb-4 bg-green-500/20 w-12 h-12 flex items-center justify-center rounded-xl border border-green-500/30 shadow-lg shadow-green-500/10">
                             📈
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5">
+                        <h3 class="font-bold text-lg mt-5 text-white">
                             Scalable
                         </h3>
 
-                        <p class="text-gray-600 mt-2
+                        <p class="text-gray-400 mt-2
                                   text-sm leading-6">
 
                             Grow your digital ecosystem as you grow.
@@ -600,11 +487,16 @@
          CTA
     ================================ -->
 
-    <section class="py-24 bg-black text-white">
+    <section class="py-24 relative border-t border-white/5">
+        
+        <!-- Background glow -->
+        <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <div class="w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[100px]"></div>
+        </div>
 
-        <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
 
-            <p class="text-gray-400 uppercase
+            <p class="text-sky-400 uppercase
                       tracking-widest text-sm font-semibold">
 
                 Find the Right Solution
@@ -613,7 +505,7 @@
 
 
             <h2 class="text-4xl lg:text-6xl
-                       font-bold mt-5">
+                       font-bold mt-5 text-white">
 
                 Let's build your
                 digital factory.
@@ -630,12 +522,12 @@
             </p>
 
 
-            <a href="/#contact"
+            <a href="/contact"
                class="inline-flex mt-9
-                      bg-white text-black
+                      bg-gradient-to-r from-sky-500 to-blue-600 text-white
                       px-8 py-4 rounded-full
-                      font-semibold
-                      hover:bg-gray-200 transition">
+                      font-semibold shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50
+                      hover:-translate-y-1 transition-all">
 
                 Book a Demo →
 
@@ -645,133 +537,4 @@
 
     </section>
 
-
-    <!-- ===============================
-         FOOTER
-    ================================ -->
-
-    <footer class="bg-black text-white
-                   border-t border-white/10 py-14">
-
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-            <div class="grid md:grid-cols-3 gap-12">
-
-
-                <!-- COMPANY -->
-
-                <div>
-
-                    <div class="text-xl font-bold">
-                        TRACK TECH
-                    </div>
-
-                    <div class="text-xs text-gray-500
-                                tracking-widest mt-1">
-
-                        SOLUTIONS
-
-                    </div>
-
-
-                    <p class="text-gray-400 mt-5 leading-7">
-
-                        Digital solutions for smarter apparel manufacturing.
-
-                    </p>
-
-                </div>
-
-
-                <!-- COMPANY LINKS -->
-
-                <div>
-
-                    <h4 class="font-semibold">
-                        Company
-                    </h4>
-
-
-                    <div class="mt-5 space-y-3 text-gray-400">
-
-                        <a href="/"
-                           class="block hover:text-white">
-
-                            Home
-
-                        </a>
-
-
-                        <a href="/about"
-                           class="block hover:text-white">
-
-                            About
-
-                        </a>
-
-
-                        <a href="/solutions"
-                           class="block hover:text-white">
-
-                            Solutions
-
-                        </a>
-
-
-                        <a href="/products"
-                           class="block hover:text-white">
-
-                            Products
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CONTACT -->
-
-                <div>
-
-                    <h4 class="font-semibold">
-                        Contact
-                    </h4>
-
-
-                    <p class="mt-5 text-gray-400">
-
-                        Track Tech Solutions
-
-                    </p>
-
-
-                    <p class="mt-2 text-gray-400">
-
-                        Coimbatore, Tamil Nadu
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- COPYRIGHT -->
-
-            <div class="border-t border-white/10
-                        mt-12 pt-7
-                        text-sm text-gray-500">
-
-                © {{ date('Y') }} Track Tech Solutions.
-                All rights reserved.
-
-            </div>
-
-        </div>
-
-    </footer>
-
-
-</body>
-</html>
+@endsection
