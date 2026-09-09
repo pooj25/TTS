@@ -165,15 +165,15 @@
                 </a>
                 
                 <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Products</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Business Stories</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Company</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Resources</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a>
+                    <a href="/products" class="text-gray-300 hover:text-white transition-colors">Products</a>
+                    <a href="/industries" class="text-gray-300 hover:text-white transition-colors">Business Stories</a>
+                    <a href="/about" class="text-gray-300 hover:text-white transition-colors">Company</a>
+                    <a href="/resources" class="text-gray-300 hover:text-white transition-colors">Resources</a>
+                    <a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact Us</a>
                 </nav>
 
                 <div class="hidden md:block">
-                    <a href="#" class="bg-sky-500 hover:bg-sky-400 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 text-sm">
+                    <a href="/contact" class="bg-sky-500 hover:bg-sky-400 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 text-sm">
                         Book Demo
                     </a>
                 </div>
@@ -197,11 +197,11 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#" class="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-sky-500/30 transition-all flex items-center justify-center gap-2">
+                    <a href="/contact" class="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-sky-500/30 transition-all flex items-center justify-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         GET DEMO
                     </a>
-                    <a href="#" class="glass-panel text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all">
+                    <a href="#section-solutions" class="glass-panel text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all">
                         Learn More
                     </a>
                 </div>
@@ -250,7 +250,7 @@
                             </li>
                         </ul>
                         
-                        <a href="#" class="inline-flex items-center text-sky-400 hover:text-sky-300 font-medium group">
+                        <a href="/solutions" class="inline-flex items-center text-sky-400 hover:text-sky-300 font-medium group">
                             Explore Solutions 
                             <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </a>
@@ -296,7 +296,7 @@
                         <p class="text-gray-400 leading-relaxed mb-6">
                             Flawless Quality: Predict and prevent defects, automate checks, and ensure consistent excellence with our AI-powered Quality Control system.
                         </p>
-                        <a href="#" class="text-sm font-semibold text-sky-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-sky-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
                     </div>
                     
                     <!-- Product 2 -->
@@ -308,7 +308,7 @@
                         <p class="text-gray-400 leading-relaxed mb-6">
                             Gain complete visibility of your production line with detailed tracking, from materials to finished products with real-time monitoring.
                         </p>
-                        <a href="#" class="text-sm font-semibold text-blue-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-blue-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
                     </div>
 
                     <!-- Product 3 -->
@@ -320,7 +320,7 @@
                         <p class="text-gray-400 leading-relaxed mb-6">
                             Maximized Uptime: Unlock the full potential of your machines and track Overall Equipment Effectiveness (OEE) with predictive maintenance.
                         </p>
-                        <a href="#" class="text-sm font-semibold text-purple-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-purple-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
                     </div>
 
                     <!-- Product 4 -->
@@ -332,7 +332,7 @@
                         <p class="text-gray-400 leading-relaxed mb-6">
                             Optimized Planning: Schedule orders against lines, sections, and locations with ease using our intuitive Production Planning module.
                         </p>
-                        <a href="#" class="text-sm font-semibold text-indigo-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-indigo-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -415,8 +415,8 @@
                     <div>
                         <h4 class="font-semibold mb-6">Company</h4>
                         <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="#" class="hover:text-sky-400">About Us</a></li>
-                            <li><a href="#" class="hover:text-sky-400">Contact Us</a></li>
+                            <li><a href="/about" class="hover:text-sky-400">About Us</a></li>
+                            <li><a href="/contact" class="hover:text-sky-400">Contact Us</a></li>
                             <li><a href="#" class="hover:text-sky-400">Careers</a></li>
                         </ul>
                     </div>
@@ -424,19 +424,19 @@
                     <div>
                         <h4 class="font-semibold mb-6">Products</h4>
                         <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="#" class="hover:text-sky-400">Quality Control</a></li>
-                            <li><a href="#" class="hover:text-sky-400">Production Tracking</a></li>
-                            <li><a href="#" class="hover:text-sky-400">Machine Maintenance</a></li>
-                            <li><a href="#" class="hover:text-sky-400">Production Planning</a></li>
+                            <li><a href="/solutions" class="hover:text-sky-400">Quality Control</a></li>
+                            <li><a href="/solutions" class="hover:text-sky-400">Production Tracking</a></li>
+                            <li><a href="/solutions" class="hover:text-sky-400">Machine Maintenance</a></li>
+                            <li><a href="/solutions" class="hover:text-sky-400">Production Planning</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 class="font-semibold mb-6">Resources</h4>
                         <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="#" class="hover:text-sky-400">Success Stories</a></li>
-                            <li><a href="#" class="hover:text-sky-400">FAQ</a></li>
-                            <li><a href="#" class="hover:text-sky-400">Blog</a></li>
+                            <li><a href="/resources" class="hover:text-sky-400">Success Stories</a></li>
+                            <li><a href="/resources" class="hover:text-sky-400">FAQ</a></li>
+                            <li><a href="/resources" class="hover:text-sky-400">Blog</a></li>
                         </ul>
                     </div>
                 </div>
