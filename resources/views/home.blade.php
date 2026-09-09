@@ -158,9 +158,7 @@
         <header class="fixed top-0 w-full glass-nav z-50 transition-all duration-300 py-4">
             <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <a href="/" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-full logo-symbol flex items-center justify-center font-bold text-white shadow-lg shadow-sky-500/30 transition-transform group-hover:scale-105">
-                        TT
-                    </div>
+                    <img src="https://tts-web-six.vercel.app/fav_logo.png" alt="Track Tech Solution Logo" class="w-10 h-10 object-contain transition-transform group-hover:scale-105 bg-white rounded-full p-1" onerror="this.onerror=null;this.src='https://tracktechsolution.com/wp-content/uploads/2023/06/Track-Tech-Solution-Logo.png';">
                     <div>
                         <span class="text-xl font-bold tracking-tight text-white">Track Tech <span class="text-sky-400">Solution</span></span>
                     </div>
@@ -402,7 +400,7 @@
                 <div class="grid md:grid-cols-4 gap-12 mb-16">
                     <div class="md:col-span-1">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-8 h-8 rounded-full logo-symbol flex items-center justify-center font-bold text-white text-xs">TT</div>
+                            <img src="https://tts-web-six.vercel.app/fav_logo.png" alt="Track Tech Solution Logo" class="w-8 h-8 object-contain bg-white rounded-full p-1" onerror="this.onerror=null;this.src='https://tracktechsolution.com/wp-content/uploads/2023/06/Track-Tech-Solution-Logo.png';">
                             <span class="font-bold text-lg">Track Tech <span class="text-sky-400">Solution</span></span>
                         </div>
                         <p class="text-gray-400 text-sm leading-relaxed mb-6">
