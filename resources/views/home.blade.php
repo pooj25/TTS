@@ -1,197 +1,156 @@
 @extends('layouts.app')
 
-@section('title', 'Track Tech Solutions - The Operating System for Garment Manufacturing')
+@section('title', 'Track Tech Solutions - Digital Intelligence for Apparel Manufacturing')
 
 @section('content')
 
-<!-- Unique Hero Section (Transparent to show the custom 3D Canvas) -->
-<section class="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-transparent">
-    <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-10 relative z-10">
+<!-- Unique Custom Hero Section -->
+<section class="relative min-h-[95vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-white/60">
+    <div class="max-w-6xl mx-auto w-full flex flex-col items-center text-center space-y-8 relative z-10">
         
-        <div data-aos="zoom-in" class="px-5 py-2 rounded-full bg-white/80 border border-slate-200 shadow-sm backdrop-blur-md">
-            <span class="text-sm font-semibold text-primary-600 uppercase tracking-widest">Next-Gen Factory Intelligence</span>
+        <div data-aos="fade-down" class="px-6 py-2 rounded-full border-2 border-dashed border-accent-400 bg-white shadow-sm">
+            <span class="text-xs font-black text-primary-600 uppercase tracking-[0.2em]">Apparel & Textile Manufacturing Operations</span>
         </div>
 
-        <h1 data-aos="fade-up" data-aos-duration="1000" class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 leading-[1.05] max-w-5xl">
-            The Operating System <br class="hidden sm:inline" />
-            for <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500">Modern Apparel</span>
+        <h1 data-aos="zoom-in" data-aos-duration="1000" class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 leading-[1.1] max-w-5xl">
+            Dynamic Digital <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-accent-500">Intelligence</span> Platform
         </h1>
         
-        <p data-aos="fade-up" data-aos-delay="200" class="text-xl sm:text-3xl text-slate-600 font-medium leading-relaxed max-w-3xl">
-            Unify your cutting room, sewing lines, and quality control into a single, perfectly orchestrated digital ecosystem.
+        <p data-aos="fade-up" data-aos-delay="200" class="text-xl sm:text-2xl text-slate-600 font-medium leading-relaxed max-w-3xl">
+            Empower your factory floor with our Interactive WebGL 3D Engine, Real-Time Production Tracking, and Alpine.js ROI Calculator.
         </p>
 
-        <div data-aos="fade-up" data-aos-delay="400" class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
-            <a href="/contact" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-slate-900 hover:bg-primary-600 text-white font-bold text-lg px-12 py-5 rounded-xl shadow-2xl shadow-slate-900/20 hover:shadow-primary-600/40 hover:-translate-y-1 transition-all group">
-                <span>Start Transforming</span>
-                <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        <div data-aos="fade-up" data-aos-delay="400" class="pt-10 flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
+            <a href="/contact" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-br from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold text-lg px-12 py-5 rounded-tl-[30px] rounded-br-[30px] shadow-xl hover:-translate-y-1 transition-all group border-2 border-transparent hover:border-white">
+                <span>Book a Live Demo</span>
+                <svg class="w-6 h-6 group-hover:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
-            <a href="#platform" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-900 font-bold text-lg px-12 py-5 rounded-xl border-2 border-slate-200 hover:border-primary-600 shadow-sm transition-all">
-                <span>Discover Features</span>
+            <a href="#calculator" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-slate-900 font-bold text-lg px-12 py-5 rounded-tr-[30px] rounded-bl-[30px] border-2 border-dashed border-slate-300 hover:border-accent-500 shadow-sm hover:shadow-lg transition-all group">
+                <span class="group-hover:text-accent-600 transition-colors">Estimate Your ROI</span>
             </a>
         </div>
     </div>
 </section>
 
-<!-- Scale & Impact Section -->
-<section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-200 border border-slate-200 rounded-3xl shadow-sm bg-white overflow-hidden" data-aos="fade-up">
-            <div class="p-10 text-center hover:bg-slate-50 transition-colors">
-                <div class="text-5xl font-black text-slate-900 mb-2">500<span class="text-primary-600">+</span></div>
-                <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">Live Production Lines</p>
-            </div>
-            <div class="p-10 text-center hover:bg-slate-50 transition-colors">
-                <div class="text-5xl font-black text-slate-900 mb-2">10<span class="text-accent-500">M</span></div>
-                <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">Pieces Tracked Daily</p>
-            </div>
-            <div class="p-10 text-center hover:bg-slate-50 transition-colors">
-                <div class="text-5xl font-black text-slate-900 mb-2">99<span class="text-primary-600">%</span></div>
-                <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">Defect Reduction</p>
-            </div>
-            <div class="p-10 text-center hover:bg-slate-50 transition-colors">
-                <div class="text-5xl font-black text-slate-900 mb-2">25<span class="text-accent-500">+</span></div>
-                <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">Global Countries</p>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Curved Stitching Separator -->
+<div class="w-full overflow-hidden leading-none border-t-2 border-dashed border-slate-200">
+    <svg class="relative block w-full h-[50px] text-slate-50" fill="currentColor" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C63.2,16,128.8,26.5,191.7,39.61,235.2,48.5,279.1,52.8,321.39,56.44Z"></path>
+    </svg>
+</div>
 
-<!-- Distinct Alternating Feature Layout -->
-<section id="platform" class="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto space-y-40">
+<!-- Custom Shaped Product Modules -->
+<section class="relative py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <div class="max-w-7xl mx-auto space-y-28">
         
-        <!-- Feature 1: Image Left, Text Right -->
-        <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-            <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
-                <div class="absolute inset-0 bg-gradient-to-tr from-primary-200 to-accent-200 rounded-[3rem] transform -rotate-3 scale-105 z-0"></div>
-                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="Vision AI Quality" class="relative z-10 rounded-[2.5rem] shadow-2xl object-cover aspect-[4/3] w-full border border-white/50">
-                <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-xl z-20 border border-slate-100 hidden md:block">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-accent-100 flex items-center justify-center text-accent-600">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold text-slate-500 uppercase">Accuracy</p>
-                            <p class="text-2xl font-black text-slate-900">99.8%</p>
-                        </div>
+        <div class="text-center" data-aos="fade-up">
+            <h2 class="text-4xl sm:text-5xl font-black text-slate-900">End-to-End <span class="text-primary-500">Fabrication</span> Control</h2>
+            <div class="mt-4 w-24 h-1 bg-accent-500 mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Module 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div class="w-full lg:w-1/2 relative group" data-aos="fade-right">
+                <div class="absolute inset-0 bg-primary-100 rounded-tr-[80px] rounded-bl-[80px] transform rotate-3 scale-105 z-0 transition-transform group-hover:rotate-6"></div>
+                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="3D Engine" class="relative z-10 rounded-tr-[70px] rounded-bl-[70px] shadow-2xl object-cover aspect-[4/3] w-full border-4 border-white">
+                <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-full shadow-xl z-20 border-2 border-dashed border-accent-400 animate-spin-slow hidden md:block">
+                    <div class="w-16 h-16 rounded-full bg-accent-50 flex items-center justify-center text-accent-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-1/2 space-y-8" data-aos="fade-left">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">
-                    <span class="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span>
-                    Vision Intelligence
+            <div class="w-full lg:w-1/2 space-y-6" data-aos="fade-left">
+                <div class="text-accent-500 font-bold uppercase tracking-widest text-sm flex items-center gap-2">
+                    <span class="w-8 h-[2px] bg-accent-500"></span> 01 / Visualization
                 </div>
-                <h2 class="text-4xl sm:text-5xl font-black text-slate-900 leading-tight">Flawless Quality, <br/><span class="text-primary-600">Automated.</span></h2>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    Replace manual error-prone inspections with our cutting-edge Vision AI. Instantly detect stitching flaws, fabric defects, and measurement variances inline, stopping quality issues before they reach the packaging department.
+                <h3 class="text-4xl font-black text-slate-900 leading-tight">Interactive Three.js <br/><span class="text-primary-600">WebGL 3D Engine</span></h3>
+                <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-primary-500 pl-6">
+                    Rotate and monitor real-time 3D factory models. Gain spatial intelligence over your entire shop floor, identifying bottlenecks visually before they impact production targets.
                 </p>
-                <ul class="space-y-4 pt-4">
-                    <li class="flex items-center gap-3 text-slate-700 font-semibold"><svg class="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Real-time AQL scoring</li>
-                    <li class="flex items-center gap-3 text-slate-700 font-semibold"><svg class="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Automated fabric roll inspection</li>
-                    <li class="flex items-center gap-3 text-slate-700 font-semibold"><svg class="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Instant defect analytics dashboards</li>
-                </ul>
+                <button class="mt-4 px-8 py-3 bg-slate-900 text-white font-bold rounded-tl-[20px] rounded-br-[20px] hover:bg-primary-600 transition-colors">Experience 3D Viewer</button>
             </div>
         </div>
 
-        <!-- Feature 2: Text Left, Image Right -->
-        <div class="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
-            <div class="w-full lg:w-1/2 space-y-8" data-aos="fade-right">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-100 text-accent-700 font-bold text-sm">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    Live Telemetry
+        <!-- Module 2 -->
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+            <div class="w-full lg:w-1/2 space-y-6" data-aos="fade-right">
+                <div class="text-primary-500 font-bold uppercase tracking-widest text-sm flex items-center gap-2">
+                    <span class="w-8 h-[2px] bg-primary-500"></span> 02 / Analytics
                 </div>
-                <h2 class="text-4xl sm:text-5xl font-black text-slate-900 leading-tight">Total Visibility, <br/><span class="text-accent-600">Zero Guesswork.</span></h2>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    Track every single bundle moving across your sewing lines in real-time. Our RFID and barcode integration provides 100% transparent Work-In-Progress (WIP) tracking from the cutting room to final dispatch.
+                <h3 class="text-4xl font-black text-slate-900 leading-tight">Alpine.js Dynamic <br/><span class="text-accent-600">ROI Calculator</span></h3>
+                <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-accent-500 pl-6">
+                    Instantly estimate your cost-savings and efficiency gains. Our lightning-fast Alpine.js calculator dynamically adapts to your factory's specific line setup and daily output volumes.
                 </p>
-                <div class="pt-6">
-                    <a href="/solutions" class="text-primary-600 font-bold text-lg flex items-center gap-2 hover:text-primary-700 group">
-                        Explore Production Tracking 
-                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
+                <button class="mt-4 px-8 py-3 bg-white border-2 border-slate-900 text-slate-900 font-bold rounded-tr-[20px] rounded-bl-[20px] hover:bg-slate-900 hover:text-white transition-colors">Calculate Savings</button>
             </div>
-            <div class="w-full lg:w-1/2 relative" data-aos="fade-left">
-                <div class="absolute inset-0 bg-gradient-to-bl from-slate-200 to-slate-300 rounded-[3rem] transform rotate-3 scale-105 z-0"></div>
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80" alt="Production Tracking" class="relative z-10 rounded-[2.5rem] shadow-2xl object-cover aspect-[4/3] w-full border border-white/50">
+            <div class="w-full lg:w-1/2 relative group" data-aos="fade-left">
+                <div class="absolute inset-0 bg-accent-100 rounded-tl-[80px] rounded-br-[80px] transform -rotate-3 scale-105 z-0 transition-transform group-hover:-rotate-6"></div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="ROI Calculator" class="relative z-10 rounded-tl-[70px] rounded-br-[70px] shadow-2xl object-cover aspect-[4/3] w-full border-4 border-white">
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- Don Norman Inspired Philosophy Section (Unique Dark Contrast) -->
-<section class="py-32 px-4 sm:px-6 lg:px-8 bg-slate-950 text-white relative overflow-hidden">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- Continuous Partner Marquee (Dashed styling) -->
+<section class="py-16 bg-white border-y-2 border-dashed border-slate-300 overflow-hidden relative">
+    <div class="absolute left-0 inset-y-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+    <div class="absolute right-0 inset-y-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
     
-    <div class="max-w-7xl mx-auto space-y-20 relative z-10">
-        <div class="text-center space-y-6 max-w-4xl mx-auto" data-aos="fade-up">
-            <h2 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
-                Designed for the <span class="text-primary-400">Humans</span> <br/> Behind the Machines.
-            </h2>
-            <p class="text-slate-400 text-lg sm:text-2xl font-medium leading-relaxed max-w-3xl mx-auto">
-                Meaningful, sustainable, and humanity-centered design. We don't just optimize factories; we elevate the people working in them.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div data-aos="slide-up" data-aos-delay="100" class="p-10 rounded-[2rem] bg-slate-900 border border-slate-800 hover:border-primary-500/50 transition-colors group">
-                <div class="text-primary-400 mb-6 group-hover:scale-110 transition-transform origin-left">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-4">Meaningful Efficiency</h3>
-                <p class="text-slate-400 leading-relaxed text-lg">By eliminating wasted effort, we empower factory teams to focus on true craftsmanship rather than endless firefighting.</p>
-            </div>
-            
-            <div data-aos="slide-up" data-aos-delay="200" class="p-10 rounded-[2rem] bg-slate-900 border border-slate-800 hover:border-accent-500/50 transition-colors group">
-                <div class="text-accent-400 mb-6 group-hover:scale-110 transition-transform origin-left">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-4">Sustainable Impact</h3>
-                <p class="text-slate-400 leading-relaxed text-lg">Our smart spreading modules drastically reduce textile waste, actively lowering your factory's environmental footprint.</p>
-            </div>
-            
-            <div data-aos="slide-up" data-aos-delay="300" class="p-10 rounded-[2rem] bg-slate-900 border border-slate-800 hover:border-primary-500/50 transition-colors group">
-                <div class="text-primary-400 mb-6 group-hover:scale-110 transition-transform origin-left">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-4">Empowering Tools</h3>
-                <p class="text-slate-400 leading-relaxed text-lg">Interfaces built to remove friction. We design software that your floor managers and operators will actually love using.</p>
-            </div>
-        </div>
+    <div class="text-center mb-10" data-aos="fade-up">
+        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Integrating with 9 Industry Leaders</h4>
     </div>
-</section>
-
-<!-- Trusted Partners Marquee -->
-<section class="py-16 bg-white border-y border-slate-200 overflow-hidden">
-    <div class="relative flex overflow-x-hidden opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+    <div class="relative flex overflow-x-hidden">
         <div class="py-4 animate-marquee whitespace-nowrap flex items-center gap-16 px-8">
-            <h4 class="text-3xl font-black text-slate-300">ARVIND LTD</h4>
-            <h4 class="text-3xl font-black text-slate-300">SHAHI EXPORTS</h4>
-            <h4 class="text-3xl font-black text-slate-300">PDS MULTINATIONAL</h4>
-            <h4 class="text-3xl font-black text-slate-300">MODELAMA</h4>
-            <h4 class="text-3xl font-black text-slate-300">ARMSTRONG</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-primary-500 pb-1">ARVIND LTD</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-accent-500 pb-1">SHAHI EXPORTS</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-primary-500 pb-1">PDS</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-accent-500 pb-1">MODELAMA</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-primary-500 pb-1">ARMSTRONG</h4>
         </div>
         <div class="py-4 animate-marquee whitespace-nowrap flex items-center gap-16 px-8 absolute top-0" aria-hidden="true" style="margin-left: 100%;">
-            <h4 class="text-3xl font-black text-slate-300">ARVIND LTD</h4>
-            <h4 class="text-3xl font-black text-slate-300">SHAHI EXPORTS</h4>
-            <h4 class="text-3xl font-black text-slate-300">PDS MULTINATIONAL</h4>
-            <h4 class="text-3xl font-black text-slate-300">MODELAMA</h4>
-            <h4 class="text-3xl font-black text-slate-300">ARMSTRONG</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-primary-500 pb-1">ARVIND LTD</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-accent-500 pb-1">SHAHI EXPORTS</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-primary-500 pb-1">PDS</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-accent-500 pb-1">MODELAMA</h4>
+            <h4 class="text-2xl font-black text-slate-800 border-b-4 border-primary-500 pb-1">ARMSTRONG</h4>
         </div>
     </div>
 </section>
 
-<!-- Clean Modern CTA -->
-<section class="py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
-    <div class="max-w-5xl mx-auto text-center space-y-10 relative z-10">
-        <h2 data-aos="zoom-in" class="text-5xl sm:text-7xl font-black text-slate-900 tracking-tight">Step Into The Future.</h2>
-        <p data-aos="fade-up" data-aos-delay="100" class="text-2xl text-slate-600 max-w-3xl mx-auto font-medium">Join the intelligent manufacturing revolution. Optimize your factory with Track Tech Solutions today.</p>
-        <div data-aos="fade-up" data-aos-delay="200" class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a href="/contact" class="bg-primary-600 hover:bg-primary-700 text-white font-bold text-xl px-12 py-5 rounded-xl shadow-2xl hover:-translate-y-1 transition-all">Request Demo</a>
-            <a href="/roi-calculator" class="bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-200 font-bold text-xl px-12 py-5 rounded-xl shadow-sm transition-all">Calculate Your ROI</a>
+<!-- Don Norman Inspired Philosophy Section -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto space-y-16 relative z-10">
+        <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">Meaningful, Sustainable, <br/><span class="text-accent-400 italic">Humanity Centered</span></h2>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">We build digital tools that elevate the people working in factories and protect the world around them.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div data-aos="fade-up" data-aos-delay="100" class="p-8 rounded-tl-[40px] rounded-br-[40px] bg-slate-800 border-2 border-dashed border-slate-600 hover:border-primary-400 transition-all">
+                <div class="w-14 h-14 mx-auto rounded-full bg-primary-500/20 text-primary-400 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Meaningful Efficiency</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Reducing defects allows factory teams to focus on craftsmanship rather than firefighting.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200" class="p-8 rounded-tr-[40px] rounded-bl-[40px] bg-slate-800 border-2 border-dashed border-slate-600 hover:border-accent-400 transition-all">
+                <div class="w-14 h-14 mx-auto rounded-full bg-accent-500/20 text-accent-400 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Sustainable Production</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Zero-loss fabric modules drastically reduce textile waste and lower your carbon footprint.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="p-8 rounded-tl-[40px] rounded-br-[40px] bg-slate-800 border-2 border-dashed border-slate-600 hover:border-primary-400 transition-all">
+                <div class="w-14 h-14 mx-auto rounded-full bg-primary-500/20 text-primary-400 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Humanity Centered</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Intuitive, empowering interfaces that remove friction and reduce stress on the factory floor.</p>
+            </div>
         </div>
     </div>
 </section>
