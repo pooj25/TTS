@@ -23,4 +23,4 @@ RUN chown -R www-data:www-data /var/www/html \
 
 EXPOSE 10000
 
-CMD php artisan config:clear && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}
+CMD touch database/database.sqlite && php artisan migrate --force && php artisan config:clear && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}

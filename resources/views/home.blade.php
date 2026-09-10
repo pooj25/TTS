@@ -14,7 +14,7 @@
                     <span class="text-gradient">Garment Manufacturing</span><br>
                     With Real-Time Intelligence
                 </h1>
-                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-xl text-slate-500 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                     From Factory Floor to Executive Dashboard.<br>
                     Track. Optimize. Transform.
                 </p>
@@ -32,7 +32,7 @@
             
             <!-- Scroll Indicator -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
-                <span class="text-xs uppercase tracking-widest text-gray-400">Scroll to Explore</span>
+                <span class="text-xs uppercase tracking-widest text-slate-500">Scroll to Explore</span>
                 <div class="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-1">
                     <div class="w-1.5 h-1.5 bg-sky-400 rounded-full animate-bounce"></div>
                 </div>
@@ -54,20 +54,20 @@
                         <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl"></div>
                         
                         <h3 class="text-3xl font-bold mb-6">Fashion Manufacturers &<br>Innovative Brands</h3>
-                        <p class="text-gray-300 leading-relaxed mb-8">
+                        <p class="text-slate-600 leading-relaxed mb-8">
                             From planning to production, data to decisions, Track Tech Solution seamlessly connects your entire operation. Our AI-powered platform helps you boost efficiency, reduce waste, and achieve sustainable excellence in today's competitive fashion industry.
                         </p>
                         
                         <ul class="space-y-4 mb-8">
-                            <li class="flex items-start gap-3 text-gray-300">
+                            <li class="flex items-start gap-3 text-slate-600">
                                 <svg class="w-6 h-6 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <span>Real-time production tracking across all facilities</span>
                             </li>
-                            <li class="flex items-start gap-3 text-gray-300">
+                            <li class="flex items-start gap-3 text-slate-600">
                                 <svg class="w-6 h-6 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <span>AI-powered quality control reducing defects by up to 35%</span>
                             </li>
-                            <li class="flex items-start gap-3 text-gray-300">
+                            <li class="flex items-start gap-3 text-slate-600">
                                 <svg class="w-6 h-6 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <span>Predictive maintenance to maximize equipment uptime</span>
                             </li>
@@ -82,19 +82,19 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center">
                             <div class="text-5xl font-bold text-primary-400 mb-2">28%</div>
-                            <div class="text-sm text-gray-400 uppercase tracking-wider">Waste Reduction</div>
+                            <div class="text-sm text-slate-500 uppercase tracking-wider">Waste Reduction</div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center mt-0 sm:mt-12">
                             <div class="text-5xl font-bold text-accent-500 mb-2">37%</div>
-                            <div class="text-sm text-gray-400 uppercase tracking-wider">Efficiency Boost</div>
+                            <div class="text-sm text-slate-500 uppercase tracking-wider">Efficiency Boost</div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="300" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center">
                             <div class="text-5xl font-bold text-accent-400 mb-2">99.2%</div>
-                            <div class="text-sm text-gray-400 uppercase tracking-wider">Quality Score</div>
+                            <div class="text-sm text-slate-500 uppercase tracking-wider">Quality Score</div>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="400" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center mt-0 sm:mt-12">
                             <div class="text-5xl font-bold text-primary-500 mb-2">24/7</div>
-                            <div class="text-sm text-gray-400 uppercase tracking-wider">Live Tracking</div>
+                            <div class="text-sm text-slate-500 uppercase tracking-wider">Live Tracking</div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-400 transition-colors">Quality Control</h3>
-                        <p class="text-gray-400 leading-relaxed mb-6">
+                        <p class="text-slate-500 leading-relaxed mb-6">
                             Flawless Quality: Predict and prevent defects, automate checks, and ensure consistent excellence with our AI-powered Quality Control system.
                         </p>
                         <a href="/solutions" class="text-sm font-semibold text-primary-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
@@ -128,7 +128,7 @@
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-400 transition-colors">Production Tracking</h3>
-                        <p class="text-gray-400 leading-relaxed mb-6">
+                        <p class="text-slate-500 leading-relaxed mb-6">
                             Gain complete visibility of your production line with detailed tracking, from materials to finished products with real-time monitoring.
                         </p>
                         <a href="/solutions" class="text-sm font-semibold text-accent-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
@@ -140,7 +140,7 @@
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors">Machine Maintenance</h3>
-                        <p class="text-gray-400 leading-relaxed mb-6">
+                        <p class="text-slate-500 leading-relaxed mb-6">
                             Maximized Uptime: Unlock the full potential of your machines and track Overall Equipment Effectiveness (OEE) with predictive maintenance.
                         </p>
                         <a href="/solutions" class="text-sm font-semibold text-purple-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
@@ -152,7 +152,7 @@
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 group-hover:text-teal-400 transition-colors">Production Planning</h3>
-                        <p class="text-gray-400 leading-relaxed mb-6">
+                        <p class="text-slate-500 leading-relaxed mb-6">
                             Optimized Planning: Schedule orders against lines, sections, and locations with ease using our intuitive Production Planning module.
                         </p>
                         <a href="/solutions" class="text-sm font-semibold text-teal-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
@@ -166,26 +166,26 @@
             <div class="max-w-7xl mx-auto px-6 text-center">
                 <span data-aos="fade-up" class="text-accent-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Our Impact</span>
                 <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-6xl font-bold mb-6 text-gradient-primary">Beyond borders, beyond limits</h2>
-                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-gray-400 mb-16 max-w-2xl mx-auto">
+                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-slate-500 mb-16 max-w-2xl mx-auto">
                     Empowering manufacturers worldwide with cutting-edge technology and innovative solutions.
                 </p>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div data-aos="zoom-in" data-aos-delay="100" class="glass-card p-8 rounded-2xl">
                         <div class="text-4xl md:text-5xl font-bold text-white mb-2">250+</div>
-                        <div class="text-gray-400">Active lines</div>
+                        <div class="text-slate-500">Active lines</div>
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="200" class="glass-card p-8 rounded-2xl">
                         <div class="text-4xl md:text-5xl font-bold text-white mb-2">1M+</div>
-                        <div class="text-gray-400">Users</div>
+                        <div class="text-slate-500">Users</div>
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="300" class="glass-card p-8 rounded-2xl">
                         <div class="text-4xl md:text-5xl font-bold text-white mb-2">50M+</div>
-                        <div class="text-gray-400">Pieces checked/month</div>
+                        <div class="text-slate-500">Pieces checked/month</div>
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="400" class="glass-card p-8 rounded-2xl">
                         <div class="text-4xl md:text-5xl font-bold text-white mb-2">12</div>
-                        <div class="text-gray-400">Countries</div>
+                        <div class="text-slate-500">Countries</div>
                     </div>
                 </div>
             </div>
@@ -194,25 +194,25 @@
         <!-- Partners Marquee -->
         <section class="py-20 border-t border-white/5 bg-black/40 backdrop-blur-md">
             <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold text-gray-300">Trusted by Industry Leaders</h3>
+                <h3 class="text-2xl font-bold text-slate-600">Trusted by Industry Leaders</h3>
             </div>
             
             <div class="marquee-container w-full max-w-7xl mx-auto py-4">
                 <!-- First set -->
                 <div class="marquee-content">
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Arvind Ltd</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Shahi Exports</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Matrix</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Pearl Global</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Gokaldas</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Arvind Ltd</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Shahi Exports</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Matrix</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Pearl Global</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Gokaldas</div>
                 </div>
                 <!-- Duplicate for seamless scroll -->
                 <div class="marquee-content" aria-hidden="true">
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Arvind Ltd</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Shahi Exports</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Matrix</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Pearl Global</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-gray-400 min-w-[200px]">Gokaldas</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Arvind Ltd</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Shahi Exports</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Matrix</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Pearl Global</div>
+                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-500 min-w-[200px]">Gokaldas</div>
                 </div>
             </div>
         </section>

@@ -52,8 +52,8 @@
     <style>
         body {
             margin: 0;
-            background-color: #0f0e17; /* Obsidian */
-            color: #ffffff;
+            background-color: #f8fafc; /* Light Slate */
+            color: #0f172a; /* Dark text */
             overflow-x: hidden;
         }
 
@@ -80,28 +80,29 @@
 
         /* Premium Glassmorphism Utilities */
         .glass-panel {
-            background: rgba(23, 19, 41, 0.4);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
         }
         
         .glass-nav {
-            background: rgba(15, 14, 23, 0.75);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         /* Spotlight Glass Card */
         .glass-card {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 1rem;
             position: relative;
             overflow: hidden;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .glass-card::before {
@@ -143,7 +144,7 @@
             transform: translate(-50%, -50%);
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, transparent 70%);
             pointer-events: none;
             opacity: 0;
             transition: opacity 0.3s;
@@ -205,18 +206,18 @@
         <header class="fixed top-0 w-full glass-nav z-50 transition-all duration-300 py-4">
             <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <a href="/" class="flex items-center gap-3 group">
-                    <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-10 h-10 object-contain transition-transform group-hover:scale-105 bg-white rounded-full p-1">
+                    <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-10 h-10 object-contain transition-transform group-hover:scale-105 bg-white rounded-full p-1 shadow-sm">
                     <div>
-                        <span class="text-xl font-bold tracking-tight text-white">Track Tech <span class="text-sky-400">Solution</span></span>
+                        <span class="text-xl font-bold tracking-tight text-slate-800">Track Tech <span class="text-primary-500">Solution</span></span>
                     </div>
                 </a>
                 
                 <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
-                    <a href="/products" class="text-gray-300 hover:text-white transition-colors">Products</a>
-                    <a href="/industries" class="text-gray-300 hover:text-white transition-colors">Business Stories</a>
-                    <a href="/about" class="text-gray-300 hover:text-white transition-colors">Company</a>
-                    <a href="/resources" class="text-gray-300 hover:text-white transition-colors">Resources</a>
-                    <a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact Us</a>
+                    <a href="/products" class="text-slate-600 hover:text-primary-600 transition-colors">Products</a>
+                    <a href="/industries" class="text-slate-600 hover:text-primary-600 transition-colors">Business Stories</a>
+                    <a href="/about" class="text-slate-600 hover:text-primary-600 transition-colors">Company</a>
+                    <a href="/resources" class="text-slate-600 hover:text-primary-600 transition-colors">Resources</a>
+                    <a href="/contact" class="text-slate-600 hover:text-primary-600 transition-colors">Contact Us</a>
                 </nav>
 
                 <div class="hidden md:block">
@@ -233,57 +234,57 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-[#030712]/90 backdrop-blur-sm border-t border-white/10 pt-20 pb-10 mt-20">
+        <footer class="bg-white/80 backdrop-blur-md border-t border-slate-200 pt-20 pb-10 mt-20">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid md:grid-cols-4 gap-12 mb-16">
                     <div class="md:col-span-1">
                         <div class="flex items-center gap-3 mb-6">
-                            <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-8 h-8 object-contain bg-white rounded-full p-1">
-                            <span class="font-bold text-lg">Track Tech <span class="text-sky-400">Solution</span></span>
+                            <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-8 h-8 object-contain bg-white rounded-full p-1 shadow-sm">
+                            <span class="font-bold text-lg text-slate-800">Track Tech <span class="text-primary-500">Solution</span></span>
                         </div>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">
                             From planning to production, data to decisions, seamlessly connect your entire operation. Boost efficiency, reduce waste, and achieve sustainability.
                         </p>
-                        <div class="flex flex-col gap-2 text-sm text-gray-400">
-                            <a href="mailto:sales@tracktechsolutions.com" class="hover:text-white">sales@tracktechsolutions.com</a>
-                            <a href="tel:+919650613666" class="hover:text-white">+91 96506 13666</a>
+                        <div class="flex flex-col gap-2 text-sm text-slate-500">
+                            <a href="mailto:sales@tracktechsolutions.com" class="hover:text-primary-600">sales@tracktechsolutions.com</a>
+                            <a href="tel:+919650613666" class="hover:text-primary-600">+91 96506 13666</a>
                         </div>
                     </div>
                     
                     <div>
-                        <h4 class="font-semibold mb-6">Company</h4>
-                        <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="/about" class="hover:text-sky-400">About Us</a></li>
-                            <li><a href="/contact" class="hover:text-sky-400">Contact Us</a></li>
-                            <li><a href="#" class="hover:text-sky-400">Careers</a></li>
+                        <h4 class="font-semibold text-slate-800 mb-6">Company</h4>
+                        <ul class="space-y-3 text-sm text-slate-500">
+                            <li><a href="/about" class="hover:text-primary-600">About Us</a></li>
+                            <li><a href="/contact" class="hover:text-primary-600">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-primary-600">Careers</a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 class="font-semibold mb-6">Products</h4>
-                        <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="/solutions" class="hover:text-sky-400">Quality Control</a></li>
-                            <li><a href="/solutions" class="hover:text-sky-400">Production Tracking</a></li>
-                            <li><a href="/solutions" class="hover:text-sky-400">Machine Maintenance</a></li>
-                            <li><a href="/solutions" class="hover:text-sky-400">Production Planning</a></li>
+                        <h4 class="font-semibold text-slate-800 mb-6">Products</h4>
+                        <ul class="space-y-3 text-sm text-slate-500">
+                            <li><a href="/solutions" class="hover:text-primary-600">Quality Control</a></li>
+                            <li><a href="/solutions" class="hover:text-primary-600">Production Tracking</a></li>
+                            <li><a href="/solutions" class="hover:text-primary-600">Machine Maintenance</a></li>
+                            <li><a href="/solutions" class="hover:text-primary-600">Production Planning</a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 class="font-semibold mb-6">Resources</h4>
-                        <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="/resources" class="hover:text-sky-400">Success Stories</a></li>
-                            <li><a href="/resources" class="hover:text-sky-400">FAQ</a></li>
-                            <li><a href="/resources" class="hover:text-sky-400">Blog</a></li>
+                        <h4 class="font-semibold text-slate-800 mb-6">Resources</h4>
+                        <ul class="space-y-3 text-sm text-slate-500">
+                            <li><a href="/resources" class="hover:text-primary-600">Success Stories</a></li>
+                            <li><a href="/resources" class="hover:text-primary-600">FAQ</a></li>
+                            <li><a href="/resources" class="hover:text-primary-600">Blog</a></li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
                     <p>&copy; {{ date('Y') }} Track Tech Solution. All rights reserved.</p>
                     <div class="flex gap-6">
-                        <a href="#" class="hover:text-white">Privacy Policy</a>
-                        <a href="#" class="hover:text-white">Terms & Conditions</a>
+                        <a href="#" class="hover:text-slate-600">Privacy Policy</a>
+                        <a href="#" class="hover:text-slate-600">Terms & Conditions</a>
                     </div>
                 </div>
             </div>
@@ -317,7 +318,7 @@
         // Scene Setup
         const container = document.getElementById('webgl-container');
         const scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0x0f0e17, 0.02); // Obsidian fog
+        scene.fog = new THREE.FogExp2(0xf8fafc, 0.02); // Light fog
 
         // Camera
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -336,9 +337,9 @@
         scene.add(techGroup);
 
         // 1. Digital Grid Floor
-        const gridHelper = new THREE.GridHelper(200, 100, 0x14b8a6, 0x171329); // Teal and Deep Purple
+        const gridHelper = new THREE.GridHelper(200, 100, 0x14b8a6, 0xe2e8f0); // Teal and Light Slate
         gridHelper.position.y = -15;
-        gridHelper.material.opacity = 0.15;
+        gridHelper.material.opacity = 0.3;
         gridHelper.material.transparent = true;
         scene.add(gridHelper);
 
