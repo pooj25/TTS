@@ -125,7 +125,7 @@
                             apparel manufacturing.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
+                        <a href="/resources" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
                             Read More →
                         </a>
 
@@ -158,7 +158,7 @@
                             visibility and decision making.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
+                        <a href="/resources" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
                             Read More →
                         </a>
 
@@ -191,7 +191,7 @@
                             smarter manufacturing environments.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
+                        <a href="/resources" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
                             Read More →
                         </a>
 
@@ -204,7 +204,7 @@
 
                     <div class="overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1586528116493-da8b9b5c6f68?auto=format&fit=crop&w=900&q=80"
+                            src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=900&q=80"
                             class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
                             alt="Inventory Management">
                     </div>
@@ -224,7 +224,7 @@
                             and improve material control.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
+                        <a href="/resources" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
                             Read More →
                         </a>
 
@@ -237,7 +237,7 @@
 
                     <div class="overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1516321318427-8b5a2b7b3e5c?auto=format&fit=crop&w=900&q=80"
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
                             class="w-full h-56 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700"
                             alt="Data Analytics">
                     </div>
@@ -257,7 +257,7 @@
                             data into actionable insights.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
+                        <a href="/resources" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
                             Read More →
                         </a>
 
@@ -290,7 +290,7 @@
                             processes into a connected digital environment.
                         </p>
 
-                        <a href="#" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
+                        <a href="/resources" class="inline-block mt-6 font-semibold text-sky-400 group-hover:text-slate-800 transition">
                             Read More →
                         </a>
 
