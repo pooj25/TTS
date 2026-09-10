@@ -1,219 +1,242 @@
 @extends('layouts.app')
 
-@section('title', 'Track Tech Solution - The Missing Piece in Your Production Puzzle')
+@section('title', 'Track Tech Solution - Digital Intelligence for Garment Manufacturing')
 
 @section('content')
-        <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center relative -mt-20" id="section-hero">
-            <div class="max-w-5xl mx-auto px-6 text-center pt-32">
-                <div data-aos="fade-down" data-aos-duration="1000" class="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-400 text-sm font-medium tracking-wide">
-                    Digital Factory Engine
-                </div>
-                <h1 data-aos="fade-up" data-aos-duration="1000" class="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
-                    Revolutionizing <br>
-                    <span class="text-gradient">Garment Manufacturing</span><br>
-                    With Real-Time Intelligence
-                </h1>
-                <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-xl text-slate-800 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                    From Factory Floor to Executive Dashboard.<br>
-                    Track. Optimize. Transform.
-                </p>
-                
-                <div data-aos="zoom-in" data-aos-delay="400" class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/contact" class="bg-gradient-to-r from-primary-500 to-accent-600 text-slate-800 px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-primary-500/30 transition-all flex items-center justify-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        GET DEMO
-                    </a>
-                    <a href="#section-solutions" class="glass-panel text-slate-700 px-8 py-4 rounded-full font-medium hover:bg-slate-200 transition-all">
-                        Learn More
-                    </a>
-                </div>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
+    <!-- Custom High-Tech Garment Manufacturing Video Background -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-75 scale-105 filter contrast-105 saturate-110">
+            <source src="https://tts-page.onrender.com/videos/garment-bg.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-transparent to-slate-950/90"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-[20%] right-[10%] w-24 h-24 bg-sky-400/20 rounded-full blur-2xl animate-pulse"></div>
+            <div class="absolute bottom-[30%] left-[15%] w-32 h-32 bg-sky-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto w-full flex flex-col items-center text-center space-y-8 relative z-10">
+        <h1 data-aos="zoom-out-up" data-aos-duration="1000" class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-4xl drop-shadow-lg">
+            Revolutionizing <span class="text-sky-400 italic font-sans drop-shadow-lg">Garment Manufacturing</span> <br class="hidden sm:inline" />
+            With Real-Time Digital Intelligence
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="text-lg sm:text-2xl text-slate-100 font-sans leading-relaxed max-w-2xl drop-shadow-md">
+            From Factory Floor to Executive Dashboard. <br />
+            <span class="text-sky-400 font-sans text-xs sm:text-sm tracking-widest uppercase font-semibold">Track. Optimize. Transform.</span>
+        </p>
+
+        <div data-aos="fade-up" data-aos-delay="400" class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
+            <a href="/contact" class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-500 hover:from-sky-400 hover:to-blue-600 text-white font-semibold text-base px-10 py-4 rounded-full shadow-2xl shadow-sky-500/50 hover:scale-105 transition-all group">
+                <span>Book Live Demo</span>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="#impact" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white font-sans font-medium text-base px-9 py-4 rounded-full border border-white/30 hover:border-sky-400 backdrop-blur-md shadow-lg transition-all group">
+                <span>Explore Platform</span>
+            </a>
+        </div>
+        
+        <div data-aos="fade-in" data-aos-delay="600" class="pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full mt-8">
+            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> Quality Control AI</div>
+            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> Live Tracking</div>
+            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> Machine OEE</div>
+            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> Smart Gantt</div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section id="impact" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 inline-block">Our Impact</span>
+            <h2 class="text-4xl sm:text-5xl font-bold text-sky-600 tracking-tight leading-tight">Beyond borders, beyond limits</h2>
+            <p class="text-slate-700 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Empowering manufacturers worldwide with cutting-edge technology and innovative solutions</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div data-aos="fade-up" data-aos-delay="100" class="relative p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-sky-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group text-center">
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 tracking-tight mb-2">500+</div>
+                <p class="text-sm font-semibold text-slate-800">Active lines</p>
             </div>
-            
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
-                <span class="text-xs uppercase tracking-widest text-slate-800">Scroll to Explore</span>
-                <div class="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-1">
-                    <div class="w-1.5 h-1.5 bg-sky-400 rounded-full animate-bounce"></div>
-                </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="relative p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-sky-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group text-center">
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 tracking-tight mb-2">10M+</div>
+                <p class="text-sm font-semibold text-slate-800">Users</p>
             </div>
-        </section>
-
-        <!-- Industry Solutions (Transforming) -->
-        <section class="py-32 relative" id="section-solutions">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-20">
-                    <span data-aos="fade-up" class="text-primary-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Industry Solutions</span>
-                    <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-5xl font-bold text-gradient-primary">Transforming the Fashion Industry</h2>
-                    <div data-aos="fade-right" data-aos-delay="200" class="w-24 h-1 bg-gradient-to-r from-primary-400 to-accent-600 mx-auto mt-6 rounded-full"></div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right" class="glass-panel p-10 rounded-3xl relative overflow-hidden">
-                        <!-- Decorative glow -->
-                        <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl"></div>
-                        
-                        <h3 class="text-3xl font-bold mb-6">Fashion Manufacturers &<br>Innovative Brands</h3>
-                        <p class="text-slate-900 leading-relaxed mb-8">
-                            From planning to production, data to decisions, Track Tech Solution seamlessly connects your entire operation. Our AI-powered platform helps you boost efficiency, reduce waste, and achieve sustainable excellence in today's competitive fashion industry.
-                        </p>
-                        
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-start gap-3 text-slate-900">
-                                <svg class="w-6 h-6 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span>Real-time production tracking across all facilities</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-slate-900">
-                                <svg class="w-6 h-6 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span>AI-powered quality control reducing defects by up to 35%</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-slate-900">
-                                <svg class="w-6 h-6 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span>Predictive maintenance to maximize equipment uptime</span>
-                            </li>
-                        </ul>
-                        
-                        <a href="/solutions" class="inline-flex items-center text-primary-400 hover:text-primary-300 font-medium group">
-                            Explore Solutions 
-                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center">
-                            <div class="text-5xl font-bold text-primary-400 mb-2">28%</div>
-                            <div class="text-sm text-slate-800 uppercase tracking-wider">Waste Reduction</div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center mt-0 sm:mt-12">
-                            <div class="text-5xl font-bold text-accent-500 mb-2">37%</div>
-                            <div class="text-sm text-slate-800 uppercase tracking-wider">Efficiency Boost</div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-delay="300" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center">
-                            <div class="text-5xl font-bold text-accent-400 mb-2">99.2%</div>
-                            <div class="text-sm text-slate-800 uppercase tracking-wider">Quality Score</div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-delay="400" class="glass-card p-8 rounded-2xl flex flex-col justify-center items-center text-center mt-0 sm:mt-12">
-                            <div class="text-5xl font-bold text-primary-500 mb-2">24/7</div>
-                            <div class="text-sm text-slate-800 uppercase tracking-wider">Live Tracking</div>
-                        </div>
-                    </div>
-                </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="relative p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-sky-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group text-center">
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 tracking-tight mb-2">50M+</div>
+                <p class="text-sm font-semibold text-slate-800">Pieces checked/mo</p>
             </div>
-        </section>
+            <div data-aos="fade-up" data-aos-delay="400" class="relative p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-sky-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group text-center">
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 tracking-tight mb-2">25</div>
+                <p class="text-sm font-semibold text-slate-800">Countries</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- Core Products -->
-        <section class="py-32 relative" id="section-products">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-20">
-                    <span data-aos="fade-up" class="text-primary-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Our Solutions</span>
-                    <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-5xl font-bold">Industry Leading <span class="text-primary-500">Expertise</span></h2>
-                </div>
+<!-- Products / Benefits -->
+<section id="products" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <div class="max-w-7xl mx-auto space-y-20">
+        <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block">Comprehensive Software Suite</span>
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight">Designed for <span class="text-sky-600 italic">Smart Garment Factories</span></h2>
+        </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Product 1 -->
-                    <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-8 rounded-2xl group">
-                        <div class="w-14 h-14 bg-primary-500/20 rounded-xl flex items-center justify-center mb-6 border border-primary-500/30 text-primary-400">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div data-aos="fade-right" class="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-sky-300 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-400 transition-colors">Quality Control</h3>
-                        <p class="text-slate-800 leading-relaxed mb-6">
-                            Flawless Quality: Predict and prevent defects, automate checks, and ensure consistent excellence with our AI-powered Quality Control system.
-                        </p>
-                        <a href="/solutions" class="text-sm font-semibold text-primary-500 uppercase tracking-wider hover:text-primary-700 transition-colors">Know More &rarr;</a>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200">AI Powered</span>
                     </div>
-                    
-                    <!-- Product 2 -->
-                    <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-8 rounded-2xl group md:translate-y-12">
-                        <div class="w-14 h-14 bg-accent-500/20 rounded-xl flex items-center justify-center mb-6 border border-accent-500/30 text-accent-400">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-accent-400 transition-colors">Production Tracking</h3>
-                        <p class="text-slate-800 leading-relaxed mb-6">
-                            Gain complete visibility of your production line with detailed tracking, from materials to finished products with real-time monitoring.
-                        </p>
-                        <a href="/solutions" class="text-sm font-semibold text-accent-500 uppercase tracking-wider hover:text-accent-700 transition-colors">Know More &rarr;</a>
+                    <div>
+                        <h3 class="text-3xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Quality Control AI</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1">Predict & Prevent Defects Inline</p>
                     </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">Flawless quality assurance powered by vision AI. Automate fabric roll inspection, stitching flaw detection, and inline quality logging to reduce defects by up to 35%.</p>
+                </div>
+            </div>
 
-                    <!-- Product 3 -->
-                    <div data-aos="fade-up" data-aos-delay="300" class="glass-card p-8 rounded-2xl group">
-                        <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 border border-purple-500/30 text-purple-400">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <div data-aos="fade-left" class="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-sky-300 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors">Machine Maintenance</h3>
-                        <p class="text-slate-800 leading-relaxed mb-6">
-                            Maximized Uptime: Unlock the full potential of your machines and track Overall Equipment Effectiveness (OEE) with predictive maintenance.
-                        </p>
-                        <a href="/solutions" class="text-sm font-semibold text-purple-500 uppercase tracking-wider hover:text-purple-700 transition-colors">Know More &rarr;</a>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200">Live Telemetry</span>
                     </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Production Tracking</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1">End-to-End Real Time Visibility</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">Gain 100% transparent tracking across all production stages—from cutting room and sewing lines to finishing and final dispatch.</p>
+                </div>
+            </div>
 
-                    <!-- Product 4 -->
-                    <div data-aos="fade-up" data-aos-delay="400" class="glass-card p-8 rounded-2xl group md:translate-y-12">
-                        <div class="w-14 h-14 bg-teal-500/20 rounded-xl flex items-center justify-center mb-6 border border-teal-500/30 text-teal-400">
+            <div data-aos="fade-right" class="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-sky-300 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                        </div>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200">IoT Connected</span>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Machine Maintenance (OEE)</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1">Equipment Health & Downtime Prevention</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">Maximize overall equipment effectiveness (OEE). Monitor machine run hours, predict motor failures, and schedule servicing automatically.</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" class="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-sky-300 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-teal-400 transition-colors">Production Planning</h3>
-                        <p class="text-slate-800 leading-relaxed mb-6">
-                            Optimized Planning: Schedule orders against lines, sections, and locations with ease using our intuitive Production Planning module.
-                        </p>
-                        <a href="/solutions" class="text-sm font-semibold text-teal-500 uppercase tracking-wider hover:text-teal-700 transition-colors">Know More &rarr;</a>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200">Smart Gantt</span>
                     </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Production Planning</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1">Intelligent Scheduling & Line Optimization</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">Schedule customer orders against exact line capacities, section skills, and delivery deadlines with an intuitive digital planner.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Impact Section -->
-        <section class="py-32 relative" id="section-impact">
-            <div class="max-w-7xl mx-auto px-6 text-center">
-                <span data-aos="fade-up" class="text-accent-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Our Impact</span>
-                <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-6xl font-bold mb-6 text-gradient-primary">Beyond borders, beyond limits</h2>
-                <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-slate-800 mb-16 max-w-2xl mx-auto">
-                    Empowering manufacturers worldwide with cutting-edge technology and innovative solutions.
-                </p>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div data-aos="zoom-in" data-aos-delay="100" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">250+</div>
-                        <div class="text-slate-800">Active lines</div>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-delay="200" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">1M+</div>
-                        <div class="text-slate-800">Users</div>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-delay="300" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">50M+</div>
-                        <div class="text-slate-800">Pieces checked/month</div>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-delay="400" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">12</div>
-                        <div class="text-slate-800">Countries</div>
-                    </div>
+<!-- Modules Showcase -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto space-y-12">
+        <div class="text-center space-y-3 max-w-2xl mx-auto" data-aos="fade-up">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 inline-block">Garment Industry Modules</span>
+            <h3 class="text-3xl font-bold text-slate-900">End-to-End Digitalization for Apparel Factories</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div data-aos="flip-left" data-aos-delay="100" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                <div class="h-44 relative overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="QMS" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                    <span class="absolute bottom-3 left-3 text-xs font-semibold text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">QMS AI</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Partners Marquee -->
-        <section class="py-20 border-t border-slate-200 bg-black/40 backdrop-blur-md">
-            <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold text-slate-900">Trusted by Industry Leaders</h3>
+                <div class="p-5 space-y-2">
+                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Quality Management</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Inline fabric inspection, stitch defect tagging, and AQL automated scoring dashboards.</p>
+                </div>
             </div>
             
-            <div class="marquee-container w-full max-w-7xl mx-auto py-4">
-                <!-- First set -->
-                <div class="marquee-content">
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Arvind Ltd</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Shahi Exports</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Matrix</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Pearl Global</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Gokaldas</div>
+            <div data-aos="flip-left" data-aos-delay="200" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                <div class="h-44 relative overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Tracking" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                    <span class="absolute bottom-3 left-3 text-xs font-semibold text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">RFID & Barcode</span>
                 </div>
-                <!-- Duplicate for seamless scroll -->
-                <div class="marquee-content" aria-hidden="true">
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Arvind Ltd</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Shahi Exports</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Matrix</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Pearl Global</div>
-                    <div class="glass-panel px-8 py-4 rounded-xl flex items-center justify-center font-bold text-xl text-slate-800 min-w-[200px]">Gokaldas</div>
+                <div class="p-5 space-y-2">
+                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Production Tracking</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Real-time bundle tracking across sewing lines with real-time WIP updates.</p>
                 </div>
             </div>
-        </section>
+            
+            <div data-aos="flip-left" data-aos-delay="300" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                <div class="h-44 relative overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" alt="Cutting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                    <span class="absolute bottom-3 left-3 text-xs font-semibold text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">Smart Spreading</span>
+                </div>
+                <div class="p-5 space-y-2">
+                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Cutting Room</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Digital marker planning, fabric roll optimization, and automated ply-count tracking.</p>
+                </div>
+            </div>
+            
+            <div data-aos="flip-left" data-aos-delay="400" class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all group">
+                <div class="h-44 relative overflow-hidden bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=600&q=80" alt="Inventory" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                    <span class="absolute bottom-3 left-3 text-xs font-semibold text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">Warehouse IoT</span>
+                </div>
+                <div class="p-5 space-y-2">
+                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Inventory Management</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Barcode-driven roll allocation, shade grouping, and zero-loss fabric storage.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trusted Partners -->
+<section class="py-16 bg-slate-50 border-t border-slate-200 overflow-hidden">
+    <div class="text-center mb-10" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-slate-700">Trusted by Industry Leaders</h3>
+    </div>
+    <div class="relative flex overflow-x-hidden">
+        <div class="py-4 animate-marquee whitespace-nowrap flex items-center gap-8 px-4">
+            <div class="px-8 py-4 rounded-xl bg-white border border-slate-200 shadow-sm font-bold text-xl text-slate-700 min-w-[200px] text-center hover:scale-105 transition-transform">Arvind Ltd</div>
+            <div class="px-8 py-4 rounded-xl bg-white border border-slate-200 shadow-sm font-bold text-xl text-slate-700 min-w-[200px] text-center hover:scale-105 transition-transform">Shahi Exports</div>
+            <div class="px-8 py-4 rounded-xl bg-white border border-slate-200 shadow-sm font-bold text-xl text-slate-700 min-w-[200px] text-center hover:scale-105 transition-transform">PDS</div>
+            <div class="px-8 py-4 rounded-xl bg-white border border-slate-200 shadow-sm font-bold text-xl text-slate-700 min-w-[200px] text-center hover:scale-105 transition-transform">Modelama</div>
+            <div class="px-8 py-4 rounded-xl bg-white border border-slate-200 shadow-sm font-bold text-xl text-slate-700 min-w-[200px] text-center hover:scale-105 transition-transform">Armstrong</div>
+        </div>
+    </div>
+</section>
+
+<!-- ROI Banner -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 bg-sky-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+    <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+        <h2 data-aos="zoom-in" class="text-4xl sm:text-5xl font-bold tracking-tight">Ready to Digitize Your Factory?</h2>
+        <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-sky-100 max-w-2xl mx-auto">Join the 500+ production lines already using Track Tech Solutions to optimize their manufacturing.</p>
+        <div data-aos="fade-up" data-aos-delay="200" class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contact" class="bg-white text-sky-600 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:bg-slate-50 hover:scale-105 transition-all">Get a Custom Demo</a>
+            <a href="/roi-calculator" class="bg-sky-700/50 hover:bg-sky-700 text-white border border-sky-400/50 font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:scale-105 transition-all">Calculate ROI</a>
+        </div>
+    </div>
+</section>
+
 @endsection

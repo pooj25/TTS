@@ -23,19 +23,29 @@
                     },
                     colors: {
                         primary: {
-                            400: '#2dd4bf', // Teal 400
-                            500: '#14b8a6', // Teal 500
-                            600: '#0d9488', // Teal 600
+                            400: '#38bdf8', // Sky 400
+                            500: '#0ea5e9', // Sky 500
+                            600: '#0284c7', // Sky 600
                         },
                         accent: {
-                            400: '#a78bfa', // Violet 400
-                            500: '#8b5cf6', // Violet 500
-                            600: '#7c3aed', // Violet 600
+                            400: '#7dd3fc', // Sky 300
+                            500: '#38bdf8', // Sky 400
+                            600: '#0ea5e9', // Sky 500
                         },
                         dark: {
                             800: '#171329', // Deep space
                             900: '#0f0e17', // Obsidian
                             950: '#07070a', // Ultra dark
+                        }
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
                         }
                     }
                 }
@@ -350,9 +360,9 @@
         const velocities = [];
 
         const colorPalette = [
-            new THREE.Color(0x2dd4bf), // Teal
-            new THREE.Color(0x8b5cf6), // Violet
-            new THREE.Color(0xc084fc), // Light Purple
+            new THREE.Color(0x0ea5e9), // Sky Blue
+            new THREE.Color(0x0284c7), // Dark Sky
+            new THREE.Color(0x38bdf8), // Light Sky
             new THREE.Color(0x0f172a)  // Slate Dark
         ];
 
