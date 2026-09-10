@@ -353,7 +353,7 @@
             new THREE.Color(0x2dd4bf), // Teal
             new THREE.Color(0x8b5cf6), // Violet
             new THREE.Color(0xc084fc), // Light Purple
-            new THREE.Color(0xffffff)  // White
+            new THREE.Color(0x0f172a)  // Slate Dark
         ];
 
         for(let i = 0; i < particlesCount; i++) {

@@ -24,7 +24,7 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         GET DEMO
                     </a>
-                    <a href="#section-solutions" class="glass-panel text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all">
+                    <a href="#section-solutions" class="glass-panel text-slate-700 px-8 py-4 rounded-full font-medium hover:bg-slate-200 transition-all">
                         Learn More
                     </a>
                 </div>
@@ -119,7 +119,7 @@
                         <p class="text-slate-500 leading-relaxed mb-6">
                             Flawless Quality: Predict and prevent defects, automate checks, and ensure consistent excellence with our AI-powered Quality Control system.
                         </p>
-                        <a href="/solutions" class="text-sm font-semibold text-primary-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-primary-500 uppercase tracking-wider hover:text-primary-700 transition-colors">Know More &rarr;</a>
                     </div>
                     
                     <!-- Product 2 -->
@@ -131,7 +131,7 @@
                         <p class="text-slate-500 leading-relaxed mb-6">
                             Gain complete visibility of your production line with detailed tracking, from materials to finished products with real-time monitoring.
                         </p>
-                        <a href="/solutions" class="text-sm font-semibold text-accent-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-accent-500 uppercase tracking-wider hover:text-accent-700 transition-colors">Know More &rarr;</a>
                     </div>
 
                     <!-- Product 3 -->
@@ -143,7 +143,7 @@
                         <p class="text-slate-500 leading-relaxed mb-6">
                             Maximized Uptime: Unlock the full potential of your machines and track Overall Equipment Effectiveness (OEE) with predictive maintenance.
                         </p>
-                        <a href="/solutions" class="text-sm font-semibold text-purple-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-purple-500 uppercase tracking-wider hover:text-purple-700 transition-colors">Know More &rarr;</a>
                     </div>
 
                     <!-- Product 4 -->
@@ -155,7 +155,7 @@
                         <p class="text-slate-500 leading-relaxed mb-6">
                             Optimized Planning: Schedule orders against lines, sections, and locations with ease using our intuitive Production Planning module.
                         </p>
-                        <a href="/solutions" class="text-sm font-semibold text-teal-400 uppercase tracking-wider hover:text-white transition-colors">Know More &rarr;</a>
+                        <a href="/solutions" class="text-sm font-semibold text-teal-500 uppercase tracking-wider hover:text-teal-700 transition-colors">Know More &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -172,19 +172,19 @@
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div data-aos="zoom-in" data-aos-delay="100" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">250+</div>
+                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">250+</div>
                         <div class="text-slate-500">Active lines</div>
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="200" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">1M+</div>
+                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">1M+</div>
                         <div class="text-slate-500">Users</div>
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="300" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">50M+</div>
+                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">50M+</div>
                         <div class="text-slate-500">Pieces checked/month</div>
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="400" class="glass-card p-8 rounded-2xl">
-                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">12</div>
+                        <div class="text-4xl md:text-5xl font-bold text-slate-800 mb-2">12</div>
                         <div class="text-slate-500">Countries</div>
                     </div>
                 </div>
