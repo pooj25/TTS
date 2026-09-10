@@ -12,6 +12,7 @@ use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdminResourceController;
 use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\NewsletterController;
 
 
 // ===============================
@@ -76,6 +77,14 @@ Route::get('/contact', function () {
 
 Route::post('/contact', [ContactController::class, 'store'])
     ->name('contact.store');
+
+
+// ===============================
+// Newsletter
+// ===============================
+
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'store'])
+    ->name('newsletter.subscribe');
 
 
 // ===============================
