@@ -23,14 +23,14 @@
                     },
                     colors: {
                         primary: {
-                            400: '#38bdf8', // Sky 400
-                            500: '#0ea5e9', // Sky 500
-                            600: '#0284c7', // Sky 600
+                            400: '#818cf8', // Indigo 400
+                            500: '#6366f1', // Indigo 500
+                            600: '#4f46e5', // Indigo 600
                         },
                         accent: {
-                            400: '#7dd3fc', // Sky 300
-                            500: '#38bdf8', // Sky 400
-                            600: '#0ea5e9', // Sky 500
+                            400: '#34d399', // Emerald 400
+                            500: '#10b981', // Emerald 500
+                            600: '#059669', // Emerald 600
                         },
                         dark: {
                             800: '#171329', // Deep space
@@ -360,10 +360,10 @@
         const velocities = [];
 
         const colorPalette = [
-            new THREE.Color(0x0ea5e9), // Sky Blue
-            new THREE.Color(0x0284c7), // Dark Sky
-            new THREE.Color(0x38bdf8), // Light Sky
-            new THREE.Color(0x0f172a)  // Slate Dark
+            new THREE.Color(0x4f46e5), // Indigo
+            new THREE.Color(0x6366f1), // Light Indigo
+            new THREE.Color(0x10b981), // Emerald
+            new THREE.Color(0x1e293b)  // Slate
         ];
 
         for(let i = 0; i < particlesCount; i++) {
