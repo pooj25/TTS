@@ -53,7 +53,7 @@
         body {
             margin: 0;
             background-color: #f8fafc; /* Light Slate */
-            color: #0f172a; /* Dark text */
+            color: #020617; /* Dark text */
             overflow-x: hidden;
         }
 
@@ -213,11 +213,11 @@
                 </a>
                 
                 <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
-                    <a href="/products" class="text-slate-600 hover:text-primary-600 transition-colors">Products</a>
-                    <a href="/industries" class="text-slate-600 hover:text-primary-600 transition-colors">Business Stories</a>
-                    <a href="/about" class="text-slate-600 hover:text-primary-600 transition-colors">Company</a>
-                    <a href="/resources" class="text-slate-600 hover:text-primary-600 transition-colors">Resources</a>
-                    <a href="/contact" class="text-slate-600 hover:text-primary-600 transition-colors">Contact Us</a>
+                    <a href="/products" class="text-slate-900 hover:text-primary-600 transition-colors">Products</a>
+                    <a href="/industries" class="text-slate-900 hover:text-primary-600 transition-colors">Business Stories</a>
+                    <a href="/about" class="text-slate-900 hover:text-primary-600 transition-colors">Company</a>
+                    <a href="/resources" class="text-slate-900 hover:text-primary-600 transition-colors">Resources</a>
+                    <a href="/contact" class="text-slate-900 hover:text-primary-600 transition-colors">Contact Us</a>
                 </nav>
 
                 <div class="hidden md:block">
@@ -242,10 +242,10 @@
                             <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-8 h-8 object-contain bg-white rounded-full p-1 shadow-sm">
                             <span class="font-bold text-lg text-slate-800">Track Tech <span class="text-primary-500">Solution</span></span>
                         </div>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        <p class="text-slate-800 text-sm leading-relaxed mb-6">
                             From planning to production, data to decisions, seamlessly connect your entire operation. Boost efficiency, reduce waste, and achieve sustainability.
                         </p>
-                        <div class="flex flex-col gap-2 text-sm text-slate-500">
+                        <div class="flex flex-col gap-2 text-sm text-slate-800">
                             <a href="mailto:sales@tracktechsolutions.com" class="hover:text-primary-600">sales@tracktechsolutions.com</a>
                             <a href="tel:+919650613666" class="hover:text-primary-600">+91 96506 13666</a>
                         </div>
@@ -253,7 +253,7 @@
                     
                     <div>
                         <h4 class="font-semibold text-slate-800 mb-6">Company</h4>
-                        <ul class="space-y-3 text-sm text-slate-500">
+                        <ul class="space-y-3 text-sm text-slate-800">
                             <li><a href="/about" class="hover:text-primary-600">About Us</a></li>
                             <li><a href="/contact" class="hover:text-primary-600">Contact Us</a></li>
                             <li><a href="#" class="hover:text-primary-600">Careers</a></li>
@@ -262,7 +262,7 @@
 
                     <div>
                         <h4 class="font-semibold text-slate-800 mb-6">Products</h4>
-                        <ul class="space-y-3 text-sm text-slate-500">
+                        <ul class="space-y-3 text-sm text-slate-800">
                             <li><a href="/solutions" class="hover:text-primary-600">Quality Control</a></li>
                             <li><a href="/solutions" class="hover:text-primary-600">Production Tracking</a></li>
                             <li><a href="/solutions" class="hover:text-primary-600">Machine Maintenance</a></li>
@@ -272,7 +272,7 @@
 
                     <div>
                         <h4 class="font-semibold text-slate-800 mb-6">Resources</h4>
-                        <ul class="space-y-3 text-sm text-slate-500">
+                        <ul class="space-y-3 text-sm text-slate-800">
                             <li><a href="/resources" class="hover:text-primary-600">Success Stories</a></li>
                             <li><a href="/resources" class="hover:text-primary-600">FAQ</a></li>
                             <li><a href="/resources" class="hover:text-primary-600">Blog</a></li>
@@ -283,8 +283,8 @@
                 <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
                     <p>&copy; {{ date('Y') }} Track Tech Solution. All rights reserved.</p>
                     <div class="flex gap-6">
-                        <a href="#" class="hover:text-slate-600">Privacy Policy</a>
-                        <a href="#" class="hover:text-slate-600">Terms & Conditions</a>
+                        <a href="#" class="hover:text-slate-900">Privacy Policy</a>
+                        <a href="#" class="hover:text-slate-900">Terms & Conditions</a>
                     </div>
                 </div>
             </div>
