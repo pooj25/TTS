@@ -6,8 +6,11 @@
     <title>@yield('title', 'Track Tech Solution - The Missing Piece in Your Production Puzzle')</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
     
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,12 +19,23 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
                     },
                     colors: {
-                        sky: {
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
+                        primary: {
+                            400: '#2dd4bf', // Teal 400
+                            500: '#14b8a6', // Teal 500
+                            600: '#0d9488', // Teal 600
+                        },
+                        accent: {
+                            400: '#a78bfa', // Violet 400
+                            500: '#8b5cf6', // Violet 500
+                            600: '#7c3aed', // Violet 600
+                        },
+                        dark: {
+                            800: '#171329', // Deep space
+                            900: '#0f0e17', // Obsidian
+                            950: '#07070a', // Ultra dark
                         }
                     }
                 }
@@ -33,13 +47,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
         body {
             margin: 0;
-            background-color: #030712;
+            background-color: #0f0e17; /* Obsidian */
             color: #ffffff;
             overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
         }
 
         /* 3D Background Container */
@@ -59,45 +78,90 @@
             z-index: 10;
         }
 
-        /* Glassmorphism Utilities */
+        /* Premium Glassmorphism Utilities */
         .glass-panel {
-            background: rgba(17, 24, 39, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(23, 19, 41, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         }
         
         .glass-nav {
-            background: rgba(3, 7, 18, 0.7);
-            backdrop-filter: blur(16px);
+            background: rgba(15, 14, 23, 0.75);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
+        /* Spotlight Glass Card */
         .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(
+                135deg,
+                rgba(45, 212, 191, 0.4), /* Teal */
+                rgba(139, 92, 246, 0.4) /* Violet */
+            );
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.5s ease;
         }
 
         .glass-card:hover {
-            border-color: rgba(14, 165, 233, 0.4);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.3);
-            background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(45, 212, 191, 0.15);
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Spotlight mouse effect added via JS */
+        .glass-card.spotlight::after {
+            content: "";
+            position: absolute;
+            top: var(--y);
+            left: var(--x);
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .glass-card:hover::after {
+            opacity: 1;
         }
 
         /* Gradient Text */
         .text-gradient {
-            background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+            background: linear-gradient(135deg, #2dd4bf, #8b5cf6, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .text-gradient-blue {
-            background: linear-gradient(to right, #38bdf8, #2563eb);
+        .text-gradient-primary {
+            background: linear-gradient(to right, #2dd4bf, #0d9488);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -156,7 +220,7 @@
                 </nav>
 
                 <div class="hidden md:block">
-                    <a href="/contact" class="bg-sky-500 hover:bg-sky-400 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 text-sm">
+                    <a href="/contact" class="bg-primary-500 hover:bg-primary-400 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 text-sm">
                         Book Demo
                     </a>
                 </div>
@@ -227,19 +291,38 @@
 
     </div>
 
-    <!-- 3D Logic -->
+    <!-- 3D Logic & Spotlight Setup -->
     <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        // Initialize Spotlight Cards
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('spotlight');
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+
         gsap.registerPlugin(ScrollTrigger);
 
         // Scene Setup
         const container = document.getElementById('webgl-container');
         const scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0x030712, 0.025);
+        scene.fog = new THREE.FogExp2(0x0f0e17, 0.02); // Obsidian fog
 
         // Camera
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 30;
-        camera.position.y = 10;
+        camera.position.z = 40;
+        camera.position.y = 15;
         camera.position.x = 0;
 
         // Renderer
@@ -248,158 +331,130 @@
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         container.appendChild(renderer.domElement);
 
-        // Main Group
-        const factoryGroup = new THREE.Group();
-        scene.add(factoryGroup);
+        // Main Tech Group
+        const techGroup = new THREE.Group();
+        scene.add(techGroup);
 
-        // 1. Core Grid Floor
-        const gridHelper = new THREE.GridHelper(150, 75, 0x0ea5e9, 0x1e293b);
-        gridHelper.position.y = -10;
-        gridHelper.material.opacity = 0.2;
+        // 1. Digital Grid Floor
+        const gridHelper = new THREE.GridHelper(200, 100, 0x14b8a6, 0x171329); // Teal and Deep Purple
+        gridHelper.position.y = -15;
+        gridHelper.material.opacity = 0.15;
         gridHelper.material.transparent = true;
         scene.add(gridHelper);
 
-        // 2. Data Nodes (Particles)
-        const particlesCount = 2000;
+        // 2. Data Constellation (Nodes)
+        const particlesCount = 800; // Less particles but connected for premium feel
         const positions = new Float32Array(particlesCount * 3);
         const colors = new Float32Array(particlesCount * 3);
+        const velocities = [];
 
         const colorPalette = [
-            new THREE.Color(0x38bdf8), // Sky
-            new THREE.Color(0x818cf8), // Indigo
-            new THREE.Color(0xc084fc), // Purple
+            new THREE.Color(0x2dd4bf), // Teal
+            new THREE.Color(0x8b5cf6), // Violet
+            new THREE.Color(0xc084fc), // Light Purple
             new THREE.Color(0xffffff)  // White
         ];
 
-        for(let i = 0; i < particlesCount * 3; i+=3) {
-            positions[i] = (Math.random() - 0.5) * 100;
-            positions[i+1] = (Math.random() - 0.5) * 60 + 10;
-            positions[i+2] = (Math.random() - 0.5) * 80;
+        for(let i = 0; i < particlesCount; i++) {
+            const i3 = i * 3;
+            // Sphere distribution
+            const radius = 60;
+            const theta = Math.random() * 2 * Math.PI;
+            const phi = Math.acos(2 * Math.random() - 1);
+            
+            positions[i3] = radius * Math.sin(phi) * Math.cos(theta);
+            positions[i3+1] = radius * Math.sin(phi) * Math.sin(theta) + 5;
+            positions[i3+2] = radius * Math.cos(phi) - 20;
 
             const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
-            colors[i] = color.r;
-            colors[i+1] = color.g;
-            colors[i+2] = color.b;
+            colors[i3] = color.r;
+            colors[i3+1] = color.g;
+            colors[i3+2] = color.b;
+
+            // Slow drift velocity
+            velocities.push({
+                x: (Math.random() - 0.5) * 0.05,
+                y: (Math.random() - 0.5) * 0.05,
+                z: (Math.random() - 0.5) * 0.05
+            });
         }
 
         const particleGeo = new THREE.BufferGeometry();
         particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
         particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-        // Create a glow texture for particles
+        // Circular soft texture
         const canvas = document.createElement('canvas');
-        canvas.width = 16;
-        canvas.height = 16;
+        canvas.width = 32;
+        canvas.height = 32;
         const context = canvas.getContext('2d');
-        const gradient = context.createRadialGradient(8, 8, 0, 8, 8, 8);
+        const gradient = context.createRadialGradient(16, 16, 0, 16, 16, 16);
         gradient.addColorStop(0, 'rgba(255,255,255,1)');
+        gradient.addColorStop(0.2, 'rgba(255,255,255,0.8)');
         gradient.addColorStop(1, 'rgba(255,255,255,0)');
         context.fillStyle = gradient;
-        context.fillRect(0, 0, 16, 16);
+        context.fillRect(0, 0, 32, 32);
         const texture = new THREE.CanvasTexture(canvas);
 
         const particleMat = new THREE.PointsMaterial({
-            size: 0.8,
+            size: 1.2,
             vertexColors: true,
             map: texture,
             transparent: true,
-            opacity: 0.8,
+            opacity: 0.9,
             blending: THREE.AdditiveBlending,
             depthWrite: false
         });
 
         const particles = new THREE.Points(particleGeo, particleMat);
-        factoryGroup.add(particles);
+        techGroup.add(particles);
 
-        // 3. Connective Lines (Network)
+        // 3. Connective Lines (Data Network)
+        const maxConnections = 1200;
         const lineGeo = new THREE.BufferGeometry();
-        const linePos = [];
-        for(let i=0; i<300; i++) {
-            const idx1 = Math.floor(Math.random() * particlesCount) * 3;
-            const idx2 = Math.floor(Math.random() * particlesCount) * 3;
-            
-            // Only connect if they are relatively close
-            const dist = Math.sqrt(
-                Math.pow(positions[idx1] - positions[idx2], 2) +
-                Math.pow(positions[idx1+1] - positions[idx2+1], 2) +
-                Math.pow(positions[idx1+2] - positions[idx2+2], 2)
-            );
+        // preallocate arrays
+        const linePos = new Float32Array(maxConnections * 6);
+        const lineOpacities = new Float32Array(maxConnections * 2);
+        
+        lineGeo.setAttribute('position', new THREE.BufferAttribute(linePos, 3));
+        lineGeo.setAttribute('color', new THREE.BufferAttribute(new Float32Array(maxConnections * 6).fill(1), 3)); // Will override with shader if needed, but basic line is fine
 
-            if(dist < 20) {
-                linePos.push(
-                    positions[idx1], positions[idx1+1], positions[idx1+2],
-                    positions[idx2], positions[idx2+1], positions[idx2+2]
-                );
-            }
-        }
-        lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(linePos, 3));
         const lineMat = new THREE.LineBasicMaterial({
-            color: 0x38bdf8,
+            color: 0x14b8a6, // Teal lines
             transparent: true,
             opacity: 0.15,
             blending: THREE.AdditiveBlending
         });
-        const lines = new THREE.LineSegments(lineGeo, lineMat);
-        factoryGroup.add(lines);
-
-        // 4. Floating geometric shapes (Machines/Servers)
-        const shapes = [];
-        const shapeGeo = new THREE.IcosahedronGeometry(1.5, 0);
-        const shapeMat = new THREE.MeshBasicMaterial({
-            color: 0x0ea5e9,
-            wireframe: true,
-            transparent: true,
-            opacity: 0.3
-        });
-
-        for(let i=0; i<15; i++) {
-            const mesh = new THREE.Mesh(shapeGeo, shapeMat);
-            mesh.position.set(
-                (Math.random() - 0.5) * 60,
-                (Math.random() - 0.5) * 30 + 5,
-                (Math.random() - 0.5) * 40
-            );
-            mesh.userData = {
-                rotSpeedX: (Math.random() - 0.5) * 0.02,
-                rotSpeedY: (Math.random() - 0.5) * 0.02,
-                floatOffset: Math.random() * Math.PI * 2
-            };
-            factoryGroup.add(mesh);
-            shapes.push(mesh);
-        }
+        const linesMesh = new THREE.LineSegments(lineGeo, lineMat);
+        techGroup.add(linesMesh);
 
         // Scroll Animations using GSAP
-        // We will move the camera and rotate the group based on scroll position
-        
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "body",
                 start: "top top",
                 end: "bottom bottom",
-                scrub: 1
+                scrub: 1.5 // Smooth scrub
             }
         });
 
         // Rotate scene globally as we scroll
-        tl.to(factoryGroup.rotation, {
-            y: Math.PI * 1.5,
-            x: Math.PI * 0.1,
+        tl.to(techGroup.rotation, {
+            y: Math.PI * 1.2,
+            x: Math.PI * 0.05,
             ease: "none"
         }, 0);
 
-        // Move camera closer and down
+        // Move camera closer
         tl.to(camera.position, {
-            z: 15,
+            z: 20,
             y: 5,
-            ease: "power1.inOut"
+            ease: "power2.inOut"
         }, 0);
-
 
         // Mouse Interaction
         let mouseX = 0;
         let mouseY = 0;
-        let targetX = 0;
-        let targetY = 0;
         const windowHalfX = window.innerWidth / 2;
         const windowHalfY = window.innerHeight / 2;
 
@@ -409,36 +464,63 @@
         });
 
         // Animation Loop
-        const clock = new THREE.Clock();
-
         function animate() {
             requestAnimationFrame(animate);
-            const time = clock.getElapsedTime();
 
-            // Smooth mouse follow
-            targetX = mouseX * 0.001;
-            targetY = mouseY * 0.001;
-            
-            // Add subtle sway to the whole group based on mouse
-            factoryGroup.rotation.y += 0.001; // Constant slow spin
-            camera.position.x += (mouseX * 0.02 - camera.position.x) * 0.05;
-            camera.position.y += (-mouseY * 0.02 - (camera.position.y - 10)) * 0.05;
+            // Smooth mouse follow (Parallax)
+            techGroup.rotation.y += 0.0005; // Constant slow spin
+            camera.position.x += (mouseX * 0.015 - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY * 0.015 - (camera.position.y - 15)) * 0.05;
             camera.lookAt(scene.position);
 
-            // Animate floating shapes
-            shapes.forEach(shape => {
-                shape.rotation.x += shape.userData.rotSpeedX;
-                shape.rotation.y += shape.userData.rotSpeedY;
-                shape.position.y += Math.sin(time * 2 + shape.userData.floatOffset) * 0.01;
-            });
-
-            // Wavy particles
-            const positions = particles.geometry.attributes.position.array;
+            // Animate particles (Drift)
+            const posArray = particles.geometry.attributes.position.array;
+            
+            // Recompute lines dynamically
+            let lineIdx = 0;
+            
             for(let i = 0; i < particlesCount; i++) {
                 const i3 = i * 3;
-                positions[i3 + 1] += Math.sin(time + positions[i3]*0.1) * 0.02;
+                
+                // Move particle
+                posArray[i3] += velocities[i].x;
+                posArray[i3+1] += velocities[i].y;
+                posArray[i3+2] += velocities[i].z;
+
+                // Bounce off invisible sphere boundary
+                const dist = Math.sqrt(posArray[i3]**2 + posArray[i3+1]**2 + posArray[i3+2]**2);
+                if (dist > 80) {
+                    velocities[i].x *= -1;
+                    velocities[i].y *= -1;
+                    velocities[i].z *= -1;
+                }
+
+                // Connect lines to nearby particles
+                for (let j = i + 1; j < particlesCount; j++) {
+                    const j3 = j * 3;
+                    const dx = posArray[i3] - posArray[j3];
+                    const dy = posArray[i3+1] - posArray[j3+1];
+                    const dz = posArray[i3+2] - posArray[j3+2];
+                    const distSq = dx*dx + dy*dy + dz*dz;
+
+                    if (distSq < 150 && lineIdx < maxConnections * 6) { // Distance threshold for connection
+                        linePos[lineIdx++] = posArray[i3];
+                        linePos[lineIdx++] = posArray[i3+1];
+                        linePos[lineIdx++] = posArray[i3+2];
+                        linePos[lineIdx++] = posArray[j3];
+                        linePos[lineIdx++] = posArray[j3+1];
+                        linePos[lineIdx++] = posArray[j3+2];
+                    }
+                }
             }
+            
+            // Clear remaining line positions
+            while(lineIdx < maxConnections * 6) {
+                linePos[lineIdx++] = 0;
+            }
+
             particles.geometry.attributes.position.needsUpdate = true;
+            linesMesh.geometry.attributes.position.needsUpdate = true;
 
             renderer.render(scene, camera);
         }
