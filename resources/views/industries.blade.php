@@ -12,8 +12,8 @@
             <div class="max-w-4xl relative z-10">
 
                 <div class="inline-flex items-center gap-2
-                            px-4 py-2 glass-panel border border-white/10
-                            rounded-full text-sm font-medium mb-7 text-white">
+                            px-4 py-2 glass-panel border border-slate-300
+                            rounded-full text-sm font-medium mb-7 text-slate-800">
 
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
 
@@ -22,7 +22,7 @@
                 </div>
 
 
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-800">
                     Digital solutions for
                     <span class="text-gradient">
                         manufacturing industries.
@@ -30,7 +30,7 @@
                 </h1>
 
 
-                <p class="mt-7 text-lg lg:text-xl text-gray-300 leading-8 max-w-3xl">
+                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl">
 
                     We help manufacturing businesses connect their
                     operations, improve productivity and gain real-time
@@ -46,7 +46,7 @@
 
 
     <!-- INDUSTRIES -->
-    <section class="py-24 relative border-t border-white/5 bg-black/20">
+    <section class="py-24 relative border-t border-slate-200 bg-black/20">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -57,13 +57,13 @@
                 </p>
 
 
-                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-white">
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-slate-800">
                     Technology designed around
                     real factory operations.
                 </h2>
 
 
-                <p class="mt-6 text-lg text-gray-400 leading-8">
+                <p class="mt-6 text-lg text-slate-600 leading-8">
                     Every industry has different workflows and challenges.
                     Our solutions can be configured to match your
                     operational requirements.
@@ -76,9 +76,9 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14 relative z-10">
 
                 <!-- Apparel -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-white/10">
+                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-slate-300">
 
-                    <div class="h-60 bg-white/5 border-b border-white/10 flex items-center justify-center">
+                    <div class="h-60 bg-white/5 border-b border-slate-300 flex items-center justify-center">
                         <div class="text-7xl group-hover:scale-110 transition">
                             👕
                         </div>
@@ -89,26 +89,26 @@
                             INDUSTRY 01
                         </p>
 
-                        <h3 class="text-2xl font-bold mt-3 text-white">
+                        <h3 class="text-2xl font-bold mt-3 text-slate-800">
                             Apparel Manufacturing
                         </h3>
 
-                        <p class="mt-5 text-gray-400 leading-7">
+                        <p class="mt-5 text-slate-600 leading-7">
                             Digitise fabric, cutting, production,
                             quality and dispatch processes for
                             apparel factories.
                         </p>
 
-                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-white transition">
+                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-slate-800 transition">
                             Explore Industry →
                         </div>
                     </div>
                 </div>
 
                 <!-- Textile -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-white/10">
+                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-slate-300">
 
-                    <div class="h-60 bg-white/5 border-b border-white/10 flex items-center justify-center">
+                    <div class="h-60 bg-white/5 border-b border-slate-300 flex items-center justify-center">
                         <div class="text-7xl group-hover:scale-110 transition">
                             🧵
                         </div>
@@ -119,17 +119,17 @@
                             INDUSTRY 02
                         </p>
 
-                        <h3 class="text-2xl font-bold mt-3 text-white">
+                        <h3 class="text-2xl font-bold mt-3 text-slate-800">
                             Textile Manufacturing
                         </h3>
 
-                        <p class="mt-5 text-gray-400 leading-7">
+                        <p class="mt-5 text-slate-600 leading-7">
                             Improve visibility across materials,
                             production workflows and operational
                             performance.
                         </p>
 
-                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-white transition">
+                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-slate-800 transition">
                             Explore Industry →
                         </div>
                     </div>
@@ -137,9 +137,9 @@
 
 
                 <!-- Garment -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-white/10">
+                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-slate-300">
 
-                    <div class="h-60 bg-white/5 border-b border-white/10 flex items-center justify-center">
+                    <div class="h-60 bg-white/5 border-b border-slate-300 flex items-center justify-center">
                         <div class="text-7xl group-hover:scale-110 transition">
                             🏭
                         </div>
@@ -150,16 +150,16 @@
                             INDUSTRY 03
                         </p>
 
-                        <h3 class="text-2xl font-bold mt-3 text-white">
+                        <h3 class="text-2xl font-bold mt-3 text-slate-800">
                             Garment Production
                         </h3>
 
-                        <p class="mt-5 text-gray-400 leading-7">
+                        <p class="mt-5 text-slate-600 leading-7">
                             Track orders, production lines, operators
                             and quality performance in real time.
                         </p>
 
-                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-white transition">
+                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-slate-800 transition">
                             Explore Industry →
                         </div>
                     </div>
@@ -167,9 +167,9 @@
 
 
                 <!-- Footwear -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-white/10">
+                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-slate-300">
 
-                    <div class="h-60 bg-white/5 border-b border-white/10 flex items-center justify-center">
+                    <div class="h-60 bg-white/5 border-b border-slate-300 flex items-center justify-center">
                         <div class="text-7xl group-hover:scale-110 transition">
                             👟
                         </div>
@@ -180,16 +180,16 @@
                             INDUSTRY 04
                         </p>
 
-                        <h3 class="text-2xl font-bold mt-3 text-white">
+                        <h3 class="text-2xl font-bold mt-3 text-slate-800">
                             Footwear Manufacturing
                         </h3>
 
-                        <p class="mt-5 text-gray-400 leading-7">
+                        <p class="mt-5 text-slate-600 leading-7">
                             Connect production processes and monitor
                             manufacturing performance digitally.
                         </p>
 
-                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-white transition">
+                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-slate-800 transition">
                             Explore Industry →
                         </div>
                     </div>
@@ -197,9 +197,9 @@
 
 
                 <!-- Home Textiles -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-white/10">
+                <div class="glass-card rounded-3xl overflow-hidden group hover:-translate-y-2 transition duration-300 border border-slate-300">
 
-                    <div class="h-60 bg-white/5 border-b border-white/10 flex items-center justify-center">
+                    <div class="h-60 bg-white/5 border-b border-slate-300 flex items-center justify-center">
                         <div class="text-7xl group-hover:scale-110 transition">
                             🛏️
                         </div>
@@ -210,16 +210,16 @@
                             INDUSTRY 05
                         </p>
 
-                        <h3 class="text-2xl font-bold mt-3 text-white">
+                        <h3 class="text-2xl font-bold mt-3 text-slate-800">
                             Home Textiles
                         </h3>
 
-                        <p class="mt-5 text-gray-400 leading-7">
+                        <p class="mt-5 text-slate-600 leading-7">
                             Digitise material tracking, production
                             monitoring and quality management.
                         </p>
 
-                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-white transition">
+                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-slate-800 transition">
                             Explore Industry →
                         </div>
                     </div>
@@ -241,16 +241,16 @@
                             INDUSTRY 06
                         </p>
 
-                        <h3 class="text-2xl font-bold mt-3 text-white">
+                        <h3 class="text-2xl font-bold mt-3 text-slate-800">
                             Smart Manufacturing
                         </h3>
 
-                        <p class="mt-5 text-gray-300 leading-7">
+                        <p class="mt-5 text-slate-700 leading-7">
                             Build connected factories using IoT,
                             real-time data and intelligent dashboards.
                         </p>
 
-                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-white transition">
+                        <div class="mt-7 font-semibold text-sm text-sky-400 group-hover:text-slate-800 transition">
                             Talk to Us →
                         </div>
                     </div>
@@ -275,12 +275,12 @@
                         Manufacturing Challenges
                     </p>
 
-                    <h2 class="text-4xl lg:text-5xl font-bold mt-4 leading-tight text-white">
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-4 leading-tight text-slate-800">
                         We solve problems
                         that slow factories down.
                     </h2>
 
-                    <p class="mt-6 text-lg text-gray-300 leading-8">
+                    <p class="mt-6 text-lg text-slate-700 leading-8">
                         Manual processes, disconnected systems and
                         limited visibility can make manufacturing
                         operations difficult to manage.
@@ -290,43 +290,43 @@
 
                 <div class="space-y-4">
 
-                    <div class="glass-panel border border-white/10 rounded-2xl p-6 flex gap-5 group">
-                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-sky-500/20 transition">
+                    <div class="glass-panel border border-slate-300 rounded-2xl p-6 flex gap-5 group">
+                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-slate-300 group-hover:bg-sky-500/20 transition">
                             📄
                         </div>
                         <div>
-                            <h3 class="font-bold text-white">Paper-based Processes</h3>
-                            <p class="text-gray-400 text-sm mt-2">Replace manual records with digital workflows.</p>
+                            <h3 class="font-bold text-slate-800">Paper-based Processes</h3>
+                            <p class="text-slate-600 text-sm mt-2">Replace manual records with digital workflows.</p>
                         </div>
                     </div>
 
-                    <div class="glass-panel border border-white/10 rounded-2xl p-6 flex gap-5 group">
-                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-sky-500/20 transition">
+                    <div class="glass-panel border border-slate-300 rounded-2xl p-6 flex gap-5 group">
+                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-slate-300 group-hover:bg-sky-500/20 transition">
                             🔗
                         </div>
                         <div>
-                            <h3 class="font-bold text-white">Disconnected Operations</h3>
-                            <p class="text-gray-400 text-sm mt-2">Connect information across departments.</p>
+                            <h3 class="font-bold text-slate-800">Disconnected Operations</h3>
+                            <p class="text-slate-600 text-sm mt-2">Connect information across departments.</p>
                         </div>
                     </div>
 
-                    <div class="glass-panel border border-white/10 rounded-2xl p-6 flex gap-5 group">
-                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-sky-500/20 transition">
+                    <div class="glass-panel border border-slate-300 rounded-2xl p-6 flex gap-5 group">
+                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-slate-300 group-hover:bg-sky-500/20 transition">
                             👁️
                         </div>
                         <div>
-                            <h3 class="font-bold text-white">Limited Visibility</h3>
-                            <p class="text-gray-400 text-sm mt-2">Get real-time visibility into factory performance.</p>
+                            <h3 class="font-bold text-slate-800">Limited Visibility</h3>
+                            <p class="text-slate-600 text-sm mt-2">Get real-time visibility into factory performance.</p>
                         </div>
                     </div>
 
-                    <div class="glass-panel border border-white/10 rounded-2xl p-6 flex gap-5 group">
-                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-white/10 group-hover:bg-sky-500/20 transition">
+                    <div class="glass-panel border border-slate-300 rounded-2xl p-6 flex gap-5 group">
+                        <div class="text-2xl w-12 h-12 flex justify-center items-center bg-white/5 rounded-xl border border-slate-300 group-hover:bg-sky-500/20 transition">
                             📉
                         </div>
                         <div>
-                            <h3 class="font-bold text-white">Productivity Loss</h3>
-                            <p class="text-gray-400 text-sm mt-2">Identify bottlenecks and improve efficiency.</p>
+                            <h3 class="font-bold text-slate-800">Productivity Loss</h3>
+                            <p class="text-slate-600 text-sm mt-2">Identify bottlenecks and improve efficiency.</p>
                         </div>
                     </div>
 
@@ -340,7 +340,7 @@
 
 
     <!-- WORKFLOW -->
-    <section class="py-24 relative border-t border-white/5 bg-black/20">
+    <section class="py-24 relative border-t border-slate-200 bg-black/20">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
@@ -349,7 +349,7 @@
                     Connected Factory
                 </p>
 
-                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-white">
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-slate-800">
                     One digital ecosystem
                     for your factory.
                 </h2>
@@ -358,32 +358,32 @@
 
             <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mt-16">
 
-                <div class="glass-card border border-white/10 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
+                <div class="glass-card border border-slate-300 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
                     <div class="text-3xl group-hover:scale-110 transition">🧵</div>
-                    <p class="font-semibold mt-3 text-white">Fabric</p>
+                    <p class="font-semibold mt-3 text-slate-800">Fabric</p>
                 </div>
 
-                <div class="glass-card border border-white/10 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
+                <div class="glass-card border border-slate-300 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
                     <div class="text-3xl group-hover:scale-110 transition">✂️</div>
-                    <p class="font-semibold mt-3 text-white">Cutting</p>
+                    <p class="font-semibold mt-3 text-slate-800">Cutting</p>
                 </div>
 
-                <div class="glass-card border border-white/10 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
+                <div class="glass-card border border-slate-300 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
                     <div class="text-3xl group-hover:scale-110 transition">⚙️</div>
-                    <p class="font-semibold mt-3 text-white">Production</p>
+                    <p class="font-semibold mt-3 text-slate-800">Production</p>
                 </div>
 
-                <div class="glass-card border border-white/10 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
+                <div class="glass-card border border-slate-300 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
                     <div class="text-3xl group-hover:scale-110 transition">✓</div>
-                    <p class="font-semibold mt-3 text-white">Quality</p>
+                    <p class="font-semibold mt-3 text-slate-800">Quality</p>
                 </div>
 
-                <div class="glass-card border border-white/10 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
+                <div class="glass-card border border-slate-300 rounded-2xl p-6 text-center group hover:-translate-y-2 transition">
                     <div class="text-3xl group-hover:scale-110 transition">📦</div>
-                    <p class="font-semibold mt-3 text-white">Packing</p>
+                    <p class="font-semibold mt-3 text-slate-800">Packing</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-2xl p-6 text-center group hover:-translate-y-2 transition shadow-lg shadow-sky-500/20">
+                <div class="bg-gradient-to-br from-sky-500 to-blue-600 text-slate-800 rounded-2xl p-6 text-center group hover:-translate-y-2 transition shadow-lg shadow-sky-500/20">
                     <div class="text-3xl group-hover:scale-110 transition">🚚</div>
                     <p class="font-semibold mt-3">Dispatch</p>
                 </div>
@@ -408,18 +408,18 @@
                 Transform Your Operations
             </p>
 
-            <h2 class="text-4xl lg:text-6xl font-bold mt-5 text-white">
+            <h2 class="text-4xl lg:text-6xl font-bold mt-5 text-slate-800">
                 Ready to build a
                 smarter factory?
             </h2>
 
-            <p class="mt-6 text-gray-300 text-lg leading-8">
+            <p class="mt-6 text-slate-700 text-lg leading-8">
                 Let's explore how digital technology can improve
                 your manufacturing operations.
             </p>
 
             <a href="/contact"
-               class="inline-flex mt-9 bg-gradient-to-r from-sky-500 to-blue-600 text-white
+               class="inline-flex mt-9 bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800
                       px-8 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-1 transition-all">
                 Book a Demo →
             </a>

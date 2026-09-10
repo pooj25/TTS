@@ -20,7 +20,7 @@
 
                     <!-- BACK -->
                     <a href="/products"
-                       class="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white transition mb-8 group">
+                       class="inline-flex items-center text-sm font-medium text-slate-600 hover:text-slate-800 transition mb-8 group">
                         <span class="mr-2 group-hover:-translate-x-1 transition">←</span> Back to Products
                     </a>
 
@@ -28,7 +28,7 @@
                     <!-- CATEGORY -->
                     @if($product->category)
                         <div class="mb-6">
-                            <span class="inline-flex px-4 py-2 glass-panel border border-white/10 rounded-full text-sm font-medium text-sky-400">
+                            <span class="inline-flex px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-medium text-sky-400">
                                 {{ $product->category }}
                             </span>
                         </div>
@@ -36,14 +36,14 @@
 
 
                     <!-- TITLE -->
-                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-800">
                         {{ $product->name }}
                     </h1>
 
 
                     <!-- SHORT DESCRIPTION -->
                     @if($product->short_description)
-                        <p class="mt-7 text-lg lg:text-xl text-gray-300 leading-8">
+                        <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8">
                             {{ $product->short_description }}
                         </p>
                     @endif
@@ -52,12 +52,12 @@
                     <!-- CTA -->
                     <div class="mt-9 flex flex-wrap gap-4">
                         <a href="/contact"
-                           class="inline-flex bg-gradient-to-r from-sky-500 to-blue-600 text-white px-7 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition">
+                           class="inline-flex bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800 px-7 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition">
                             Book a Demo →
                         </a>
 
                         <a href="/products"
-                           class="inline-flex bg-white/5 border border-white/10 text-white px-7 py-4 rounded-full font-semibold hover:bg-white/10 transition">
+                           class="inline-flex bg-white/5 border border-slate-300 text-slate-800 px-7 py-4 rounded-full font-semibold hover:bg-slate-200 transition">
                             View All Products
                         </a>
                     </div>
@@ -68,12 +68,12 @@
                 <!-- RIGHT PRODUCT ICON -->
                 <div>
 
-                    <div class="h-96 glass-card border border-white/10 rounded-3xl flex items-center justify-center relative overflow-hidden group">
+                    <div class="h-96 glass-card border border-slate-300 rounded-3xl flex items-center justify-center relative overflow-hidden group">
                         
                         <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-blue-600/10 opacity-50"></div>
                         <div class="absolute -inset-10 bg-sky-500/20 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition duration-700"></div>
 
-                        <div class="w-40 h-40 rounded-[2rem] glass-panel border border-white/20 text-white flex items-center justify-center text-7xl shadow-xl shadow-sky-500/10 group-hover:scale-110 group-hover:rotate-6 transition duration-500 relative z-10">
+                        <div class="w-40 h-40 rounded-[2rem] glass-panel border border-white/20 text-slate-800 flex items-center justify-center text-7xl shadow-xl shadow-sky-500/10 group-hover:scale-110 group-hover:rotate-6 transition duration-500 relative z-10">
                             {{ $product->icon ?? '📦' }}
                         </div>
 
@@ -93,7 +93,7 @@
          PRODUCT DETAILS
     ================================ -->
 
-    <section class="py-24 relative border-t border-b border-white/5 bg-black/20">
+    <section class="py-24 relative border-t border-b border-slate-200 bg-black/20">
 
         <div class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
 
@@ -103,18 +103,18 @@
                     Product Overview
                 </p>
 
-                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-white">
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-slate-800">
                     Built for smarter
                     manufacturing.
                 </h2>
 
 
                 @if($product->description)
-                    <div class="mt-8 text-lg text-gray-300 leading-8 whitespace-pre-line">
+                    <div class="mt-8 text-lg text-slate-700 leading-8 whitespace-pre-line">
                         {{ $product->description }}
                     </div>
                 @else
-                    <p class="mt-8 text-lg text-gray-300 leading-8">
+                    <p class="mt-8 text-lg text-slate-700 leading-8">
                         {{ $product->short_description
                             ?? 'This Track Tech Solutions product is designed to improve factory visibility, productivity and operational efficiency.' }}
                     </p>
@@ -142,12 +142,12 @@
                     Why Choose This Product
                 </p>
 
-                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-white">
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-slate-800">
                     Designed for the
                     factory floor.
                 </h2>
 
-                <p class="mt-6 text-gray-400 text-lg leading-8">
+                <p class="mt-6 text-slate-600 text-lg leading-8">
                     Track Tech Solutions products are designed
                     around real manufacturing workflows.
                 </p>
@@ -158,16 +158,16 @@
             <div class="grid md:grid-cols-3 gap-6 mt-16">
 
                 <!-- FEATURE 1 -->
-                <div class="glass-card border border-white/10 rounded-3xl p-8 group hover:-translate-y-2 transition duration-300">
-                    <div class="text-3xl w-14 h-14 bg-white/5 border border-white/10 flex items-center justify-center rounded-2xl group-hover:bg-sky-500/20 transition">
+                <div class="glass-card border border-slate-300 rounded-3xl p-8 group hover:-translate-y-2 transition duration-300">
+                    <div class="text-3xl w-14 h-14 bg-white/5 border border-slate-300 flex items-center justify-center rounded-2xl group-hover:bg-sky-500/20 transition">
                         ⚡
                     </div>
 
-                    <h3 class="text-xl font-bold mt-6 text-white">
+                    <h3 class="text-xl font-bold mt-6 text-slate-800">
                         Real-time Visibility
                     </h3>
 
-                    <p class="mt-4 text-gray-400 leading-7">
+                    <p class="mt-4 text-slate-600 leading-7">
                         Access important operational information
                         quickly and make better decisions.
                     </p>
@@ -175,16 +175,16 @@
 
 
                 <!-- FEATURE 2 -->
-                <div class="glass-card border border-white/10 rounded-3xl p-8 group hover:-translate-y-2 transition duration-300">
-                    <div class="text-3xl w-14 h-14 bg-white/5 border border-white/10 flex items-center justify-center rounded-2xl group-hover:bg-sky-500/20 transition">
+                <div class="glass-card border border-slate-300 rounded-3xl p-8 group hover:-translate-y-2 transition duration-300">
+                    <div class="text-3xl w-14 h-14 bg-white/5 border border-slate-300 flex items-center justify-center rounded-2xl group-hover:bg-sky-500/20 transition">
                         📊
                     </div>
 
-                    <h3 class="text-xl font-bold mt-6 text-white">
+                    <h3 class="text-xl font-bold mt-6 text-slate-800">
                         Better Insights
                     </h3>
 
-                    <p class="mt-4 text-gray-400 leading-7">
+                    <p class="mt-4 text-slate-600 leading-7">
                         Turn factory data into useful information
                         for monitoring and analysis.
                     </p>
@@ -192,16 +192,16 @@
 
 
                 <!-- FEATURE 3 -->
-                <div class="glass-card border border-white/10 rounded-3xl p-8 group hover:-translate-y-2 transition duration-300">
-                    <div class="text-3xl w-14 h-14 bg-white/5 border border-white/10 flex items-center justify-center rounded-2xl group-hover:bg-sky-500/20 transition">
+                <div class="glass-card border border-slate-300 rounded-3xl p-8 group hover:-translate-y-2 transition duration-300">
+                    <div class="text-3xl w-14 h-14 bg-white/5 border border-slate-300 flex items-center justify-center rounded-2xl group-hover:bg-sky-500/20 transition">
                         🚀
                     </div>
 
-                    <h3 class="text-xl font-bold mt-6 text-white">
+                    <h3 class="text-xl font-bold mt-6 text-slate-800">
                         Improved Productivity
                     </h3>
 
-                    <p class="mt-4 text-gray-400 leading-7">
+                    <p class="mt-4 text-slate-600 leading-7">
                         Simplify workflows and help teams operate
                         more efficiently.
                     </p>
@@ -223,7 +223,7 @@
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-            <div class="glass-panel border border-white/10 rounded-[2rem] p-10 lg:p-16 relative overflow-hidden group">
+            <div class="glass-panel border border-slate-300 rounded-[2rem] p-10 lg:p-16 relative overflow-hidden group">
                 
                 <div class="absolute -inset-2 bg-gradient-to-r from-sky-500 to-blue-600 rounded-[2rem] blur opacity-0 group-hover:opacity-20 transition duration-1000"></div>
 
@@ -234,16 +234,16 @@
                             Track Tech Solutions
                         </p>
 
-                        <h2 class="text-4xl lg:text-5xl font-bold mt-5 leading-tight text-white">
+                        <h2 class="text-4xl lg:text-5xl font-bold mt-5 leading-tight text-slate-800">
                             Transform your factory
                             with digital technology.
                         </h2>
                     </div>
 
                     <div>
-                        <p class="text-gray-300 text-lg leading-8">
+                        <p class="text-slate-700 text-lg leading-8">
                             Discover how
-                            <span class="text-white font-semibold">{{ $product->name }}</span>
+                            <span class="text-slate-800 font-semibold">{{ $product->name }}</span>
                             can help your organisation
                             improve visibility, productivity
                             and manufacturing performance.

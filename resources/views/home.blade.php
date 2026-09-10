@@ -20,7 +20,7 @@
                 </p>
                 
                 <div data-aos="zoom-in" data-aos-delay="400" class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/contact" class="bg-gradient-to-r from-primary-500 to-accent-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-primary-500/30 transition-all flex items-center justify-center gap-2">
+                    <a href="/contact" class="bg-gradient-to-r from-primary-500 to-accent-600 text-slate-800 px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-primary-500/30 transition-all flex items-center justify-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         GET DEMO
                     </a>
@@ -192,7 +192,7 @@
         </section>
 
         <!-- Partners Marquee -->
-        <section class="py-20 border-t border-white/5 bg-black/40 backdrop-blur-md">
+        <section class="py-20 border-t border-slate-200 bg-black/40 backdrop-blur-md">
             <div class="text-center mb-10">
                 <h3 class="text-2xl font-bold text-slate-900">Trusted by Industry Leaders</h3>
             </div>

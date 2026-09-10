@@ -13,7 +13,7 @@
 
                 <div class="inline-flex items-center gap-2
                             px-4 py-2 glass-panel
-                            rounded-full text-sm font-medium mb-7 border border-white/10">
+                            rounded-full text-sm font-medium mb-7 border border-slate-300">
 
                     <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
 
@@ -21,7 +21,7 @@
 
                 </div>
 
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-800">
 
                     Digitise your factory
                     <span class="text-gradient">
@@ -31,7 +31,7 @@
                 </h1>
 
 
-                <p class="mt-7 text-lg lg:text-xl text-gray-300 leading-8 max-w-3xl">
+                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl">
 
                     Connect every stage of apparel manufacturing with
                     intelligent software, real-time tracking and
@@ -61,13 +61,13 @@
                         Our Solutions
                     </p>
 
-                    <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-white">
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-slate-800">
                         Everything your factory needs.
                     </h2>
 
                 </div>
 
-                <p class="text-gray-300 max-w-md leading-7">
+                <p class="text-slate-700 max-w-md leading-7">
 
                     From inventory management to IoT-enabled production,
                     our solutions help create a connected digital factory.
@@ -85,11 +85,11 @@
                     <div class="glass-card
                                 rounded-3xl p-8 group
                                 hover:-translate-y-2
-                                transition duration-300 border border-white/10">
+                                transition duration-300 border border-slate-300">
 
                         <!-- ICON -->
                         <div class="w-14 h-14 rounded-2xl
-                                    bg-white/5 border border-white/10
+                                    bg-white/5 border border-slate-300
                                     flex items-center justify-center
                                     text-2xl group-hover:bg-sky-500/20 transition">
 
@@ -105,13 +105,13 @@
 
 
                         <!-- TITLE -->
-                        <h3 class="text-2xl font-bold mt-2 text-white">
+                        <h3 class="text-2xl font-bold mt-2 text-slate-800">
                             {{ $service->title }}
                         </h3>
 
 
                         <!-- DESCRIPTION -->
-                        <p class="mt-5 text-gray-400 leading-7">
+                        <p class="mt-5 text-slate-600 leading-7">
 
                             {{ $service->short_description
                                 ?? $service->description
@@ -121,7 +121,7 @@
 
 
                         <!-- ACTION -->
-                        <div class="mt-7 text-sm font-semibold text-sky-400 group-hover:text-white transition">
+                        <div class="mt-7 text-sm font-semibold text-sky-400 group-hover:text-slate-800 transition">
                             Explore Solution →
                         </div>
 
@@ -130,17 +130,17 @@
                 @empty
 
                     <!-- EMPTY STATE -->
-                    <div class="col-span-full text-center py-16 glass-panel rounded-3xl border border-white/10">
+                    <div class="col-span-full text-center py-16 glass-panel rounded-3xl border border-slate-300">
 
                         <div class="text-5xl mb-5 opacity-50">
                             ⚙️
                         </div>
 
-                        <h3 class="text-xl font-bold text-white">
+                        <h3 class="text-xl font-bold text-slate-800">
                             No solutions available
                         </h3>
 
-                        <p class="text-gray-400 mt-2">
+                        <p class="text-slate-600 mt-2">
                             Solutions will appear here once they are
                             added from the admin panel.
                         </p>
@@ -158,7 +158,7 @@
 
 
     <!-- ================= WORKFLOW ================= -->
-    <section class="py-24 relative bg-black/20 border-t border-b border-white/5">
+    <section class="py-24 relative bg-black/20 border-t border-b border-slate-200">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -168,11 +168,11 @@
                     Connected Workflow
                 </p>
 
-                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-white">
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-slate-800">
                     One connected manufacturing journey.
                 </h2>
 
-                <p class="mt-6 text-gray-400 text-lg leading-8">
+                <p class="mt-6 text-slate-600 text-lg leading-8">
                     Connect every process and get real-time visibility
                     across your entire factory.
                 </p>
@@ -183,32 +183,32 @@
             <!-- WORKFLOW ITEMS -->
             <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mt-16 relative z-10">
 
-                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-white/10">
+                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-slate-300">
                     <div class="text-2xl group-hover:scale-110 transition">🧵</div>
-                    <p class="font-semibold mt-3 text-white">Fabric</p>
+                    <p class="font-semibold mt-3 text-slate-800">Fabric</p>
                 </div>
 
-                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-white/10">
+                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-slate-300">
                     <div class="text-2xl group-hover:scale-110 transition">✂️</div>
-                    <p class="font-semibold mt-3 text-white">Cutting</p>
+                    <p class="font-semibold mt-3 text-slate-800">Cutting</p>
                 </div>
 
-                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-white/10">
+                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-slate-300">
                     <div class="text-2xl group-hover:scale-110 transition">⚙️</div>
-                    <p class="font-semibold mt-3 text-white">Production</p>
+                    <p class="font-semibold mt-3 text-slate-800">Production</p>
                 </div>
 
-                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-white/10">
+                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-slate-300">
                     <div class="text-2xl group-hover:scale-110 transition">✓</div>
-                    <p class="font-semibold mt-3 text-white">Quality</p>
+                    <p class="font-semibold mt-3 text-slate-800">Quality</p>
                 </div>
 
-                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-white/10">
+                <div class="glass-panel rounded-2xl p-6 text-center group hover:-translate-y-2 transition border border-slate-300">
                     <div class="text-2xl group-hover:scale-110 transition">📦</div>
-                    <p class="font-semibold mt-3 text-white">Packing</p>
+                    <p class="font-semibold mt-3 text-slate-800">Packing</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-2xl p-6 text-center group hover:-translate-y-2 transition shadow-lg shadow-sky-500/20">
+                <div class="bg-gradient-to-br from-sky-500 to-blue-600 text-slate-800 rounded-2xl p-6 text-center group hover:-translate-y-2 transition shadow-lg shadow-sky-500/20">
                     <div class="text-2xl group-hover:scale-110 transition">🚚</div>
                     <p class="font-semibold mt-3">Dispatch</p>
                 </div>
@@ -234,12 +234,12 @@
                         Why Digitise?
                     </p>
 
-                    <h2 class="text-4xl lg:text-5xl font-bold mt-4 leading-tight text-white">
+                    <h2 class="text-4xl lg:text-5xl font-bold mt-4 leading-tight text-slate-800">
                         Turn factory data into
                         better decisions.
                     </h2>
 
-                    <p class="mt-6 text-gray-300 text-lg leading-8">
+                    <p class="mt-6 text-slate-700 text-lg leading-8">
                         Replace disconnected processes with a single
                         digital ecosystem that gives your teams the
                         information they need, when they need it.
@@ -251,13 +251,13 @@
                 <div class="space-y-5">
 
                     <!-- BENEFIT 1 -->
-                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-white/10 group">
-                        <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
+                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-slate-300 group">
+                        <div class="w-10 h-10 rounded-full bg-white/5 border border-slate-300 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
                             ✓
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-white">Real-time Visibility</h3>
-                            <p class="text-gray-400 mt-2">
+                            <h3 class="font-bold text-lg text-slate-800">Real-time Visibility</h3>
+                            <p class="text-slate-600 mt-2">
                                 Know what is happening across your factory
                                 without waiting for manual reports.
                             </p>
@@ -265,13 +265,13 @@
                     </div>
 
                     <!-- BENEFIT 2 -->
-                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-white/10 group">
-                        <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
+                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-slate-300 group">
+                        <div class="w-10 h-10 rounded-full bg-white/5 border border-slate-300 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
                             ✓
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-white">Paperless Operations</h3>
-                            <p class="text-gray-400 mt-2">
+                            <h3 class="font-bold text-lg text-slate-800">Paperless Operations</h3>
+                            <p class="text-slate-600 mt-2">
                                 Reduce manual paperwork and simplify
                                 information flow between departments.
                             </p>
@@ -279,13 +279,13 @@
                     </div>
 
                     <!-- BENEFIT 3 -->
-                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-white/10 group">
-                        <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
+                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-slate-300 group">
+                        <div class="w-10 h-10 rounded-full bg-white/5 border border-slate-300 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
                             ✓
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-white">Better Productivity</h3>
-                            <p class="text-gray-400 mt-2">
+                            <h3 class="font-bold text-lg text-slate-800">Better Productivity</h3>
+                            <p class="text-slate-600 mt-2">
                                 Identify bottlenecks and improve operational
                                 efficiency using meaningful data.
                             </p>
@@ -293,13 +293,13 @@
                     </div>
 
                     <!-- BENEFIT 4 -->
-                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-white/10 group">
-                        <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
+                    <div class="flex gap-5 p-6 rounded-2xl glass-panel border border-slate-300 group">
+                        <div class="w-10 h-10 rounded-full bg-white/5 border border-slate-300 flex items-center justify-center text-sky-400 group-hover:bg-sky-500/20 transition">
                             ✓
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-white">Scalable Technology</h3>
-                            <p class="text-gray-400 mt-2">
+                            <h3 class="font-bold text-lg text-slate-800">Scalable Technology</h3>
+                            <p class="text-slate-600 mt-2">
                                 Build a digital foundation that can grow
                                 along with your manufacturing operations.
                             </p>
@@ -317,7 +317,7 @@
 
 
     <!-- ================= CTA ================= -->
-    <section class="py-24 relative border-t border-white/5">
+    <section class="py-24 relative border-t border-slate-200">
 
         <div class="absolute inset-0 flex justify-center items-center pointer-events-none -z-10">
             <div class="w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[120px]"></div>
@@ -329,18 +329,18 @@
                 Transform Your Operations
             </p>
 
-            <h2 class="text-4xl lg:text-6xl font-bold mt-5 text-white">
+            <h2 class="text-4xl lg:text-6xl font-bold mt-5 text-slate-800">
                 Ready to build a
                 smarter factory?
             </h2>
 
-            <p class="mt-6 text-gray-400 text-lg leading-8">
+            <p class="mt-6 text-slate-600 text-lg leading-8">
                 Let's explore how digital technology can improve
                 your manufacturing operations.
             </p>
 
             <a href="/contact"
-               class="inline-flex mt-9 bg-gradient-to-r from-sky-500 to-blue-600 text-white
+               class="inline-flex mt-9 bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800
                       px-8 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/30
                       hover:shadow-sky-500/50 hover:-translate-y-1 transition-all">
                 Book a Demo →

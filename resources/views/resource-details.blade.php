@@ -10,15 +10,15 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <!-- Breadcrumb -->
-            <div class="flex items-center gap-2 text-sm text-gray-400 mb-8">
+            <div class="flex items-center gap-2 text-sm text-slate-600 mb-8">
 
-                <a href="/resources" class="hover:text-white transition">
+                <a href="/resources" class="hover:text-slate-800 transition">
                     Resources
                 </a>
 
                 <span>→</span>
 
-                <span class="text-gray-300">
+                <span class="text-slate-700">
                     {{ $resource->title }}
                 </span>
 
@@ -31,14 +31,14 @@
                 <div class="flex flex-wrap items-center gap-3 mb-6">
 
                     @if($resource->type)
-                        <span class="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-sm text-sky-400">
+                        <span class="px-3 py-1 rounded-full bg-slate-200 border border-slate-300 text-sm text-sky-400">
                             {{ $resource->type }}
                         </span>
                     @endif
 
                     @if($resource->category)
                         <span class="text-gray-500">•</span>
-                        <span class="text-sm text-gray-400">
+                        <span class="text-sm text-slate-600">
                             {{ $resource->category }}
                         </span>
                     @endif
@@ -46,13 +46,13 @@
                 </div>
 
                 <!-- Title -->
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight text-slate-800">
                     {{ $resource->title }}
                 </h1>
 
                 <!-- Short Description -->
                 @if($resource->short_description)
-                    <p class="mt-7 text-xl text-gray-300 leading-8 max-w-3xl">
+                    <p class="mt-7 text-xl text-slate-700 leading-8 max-w-3xl">
                         {{ $resource->short_description }}
                     </p>
                 @endif
@@ -65,7 +65,7 @@
 
 
     <!-- ================= CONTENT ================= -->
-    <main class="py-20 relative border-t border-white/5 bg-black/20">
+    <main class="py-20 relative border-t border-slate-200 bg-black/20">
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
@@ -75,22 +75,22 @@
                 <article class="lg:col-span-2">
 
                     <!-- Resource Icon -->
-                    <div class="w-24 h-24 rounded-2xl glass-card border border-white/10 flex items-center justify-center text-5xl mb-10 shadow-lg shadow-sky-500/10">
+                    <div class="w-24 h-24 rounded-2xl glass-card border border-slate-300 flex items-center justify-center text-5xl mb-10 shadow-lg shadow-sky-500/10">
                         {{ $resource->icon ?: '📘' }}
                     </div>
 
 
-                    <h2 class="text-3xl font-bold mb-6 text-white">
+                    <h2 class="text-3xl font-bold mb-6 text-slate-800">
                         About this Resource
                     </h2>
 
 
                     @if($resource->description)
-                        <div class="text-lg text-gray-300 leading-9 whitespace-pre-line">
+                        <div class="text-lg text-slate-700 leading-9 whitespace-pre-line">
                             {{ $resource->description }}
                         </div>
                     @elseif($resource->short_description)
-                        <div class="text-lg text-gray-300 leading-9">
+                        <div class="text-lg text-slate-700 leading-9">
                             {{ $resource->short_description }}
                         </div>
                     @else
@@ -102,31 +102,31 @@
 
 
                     <!-- Resource Information -->
-                    <div class="mt-12 pt-8 border-t border-white/10">
+                    <div class="mt-12 pt-8 border-t border-slate-300">
 
-                        <h3 class="text-xl font-bold mb-6 text-white">
+                        <h3 class="text-xl font-bold mb-6 text-slate-800">
                             Resource Information
                         </h3>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
                             @if($resource->type)
-                                <div class="glass-panel border border-white/10 rounded-xl p-5">
+                                <div class="glass-panel border border-slate-300 rounded-xl p-5">
                                     <p class="text-xs uppercase tracking-wider text-gray-500">
                                         Type
                                     </p>
-                                    <p class="mt-2 font-semibold text-white">
+                                    <p class="mt-2 font-semibold text-slate-800">
                                         {{ $resource->type }}
                                     </p>
                                 </div>
                             @endif
 
                             @if($resource->category)
-                                <div class="glass-panel border border-white/10 rounded-xl p-5">
+                                <div class="glass-panel border border-slate-300 rounded-xl p-5">
                                     <p class="text-xs uppercase tracking-wider text-gray-500">
                                         Category
                                     </p>
-                                    <p class="mt-2 font-semibold text-white">
+                                    <p class="mt-2 font-semibold text-slate-800">
                                         {{ $resource->category }}
                                     </p>
                                 </div>
@@ -142,7 +142,7 @@
                 <!-- ================= SIDEBAR ================= -->
                 <aside>
 
-                    <div class="sticky top-28 glass-panel border border-white/10 rounded-2xl p-8 relative overflow-hidden group">
+                    <div class="sticky top-28 glass-panel border border-slate-300 rounded-2xl p-8 relative overflow-hidden group">
                         
                         <div class="absolute -inset-2 bg-gradient-to-br from-sky-500 to-blue-600 rounded-[2rem] blur opacity-0 group-hover:opacity-10 transition duration-1000"></div>
 
@@ -151,23 +151,23 @@
                                 {{ $resource->icon ?: '📘' }}
                             </div>
 
-                            <h3 class="text-2xl font-bold text-white">
+                            <h3 class="text-2xl font-bold text-slate-800">
                                 {{ $resource->title }}
                             </h3>
 
-                            <p class="mt-4 text-gray-400 leading-7">
+                            <p class="mt-4 text-slate-600 leading-7">
                                 Explore more insights and resources
                                 from Track Tech Solutions.
                             </p>
 
 
                             <a href="/contact"
-                               class="block text-center mt-8 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition">
+                               class="block text-center mt-8 bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800 px-6 py-3 rounded-full font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition">
                                 Talk to Our Team
                             </a>
 
                             <a href="/resources"
-                               class="block text-center mt-3 border border-white/20 px-6 py-3 rounded-full font-semibold text-gray-300 hover:bg-white/10 hover:text-white transition">
+                               class="block text-center mt-3 border border-white/20 px-6 py-3 rounded-full font-semibold text-slate-700 hover:bg-slate-200 hover:text-slate-800 transition">
                                 ← All Resources
                             </a>
                         </div>
@@ -184,7 +184,7 @@
 
 
     <!-- ================= CTA ================= -->
-    <section class="py-20 relative border-t border-white/5">
+    <section class="py-20 relative border-t border-slate-200">
 
         <div class="absolute inset-0 flex justify-center items-center pointer-events-none -z-10">
             <div class="w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[100px]"></div>
@@ -196,12 +196,12 @@
                 Digital Transformation
             </p>
 
-            <h2 class="text-3xl md:text-5xl font-bold text-white">
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-800">
                 Build a smarter,
                 connected factory.
             </h2>
 
-            <p class="mt-6 text-gray-400 max-w-2xl mx-auto leading-7">
+            <p class="mt-6 text-slate-600 max-w-2xl mx-auto leading-7">
                 Discover how Track Tech Solutions can help
                 transform your apparel manufacturing operations
                 with intelligent technology.

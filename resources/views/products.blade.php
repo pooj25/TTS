@@ -27,7 +27,7 @@
 
 
                 <h1 class="text-5xl lg:text-7xl
-                           font-bold leading-tight tracking-tight text-white">
+                           font-bold leading-tight tracking-tight text-slate-800">
 
                     Digital products built for
 
@@ -39,7 +39,7 @@
 
 
                 <p class="mt-7 text-lg lg:text-xl
-                          text-gray-300 leading-8 max-w-3xl">
+                          text-slate-700 leading-8 max-w-3xl">
 
                     Powerful software products designed to simplify
                     apparel manufacturing, improve productivity and
@@ -76,7 +76,7 @@
 
 
                 <h2 class="text-4xl lg:text-5xl
-                           font-bold mt-4 text-white">
+                           font-bold mt-4 text-slate-800">
 
                     One platform.
                     Multiple possibilities.
@@ -84,7 +84,7 @@
                 </h2>
 
 
-                <p class="mt-6 text-gray-400 text-lg leading-8">
+                <p class="mt-6 text-slate-600 text-lg leading-8">
 
                     Connect your factory operations through
                     purpose-built digital products.
@@ -120,7 +120,7 @@
                             <!-- PRODUCT ICON -->
 
                             <div class="h-64 bg-white/5
-                                        flex items-center justify-center border-b border-white/10">
+                                        flex items-center justify-center border-b border-slate-300">
 
                                 <div class="w-28 h-28 rounded-3xl
                                             glass-card
@@ -147,14 +147,14 @@
                                 </p>
 
 
-                                <h3 class="text-3xl font-bold mt-3 text-white">
+                                <h3 class="text-3xl font-bold mt-3 text-slate-800">
 
                                     {{ $product->name }}
 
                                 </h3>
 
 
-                                <p class="mt-5 text-gray-300 leading-7">
+                                <p class="mt-5 text-slate-700 leading-7">
 
                                     {{ $product->short_description
                                         ?? $product->description
@@ -189,7 +189,7 @@
                                 <a href="{{ route('products.show', $product->slug) }}"
                                    class="inline-block mt-8
                                           font-semibold text-sky-400
-                                          hover:text-white transition">
+                                          hover:text-slate-800 transition">
 
                                     View Product →
 
@@ -206,7 +206,7 @@
                              NORMAL PRODUCT CARD
                         ================================ -->
 
-                        <div class="group border border-white/10
+                        <div class="group border border-slate-300
                                     rounded-3xl overflow-hidden
                                     glass-card
                                     transition duration-300">
@@ -215,7 +215,7 @@
                             <!-- PRODUCT ICON -->
 
                             <div class="h-64 bg-white/5
-                                        flex items-center justify-center border-b border-white/10">
+                                        flex items-center justify-center border-b border-slate-300">
 
                                 <div class="w-28 h-28 rounded-3xl
                                             glass-panel
@@ -242,14 +242,14 @@
                                 </p>
 
 
-                                <h3 class="text-3xl font-bold mt-3 text-white">
+                                <h3 class="text-3xl font-bold mt-3 text-slate-800">
 
                                     {{ $product->name }}
 
                                 </h3>
 
 
-                                <p class="mt-5 text-gray-300 leading-7">
+                                <p class="mt-5 text-slate-700 leading-7">
 
                                     {{ $product->short_description
                                         ?? $product->description
@@ -265,7 +265,7 @@
                                     <div class="mt-7 flex flex-wrap gap-2">
 
                                         <span class="px-3 py-2
-                                                     bg-white/10 border border-white/10 text-gray-300
+                                                     bg-slate-200 border border-slate-300 text-slate-700
                                                      rounded-full
                                                      text-xs
                                                      font-medium">
@@ -283,7 +283,7 @@
 
                                 <a href="{{ route('products.show', $product->slug) }}"
                                    class="inline-block mt-8
-                                          font-semibold text-sky-400 hover:text-white transition">
+                                          font-semibold text-sky-400 hover:text-slate-800 transition">
 
                                     View Product →
 
@@ -303,7 +303,7 @@
                     ================================ -->
 
                     <div class="md:col-span-2
-                                border border-white/10 glass-panel
+                                border border-slate-300 glass-panel
                                 rounded-3xl
                                 p-12
                                 text-center">
@@ -313,14 +313,14 @@
                         </div>
 
 
-                        <h3 class="text-2xl font-bold text-white">
+                        <h3 class="text-2xl font-bold text-slate-800">
 
                             No products available
 
                         </h3>
 
 
-                        <p class="mt-3 text-gray-400">
+                        <p class="mt-3 text-slate-600">
 
                             Products will appear here once they
                             are added from the admin panel.
@@ -343,7 +343,7 @@
          PRODUCT BENEFITS
     ================================ -->
 
-    <section class="py-24 relative border-t border-white/10 bg-black/20">
+    <section class="py-24 relative border-t border-slate-300 bg-black/20">
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -363,7 +363,7 @@
 
 
                     <h2 class="text-4xl lg:text-5xl
-                               font-bold mt-4 leading-tight text-white">
+                               font-bold mt-4 leading-tight text-slate-800">
 
                         Technology that works
                         on the factory floor.
@@ -371,7 +371,7 @@
                     </h2>
 
 
-                    <p class="mt-6 text-gray-400 text-lg leading-8">
+                    <p class="mt-6 text-slate-600 text-lg leading-8">
 
                         Our products are designed around real
                         manufacturing workflows, making digital
@@ -395,11 +395,11 @@
                             ⚡
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5 text-white">
+                        <h3 class="font-bold text-lg mt-5 text-slate-800">
                             Real-time
                         </h3>
 
-                        <p class="text-gray-400 mt-2
+                        <p class="text-slate-600 mt-2
                                   text-sm leading-6">
 
                             Access operational information instantly.
@@ -417,11 +417,11 @@
                             📱
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5 text-white">
+                        <h3 class="font-bold text-lg mt-5 text-slate-800">
                             Mobile Ready
                         </h3>
 
-                        <p class="text-gray-400 mt-2
+                        <p class="text-slate-600 mt-2
                                   text-sm leading-6">
 
                             Access factory information from anywhere.
@@ -439,11 +439,11 @@
                             🔒
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5 text-white">
+                        <h3 class="font-bold text-lg mt-5 text-slate-800">
                             Secure
                         </h3>
 
-                        <p class="text-gray-400 mt-2
+                        <p class="text-slate-600 mt-2
                                   text-sm leading-6">
 
                             Keep your business data protected.
@@ -461,11 +461,11 @@
                             📈
                         </div>
 
-                        <h3 class="font-bold text-lg mt-5 text-white">
+                        <h3 class="font-bold text-lg mt-5 text-slate-800">
                             Scalable
                         </h3>
 
-                        <p class="text-gray-400 mt-2
+                        <p class="text-slate-600 mt-2
                                   text-sm leading-6">
 
                             Grow your digital ecosystem as you grow.
@@ -487,7 +487,7 @@
          CTA
     ================================ -->
 
-    <section class="py-24 relative border-t border-white/5">
+    <section class="py-24 relative border-t border-slate-200">
         
         <!-- Background glow -->
         <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
@@ -505,7 +505,7 @@
 
 
             <h2 class="text-4xl lg:text-6xl
-                       font-bold mt-5 text-white">
+                       font-bold mt-5 text-slate-800">
 
                 Let's build your
                 digital factory.
@@ -513,7 +513,7 @@
             </h2>
 
 
-            <p class="mt-6 text-gray-400
+            <p class="mt-6 text-slate-600
                       text-lg leading-8">
 
                 Talk to our team and discover which Track Tech
@@ -524,7 +524,7 @@
 
             <a href="/contact"
                class="inline-flex mt-9
-                      bg-gradient-to-r from-sky-500 to-blue-600 text-white
+                      bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800
                       px-8 py-4 rounded-full
                       font-semibold shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50
                       hover:-translate-y-1 transition-all">
