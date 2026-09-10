@@ -75,6 +75,47 @@
     </div>
 </section>
 
+<!-- Sustainability & Humanity-Centered Design Section -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80')] opacity-5 bg-cover bg-center mix-blend-overlay"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto space-y-16 relative z-10">
+        <div class="text-center space-y-4 max-w-3xl mx-auto" data-aos="fade-up">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-400 px-4 py-1.5 rounded-full border border-sky-400/30 inline-block bg-sky-900/30">Our Philosophy</span>
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">Meaningful, Sustainable, <br/><span class="text-sky-400 italic">Humanity Centered</span></h2>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">We believe in building digital tools that don't just optimize factories, but elevate the people working in them and protect the world around them.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div data-aos="fade-up" data-aos-delay="100" class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 backdrop-blur-sm hover:border-sky-400/50 transition-all">
+                <div class="w-14 h-14 mx-auto rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Meaningful Efficiency</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">By reducing defects and streamlining workflows, we eliminate wasted effort, allowing factory teams to focus on craftsmanship rather than constant firefighting.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200" class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 backdrop-blur-sm hover:border-sky-400/50 transition-all">
+                <div class="w-14 h-14 mx-auto rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Sustainable Production</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Our smart spreading and zero-loss fabric modules drastically reduce textile waste, actively lowering the carbon footprint of global garment manufacturing.</p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 backdrop-blur-sm hover:border-sky-400/50 transition-all">
+                <div class="w-14 h-14 mx-auto rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Humanity Centered</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">We design for the humans behind the machines. Our interfaces are intuitive and empowering, removing friction and reducing stress on the factory floor.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Products / Benefits -->
 <section id="products" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-50">
     <div class="max-w-7xl mx-auto space-y-20">
