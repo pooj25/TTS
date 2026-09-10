@@ -147,24 +147,7 @@
                     </p>
 
 
-                    <!-- SUCCESS MESSAGE -->
-                    @if(session('success'))
-                        <div class="mt-6 p-4 bg-green-500/20 text-green-300 border border-green-500/30 rounded-xl">
-                            {{ session('success') }}
-                        </div>
-                    @endif
 
-
-                    <!-- VALIDATION ERRORS -->
-                    @if($errors->any())
-                        <div class="mt-6 p-4 bg-red-500/20 text-red-300 border border-red-500/30 rounded-xl">
-                            <ul class="list-disc pl-5">
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
 
 
                     <form action="{{ route('contact.store') }}"
@@ -263,8 +246,16 @@
                         <!-- SUBMIT -->
                         <button
                             type="submit"
-                            class="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800 py-4 rounded-xl font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition-all">
-                            Send Message →
+                            id="contact-submit-btn"
+                            class="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white py-4 rounded-xl font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                            <span id="btn-text">Send Message →</span>
+                            <span id="btn-spinner" class="hidden">
+                                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                                </svg>
+                                Sending...
+                            </span>
                         </button>
 
                     </form>
@@ -276,5 +267,24 @@
         </div>
 
     </section>
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form[action="{{ route(\'contact.store\') }}"]');
+        const btn = document.getElementById('contact-submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnSpinner = document.getElementById('btn-spinner');
+
+        if (form && btn) {
+            form.addEventListener('submit', function () {
+                btn.disabled = true;
+                btnText.classList.add('hidden');
+                btnSpinner.classList.remove('hidden');
+            });
+        }
+    });
+</script>
+@endpush
 
 @endsection

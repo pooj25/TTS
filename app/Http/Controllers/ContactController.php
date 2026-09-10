@@ -20,9 +20,10 @@ class ContactController extends Controller
 
         ContactMessage::create($validated);
 
+        $name = $validated['first_name'];
         return redirect('/contact')->with(
             'success',
-            'Thank you! Your message has been submitted successfully.'
+            "Thank you, {$name}! 🎉 Your message has been received. Our team will get back to you within 24 hours."
         );
     }
 }

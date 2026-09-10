@@ -546,5 +546,44 @@
         });
 
     </script>
+
+    <!-- SweetAlert2 for beautiful form notifications -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            @if(session('success'))
+            Swal.fire({
+                title: '✅ Message Sent!',
+                text: @json(session('success')),
+                icon: 'success',
+                confirmButtonText: 'Great!',
+                confirmButtonColor: '#0ea5e9',
+                background: '#ffffff',
+                color: '#1e293b',
+                iconColor: '#22c55e',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            });
+            @endif
+
+            @if($errors->any())
+            var errorMessages = @json($errors->all());
+            Swal.fire({
+                title: 'Please fix these errors',
+                html: errorMessages.map(function(e){ return '• ' + e; }).join('<br>'),
+                icon: 'error',
+                confirmButtonText: 'Try Again',
+                confirmButtonColor: '#0ea5e9',
+                background: '#ffffff',
+                color: '#1e293b',
+            });
+            @endif
+        });
+    </script>
+    @stack('scripts')
 </body>
 </html>
