@@ -235,6 +235,27 @@
                         Book Demo
                     </a>
                 </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-slate-100 transition" aria-label="Menu">
+                    <span class="block w-6 h-0.5 bg-slate-800 transition-all" id="bar1"></span>
+                    <span class="block w-6 h-0.5 bg-slate-800 transition-all" id="bar2"></span>
+                    <span class="block w-4 h-0.5 bg-slate-800 transition-all ml-auto" id="bar3"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Panel -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-t border-slate-200 shadow-xl">
+                <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
+                    <a href="/products" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Products</a>
+                    <a href="/industries" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Business Stories</a>
+                    <a href="/about" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Company</a>
+                    <a href="/resources" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Resources</a>
+                    <a href="/contact" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Contact Us</a>
+                    <a href="/contact" class="mt-2 bg-primary-500 text-white text-center px-6 py-3 rounded-full font-medium shadow-lg">
+                        Book Demo
+                    </a>
+                </div>
             </div>
         </header>
 
@@ -266,7 +287,7 @@
                         <ul class="space-y-3 text-sm text-slate-800">
                             <li><a href="/about" class="hover:text-primary-600">About Us</a></li>
                             <li><a href="/contact" class="hover:text-primary-600">Contact Us</a></li>
-                            <li><a href="#" class="hover:text-primary-600">Careers</a></li>
+                            <li><a href="/contact" class="hover:text-primary-600">Careers</a></li>
                         </ul>
                     </div>
 
@@ -293,8 +314,8 @@
                 <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
                     <p>&copy; {{ date('Y') }} Track Tech Solution. All rights reserved.</p>
                     <div class="flex gap-6">
-                        <a href="#" class="hover:text-slate-900">Privacy Policy</a>
-                        <a href="#" class="hover:text-slate-900">Terms & Conditions</a>
+                        <a href="/about" class="hover:text-slate-900">Privacy Policy</a>
+                        <a href="/about" class="hover:text-slate-900">Terms & Conditions</a>
                     </div>
                 </div>
             </div>
@@ -310,6 +331,17 @@
             once: true,
             offset: 100,
         });
+
+        // Mobile Menu Toggle
+        (function() {
+            var menuBtn = document.getElementById('mobile-menu-btn');
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        })();
 
         // Initialize Spotlight Cards
         document.querySelectorAll('.glass-card').forEach(card => {

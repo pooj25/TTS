@@ -26,8 +26,8 @@
                 <span>Book a Live Demo</span>
                 <svg class="w-6 h-6 group-hover:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
-            <a href="#calculator" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-slate-900 font-bold text-lg px-12 py-5 rounded-tr-[30px] rounded-bl-[30px] border-2 border-dashed border-slate-300 hover:border-accent-500 shadow-sm hover:shadow-lg transition-all group">
-                <span class="group-hover:text-accent-600 transition-colors">Estimate Your ROI</span>
+            <a href="/products" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-slate-900 font-bold text-lg px-12 py-5 rounded-tr-[30px] rounded-bl-[30px] border-2 border-dashed border-slate-300 hover:border-accent-500 shadow-sm hover:shadow-lg transition-all group">
+                <span class="group-hover:text-accent-600 transition-colors">Explore Products</span>
             </a>
         </div>
     </div>
@@ -68,7 +68,7 @@
                 <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-primary-500 pl-6">
                     Rotate and monitor real-time 3D factory models. Gain spatial intelligence over your entire shop floor, identifying bottlenecks visually before they impact production targets.
                 </p>
-                <button class="mt-4 px-8 py-3 bg-slate-900 text-white font-bold rounded-tl-[20px] rounded-br-[20px] hover:bg-primary-600 transition-colors">Experience 3D Viewer</button>
+                <a href="/products" class="inline-block mt-4 px-8 py-3 bg-slate-900 text-white font-bold rounded-tl-[20px] rounded-br-[20px] hover:bg-primary-600 transition-colors">Explore Products →</a>
             </div>
         </div>
 
@@ -82,7 +82,7 @@
                 <p class="text-lg text-slate-600 leading-relaxed border-l-4 border-accent-500 pl-6">
                     Instantly estimate your cost-savings and efficiency gains. Our lightning-fast Alpine.js calculator dynamically adapts to your factory's specific line setup and daily output volumes.
                 </p>
-                <button class="mt-4 px-8 py-3 bg-white border-2 border-slate-900 text-slate-900 font-bold rounded-tr-[20px] rounded-bl-[20px] hover:bg-slate-900 hover:text-white transition-colors">Calculate Savings</button>
+                <a href="/contact" class="inline-block mt-4 px-8 py-3 bg-white border-2 border-slate-900 text-slate-900 font-bold rounded-tr-[20px] rounded-bl-[20px] hover:bg-slate-900 hover:text-white transition-colors">Get a Quote →</a>
             </div>
             <div class="w-full lg:w-1/2 relative group" data-aos="fade-left">
                 <div class="absolute inset-0 bg-accent-100 rounded-tl-[80px] rounded-br-[80px] transform -rotate-3 scale-105 z-0 transition-transform group-hover:-rotate-6"></div>
