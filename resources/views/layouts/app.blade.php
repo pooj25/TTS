@@ -58,6 +58,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
         body {
@@ -69,17 +70,6 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Outfit', sans-serif;
-        }
-
-        /* 3D Background Container */
-        #webgl-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -50;
-            pointer-events: none !important;
         }
 
         /* Content Overlay Layer */
@@ -206,9 +196,6 @@
 </head>
 <body>
 
-    <!-- 3D Canvas Background -->
-    <div id="webgl-container"></div>
-
     <!-- Main Content Layer -->
     <div id="content-layer">
 
@@ -323,16 +310,19 @@
 
     </div>
 
-    <!-- 3D Logic & Spotlight Setup -->
+    <!-- Shared UI Setup -->
     <script>
-        // Initialize AOS animations
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-        });
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 700,
+                once: true,
+                offset: 80,
+                disable: function () {
+                    return window.innerWidth < 768;
+                },
+            });
+        }
 
-        // Mobile Menu Toggle
         (function() {
             var menuBtn = document.getElementById('mobile-menu-btn');
             var mobileMenu = document.getElementById('mobile-menu');
@@ -343,7 +333,6 @@
             }
         })();
 
-        // Initialize Spotlight Cards
         document.querySelectorAll('.glass-card').forEach(card => {
             card.classList.add('spotlight');
             card.addEventListener('mousemove', e => {
@@ -354,229 +343,6 @@
                 card.style.setProperty('--y', `${y}px`);
             });
         });
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Scene Setup
-        const container = document.getElementById('webgl-container');
-        const scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0xf8fafc, 0.02); // Light fog
-
-        // Camera
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 40;
-        camera.position.y = 15;
-        camera.position.x = 0;
-
-        // Renderer
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        container.appendChild(renderer.domElement);
-
-        // Main Tech Group
-        const techGroup = new THREE.Group();
-        scene.add(techGroup);
-
-        // 1. Digital Grid Floor
-        const gridHelper = new THREE.GridHelper(200, 100, 0x14b8a6, 0xe2e8f0); // Teal and Light Slate
-        gridHelper.position.y = -15;
-        gridHelper.material.opacity = 0.3;
-        gridHelper.material.transparent = true;
-        scene.add(gridHelper);
-
-        // 2. Data Constellation (Nodes)
-        const particlesCount = 800; // Less particles but connected for premium feel
-        const positions = new Float32Array(particlesCount * 3);
-        const colors = new Float32Array(particlesCount * 3);
-        const velocities = [];
-
-        const colorPalette = [
-            new THREE.Color(0x00a3e0), // Cyan
-            new THREE.Color(0x00bbf0), // Light Cyan
-            new THREE.Color(0xa74b94), // Magenta
-            new THREE.Color(0xf1f5f9)  // Light Gray
-        ];
-
-        for(let i = 0; i < particlesCount; i++) {
-            const i3 = i * 3;
-            // Sphere distribution
-            const radius = 60;
-            const theta = Math.random() * 2 * Math.PI;
-            const phi = Math.acos(2 * Math.random() - 1);
-            
-            positions[i3] = radius * Math.sin(phi) * Math.cos(theta);
-            positions[i3+1] = radius * Math.sin(phi) * Math.sin(theta) + 5;
-            positions[i3+2] = radius * Math.cos(phi) - 20;
-
-            const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
-            colors[i3] = color.r;
-            colors[i3+1] = color.g;
-            colors[i3+2] = color.b;
-
-            // Slow drift velocity
-            velocities.push({
-                x: (Math.random() - 0.5) * 0.05,
-                y: (Math.random() - 0.5) * 0.05,
-                z: (Math.random() - 0.5) * 0.05
-            });
-        }
-
-        const particleGeo = new THREE.BufferGeometry();
-        particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-        // Circular soft texture
-        const canvas = document.createElement('canvas');
-        canvas.width = 32;
-        canvas.height = 32;
-        const context = canvas.getContext('2d');
-        const gradient = context.createRadialGradient(16, 16, 0, 16, 16, 16);
-        gradient.addColorStop(0, 'rgba(255,255,255,1)');
-        gradient.addColorStop(0.2, 'rgba(255,255,255,0.8)');
-        gradient.addColorStop(1, 'rgba(255,255,255,0)');
-        context.fillStyle = gradient;
-        context.fillRect(0, 0, 32, 32);
-        const texture = new THREE.CanvasTexture(canvas);
-
-        const particleMat = new THREE.PointsMaterial({
-            size: 1.2,
-            vertexColors: true,
-            map: texture,
-            transparent: true,
-            opacity: 0.9,
-            blending: THREE.AdditiveBlending,
-            depthWrite: false
-        });
-
-        const particles = new THREE.Points(particleGeo, particleMat);
-        techGroup.add(particles);
-
-        // 3. Connective Lines (Data Network)
-        const maxConnections = 1200;
-        const lineGeo = new THREE.BufferGeometry();
-        // preallocate arrays
-        const linePos = new Float32Array(maxConnections * 6);
-        const lineOpacities = new Float32Array(maxConnections * 2);
-        
-        lineGeo.setAttribute('position', new THREE.BufferAttribute(linePos, 3));
-        lineGeo.setAttribute('color', new THREE.BufferAttribute(new Float32Array(maxConnections * 6).fill(1), 3)); // Will override with shader if needed, but basic line is fine
-
-        const lineMat = new THREE.LineBasicMaterial({
-            color: 0x14b8a6, // Teal lines
-            transparent: true,
-            opacity: 0.15,
-            blending: THREE.AdditiveBlending
-        });
-        const linesMesh = new THREE.LineSegments(lineGeo, lineMat);
-        techGroup.add(linesMesh);
-
-        // Scroll Animations using GSAP
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1.5 // Smooth scrub
-            }
-        });
-
-        // Rotate scene globally as we scroll
-        tl.to(techGroup.rotation, {
-            y: Math.PI * 1.2,
-            x: Math.PI * 0.05,
-            ease: "none"
-        }, 0);
-
-        // Move camera closer
-        tl.to(camera.position, {
-            z: 20,
-            y: 5,
-            ease: "power2.inOut"
-        }, 0);
-
-        // Mouse Interaction
-        let mouseX = 0;
-        let mouseY = 0;
-        const windowHalfX = window.innerWidth / 2;
-        const windowHalfY = window.innerHeight / 2;
-
-        document.addEventListener('mousemove', (event) => {
-            mouseX = (event.clientX - windowHalfX);
-            mouseY = (event.clientY - windowHalfY);
-        });
-
-        // Animation Loop
-        function animate() {
-            requestAnimationFrame(animate);
-
-            // Smooth mouse follow (Parallax)
-            techGroup.rotation.y += 0.0005; // Constant slow spin
-            camera.position.x += (mouseX * 0.015 - camera.position.x) * 0.05;
-            camera.position.y += (-mouseY * 0.015 - (camera.position.y - 15)) * 0.05;
-            camera.lookAt(scene.position);
-
-            // Animate particles (Drift)
-            const posArray = particles.geometry.attributes.position.array;
-            
-            // Recompute lines dynamically
-            let lineIdx = 0;
-            
-            for(let i = 0; i < particlesCount; i++) {
-                const i3 = i * 3;
-                
-                // Move particle
-                posArray[i3] += velocities[i].x;
-                posArray[i3+1] += velocities[i].y;
-                posArray[i3+2] += velocities[i].z;
-
-                // Bounce off invisible sphere boundary
-                const dist = Math.sqrt(posArray[i3]**2 + posArray[i3+1]**2 + posArray[i3+2]**2);
-                if (dist > 80) {
-                    velocities[i].x *= -1;
-                    velocities[i].y *= -1;
-                    velocities[i].z *= -1;
-                }
-
-                // Connect lines to nearby particles
-                for (let j = i + 1; j < particlesCount; j++) {
-                    const j3 = j * 3;
-                    const dx = posArray[i3] - posArray[j3];
-                    const dy = posArray[i3+1] - posArray[j3+1];
-                    const dz = posArray[i3+2] - posArray[j3+2];
-                    const distSq = dx*dx + dy*dy + dz*dz;
-
-                    if (distSq < 150 && lineIdx < maxConnections * 6) { // Distance threshold for connection
-                        linePos[lineIdx++] = posArray[i3];
-                        linePos[lineIdx++] = posArray[i3+1];
-                        linePos[lineIdx++] = posArray[i3+2];
-                        linePos[lineIdx++] = posArray[j3];
-                        linePos[lineIdx++] = posArray[j3+1];
-                        linePos[lineIdx++] = posArray[j3+2];
-                    }
-                }
-            }
-            
-            // Clear remaining line positions
-            while(lineIdx < maxConnections * 6) {
-                linePos[lineIdx++] = 0;
-            }
-
-            particles.geometry.attributes.position.needsUpdate = true;
-            linesMesh.geometry.attributes.position.needsUpdate = true;
-
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        // Resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-
     </script>
 
     <!-- SweetAlert2 for beautiful form notifications -->

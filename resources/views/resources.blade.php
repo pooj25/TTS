@@ -29,7 +29,8 @@
             <h3 class="text-2xl font-bold text-slate-800 mb-8">Latest from Track Tech</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 @foreach($resources as $resource)
-                <article class="glass-card rounded-3xl overflow-hidden border border-slate-300 group hover:-translate-y-2 transition duration-300">
+                <a href="{{ route('resources.show', $resource->slug) }}"
+                   class="block glass-card rounded-3xl overflow-hidden border border-slate-300 group hover:-translate-y-2 transition duration-300 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-4">
                     <div class="p-7">
                         <div class="text-4xl mb-4">{{ $resource->icon ?: '📘' }}</div>
                         @if($resource->type)
@@ -39,12 +40,11 @@
                         @if($resource->short_description)
                         <p class="text-slate-600 mt-3 leading-6 text-sm">{{ Str::limit($resource->short_description, 100) }}</p>
                         @endif
-                        <a href="{{ route('resources.show', $resource->slug) }}"
-                           class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
+                        <span class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 transition group-hover:gap-3 group-hover:text-sky-700">
                             Read More <span>→</span>
-                        </a>
+                        </span>
                     </div>
-                </article>
+                </a>
                 @endforeach
             </div>
         </div>
@@ -78,7 +78,7 @@
                         <span class="text-xs font-semibold text-sky-400 uppercase">Digital Transformation</span>
                         <h4 class="text-xl font-bold mt-3 text-slate-800">Why Apparel Factories Need Digital Transformation</h4>
                         <p class="text-slate-600 mt-4 leading-6 text-sm">Understand the importance of digitisation in modern apparel manufacturing.</p>
-                        <button onclick="openModal('modal1')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
+                        <button type="button" onclick="event.stopPropagation(); openModal('modal1')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
                             Read More <span>→</span>
                         </button>
                     </div>
@@ -96,7 +96,7 @@
                         <span class="text-xs font-semibold text-sky-400 uppercase">Production</span>
                         <h4 class="text-xl font-bold mt-3 text-slate-800">The Importance of Real-Time Production Tracking</h4>
                         <p class="text-slate-600 mt-4 leading-6 text-sm">Learn how real-time data can improve production visibility and decision making.</p>
-                        <button onclick="openModal('modal2')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
+                        <button type="button" onclick="event.stopPropagation(); openModal('modal2')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
                             Read More <span>→</span>
                         </button>
                     </div>
@@ -114,7 +114,7 @@
                         <span class="text-xs font-semibold text-sky-400 uppercase">IoT</span>
                         <h4 class="text-xl font-bold mt-3 text-slate-800">Building a Smarter and Connected Factory</h4>
                         <p class="text-slate-600 mt-4 leading-6 text-sm">Explore how IoT and connected machines can create smarter manufacturing environments.</p>
-                        <button onclick="openModal('modal3')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
+                        <button type="button" onclick="event.stopPropagation(); openModal('modal3')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
                             Read More <span>→</span>
                         </button>
                     </div>
@@ -132,7 +132,7 @@
                         <span class="text-xs font-semibold text-sky-400 uppercase">Inventory</span>
                         <h4 class="text-xl font-bold mt-3 text-slate-800">Improving Fabric Inventory Visibility</h4>
                         <p class="text-slate-600 mt-4 leading-6 text-sm">See how digital inventory systems can reduce errors and improve material control.</p>
-                        <button onclick="openModal('modal4')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
+                        <button type="button" onclick="event.stopPropagation(); openModal('modal4')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
                             Read More <span>→</span>
                         </button>
                     </div>
@@ -150,7 +150,7 @@
                         <span class="text-xs font-semibold text-sky-400 uppercase">Analytics</span>
                         <h4 class="text-xl font-bold mt-3 text-slate-800">Using Factory Data to Make Better Decisions</h4>
                         <p class="text-slate-600 mt-4 leading-6 text-sm">Learn how manufacturing analytics can turn factory data into actionable insights.</p>
-                        <button onclick="openModal('modal5')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
+                        <button type="button" onclick="event.stopPropagation(); openModal('modal5')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
                             Read More <span>→</span>
                         </button>
                     </div>
@@ -168,7 +168,7 @@
                         <span class="text-xs font-semibold text-sky-400 uppercase">Smart Factory</span>
                         <h4 class="text-xl font-bold mt-3 text-slate-800">From Manual Processes to Smart Manufacturing</h4>
                         <p class="text-slate-600 mt-4 leading-6 text-sm">A practical look at moving traditional factory processes into a connected digital environment.</p>
-                        <button onclick="openModal('modal6')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
+                        <button type="button" onclick="event.stopPropagation(); openModal('modal6')" class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-500 hover:text-sky-700 transition group-hover:gap-3">
                             Read More <span>→</span>
                         </button>
                     </div>
