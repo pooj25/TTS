@@ -63,7 +63,10 @@
     <style>
         body {
             margin: 0;
-            background-color: #f8fafc; /* Light Slate */
+            background:
+                linear-gradient(135deg, rgba(0, 163, 224, 0.08), transparent 28%),
+                linear-gradient(315deg, rgba(167, 75, 148, 0.08), transparent 32%),
+                #f8fafc;
             color: #020617; /* Dark text */
             overflow-x: hidden;
         }
@@ -76,6 +79,87 @@
         #content-layer {
             position: relative;
             z-index: 10;
+        }
+
+        #site-ambient-3d {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.42;
+        }
+
+        .ambient-depth-plane {
+            position: fixed;
+            inset: auto 0 0 auto;
+            width: min(52vw, 760px);
+            height: min(52vw, 760px);
+            z-index: 1;
+            pointer-events: none;
+            transform: translate(26%, 16%) rotateX(64deg) rotateZ(-18deg);
+            transform-style: preserve-3d;
+            opacity: 0.34;
+        }
+
+        .ambient-depth-plane::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(0, 163, 224, 0.24);
+            background-image:
+                linear-gradient(rgba(0, 163, 224, 0.12) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 163, 224, 0.12) 1px, transparent 1px);
+            background-size: 44px 44px;
+            box-shadow: 0 32px 90px rgba(15, 23, 42, 0.12);
+        }
+
+        main > section {
+            position: relative;
+            isolation: isolate;
+        }
+
+        main > section::after {
+            content: "";
+            position: absolute;
+            top: 2.5rem;
+            right: max(1.5rem, calc((100vw - 80rem) / 2));
+            width: 9rem;
+            height: 9rem;
+            z-index: -1;
+            pointer-events: none;
+            border: 1px solid rgba(0, 163, 224, 0.18);
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(0, 163, 224, 0.08)),
+                linear-gradient(90deg, rgba(0, 163, 224, 0.12) 1px, transparent 1px),
+                linear-gradient(rgba(167, 75, 148, 0.08) 1px, transparent 1px);
+            background-size: auto, 18px 18px, 18px 18px;
+            box-shadow: 18px 24px 55px rgba(15, 23, 42, 0.08);
+            transform: perspective(700px) rotateX(58deg) rotateZ(-18deg);
+            opacity: 0.75;
+        }
+
+        main > section:first-child::before {
+            content: "";
+            position: absolute;
+            top: 5rem;
+            right: max(2rem, calc((100vw - 78rem) / 2));
+            width: min(34vw, 28rem);
+            height: min(34vw, 28rem);
+            z-index: -1;
+            pointer-events: none;
+            border-radius: 1rem;
+            border: 1px solid rgba(0, 163, 224, 0.24);
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(0, 163, 224, 0.14) 42%, rgba(167, 75, 148, 0.12)),
+                linear-gradient(90deg, rgba(0, 163, 224, 0.16) 1px, transparent 1px),
+                linear-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+            background-size: auto, 32px 32px, 32px 32px;
+            box-shadow:
+                -22px 28px 0 rgba(0, 163, 224, 0.09),
+                24px -18px 0 rgba(167, 75, 148, 0.08),
+                0 34px 80px rgba(15, 23, 42, 0.12);
+            transform: perspective(900px) rotateX(58deg) rotateZ(-24deg);
+            opacity: 0.86;
         }
 
         /* Premium Glassmorphism Utilities */
@@ -101,6 +185,7 @@
             border-radius: 1rem;
             position: relative;
             overflow: hidden;
+            transform-style: preserve-3d;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
@@ -127,8 +212,8 @@
         }
 
         .glass-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(45, 212, 191, 0.15);
+            transform: perspective(900px) rotateX(2deg) rotateY(-2deg) translateY(-8px);
+            box-shadow: 0 24px 50px -14px rgba(15, 23, 42, 0.18), 0 12px 30px -18px rgba(0, 163, 224, 0.3);
         }
 
         .glass-card:hover::before {
@@ -192,9 +277,40 @@
         .min-h-screen-content {
             min-height: calc(100vh - 400px);
         }
+
+        @media (max-width: 767px) {
+            #site-ambient-3d {
+                display: none;
+            }
+
+            .ambient-depth-plane {
+                width: 90vw;
+                height: 90vw;
+                transform: translate(42%, 22%) rotateX(64deg) rotateZ(-18deg);
+                opacity: 0.18;
+            }
+
+            main > section::after {
+                width: 5.5rem;
+                height: 5.5rem;
+                right: 1rem;
+                opacity: 0.32;
+            }
+
+            main > section:first-child::before {
+                top: 6rem;
+                right: -3rem;
+                width: 14rem;
+                height: 14rem;
+                opacity: 0.28;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
+    <div class="ambient-depth-plane" aria-hidden="true"></div>
 
     <!-- Main Content Layer -->
     <div id="content-layer">
@@ -343,6 +459,79 @@
                 card.style.setProperty('--y', `${y}px`);
             });
         });
+
+        (function () {
+            var canvas = document.getElementById('site-ambient-3d');
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var isSmallScreen = window.innerWidth < 768;
+            if (!canvas || typeof THREE === 'undefined' || reduceMotion || isSmallScreen) {
+                return;
+            }
+
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.set(0, 4, 13);
+
+            var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            scene.add(new THREE.AmbientLight(0xffffff, 0.75));
+            var light = new THREE.DirectionalLight(0xffffff, 1);
+            light.position.set(4, 7, 6);
+            scene.add(light);
+
+            var group = new THREE.Group();
+            group.position.set(3.2, -0.25, 0);
+            scene.add(group);
+
+            var colors = [0x00a3e0, 0xa74b94, 0x22c55e, 0xf8fafc];
+            for (var i = 0; i < 18; i++) {
+                var geometry = i % 3 === 0
+                    ? new THREE.BoxGeometry(0.7, 0.32, 0.56)
+                    : new THREE.IcosahedronGeometry(0.28, 0);
+                var material = new THREE.MeshStandardMaterial({
+                    color: colors[i % colors.length],
+                    roughness: 0.48,
+                    metalness: 0.08,
+                    transparent: true,
+                    opacity: i % 3 === 0 ? 0.62 : 0.72
+                });
+                var mesh = new THREE.Mesh(geometry, material);
+                mesh.position.set((i % 6) * 1.15 - 3.3, Math.floor(i / 6) * 1.05 - 1.1, (i % 2) * -1.4);
+                mesh.rotation.set(i * 0.21, i * 0.17, i * 0.09);
+                group.add(mesh);
+            }
+
+            var grid = new THREE.GridHelper(10, 10, 0x00a3e0, 0xcbd5e1);
+            grid.position.y = -1.7;
+            grid.material.transparent = true;
+            grid.material.opacity = 0.22;
+            group.add(grid);
+
+            function resize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+
+            function animate(time) {
+                requestAnimationFrame(animate);
+                group.rotation.y = Math.sin(time * 0.00024) * 0.22 - 0.22;
+                group.rotation.x = Math.sin(time * 0.00018) * 0.08;
+                group.children.forEach(function (child, index) {
+                    if (child.isMesh) {
+                        child.position.y += Math.sin(time * 0.001 + index) * 0.0009;
+                        child.rotation.y += 0.002;
+                    }
+                });
+                camera.lookAt(0, 0, 0);
+                renderer.render(scene, camera);
+            }
+
+            window.addEventListener('resize', resize);
+            requestAnimationFrame(animate);
+        })();
     </script>
 
     <!-- SweetAlert2 for beautiful form notifications -->
