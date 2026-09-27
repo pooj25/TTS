@@ -10,10 +10,10 @@
 
     <section class="pt-32 pb-24 relative overflow-hidden min-h-[500px] flex items-center border-b border-slate-200">
         <!-- Background Apparel Video -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-90 scale-105">
             <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
         </video>
-        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/65 via-white/55 to-sky-100/40 backdrop-blur-[1px]"></div>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/35 via-white/25 to-sky-100/15 backdrop-blur-[1px]"></div>
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
             <div class="max-w-4xl">
