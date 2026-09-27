@@ -343,12 +343,12 @@
 
     <!-- Global Site-Wide High-Clarity Apparel Manufacturing Background Video Layer -->
     <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-        <video id="site-background-apparel-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-75 scale-105">
+        <video id="site-background-apparel-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-90 scale-105 transition-opacity duration-500">
             <source src="{{ $bgVideo }}" type="video/mp4">
             <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
         </video>
-        <!-- Crisp Luminous Light Backdrop Overlay (High Video Visibility) -->
-        <div class="absolute inset-0 bg-gradient-to-br from-white/65 via-white/55 to-sky-100/45 backdrop-blur-[1px]"></div>
+        <!-- High-Definition Light Glass Overlay -->
+        <div id="video-overlay-mask" class="absolute inset-0 bg-gradient-to-br from-white/45 via-white/35 to-sky-100/25 backdrop-blur-[1px] transition-all duration-500"></div>
     </div>
 
     <!-- Main Content Layer -->

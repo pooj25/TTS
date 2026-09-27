@@ -718,7 +718,7 @@ function switchSimStage(stage) {
 {{-- ══════════════════════════════════════════════════════════════════
      SECTION 6: PRODUCTS — 4 Business-Benefit Cards
      ══════════════════════════════════════════════════════════════════ --}}
-<section id="products" class="py-28 bg-white">
+<section id="products" class="py-28 bg-white/85 backdrop-blur-md border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="text-center mb-16 reveal">
@@ -774,7 +774,7 @@ function switchSimStage(stage) {
 {{-- ══════════════════════════════════════════════════════════════════
      SECTION 7: TECHNOLOGY — Dashboard + Video
      ══════════════════════════════════════════════════════════════════ --}}
-<section id="technology" class="py-28" style="background:var(--off);">
+<section id="technology" class="py-28 bg-white/75 backdrop-blur-md border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -860,7 +860,7 @@ function switchSimStage(stage) {
 {{-- ══════════════════════════════════════════════════════════════════
      SECTION 8: ROI CALCULATOR
      ══════════════════════════════════════════════════════════════════ --}}
-<section id="roi-calculator" class="py-28 bg-white">
+<section id="roi-calculator" class="py-28 bg-white/80 backdrop-blur-md border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-6">
 
         <div class="text-center mb-16 reveal">
