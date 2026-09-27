@@ -326,11 +326,26 @@
     <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
     <div class="ambient-depth-plane" aria-hidden="true"></div>
 
+    @php
+        $bgVideo = 'https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4';
+        if (request()->is('products*')) {
+            $bgVideo = 'https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4';
+        } elseif (request()->is('business-stories*') || request()->is('industries*')) {
+            $bgVideo = 'https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4';
+        } elseif (request()->is('about*')) {
+            $bgVideo = 'https://videos.pexels.com/video-files/5532766/5532766-hd_1920_1080_25fps.mp4';
+        } elseif (request()->is('resources*')) {
+            $bgVideo = 'https://videos.pexels.com/video-files/4487373/4487373-hd_1920_1080_25fps.mp4';
+        } elseif (request()->is('contact*')) {
+            $bgVideo = 'https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4';
+        }
+    @endphp
+
     <!-- Global Site-Wide High-Clarity Apparel Manufacturing Background Video Layer -->
     <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         <video id="site-background-apparel-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-75 scale-105">
+            <source src="{{ $bgVideo }}" type="video/mp4">
             <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
-            <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
         </video>
         <!-- Crisp Luminous Light Backdrop Overlay (High Video Visibility) -->
         <div class="absolute inset-0 bg-gradient-to-br from-white/65 via-white/55 to-sky-100/45 backdrop-blur-[1px]"></div>
