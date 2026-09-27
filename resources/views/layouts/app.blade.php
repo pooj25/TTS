@@ -309,6 +309,20 @@
 </head>
 <body>
 
+    <!-- High-Tech 3D Page Transition Overlay -->
+    <div id="page-transition-overlay" class="fixed inset-0 z-[9999] pointer-events-none opacity-0 transition-all duration-300 bg-slate-950/90 backdrop-blur-xl flex flex-col items-center justify-center text-white">
+        <div class="relative flex flex-col items-center gap-4 transform scale-90 transition-transform duration-300" id="page-transition-box">
+            <div class="relative w-16 h-16 flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full border-4 border-sky-400/20 border-t-sky-400 animate-spin"></div>
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-400 to-emerald-400 animate-pulse shadow-lg shadow-cyan-400/50"></div>
+            </div>
+            <div class="text-center">
+                <p class="text-xs font-mono uppercase tracking-widest text-sky-400 mb-1">Track Tech 3D Routing</p>
+                <h4 class="text-xl font-black text-white tracking-tight" id="page-transition-text">Navigating Module...</h4>
+            </div>
+        </div>
+    </div>
+
     <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
     <div class="ambient-depth-plane" aria-hidden="true"></div>
 
@@ -439,6 +453,33 @@
 
     </div>
 
+    <!-- Floating 3D Navigation & Quick Router Dock -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-2">
+        <!-- Quick Page Router Dock -->
+        <div class="hidden lg:flex items-center gap-1.5 p-2 rounded-full bg-slate-900/90 backdrop-blur-xl border border-sky-400/30 shadow-2xl text-white text-xs font-bold">
+            <a href="/products" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('products*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
+                <span>🛍️ Products</span>
+            </a>
+            <a href="/business-stories" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ (request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
+                <span>📈 Stories</span>
+            </a>
+            <a href="/about" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('about*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
+                <span>🏢 Company</span>
+            </a>
+            <a href="/resources" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('resources*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
+                <span>📚 Resources</span>
+            </a>
+            <a href="/contact" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('contact*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
+                <span>📞 Contact</span>
+            </a>
+        </div>
+
+        <!-- Scroll Back To Top Button -->
+        <button id="scroll-to-top-btn" class="w-11 h-11 rounded-full bg-sky-500 hover:bg-sky-400 text-white flex items-center justify-center shadow-lg shadow-sky-500/40 transition hover:scale-110" title="Back to Top">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+        </button>
+    </div>
+
     <!-- Shared UI Setup -->
     <script>
         if (typeof AOS !== 'undefined') {
@@ -553,6 +594,41 @@
             var progressBar = document.getElementById('scroll-progress-bar');
             if (progressBar) {
                 progressBar.style.width = scrolled + '%';
+            }
+        });
+
+        // 3D Page Transition FX & Link Interceptor
+        document.addEventListener('DOMContentLoaded', function() {
+            var overlay = document.getElementById('page-transition-overlay');
+            var transitionText = document.getElementById('page-transition-text');
+            var transitionBox = document.getElementById('page-transition-box');
+
+            document.querySelectorAll('a[href]').forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (href && !href.startsWith('#') && !href.startsWith('javascript') && !href.startsWith('mailto') && !href.startsWith('tel') && link.target !== '_blank') {
+                    link.addEventListener('click', function(e) {
+                        if (e.metaKey || e.ctrlKey) return;
+                        var targetName = href.replace('/', '').toUpperCase() || 'HOME';
+                        if (overlay && transitionText && transitionBox) {
+                            e.preventDefault();
+                            transitionText.textContent = 'Loading ' + targetName + ' Module...';
+                            overlay.classList.remove('pointer-events-none', 'opacity-0');
+                            overlay.classList.add('opacity-100');
+                            transitionBox.classList.remove('scale-90');
+                            transitionBox.classList.add('scale-100');
+                            setTimeout(function() {
+                                window.location.href = href;
+                            }, 240);
+                        }
+                    });
+                }
+            });
+
+            var topBtn = document.getElementById('scroll-to-top-btn');
+            if (topBtn) {
+                topBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
             }
         });
     </script>
