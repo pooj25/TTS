@@ -48,7 +48,11 @@ Route::get('/products/{slug}', [ProductController::class, 'show'])
 
 Route::get('/industries', function () {
     return view('industries');
-});
+})->name('industries');
+
+Route::get('/business-stories', function () {
+    return view('industries');
+})->name('business-stories');
 
 // ===============================
 // Resources

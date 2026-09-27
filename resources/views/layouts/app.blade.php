@@ -325,6 +325,9 @@
     <!-- Main Content Layer -->
     <div id="content-layer">
 
+        <!-- Top Scroll Reading Progress Indicator -->
+        <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-sky-400 via-emerald-400 to-cyan-500 z-[100] transition-all duration-150 pointer-events-none" style="width: 0%"></div>
+
         <!-- Navigation -->
         <header class="fixed top-0 w-full glass-nav z-50 transition-all duration-300 py-4">
             <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -335,12 +338,12 @@
                     </div>
                 </a>
                 
-                <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
-                    <a href="/products" class="text-slate-900 hover:text-primary-600 transition-colors">Products</a>
-                    <a href="/industries" class="text-slate-900 hover:text-primary-600 transition-colors">Business Stories</a>
-                    <a href="/about" class="text-slate-900 hover:text-primary-600 transition-colors">Company</a>
-                    <a href="/resources" class="text-slate-900 hover:text-primary-600 transition-colors">Resources</a>
-                    <a href="/contact" class="text-slate-900 hover:text-primary-600 transition-colors">Contact Us</a>
+                <nav class="hidden md:flex gap-3 items-center text-sm font-semibold">
+                    <a href="/products" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('products*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Products</a>
+                    <a href="/business-stories" class="px-4 py-2 rounded-full transition-all duration-300 {{ (request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Business Stories</a>
+                    <a href="/about" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('about*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Company</a>
+                    <a href="/resources" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('resources*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Resources</a>
+                    <a href="/contact" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('contact*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Contact Us</a>
                 </nav>
 
                 <div class="hidden md:block">
@@ -540,8 +543,18 @@
             }
 
             window.addEventListener('resize', resize);
-            requestAnimationFrame(animate);
         })();
+
+        // Smooth Scroll Reading Progress Bar Tracker
+        window.addEventListener('scroll', function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (height > 0) ? (winScroll / height) * 100 : 0;
+            var progressBar = document.getElementById('scroll-progress-bar');
+            if (progressBar) {
+                progressBar.style.width = scrolled + '%';
+            }
+        });
     </script>
 
     <!-- SweetAlert2 for beautiful form notifications -->

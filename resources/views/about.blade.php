@@ -368,4 +368,32 @@
 
     </section>
 
+    <!-- Interactive Next Page Continuous Journey Teaser -->
+    <section class="py-16 bg-gradient-to-r from-slate-900 via-sky-950 to-indigo-950 text-white relative overflow-hidden border-t border-sky-400/20 shadow-2xl">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[2px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+                <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 mb-3">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Next Chapter: Knowledge & Resources
+                </span>
+                <h3 class="text-2xl md:text-4xl font-black text-white">
+                    Explore ROI Calculators & Apparel Whitepapers
+                </h3>
+                <p class="text-slate-300 text-sm md:text-base mt-2 max-w-xl font-medium">
+                    Read industry reports, download whitepapers, and calculate how much fabric and time your factory can save.
+                </p>
+            </div>
+
+            <a href="/resources" class="group inline-flex items-center gap-4 bg-gradient-to-r from-cyan-400 via-sky-500 to-emerald-400 text-slate-950 font-black text-lg px-8 py-4 rounded-full shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/60 hover:scale-105 transition-all duration-300 whitespace-nowrap">
+                <span>View Resources</span>
+                <span class="w-9 h-9 rounded-full bg-slate-950/20 flex items-center justify-center group-hover:translate-x-1.5 transition-transform">➔</span>
+            </a>
+        </div>
+    </section>
+
 @endsection
