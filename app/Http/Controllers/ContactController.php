@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\ContactMessage;
+use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
@@ -21,6 +21,7 @@ class ContactController extends Controller
         ContactMessage::create($validated);
 
         $name = $validated['first_name'];
+
         return redirect('/contact')->with(
             'success',
             "Thank you, {$name}! 🎉 Your message has been received. Our team will get back to you within 24 hours."

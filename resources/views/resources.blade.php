@@ -7,16 +7,21 @@
     <!-- Hero -->
     <section class="pt-36 pb-20 relative">
         <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-            <span class="inline-block px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-medium mb-6 text-sky-400">
-                Resources
-            </span>
-            <h2 class="text-5xl md:text-6xl font-bold tracking-tight max-w-4xl mx-auto text-slate-800">
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-6">
+                <span class="inline-block px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-semibold text-slate-800">
+                    Resources &amp; Knowledge Base
+                </span>
+                <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
+                    <span>🎬 Watch Video Guides</span>
+                </button>
+            </div>
+            <h2 class="text-5xl md:text-6xl font-bold tracking-tight max-w-4xl mx-auto text-slate-900">
                 Insights for the
-                <span class="text-gradient">Connected Factory</span>
+                <span class="text-gradient">Apparel Connected Factory</span>
             </h2>
-            <p class="mt-6 text-lg text-slate-700 max-w-2xl mx-auto">
+            <p class="mt-6 text-lg text-slate-700 max-w-2xl mx-auto font-medium">
                 Explore industry insights, manufacturing trends and practical
-                knowledge to help transform your factory with digital technology.
+                knowledge to help transform your apparel factory with digital technology.
             </p>
         </div>
     </section>

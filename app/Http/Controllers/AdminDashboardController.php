@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactMessage;
-use App\Models\Service;
 use App\Models\Product;
 use App\Models\Resource;
+use App\Models\Service;
 
 class AdminDashboardController extends Controller
 {
@@ -29,13 +29,11 @@ class AdminDashboardController extends Controller
 
         $activeResources = Resource::where('status', 'active')->count();
 
-
         // ===============================
         // Recent Enquiries
         // ===============================
 
         $contactMessages = ContactMessage::latest()->get();
-
 
         // ===============================
         // Send Data To Dashboard

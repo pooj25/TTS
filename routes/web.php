@@ -1,19 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminEnquiryController;
-use App\Http\Controllers\AdminServiceController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AdminProductController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdminResourceController;
-use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\AdminServiceController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterController;
-
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\ServiceController;
+use Illuminate\Support\Facades\Route;
 
 // ===============================
 // Website Routes
@@ -27,14 +25,12 @@ Route::get('/about', function () {
     return view('about');
 });
 
-
 // ===============================
 // Solutions
 // ===============================
 
 Route::get('/solutions', [ServiceController::class, 'index'])
     ->name('solutions');
-
 
 // ===============================
 // Products
@@ -46,7 +42,6 @@ Route::get('/products', [ProductController::class, 'index'])
 Route::get('/products/{slug}', [ProductController::class, 'show'])
     ->name('products.show');
 
-
 // ===============================
 // Industries
 // ===============================
@@ -54,7 +49,6 @@ Route::get('/products/{slug}', [ProductController::class, 'show'])
 Route::get('/industries', function () {
     return view('industries');
 });
-
 
 // ===============================
 // Resources
@@ -65,7 +59,6 @@ Route::get('/resources', [ResourceController::class, 'index'])
 
 Route::get('/resources/{slug}', [ResourceController::class, 'show'])
     ->name('resources.show');
-
 
 // ===============================
 // Contact
@@ -78,14 +71,12 @@ Route::get('/contact', function () {
 Route::post('/contact', [ContactController::class, 'store'])
     ->name('contact.store');
 
-
 // ===============================
 // Newsletter
 // ===============================
 
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'store'])
     ->name('newsletter.subscribe');
-
 
 // ===============================
 // Admin Authentication Routes
@@ -100,7 +91,6 @@ Route::post('/admin/login', [AdminAuthController::class, 'login'])
 Route::post('/admin/logout', [AdminAuthController::class, 'logout'])
     ->name('admin.logout');
 
-
 // ===============================
 // Protected Admin Routes
 // ===============================
@@ -114,7 +104,6 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])
         ->name('admin.dashboard');
 
-
     // ===============================
     // Admin Enquiry Routes
     // ===============================
@@ -127,7 +116,6 @@ Route::middleware('admin')->group(function () {
 
     Route::delete('/admin/enquiries/{id}', [AdminEnquiryController::class, 'destroy'])
         ->name('admin.enquiries.destroy');
-
 
     // ===============================
     // Admin Service Routes
@@ -151,7 +139,6 @@ Route::middleware('admin')->group(function () {
     Route::delete('/admin/services/{id}', [AdminServiceController::class, 'destroy'])
         ->name('admin.services.destroy');
 
-
     // ===============================
     // Admin Product Routes
     // ===============================
@@ -173,7 +160,6 @@ Route::middleware('admin')->group(function () {
 
     Route::delete('/admin/products/{id}', [AdminProductController::class, 'destroy'])
         ->name('admin.products.destroy');
-
 
     // ===============================
     // Admin Resource Routes

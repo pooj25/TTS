@@ -11,18 +11,23 @@
 
             <div class="max-w-4xl relative z-10">
 
-                <p class="text-sm font-semibold uppercase tracking-widest text-sky-400">
-                    Contact Us
-                </p>
+                <div class="flex flex-wrap items-center gap-3 mb-5">
+                    <span class="px-4 py-1.5 glass-panel border border-slate-300 rounded-full text-xs font-bold uppercase tracking-widest text-slate-800">
+                        Contact Us
+                    </span>
+                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-1.5 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-xs font-bold transition shadow-sm">
+                        <span>🎬 See Demo Video</span>
+                    </button>
+                </div>
 
-                <h1 class="text-5xl lg:text-7xl font-bold mt-5 leading-tight text-slate-800">
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight text-slate-900">
                     Let's build a
                     <span class="text-gradient">
-                        smarter factory.
+                        smarter apparel factory.
                     </span>
                 </h1>
 
-                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl">
+                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl font-medium">
                     Have a question about our solutions? Want to explore
                     digital transformation for your manufacturing operations?
                     Our team would love to hear from you.

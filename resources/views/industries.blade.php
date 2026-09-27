@@ -11,26 +11,26 @@
 
             <div class="max-w-4xl relative z-10">
 
-                <div class="inline-flex items-center gap-2
-                            px-4 py-2 glass-panel border border-slate-300
-                            rounded-full text-sm font-medium mb-7 text-slate-800">
-
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-
-                    Industries We Serve
-
+                <div class="flex flex-wrap items-center gap-3 mb-7">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-semibold text-slate-800">
+                        <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                        Industries We Serve
+                    </div>
+                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
+                        <span>🎬 Industry Video Showcase</span>
+                    </button>
                 </div>
 
 
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-800">
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900">
                     Digital solutions for
                     <span class="text-gradient">
-                        manufacturing industries.
+                        apparel manufacturing.
                     </span>
                 </h1>
 
 
-                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl">
+                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl font-medium">
 
                     We help manufacturing businesses connect their
                     operations, improve productivity and gain real-time

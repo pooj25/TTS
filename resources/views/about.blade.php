@@ -14,20 +14,25 @@
                 <!-- Left -->
                 <div>
 
-                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-medium mb-7">
-                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                        About Track Tech Solutions
+                    <div class="flex flex-wrap items-center gap-3 mb-7">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-semibold text-slate-800 border border-slate-200">
+                            <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                            About Track Tech Solutions
+                        </div>
+                        <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
+                            <span>🎬 Watch Our Factory Story</span>
+                        </button>
                     </div>
 
-                    <h1 class="text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-slate-800">
+                    <h1 class="text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-slate-900">
                         Technology that
                         <span class="text-gradient">
                             transforms
                         </span>
-                        manufacturing.
+                        apparel manufacturing.
                     </h1>
 
-                    <p class="mt-7 text-lg text-slate-700 leading-8 max-w-xl">
+                    <p class="mt-7 text-lg text-slate-700 leading-8 max-w-xl font-medium">
                         Track Tech Solutions helps apparel manufacturers
                         digitize their operations, improve visibility and
                         build smarter, more efficient factories.
