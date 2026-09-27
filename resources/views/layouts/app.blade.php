@@ -311,6 +311,48 @@
         .kb-active-4 { animation: kb-scene-4 21s ease-in-out infinite alternate; }
         .kb-active-5 { animation: kb-scene-5 23s ease-in-out infinite alternate; }
 
+        /* 3D Infinite Scrolling Track Animation */
+        @keyframes scrollTrack3D {
+            0% { transform: perspective(1200px) rotateX(10deg) rotateY(-6deg) rotateZ(-2deg) translate3d(0%, 0, 0) scale(1.1); }
+            50% { transform: perspective(1200px) rotateX(14deg) rotateY(-10deg) rotateZ(-4deg) translate3d(-25%, 0, 0) scale(1.15); }
+            100% { transform: perspective(1200px) rotateX(10deg) rotateY(-6deg) rotateZ(-2deg) translate3d(-50%, 0, 0) scale(1.1); }
+        }
+
+        .animate-scroll-track-3d {
+            animation: scrollTrack3D 35s linear infinite;
+        }
+
+        /* Laser Scan Sweep Beam */
+        @keyframes laserScanSweep {
+            0% { top: -5%; opacity: 0; }
+            20% { opacity: 0.85; }
+            80% { opacity: 0.85; }
+            100% { top: 105%; opacity: 0; }
+        }
+
+        .laser-scan-beam {
+            position: fixed; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(0, 187, 240, 0.9), rgba(194, 94, 168, 0.9), transparent);
+            box-shadow: 0 0 20px rgba(0, 187, 240, 0.9);
+            pointer-events: none; z-index: 1;
+            animation: laserScanSweep 9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Site-Wide Dynamic 3D Card Elevation Engine */
+        .glass-card, .stat-card, .prob-card, .prod-card, .cs-card, .solution-card, .resource-card, .product-card, .feature-card {
+            transform-style: preserve-3d;
+            perspective: 1200px;
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+
+        .glass-card:hover, .stat-card:hover, .prob-card:hover, .prod-card:hover, .cs-card:hover, .solution-card:hover, .resource-card:hover, .product-card:hover, .feature-card:hover {
+            transform: perspective(1200px) rotateX(4deg) rotateY(-4deg) translateZ(16px) translateY(-8px);
+            box-shadow:
+                0 24px 60px -10px rgba(0, 163, 224, 0.25),
+                0 14px 35px -15px rgba(167, 75, 148, 0.28),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
         @media (max-width: 767px) {
             #site-ambient-3d {
                 display: none;
@@ -359,32 +401,54 @@
     <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
     <div class="ambient-depth-plane" aria-hidden="true"></div>
 
+    <!-- Laser Beam Scanner Line -->
+    <div class="laser-scan-beam"></div>
+
     <!-- Global 3D Apparel Manufacturing Video & Screenshot Reel Layer -->
     <div id="apparel-3d-bg-container" class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-slate-950">
-        <!-- 3D Scene 1: Smart Sewing Machine IoT Device -->
-        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100" data-scene="1">
+        <!-- Continuous 3D Apparel Image Filmstrip Reel Track (Infinite Scroll Mode) -->
+        <div id="apparel-3d-scrolling-track" class="absolute inset-0 w-[240%] h-full flex items-center gap-8 opacity-45 pointer-events-none transform-gpu animate-scroll-track-3d">
+            <div class="flex items-center gap-8 shrink-0 h-[80vh]">
+                <img src="{{ asset('images/apparel-3d-scene-1.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-sky-400/40 shadow-2xl shadow-sky-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-2.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-emerald-400/40 shadow-2xl shadow-emerald-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-3.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-teal-400/40 shadow-2xl shadow-teal-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-4.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-cyan-400/40 shadow-2xl shadow-cyan-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-5.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-indigo-400/40 shadow-2xl shadow-indigo-500/20">
+            </div>
+            <!-- Duplicated track for infinite seamless 3D loop -->
+            <div class="flex items-center gap-8 shrink-0 h-[80vh]">
+                <img src="{{ asset('images/apparel-3d-scene-1.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-sky-400/40 shadow-2xl shadow-sky-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-2.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-emerald-400/40 shadow-2xl shadow-emerald-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-3.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-teal-400/40 shadow-2xl shadow-teal-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-4.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-cyan-400/40 shadow-2xl shadow-cyan-500/20">
+                <img src="{{ asset('images/apparel-3d-scene-5.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-indigo-400/40 shadow-2xl shadow-indigo-500/20">
+            </div>
+        </div>
+
+        <!-- 3D Scene Spotlight Layer 1: Smart Sewing Machine IoT Device -->
+        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-60" data-scene="1">
             <img src="{{ asset('images/apparel-3d-scene-1.png') }}" alt="3D Sewing Machine IoT Workstation" class="w-full h-full object-cover scale-105 kb-active-1 transition-transform duration-700 ease-out transform-gpu">
         </div>
-        <!-- 3D Scene 2: Smart Factory Sewing Floor Layout -->
+        <!-- 3D Scene Spotlight Layer 2: Smart Factory Sewing Floor Layout -->
         <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="2">
             <img src="{{ asset('images/apparel-3d-scene-2.png') }}" alt="3D Smart Factory Sewing Floor" class="w-full h-full object-cover scale-105 kb-active-2 transition-transform duration-700 ease-out transform-gpu">
         </div>
-        <!-- 3D Scene 3: Apparel Manufacturing Complex Architecture -->
+        <!-- 3D Scene Spotlight Layer 3: Apparel Manufacturing Complex Architecture -->
         <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="3">
             <img src="{{ asset('images/apparel-3d-scene-3.png') }}" alt="3D Apparel Plant Architecture" class="w-full h-full object-cover scale-105 kb-active-3 transition-transform duration-700 ease-out transform-gpu">
         </div>
-        <!-- 3D Scene 4: Real-time SaaS Manufacturing Analytics Dashboard -->
+        <!-- 3D Scene Spotlight Layer 4: Real-time SaaS Manufacturing Analytics Dashboard -->
         <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="4">
             <img src="{{ asset('images/apparel-3d-scene-4.png') }}" alt="3D SaaS Manufacturing Analytics" class="w-full h-full object-cover scale-105 kb-active-4 transition-transform duration-700 ease-out transform-gpu">
         </div>
-        <!-- 3D Scene 5: Multi-Operator Sewing Assembly Line Fleet -->
+        <!-- 3D Scene Spotlight Layer 5: Multi-Operator Sewing Assembly Line Fleet -->
         <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="5">
             <img src="{{ asset('images/apparel-3d-scene-5.png') }}" alt="3D Multi-Operator Assembly Fleet" class="w-full h-full object-cover scale-105 kb-active-5 transition-transform duration-700 ease-out transform-gpu">
         </div>
 
         <!-- Ambient Lighting Grid Overlay & Glass Mask -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(248,250,252,0.55)_100%)]"></div>
-        <div id="video-overlay-mask" class="absolute inset-0 bg-gradient-to-br from-white/70 via-white/55 to-sky-100/40 backdrop-blur-[1px]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(248,250,252,0.50)_100%)]"></div>
+        <div id="video-overlay-mask" class="absolute inset-0 bg-gradient-to-br from-white/65 via-white/50 to-sky-100/35 backdrop-blur-[1px]"></div>
     </div>
 
     <!-- Main Content Layer -->
