@@ -278,6 +278,39 @@
             min-height: calc(100vh - 400px);
         }
 
+        /* 3D Apparel Ken-Burns Animation Reel */
+        @keyframes kb-scene-1 {
+            0% { transform: scale(1.05) translate3d(0%, 0%, 0) rotate(0deg); }
+            50% { transform: scale(1.15) translate3d(-1.5%, -1.2%, 0) rotate(0.4deg); }
+            100% { transform: scale(1.05) translate3d(0%, 0%, 0) rotate(0deg); }
+        }
+        @keyframes kb-scene-2 {
+            0% { transform: scale(1.12) translate3d(1%, 0.8%, 0) rotate(0deg); }
+            50% { transform: scale(1.05) translate3d(-1%, -1.5%, 0) rotate(-0.5deg); }
+            100% { transform: scale(1.12) translate3d(1%, 0.8%, 0) rotate(0deg); }
+        }
+        @keyframes kb-scene-3 {
+            0% { transform: scale(1.08) translate3d(-1%, 1%, 0) rotate(-0.3deg); }
+            50% { transform: scale(1.18) translate3d(1.5%, -1%, 0) rotate(0.3deg); }
+            100% { transform: scale(1.08) translate3d(-1%, 1%, 0) rotate(-0.3deg); }
+        }
+        @keyframes kb-scene-4 {
+            0% { transform: scale(1.06) translate3d(0.5%, -0.5%, 0) rotate(0deg); }
+            50% { transform: scale(1.14) translate3d(-1.2%, 1%, 0) rotate(0.4deg); }
+            100% { transform: scale(1.06) translate3d(0.5%, -0.5%, 0) rotate(0deg); }
+        }
+        @keyframes kb-scene-5 {
+            0% { transform: scale(1.15) translate3d(-1%, -1%, 0) rotate(0.3deg); }
+            50% { transform: scale(1.06) translate3d(1%, 0.5%, 0) rotate(-0.3deg); }
+            100% { transform: scale(1.15) translate3d(-1%, -1%, 0) rotate(-0.3deg); }
+        }
+
+        .kb-active-1 { animation: kb-scene-1 20s ease-in-out infinite alternate; }
+        .kb-active-2 { animation: kb-scene-2 22s ease-in-out infinite alternate; }
+        .kb-active-3 { animation: kb-scene-3 24s ease-in-out infinite alternate; }
+        .kb-active-4 { animation: kb-scene-4 21s ease-in-out infinite alternate; }
+        .kb-active-5 { animation: kb-scene-5 23s ease-in-out infinite alternate; }
+
         @media (max-width: 767px) {
             #site-ambient-3d {
                 display: none;
@@ -326,29 +359,32 @@
     <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
     <div class="ambient-depth-plane" aria-hidden="true"></div>
 
-    @php
-        $bgVideo = 'https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4';
-        if (request()->is('products*')) {
-            $bgVideo = 'https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4';
-        } elseif (request()->is('business-stories*') || request()->is('industries*')) {
-            $bgVideo = 'https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4';
-        } elseif (request()->is('about*')) {
-            $bgVideo = 'https://videos.pexels.com/video-files/5532766/5532766-hd_1920_1080_25fps.mp4';
-        } elseif (request()->is('resources*')) {
-            $bgVideo = 'https://videos.pexels.com/video-files/4487373/4487373-hd_1920_1080_25fps.mp4';
-        } elseif (request()->is('contact*')) {
-            $bgVideo = 'https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4';
-        }
-    @endphp
+    <!-- Global 3D Apparel Manufacturing Video & Screenshot Reel Layer -->
+    <div id="apparel-3d-bg-container" class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-slate-950">
+        <!-- 3D Scene 1: Smart Sewing Machine IoT Device -->
+        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100" data-scene="1">
+            <img src="{{ asset('images/apparel-3d-scene-1.png') }}" alt="3D Sewing Machine IoT Workstation" class="w-full h-full object-cover scale-105 kb-active-1 transition-transform duration-700 ease-out transform-gpu">
+        </div>
+        <!-- 3D Scene 2: Smart Factory Sewing Floor Layout -->
+        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="2">
+            <img src="{{ asset('images/apparel-3d-scene-2.png') }}" alt="3D Smart Factory Sewing Floor" class="w-full h-full object-cover scale-105 kb-active-2 transition-transform duration-700 ease-out transform-gpu">
+        </div>
+        <!-- 3D Scene 3: Apparel Manufacturing Complex Architecture -->
+        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="3">
+            <img src="{{ asset('images/apparel-3d-scene-3.png') }}" alt="3D Apparel Plant Architecture" class="w-full h-full object-cover scale-105 kb-active-3 transition-transform duration-700 ease-out transform-gpu">
+        </div>
+        <!-- 3D Scene 4: Real-time SaaS Manufacturing Analytics Dashboard -->
+        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="4">
+            <img src="{{ asset('images/apparel-3d-scene-4.png') }}" alt="3D SaaS Manufacturing Analytics" class="w-full h-full object-cover scale-105 kb-active-4 transition-transform duration-700 ease-out transform-gpu">
+        </div>
+        <!-- 3D Scene 5: Multi-Operator Sewing Assembly Line Fleet -->
+        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="5">
+            <img src="{{ asset('images/apparel-3d-scene-5.png') }}" alt="3D Multi-Operator Assembly Fleet" class="w-full h-full object-cover scale-105 kb-active-5 transition-transform duration-700 ease-out transform-gpu">
+        </div>
 
-    <!-- Global Site-Wide High-Clarity Apparel Manufacturing Background Video Layer -->
-    <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-        <video id="site-background-apparel-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-90 scale-105 transition-opacity duration-500">
-            <source src="{{ $bgVideo }}" type="video/mp4">
-            <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
-        </video>
-        <!-- High-Definition Light Glass Overlay -->
-        <div id="video-overlay-mask" class="absolute inset-0 bg-gradient-to-br from-white/45 via-white/35 to-sky-100/25 backdrop-blur-[1px] transition-all duration-500"></div>
+        <!-- Ambient Lighting Grid Overlay & Glass Mask -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(248,250,252,0.55)_100%)]"></div>
+        <div id="video-overlay-mask" class="absolute inset-0 bg-gradient-to-br from-white/70 via-white/55 to-sky-100/40 backdrop-blur-[1px]"></div>
     </div>
 
     <!-- Main Content Layer -->
@@ -466,6 +502,38 @@
             </div>
         </footer>
 
+    </div>
+
+    <!-- Floating 3D Apparel Video Telemetry & Scene Controller HUD -->
+    <div id="apparel-3d-hud-control" class="fixed bottom-6 left-6 z-50 flex flex-col gap-2 transition-all duration-300">
+        <div class="flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-xl border border-sky-400/40 shadow-2xl text-white text-xs font-mono">
+            <div class="relative flex items-center justify-center w-3 h-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </div>
+            <div class="flex flex-col">
+                <div class="flex items-center gap-2">
+                    <span class="text-sky-400 font-bold uppercase tracking-wider text-[10px]">3D Apparel Stream</span>
+                    <span class="bg-sky-500/20 text-sky-300 px-1.5 py-0.5 rounded text-[9px] font-sans font-semibold">60 FPS</span>
+                </div>
+                <span id="hud-scene-title" class="font-sans font-semibold text-slate-200 text-xs truncate max-w-[180px] sm:max-w-[260px]">
+                    Scene 1: Smart IoT Sewing Node
+                </span>
+            </div>
+
+            <!-- Scene selector buttons 1..5 -->
+            <div class="flex items-center gap-1.5 ml-2 pl-2 border-l border-slate-700/80">
+                <button onclick="switchApparel3DScene(1)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-sky-500 text-white shadow-md shadow-sky-500/50 scale-110" data-scene-num="1" title="Scene 1: IoT Sewing Terminal">1</button>
+                <button onclick="switchApparel3DScene(2)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="2" title="Scene 2: Factory Sewing Lines">2</button>
+                <button onclick="switchApparel3DScene(3)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="3" title="Scene 3: Factory Architecture">3</button>
+                <button onclick="switchApparel3DScene(4)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="4" title="Scene 4: Analytics Dashboard">4</button>
+                <button onclick="switchApparel3DScene(5)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="5" title="Scene 5: Multi-Operator Fleet">5</button>
+                
+                <button id="hud-play-pause-btn" onclick="toggleApparel3DAutoPlay()" class="w-6 h-6 ml-1 rounded-lg text-[12px] bg-slate-800 text-slate-300 hover:bg-slate-700 transition flex items-center justify-center" title="Pause/Play 3D Loop">
+                    ⏸
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- Floating 3D Navigation & Quick Router Dock -->
@@ -739,6 +807,92 @@
                 });
             });
         });
+    </script>
+    <script>
+        (function() {
+            var currentScene = 1;
+            var autoPlay = true;
+            var sceneTimer = null;
+            var totalScenes = 5;
+
+            var titles = {
+                1: "Scene 1: Smart IoT Sewing Node",
+                2: "Scene 2: Smart Factory Sewing Floor",
+                3: "Scene 3: Apparel Complex & Docks",
+                4: "Scene 4: SaaS Manufacturing Analytics",
+                5: "Scene 5: Multi-Operator Assembly Fleet"
+            };
+
+            var path = window.location.pathname;
+            if (path.indexOf('products') !== -1) currentScene = 1;
+            else if (path.indexOf('business-stories') !== -1 || path.indexOf('industries') !== -1) currentScene = 2;
+            else if (path.indexOf('about') !== -1) currentScene = 3;
+            else if (path.indexOf('resources') !== -1) currentScene = 4;
+            else if (path.indexOf('contact') !== -1) currentScene = 5;
+
+            window.switchApparel3DScene = function(num) {
+                currentScene = num;
+                var scenes = document.querySelectorAll('.apparel-3d-scene');
+                var btns = document.querySelectorAll('.hud-scene-btn');
+                var titleEl = document.getElementById('hud-scene-title');
+
+                scenes.forEach(function(s) {
+                    var sNum = parseInt(s.getAttribute('data-scene'), 10);
+                    if (sNum === num) {
+                        s.classList.remove('opacity-0');
+                        s.classList.add('opacity-100');
+                    } else {
+                        s.classList.remove('opacity-100');
+                        s.classList.add('opacity-0');
+                    }
+                });
+
+                btns.forEach(function(b) {
+                    var bNum = parseInt(b.getAttribute('data-scene-num'), 10);
+                    if (bNum === num) {
+                        b.className = 'hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-sky-500 text-white shadow-md shadow-sky-500/50 scale-110';
+                    } else {
+                        b.className = 'hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700';
+                    }
+                });
+
+                if (titleEl && titles[num]) {
+                    titleEl.textContent = titles[num];
+                }
+            };
+
+            window.toggleApparel3DAutoPlay = function() {
+                autoPlay = !autoPlay;
+                var btn = document.getElementById('hud-play-pause-btn');
+                if (btn) btn.textContent = autoPlay ? '⏸' : '▶';
+                if (autoPlay) startAutoPlay();
+                else clearInterval(sceneTimer);
+            };
+
+            function startAutoPlay() {
+                clearInterval(sceneTimer);
+                sceneTimer = setInterval(function() {
+                    if (!autoPlay) return;
+                    currentScene = (currentScene % totalScenes) + 1;
+                    switchApparel3DScene(currentScene);
+                }, 6000);
+            }
+
+            var bgContainer = document.getElementById('apparel-3d-bg-container');
+            if (bgContainer && window.innerWidth >= 768) {
+                document.addEventListener('mousemove', function(e) {
+                    var xPct = (e.clientX / window.innerWidth - 0.5) * 2;
+                    var yPct = (e.clientY / window.innerHeight - 0.5) * 2;
+                    var activeImg = bgContainer.querySelector('.apparel-3d-scene.opacity-100 img');
+                    if (activeImg) {
+                        activeImg.style.transform = 'scale(1.1) translate3d(' + (xPct * 10) + 'px, ' + (yPct * 10) + 'px, 0px) rotateX(' + (-yPct * 1.5) + 'deg) rotateY(' + (xPct * 1.5) + 'deg)';
+                    }
+                });
+            }
+
+            switchApparel3DScene(currentScene);
+            startAutoPlay();
+        })();
     </script>
     @stack('scripts')
 </body>

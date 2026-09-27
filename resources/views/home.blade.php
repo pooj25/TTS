@@ -566,6 +566,123 @@ body { background: var(--white); color: var(--dark); }
     </div>
 </section>
 
+{{-- ══════════════════════════════════════════════════════════════════
+     SECTION: 3D APPAREL MANUFACTURING SMART FACTORY SHOWCASE
+     ══════════════════════════════════════════════════════════════════ --}}
+<section class="py-24 relative overflow-hidden bg-slate-900 text-white">
+    <!-- Ambient 3D Glow Orbs -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 uppercase tracking-widest mb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                3D Smart Apparel Factory Engine
+            </span>
+            <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Immersive 3D Factory <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-teal-300 to-cyan-400">Stream & Architecture</span>
+            </h2>
+            <p class="mt-4 text-slate-300 text-lg font-medium">
+                Click any 3D scene card below to project it directly into the full-screen 3D background stream and explore Track Tech's IoT hardware & SaaS analytics.
+            </p>
+        </div>
+
+        <!-- 5 Scene Grid Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Scene 1 Card -->
+            <div class="glass-card bg-slate-800/80 backdrop-blur-xl border border-sky-400/30 rounded-3xl p-5 overflow-hidden shadow-2xl group hover:-translate-y-2 transition-all duration-300 cursor-pointer" onclick="switchApparel3DScene(1); window.scrollTo({top: 0, behavior: 'smooth'});">
+                <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                    <img src="{{ asset('images/apparel-3d-scene-1.png') }}" alt="IoT Sewing Node" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <span class="absolute top-3 left-3 bg-sky-500/90 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-md">3D SCENE 01</span>
+                    <span class="absolute bottom-3 right-3 bg-slate-900/90 text-sky-300 font-mono text-[11px] font-bold px-3 py-1 rounded-lg border border-sky-400/30 flex items-center gap-1.5">
+                        <span>▶ Project to Stream</span>
+                    </span>
+                </div>
+                <h3 class="text-xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition">IoT Sewing Machine Node</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">Direct hardware telemetry attached to sewing workstations, capturing line speed, operator OEE, and motor runtime continuously.</p>
+                <div class="flex items-center justify-between text-xs font-mono text-sky-400 font-bold border-t border-slate-700/60 pt-3">
+                    <span>STATUS: ONLINE</span>
+                    <span>100% HARDWARE SYNC</span>
+                </div>
+            </div>
+
+            <!-- Scene 2 Card -->
+            <div class="glass-card bg-slate-800/80 backdrop-blur-xl border border-sky-400/30 rounded-3xl p-5 overflow-hidden shadow-2xl group hover:-translate-y-2 transition-all duration-300 cursor-pointer" onclick="switchApparel3DScene(2); window.scrollTo({top: 0, behavior: 'smooth'});">
+                <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                    <img src="{{ asset('images/apparel-3d-scene-2.png') }}" alt="Factory Floor Layout" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <span class="absolute top-3 left-3 bg-sky-500/90 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-md">3D SCENE 02</span>
+                    <span class="absolute bottom-3 right-3 bg-slate-900/90 text-sky-300 font-mono text-[11px] font-bold px-3 py-1 rounded-lg border border-sky-400/30 flex items-center gap-1.5">
+                        <span>▶ Project to Stream</span>
+                    </span>
+                </div>
+                <h3 class="text-xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition">3D Smart Sewing Lines</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">Isometric shopfloor view mapping bundle movement, conveyor lines, and real-time line-balancing metrics across the assembly hall.</p>
+                <div class="flex items-center justify-between text-xs font-mono text-emerald-400 font-bold border-t border-slate-700/60 pt-3">
+                    <span>OEE BOOST: +25%</span>
+                    <span>CONVEYOR INTEGRATED</span>
+                </div>
+            </div>
+
+            <!-- Scene 3 Card -->
+            <div class="glass-card bg-slate-800/80 backdrop-blur-xl border border-sky-400/30 rounded-3xl p-5 overflow-hidden shadow-2xl group hover:-translate-y-2 transition-all duration-300 cursor-pointer" onclick="switchApparel3DScene(3); window.scrollTo({top: 0, behavior: 'smooth'});">
+                <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                    <img src="{{ asset('images/apparel-3d-scene-3.png') }}" alt="Plant Architecture" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <span class="absolute top-3 left-3 bg-sky-500/90 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-md">3D SCENE 03</span>
+                    <span class="absolute bottom-3 right-3 bg-slate-900/90 text-sky-300 font-mono text-[11px] font-bold px-3 py-1 rounded-lg border border-sky-400/30 flex items-center gap-1.5">
+                        <span>▶ Project to Stream</span>
+                    </span>
+                </div>
+                <h3 class="text-xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition">Apparel Complex Architecture</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">Architectural exterior view of the smart factory, logistics loading docks, and central cloud dispatch operations.</p>
+                <div class="flex items-center justify-between text-xs font-mono text-teal-300 font-bold border-t border-slate-700/60 pt-3">
+                    <span>LOGISTICS: ACTIVE</span>
+                    <span>MULTI-PLANT CONNECT</span>
+                </div>
+            </div>
+
+            <!-- Scene 4 Card -->
+            <div class="glass-card bg-slate-800/80 backdrop-blur-xl border border-sky-400/30 rounded-3xl p-5 overflow-hidden shadow-2xl group hover:-translate-y-2 transition-all duration-300 cursor-pointer" onclick="switchApparel3DScene(4); window.scrollTo({top: 0, behavior: 'smooth'});">
+                <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                    <img src="{{ asset('images/apparel-3d-scene-4.png') }}" alt="SaaS Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <span class="absolute top-3 left-3 bg-sky-500/90 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-md">3D SCENE 04</span>
+                    <span class="absolute bottom-3 right-3 bg-slate-900/90 text-sky-300 font-mono text-[11px] font-bold px-3 py-1 rounded-lg border border-sky-400/30 flex items-center gap-1.5">
+                        <span>▶ Project to Stream</span>
+                    </span>
+                </div>
+                <h3 class="text-xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition">SaaS Manufacturing Intelligence</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">Live breakdown alerts, stitch efficiency dial gauges, line bottleneck monitors, and real-time production dashboards.</p>
+                <div class="flex items-center justify-between text-xs font-mono text-cyan-400 font-bold border-t border-slate-700/60 pt-3">
+                    <span>DEFECT REDUCTION: -40%</span>
+                    <span>REAL-TIME GAUGES</span>
+                </div>
+            </div>
+
+            <!-- Scene 5 Card -->
+            <div class="glass-card bg-slate-800/80 backdrop-blur-xl border border-sky-400/30 rounded-3xl p-5 overflow-hidden shadow-2xl group hover:-translate-y-2 transition-all duration-300 cursor-pointer md:col-span-2 lg:col-span-1" onclick="switchApparel3DScene(5); window.scrollTo({top: 0, behavior: 'smooth'});">
+                <div class="relative h-48 rounded-2xl overflow-hidden mb-5">
+                    <img src="{{ asset('images/apparel-3d-scene-5.png') }}" alt="Multi-Operator Assembly Line" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <span class="absolute top-3 left-3 bg-sky-500/90 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-md">3D SCENE 05</span>
+                    <span class="absolute bottom-3 right-3 bg-slate-900/90 text-sky-300 font-mono text-[11px] font-bold px-3 py-1 rounded-lg border border-sky-400/30 flex items-center gap-1.5">
+                        <span>▶ Project to Stream</span>
+                    </span>
+                </div>
+                <h3 class="text-xl font-extrabold text-white mb-2 group-hover:text-sky-400 transition">Multi-Operator Sewing Assembly</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">High-efficiency sewing workstations optimized for operator ergonomics, piece-rate tracking, and automated bundle handoff.</p>
+                <div class="flex items-center justify-between text-xs font-mono text-emerald-400 font-bold border-t border-slate-700/60 pt-3">
+                    <span>OPERATOR EFFICIENCY: HIGH</span>
+                    <span>PIECE-RATE TRACKING</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <script>
 function switchSimStage(stage) {
     var video = document.getElementById('sim-interactive-video');
