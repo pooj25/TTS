@@ -19,9 +19,6 @@
                         <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
                         Digital Apparel Solutions
                     </div>
-                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 text-white hover:bg-sky-600 rounded-full text-sm font-bold transition shadow-md shadow-sky-500/20">
-                        <span>🎬 See Solutions In Motion</span>
-                    </button>
                 </div>
 
                 <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-slate-900">

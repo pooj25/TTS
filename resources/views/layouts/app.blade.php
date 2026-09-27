@@ -312,64 +312,14 @@
     <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
     <div class="ambient-depth-plane" aria-hidden="true"></div>
 
-    <!-- Floating Apparel Video Visualizer Button (All Pages) -->
-    <div class="apparel-video-fab shadow-xl" id="open-apparel-video-modal">
-        <span class="pulse-ring"></span>
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        <span>Apparel Manufacturing Videos 🎬</span>
-    </div>
-
-    <!-- Apparel Video Showcase Modal (Available on ALL pages) -->
-    <div id="apparel-video-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-md">
-        <div class="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl border border-slate-200 transform transition-all">
-            <!-- Modal Header -->
-            <div class="p-6 bg-gradient-to-r from-sky-500 to-teal-600 text-white flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center font-bold text-xl">🪡</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white">Apparel Manufacturing In Action</h3>
-                        <p class="text-xs text-sky-100 font-medium">Real-time Digitized Factory Floor Motion</p>
-                    </div>
-                </div>
-                <button id="close-apparel-video-modal" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-xl transition">✕</button>
-            </div>
-
-            <!-- Video & Canvas Selector -->
-            <div class="p-6">
-                <div class="flex flex-wrap gap-2 mb-4 justify-center">
-                    <button class="video-tab-btn active px-4 py-2 rounded-xl text-xs font-bold bg-sky-500 text-white transition-all" data-video="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" data-title="Automatic Garment Cutting & Pattern Spreading">
-                        ✂️ Fabric Cutting
-                    </button>
-                    <button class="video-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-sky-50 transition-all" data-video="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" data-title="High-Speed Industrial Sewing Line">
-                        🪡 Sewing Assembly
-                    </button>
-                    <button class="video-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-sky-50 transition-all" data-video="https://videos.pexels.com/video-files/5532766/5532766-hd_1920_1080_25fps.mp4" data-title="Real-Time RFID Quality Control & Inspection">
-                        🔍 Quality QC
-                    </button>
-                    <button class="video-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-sky-50 transition-all" data-video="https://videos.pexels.com/video-files/4487373/4487373-hd_1920_1080_25fps.mp4" data-title="Automated Garment Logistics & Packing">
-                        📦 Dispatch & Packing
-                    </button>
-                </div>
-
-                <!-- Main Video Display Frame -->
-                <div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 shadow-inner border border-slate-200">
-                    <video id="modal-apparel-video" class="w-full h-full object-cover" autoplay loop muted playsinline>
-                        <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
-                    </video>
-                    <!-- Overlaid Live Tech Specs HUD -->
-                    <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-xl p-3 flex justify-between items-center text-xs border border-slate-200 shadow-md">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                            <span id="modal-video-title" class="font-bold text-slate-800">Automatic Garment Cutting & Pattern Spreading</span>
-                        </div>
-                        <div class="flex gap-4 font-semibold text-slate-600">
-                            <span>Efficiency: <strong class="text-emerald-600">98.4%</strong></span>
-                            <span>SMV Variance: <strong class="text-sky-600">-0.12s</strong></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Global Site-Wide Apparel Manufacturing Background Video Layer -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+        <video id="site-background-apparel-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-35 scale-105">
+            <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+            <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        <!-- Light Translucent Backdrop Overlay for High Readability -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white/85 via-slate-50/80 to-sky-100/65 backdrop-blur-[1px]"></div>
     </div>
 
     <!-- Main Content Layer -->

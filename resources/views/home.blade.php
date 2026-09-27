@@ -276,11 +276,11 @@ body { background: var(--white); color: var(--dark); }
                 Book a Demo
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
-            <button onclick="document.getElementById('open-apparel-video-modal').click()"
+            <a href="#how-it-works"
                class="flex items-center gap-2 px-10 py-4 rounded-full font-bold text-slate-800 text-lg transition-all bg-white/80 hover:bg-white border-2 border-slate-300 shadow-md backdrop-blur-md">
                 <svg class="w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                Watch Apparel Videos 🎬
-            </button>
+                See How It Works
+            </a>
         </div>
 
         {{-- Scroll indicator --}}
