@@ -348,42 +348,73 @@ body { background: var(--white); color: var(--dark); }
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="text-center mb-16 reveal">
-            <span class="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-5"
-                  style="background:#fff1f2;color:#dc2626;border:1px solid #fecaca;">The Challenge</span>
-            <h2 style="font-size:clamp(2rem,4vw,3.25rem);font-weight:900;color:var(--navy);line-height:1.15;">
+            <span class="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-5 border border-red-200 bg-red-50 text-red-600">
+                The Challenge
+            </span>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
                 Your Factory Is Losing Money —<br>
-                <span style="color:#dc2626;">And You Don't Know Where</span>
+                <span class="text-red-600">And You Don't Know Where</span>
             </h2>
-            <p class="mt-5 text-lg max-w-2xl mx-auto" style="color:var(--slate);">Every day without real-time visibility, manufacturers face the same silent losses.</p>
+            <p class="mt-5 text-lg text-slate-600 max-w-2xl mx-auto font-medium">Every day without real-time visibility, garment manufacturers face silent losses across cut rooms and sewing lines.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-3 gap-8">
 
-            <div class="prob-card red reveal">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background:#fff1f2;">
-                    <svg class="w-7 h-7" style="color:#dc2626" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg>
+            <!-- Card 1: 3D Fabric Loss Card -->
+            <div class="glass-card p-8 rounded-3xl relative overflow-hidden border border-red-200 shadow-xl group hover:-translate-y-2 transition duration-300">
+                <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none group-hover:opacity-30 transition">
+                    <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+                </video>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-red-100 text-red-600 shadow-sm font-extrabold text-2xl">
+                        ✂️
+                    </div>
+                    <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-red-50 text-red-600 border border-red-200 mb-3 inline-block">3D Cut Room Audit</span>
+                    <h3 class="text-2xl font-black mb-3 text-slate-900">3–5% Fabric Wasted Per Order</h3>
+                    <p class="leading-relaxed mb-6 text-slate-600 text-sm font-medium">Manual spreading and poor inventory tracking silently drain fabric budgets — adding up to lakhs per month with zero visibility on where it went.</p>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-50 text-red-700 font-extrabold text-sm border border-red-200 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                        ₹5–15L wasted / month
+                    </div>
                 </div>
-                <h3 class="text-xl font-black mb-3" style="color:var(--navy)">3–5% Fabric Wasted Per Order</h3>
-                <p class="leading-relaxed mb-5" style="color:var(--slate)">Manual spreading and poor inventory tracking silently drain fabric budgets — adding up to lakhs per month with no visibility on where it went.</p>
-                <div class="inline-block px-3 py-1 rounded-full text-sm font-black" style="background:#fff1f2;color:#dc2626;">₹5–15L wasted / month</div>
             </div>
 
-            <div class="prob-card amb reveal" style="transition-delay:.1s">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background:#fffbeb;">
-                    <svg class="w-7 h-7" style="color:#f59e0b" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <!-- Card 2: 3D Reporting Delay Card -->
+            <div class="glass-card p-8 rounded-3xl relative overflow-hidden border border-amber-200 shadow-xl group hover:-translate-y-2 transition duration-300">
+                <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none group-hover:opacity-30 transition">
+                    <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
+                </video>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-amber-100 text-amber-600 shadow-sm font-extrabold text-2xl">
+                        ⏱️
+                    </div>
+                    <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-amber-50 text-amber-600 border border-amber-200 mb-3 inline-block">Shopfloor Latency</span>
+                    <h3 class="text-2xl font-black mb-3 text-slate-900">2–3 Hours Lost to Manual Tallying</h3>
+                    <p class="leading-relaxed mb-6 text-slate-600 text-sm font-medium">Supervisors filling tally sheets, managers waiting for end-of-day reports — decisions are made on yesterday's data while production suffers today.</p>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-50 text-amber-700 font-extrabold text-sm border border-amber-200 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+                        15+ hrs/week per supervisor
+                    </div>
                 </div>
-                <h3 class="text-xl font-black mb-3" style="color:var(--navy)">2–3 Hours Lost to Manual Reporting</h3>
-                <p class="leading-relaxed mb-5" style="color:var(--slate)">Supervisors filling tally sheets, managers waiting for end-of-day reports — decisions are made on yesterday's data while production suffers today.</p>
-                <div class="inline-block px-3 py-1 rounded-full text-sm font-black" style="background:#fffbeb;color:#d97706;">15+ hrs/week per supervisor</div>
             </div>
 
-            <div class="prob-card navy reveal" style="transition-delay:.2s">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background:#eff6ff;">
-                    <svg class="w-7 h-7" style="color:#1d4ed8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <!-- Card 3: 3D Defect Cascade Card -->
+            <div class="glass-card p-8 rounded-3xl relative overflow-hidden border border-blue-200 shadow-xl group hover:-translate-y-2 transition duration-300">
+                <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none group-hover:opacity-30 transition">
+                    <source src="https://videos.pexels.com/video-files/5532766/5532766-hd_1920_1080_25fps.mp4" type="video/mp4">
+                </video>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-blue-100 text-blue-600 shadow-sm font-extrabold text-2xl">
+                        🔍
+                    </div>
+                    <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-200 mb-3 inline-block">Inline Quality Control</span>
+                    <h3 class="text-2xl font-black mb-3 text-slate-900">Defects Caught Too Late</h3>
+                    <p class="leading-relaxed mb-6 text-slate-600 text-sm font-medium">End-of-line quality checks mean defects cascade through the entire batch — rework, buyer rejections, and chargebacks destroy seasonal margins.</p>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-blue-700 font-extrabold text-sm border border-blue-200 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+                        8–12% industry defect rate
+                    </div>
                 </div>
-                <h3 class="text-xl font-black mb-3" style="color:var(--navy)">Defects Caught Too Late</h3>
-                <p class="leading-relaxed mb-5" style="color:var(--slate)">End-of-line quality checks mean defects cascade through the entire batch — rework, buyer rejections, and chargebacks destroy margins every season.</p>
-                <div class="inline-block px-3 py-1 rounded-full text-sm font-black" style="background:#eff6ff;color:#1d4ed8;">8–12% industry defect rate</div>
             </div>
 
         </div>
@@ -392,40 +423,43 @@ body { background: var(--white); color: var(--dark); }
 
 
 {{-- ══════════════════════════════════════════════════════════════════
-     SECTION 5: SOLUTION FLOW
+     SECTION 5: SOLUTION FLOW WITH 3D ANIMATED APPAREL STAGES
      ══════════════════════════════════════════════════════════════════ --}}
-<section id="how-it-works" class="py-28" style="background:var(--off);">
-    <div class="max-w-7xl mx-auto px-6">
+<section id="how-it-works" class="py-28 relative overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white via-sky-50/40 to-slate-50">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
 
         <div class="text-center mb-20 reveal">
-            <span class="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-5"
-                  style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;">One Platform</span>
-            <h2 style="font-size:clamp(2rem,4vw,3.25rem);font-weight:900;color:var(--navy);line-height:1.15;">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-5 bg-sky-100 text-sky-700 border border-sky-200">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                Connected Smart Factory Platform
+            </span>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
                 Complete Visibility.<br>
-                <span class="grad-brand">Fabric to Finish.</span>
+                <span class="text-gradient">Fabric to Finish.</span>
             </h2>
-            <p class="mt-5 text-lg max-w-3xl mx-auto" style="color:var(--slate)">Track Tech connects every stage of your production floor into one intelligent platform — giving supervisors, managers, and leadership real-time insights that drive action.</p>
+            <p class="mt-5 text-lg text-slate-600 max-w-3xl mx-auto font-medium">Track Tech connects every stage of your apparel production floor into one intelligent platform — giving supervisors, managers, and leadership real-time insights that drive action.</p>
         </div>
 
         {{-- Flow --}}
         <div class="relative">
-            {{-- Connector --}}
-            <div class="hidden lg:block absolute" style="top:48px;left:calc(10% + 48px);right:calc(10% + 48px);height:2px;background:linear-gradient(90deg,#f59e0b,#f97316,#1d4ed8,#7c3aed,#10b981);opacity:0.4;"></div>
+            {{-- Connector Line --}}
+            <div class="hidden lg:block absolute top-12 left-20 right-20 h-1 bg-gradient-to-r from-amber-400 via-sky-500 to-emerald-500 rounded-full opacity-60"></div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 @foreach([
-                    ['🧵', 'Fabric',     'Intake & store tracking',    '#f59e0b', '#fffbeb'],
-                    ['✂️', 'Cutting',    'Spreading & cut plans',       '#f97316', '#fff7ed'],
-                    ['🏭', 'Production', 'Line & operator output',      '#1d4ed8', '#eff6ff'],
-                    ['🔍', 'Quality',    'Defect capture at source',    '#7c3aed', '#f5f3ff'],
-                    ['📦', 'Delivery',   'Order fulfilment tracking',   '#059669', '#ecfdf5'],
+                    ['🧵', 'Fabric Intake',  'Intake & store tracking',    'from-amber-400 to-orange-500', 'bg-amber-50'],
+                    ['✂️', 'Cut Room',       'Spreading & cut plans',       'from-orange-400 to-red-500',    'bg-orange-50'],
+                    ['🏭', 'Sewing Assembly','Line & operator output',      'from-sky-400 to-blue-600',     'bg-sky-50'],
+                    ['🔍', 'Inline Quality', 'Defect capture at source',    'from-purple-400 to-indigo-600', 'bg-purple-50'],
+                    ['📦', 'RFID Dispatch',  'Order fulfilment tracking',   'from-emerald-400 to-teal-600',  'bg-emerald-50'],
                 ] as $i => $fl)
-                <div class="flow-step reveal" style="transition-delay:{{ $i * 0.1 }}s">
-                    <div class="flow-icon" style="background:{{ $fl[4] }};border:2px solid {{ $fl[3] }}22;">
+                <div class="glass-card p-6 rounded-3xl text-center border border-slate-200/80 shadow-lg group hover:-translate-y-3 transition-all duration-300 relative">
+                    <div class="w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-4 text-3xl shadow-md bg-gradient-to-br {{ $fl[3] }} text-white group-hover:scale-110 transition transform">
                         <span>{{ $fl[0] }}</span>
                     </div>
-                    <h4 class="font-black text-lg mb-1" style="color:var(--navy)">{{ $fl[1] }}</h4>
-                    <p class="text-sm" style="color:var(--slate)">{{ $fl[2] }}</p>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-sky-600 mb-1 block">Stage 0{{ $i + 1 }}</span>
+                    <h4 class="font-black text-lg text-slate-900 mb-1">{{ $fl[1] }}</h4>
+                    <p class="text-xs text-slate-600 font-medium leading-relaxed">{{ $fl[2] }}</p>
                 </div>
                 @endforeach
             </div>
@@ -489,11 +523,16 @@ body { background: var(--white); color: var(--dark); }
             </div>
 
             <!-- Right Interactive Canvas / Video Stage -->
-            <div class="lg:col-span-7 relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-inner group min-h-[380px] flex items-center justify-center">
+            <div class="lg:col-span-7 relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 via-sky-950 to-indigo-950 border border-sky-400/30 shadow-2xl group min-h-[420px] flex items-center justify-center">
                 <!-- Video Display -->
-                <video id="sim-interactive-video" class="w-full h-full object-cover absolute inset-0" autoplay loop muted playsinline>
+                <video id="sim-interactive-video" class="w-full h-full object-cover absolute inset-0 z-0 opacity-80" autoplay loop muted playsinline>
                     <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
+                    <source src="https://videos.pexels.com/video-files/5532766/5532766-hd_1920_1080_25fps.mp4" type="video/mp4">
                 </video>
+
+                <!-- Dedicated Interactive 3D Garment Canvas Overlay -->
+                <canvas id="sim-stage-3d-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-1 opacity-60"></canvas>
 
                 <!-- Dynamic Overlay Canvas with Interactive Apparel Graphics -->
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20 p-6 flex flex-col justify-between pointer-events-none">
@@ -1023,6 +1062,49 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.5 });
 
     document.querySelectorAll('.stat-card .num').forEach(function(el) { statObs.observe(el); });
+
+    // ── Dedicated Simulator Stage 3D Garment Mesh ─────────────────────
+    (function() {
+        var canvas = document.getElementById('sim-stage-3d-canvas');
+        if (!canvas || typeof THREE === 'undefined') return;
+
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / (canvas.clientHeight || 300), 0.1, 100);
+        camera.position.set(0, 0, 5);
+
+        var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight || 300);
+
+        // 3D Garment Wireframe Torso / Cylinder mesh
+        var torsoGeo = new THREE.CylinderGeometry(0.9, 0.7, 2.2, 16, 8, true);
+        var wireframeMat = new THREE.MeshBasicMaterial({ color: 0x00a3e0, wireframe: true, transparent: true, opacity: 0.45 });
+        var torsoMesh = new THREE.Mesh(torsoGeo, wireframeMat);
+        scene.add(torsoMesh);
+
+        // Orbiting RFID Sensor Nodes
+        var nodeGeo = new THREE.SphereGeometry(0.08, 8, 8);
+        var nodeMat = new THREE.MeshBasicMaterial({ color: 0x22c55e });
+        var nodes = [];
+        for (var i = 0; i < 6; i++) {
+            var node = new THREE.Mesh(nodeGeo, nodeMat);
+            node.position.set(Math.cos(i * 1.05) * 1.3, (i % 3) * 0.6 - 0.6, Math.sin(i * 1.05) * 1.3);
+            scene.add(node);
+            nodes.push(node);
+        }
+
+        function animStage(time) {
+            requestAnimationFrame(animStage);
+            torsoMesh.rotation.y = time * 0.0008;
+            torsoMesh.rotation.x = Math.sin(time * 0.0004) * 0.15;
+            nodes.forEach(function(nd, idx) {
+                nd.position.x = Math.cos(time * 0.001 + idx) * 1.35;
+                nd.position.z = Math.sin(time * 0.001 + idx) * 1.35;
+            });
+            renderer.render(scene, camera);
+        }
+        requestAnimationFrame(animStage);
+    })();
 });
 </script>
 @endpush
