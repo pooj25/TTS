@@ -8,46 +8,51 @@
          HERO
     ================================ -->
 
-    <section class="pt-32 pb-20 relative">
+    <section class="pt-32 pb-24 relative overflow-hidden min-h-[500px] flex items-center border-b border-slate-200">
+        <!-- Background Apparel Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-sky-100/70 backdrop-blur-[2px]"></div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
             <div class="max-w-4xl">
-
-                <div class="flex flex-wrap items-center gap-3 mb-7">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-semibold text-slate-800 border border-slate-200">
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-bold text-slate-900 border border-slate-300 shadow-sm">
                         <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
-                        Our Products &amp; Software
+                        Apparel Product Ecosystem
                     </div>
-                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
-                        <span>🎬 Watch Garment Video Demos</span>
+                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 text-white hover:bg-sky-600 rounded-full text-sm font-bold transition shadow-md shadow-sky-500/20">
+                        <span>🎬 Watch Live Factory Demos</span>
                     </button>
                 </div>
 
-
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900">
-
+                <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-slate-900">
                     Digital products built for
-
-                    <span class="text-gradient">
-                        apparel factories.
-                    </span>
-
+                    <span class="text-gradient">apparel factories.</span>
                 </h1>
 
-
-                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl font-medium">
-
-                    Powerful software products designed to simplify
-                    apparel manufacturing, improve productivity and
-                    provide real-time visibility across your factory.
-
+                <p class="mt-6 text-lg lg:text-xl text-slate-700 leading-relaxed max-w-3xl font-semibold">
+                    Purpose-built digital products to simplify fabric spreading, cutting management, sewing line tracking, inline QC, and bundle dispatch.
                 </p>
 
+                <!-- Interactive Apparel Stage Pill Bar -->
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800 flex items-center gap-2">
+                        ✂️ Automatic Fabric Cutting
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800 flex items-center gap-2">
+                        🪡 Industrial Sewing Terminals
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800 flex items-center gap-2">
+                        🔍 Inline Defect QC
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800 flex items-center gap-2">
+                        📦 RFID Carton Packing
+                    </span>
+                </div>
             </div>
-
         </div>
-
     </section>
 
 

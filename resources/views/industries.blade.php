@@ -5,43 +5,51 @@
 @section('content')
 
     <!-- HERO -->
-    <section class="pt-32 pb-20 relative">
+    <section class="pt-32 pb-24 relative overflow-hidden min-h-[500px] flex items-center border-b border-slate-200">
+        <!-- Background Apparel Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://videos.pexels.com/video-files/5532766/5532766-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-indigo-50/70 backdrop-blur-[2px]"></div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-            <div class="max-w-4xl relative z-10">
-
-                <div class="flex flex-wrap items-center gap-3 mb-7">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-semibold text-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-4xl">
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-bold text-slate-900 border border-slate-300 shadow-sm">
                         <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
-                        Industries We Serve
+                        Apparel &amp; Textile Sectors
                     </div>
-                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
-                        <span>🎬 Industry Video Showcase</span>
+                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 text-white hover:bg-sky-600 rounded-full text-sm font-bold transition shadow-md shadow-sky-500/20">
+                        <span>🎬 Watch Sector Motion Demos</span>
                     </button>
                 </div>
 
-
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900">
+                <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-slate-900">
                     Digital solutions for
-                    <span class="text-gradient">
-                        apparel manufacturing.
-                    </span>
+                    <span class="text-gradient">apparel manufacturing.</span>
                 </h1>
 
-
-                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl font-medium">
-
-                    We help manufacturing businesses connect their
-                    operations, improve productivity and gain real-time
-                    visibility through digital technology.
-
+                <p class="mt-6 text-lg lg:text-xl text-slate-700 leading-relaxed max-w-3xl font-semibold">
+                    We help garment manufacturers, textile mills, and apparel exporters digitize operations, boost line efficiency, and achieve total shopfloor transparency.
                 </p>
 
+                <!-- Sector Pills -->
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                        👕 Woven &amp; Shirts
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                        🧥 Knitwear &amp; T-Shirts
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                        👖 Denim &amp; Bottoms
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                        🧵 Home Textiles &amp; Spinning
+                    </span>
+                </div>
             </div>
-
         </div>
-
     </section>
 
 

@@ -5,49 +5,56 @@
 @section('content')
 
     <!-- HERO -->
-    <section class="pt-32 pb-20 relative">
+    <section class="pt-32 pb-24 relative overflow-hidden min-h-[500px] flex items-center border-b border-slate-200">
+        <!-- Background Apparel Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-sky-50/70 backdrop-blur-[2px]"></div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Left -->
                 <div>
-
-                    <div class="flex flex-wrap items-center gap-3 mb-7">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-semibold text-slate-800 border border-slate-200">
+                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-bold text-slate-900 border border-slate-300 shadow-sm">
                             <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
                             About Track Tech Solutions
                         </div>
-                        <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
-                            <span>🎬 Watch Our Factory Story</span>
+                        <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 text-white hover:bg-sky-600 rounded-full text-sm font-bold transition shadow-md shadow-sky-500/20">
+                            <span>🎬 Watch Factory Story</span>
                         </button>
                     </div>
 
-                    <h1 class="text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-slate-900">
+                    <h1 class="text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900">
                         Technology that
-                        <span class="text-gradient">
-                            transforms
-                        </span>
+                        <span class="text-gradient">transforms</span>
                         apparel manufacturing.
                     </h1>
 
-                    <p class="mt-7 text-lg text-slate-700 leading-8 max-w-xl font-medium">
-                        Track Tech Solutions helps apparel manufacturers
-                        digitize their operations, improve visibility and
-                        build smarter, more efficient factories.
+                    <p class="mt-6 text-lg text-slate-700 leading-relaxed font-semibold max-w-xl">
+                        Track Tech Solutions empowers garment manufacturers to digitize fabric cutting, sewing lines, inline QC, and inventory management with real-time IoT & AI precision.
                     </p>
-
                 </div>
 
-                <!-- Right -->
-                <div class="relative group">
-                    <div class="absolute -inset-2 bg-gradient-to-r from-sky-500 to-blue-600 rounded-[2rem] blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-                    <img
-                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
-                        alt="Technology and manufacturing"
-                        class="relative w-full h-[430px] object-cover rounded-3xl border border-slate-300"
-                    >
+                <!-- Right Live Video Card -->
+                <div class="relative group rounded-3xl overflow-hidden border border-slate-300 shadow-2xl bg-slate-900 aspect-video">
+                    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-slate-950/40 p-6 flex flex-col justify-between">
+                        <div class="flex justify-between items-start">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/90 text-slate-900 shadow">🪡 Live Line Monitoring</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow">250+ Lines Live</span>
+                        </div>
+                        <div class="text-white text-xs font-semibold">
+                            Transforming Apparel Manufacturing Across South Asia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
                     <div class="absolute -bottom-7 -left-7 glass-card rounded-2xl shadow-xl p-6 border border-white/20">
                         <div class="text-3xl font-bold text-slate-800">

@@ -5,24 +5,43 @@
 @section('content')
 
     <!-- Hero -->
-    <section class="pt-36 pb-20 relative">
+    <section class="pt-36 pb-24 relative overflow-hidden border-b border-slate-200">
+        <!-- Background Apparel Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-sky-50/70 backdrop-blur-[2px]"></div>
+
         <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
             <div class="flex flex-wrap items-center justify-center gap-3 mb-6">
-                <span class="inline-block px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-semibold text-slate-800">
-                    Resources &amp; Knowledge Base
+                <span class="inline-block px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-bold text-slate-900 shadow-sm">
+                    Resources &amp; Knowledge Hub
                 </span>
-                <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
+                <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 text-white hover:bg-sky-600 rounded-full text-sm font-bold transition shadow-md shadow-sky-500/20">
                     <span>🎬 Watch Video Guides</span>
                 </button>
             </div>
-            <h2 class="text-5xl md:text-6xl font-bold tracking-tight max-w-4xl mx-auto text-slate-900">
+
+            <h2 class="text-5xl md:text-6xl font-black tracking-tight max-w-4xl mx-auto text-slate-900">
                 Insights for the
                 <span class="text-gradient">Apparel Connected Factory</span>
             </h2>
-            <p class="mt-6 text-lg text-slate-700 max-w-2xl mx-auto font-medium">
-                Explore industry insights, manufacturing trends and practical
-                knowledge to help transform your apparel factory with digital technology.
+
+            <p class="mt-6 text-lg text-slate-700 max-w-2xl mx-auto font-semibold">
+                Explore industry insights, manufacturing trends, video walkthroughs, and practical knowledge to digitize your garment factory.
             </p>
+
+            <div class="flex flex-wrap justify-center gap-3 mt-8">
+                <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                    🎬 Video Walkthroughs
+                </span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                    📄 Whitepapers &amp; Guides
+                </span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                    📊 Factory ROI Benchmarks
+                </span>
+            </div>
         </div>
     </section>
 

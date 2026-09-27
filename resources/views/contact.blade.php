@@ -5,38 +5,46 @@
 @section('content')
 
     <!-- HERO -->
-    <section class="pt-36 pb-20 relative">
+    <section class="pt-36 pb-24 relative overflow-hidden min-h-[460px] flex items-center border-b border-slate-200">
+        <!-- Background Apparel Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-sky-50/70 backdrop-blur-[2px]"></div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-            <div class="max-w-4xl relative z-10">
-
-                <div class="flex flex-wrap items-center gap-3 mb-5">
-                    <span class="px-4 py-1.5 glass-panel border border-slate-300 rounded-full text-xs font-bold uppercase tracking-widest text-slate-800">
-                        Contact Us
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-4xl">
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <span class="px-4 py-2 glass-panel border border-slate-300 rounded-full text-sm font-bold text-slate-900 shadow-sm">
+                        Contact Track Tech Team
                     </span>
-                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-1.5 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-xs font-bold transition shadow-sm">
+                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 text-white hover:bg-sky-600 rounded-full text-sm font-bold transition shadow-md shadow-sky-500/20">
                         <span>🎬 See Demo Video</span>
                     </button>
                 </div>
 
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight text-slate-900">
+                <h1 class="text-5xl lg:text-7xl font-black leading-tight text-slate-900">
                     Let's build a
-                    <span class="text-gradient">
-                        smarter apparel factory.
-                    </span>
+                    <span class="text-gradient">smarter apparel factory.</span>
                 </h1>
 
-                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl font-medium">
-                    Have a question about our solutions? Want to explore
-                    digital transformation for your manufacturing operations?
-                    Our team would love to hear from you.
+                <p class="mt-6 text-lg lg:text-xl text-slate-700 leading-relaxed max-w-3xl font-semibold">
+                    Schedule a 30-minute factory audit or explore custom IoT/software integrations with our apparel manufacturing specialists.
                 </p>
 
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                        ⚡ Free 30-Min Demo
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                        📍 On-Site Factory Audits
+                    </span>
+                    <span class="px-3.5 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm text-xs font-extrabold text-slate-800">
+                        🤝 24/7 Expert Support
+                    </span>
+                </div>
             </div>
-
         </div>
-
     </section>
 
 

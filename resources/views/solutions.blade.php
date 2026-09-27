@@ -5,44 +5,48 @@
 @section('content')
 
     <!-- ================= HERO ================= -->
-    <section class="pt-32 pb-20 relative">
+    <section class="pt-32 pb-24 relative overflow-hidden min-h-[500px] flex items-center border-b border-slate-200">
+        <!-- Background Apparel Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-teal-50/70 backdrop-blur-[2px]"></div>
 
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-            <div class="max-w-4xl relative z-10">
-
-                <div class="flex flex-wrap items-center gap-3 mb-7">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-semibold text-slate-800 border border-slate-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-4xl">
+                <div class="flex flex-wrap items-center gap-3 mb-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-bold text-slate-900 border border-slate-300 shadow-sm">
                         <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
-                        Digital Manufacturing Solutions
+                        Digital Apparel Solutions
                     </div>
-                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-600 border border-sky-200 hover:bg-sky-100 rounded-full text-sm font-bold transition shadow-sm">
+                    <button onclick="document.getElementById('open-apparel-video-modal').click()" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 text-white hover:bg-sky-600 rounded-full text-sm font-bold transition shadow-md shadow-sky-500/20">
                         <span>🎬 See Solutions In Motion</span>
                     </button>
                 </div>
 
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900">
-
+                <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-slate-900">
                     Digitise your factory
-                    <span class="text-gradient">
-                        from fabric to ship.
-                    </span>
-
+                    <span class="text-gradient">from fabric to ship.</span>
                 </h1>
 
-
-                <p class="mt-7 text-lg lg:text-xl text-slate-700 leading-8 max-w-3xl font-medium">
-
-                    Connect every stage of apparel manufacturing with
-                    intelligent software, real-time tracking and
-                    data-driven insights.
-
+                <p class="mt-6 text-lg lg:text-xl text-slate-700 leading-relaxed max-w-3xl font-semibold">
+                    Connect every stage of apparel manufacturing with intelligent software, real-time tracking, and data-driven floor insights.
                 </p>
 
+                <!-- Workflow Flow Indicator -->
+                <div class="flex flex-wrap items-center gap-2 mt-8 text-xs font-black text-slate-800">
+                    <span class="px-3 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm">🧵 Fabric Intake</span>
+                    <span>→</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm">✂️ Cut Spreading</span>
+                    <span>→</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm">🪡 Sewing Line</span>
+                    <span>→</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm">🔍 Inline QC</span>
+                    <span>→</span>
+                    <span class="px-3 py-1.5 rounded-xl bg-white/90 border border-slate-200 shadow-sm">📦 Dispatch</span>
+                </div>
             </div>
-
         </div>
-
     </section>
 
 
