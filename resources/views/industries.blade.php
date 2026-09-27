@@ -10,7 +10,7 @@
         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
             <source src="https://videos.pexels.com/video-files/5532766/5532766-hd_1920_1080_25fps.mp4" type="video/mp4">
         </video>
-        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-indigo-50/70 backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/65 via-white/55 to-indigo-50/40 backdrop-blur-[1px]"></div>
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
             <div class="max-w-4xl">

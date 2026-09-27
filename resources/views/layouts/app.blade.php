@@ -312,14 +312,14 @@
     <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
     <div class="ambient-depth-plane" aria-hidden="true"></div>
 
-    <!-- Global Site-Wide Apparel Manufacturing Background Video Layer -->
+    <!-- Global Site-Wide High-Clarity Apparel Manufacturing Background Video Layer -->
     <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-        <video id="site-background-apparel-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-35 scale-105">
+        <video id="site-background-apparel-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-75 scale-105">
             <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
             <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
         </video>
-        <!-- Light Translucent Backdrop Overlay for High Readability -->
-        <div class="absolute inset-0 bg-gradient-to-br from-white/85 via-slate-50/80 to-sky-100/65 backdrop-blur-[1px]"></div>
+        <!-- Crisp Luminous Light Backdrop Overlay (High Video Visibility) -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white/65 via-white/55 to-sky-100/45 backdrop-blur-[1px]"></div>
     </div>
 
     <!-- Main Content Layer -->

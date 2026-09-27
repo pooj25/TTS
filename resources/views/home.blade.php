@@ -32,11 +32,11 @@ body { background: var(--white); color: var(--dark); }
     position: absolute; inset: 0; z-index: 1;
     background: linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.86) 0%,
-        rgba(240, 249, 255, 0.76) 50%,
-        rgba(0, 163, 224, 0.20) 100%
+        rgba(255, 255, 255, 0.50) 0%,
+        rgba(240, 249, 255, 0.40) 50%,
+        rgba(0, 163, 224, 0.18) 100%
     );
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
 }
 #hero-content { position: relative; z-index: 2; }
 
