@@ -6,11 +6,9 @@
 
     <!-- ================= HERO ================= -->
     <section class="pt-32 pb-24 relative overflow-hidden min-h-[500px] flex items-center border-b border-slate-200">
-        <!-- Background Apparel Video -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
-        </video>
-        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/65 via-white/55 to-teal-50/40 backdrop-blur-[1px]"></div>
+        <!-- Background: 3D Apparel Image -->
+        <div class="absolute inset-0 z-0 scale-105" style="background-image:url('{{ asset('images/apparel-3d-scene-1.png') }}'); background-size:cover; background-position:center; opacity:0.50;"></div>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/70 via-white/55 to-teal-50/35 backdrop-blur-[1px]"></div>
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
             <div class="max-w-4xl">

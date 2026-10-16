@@ -6,11 +6,9 @@
 
     <!-- Hero -->
     <section class="pt-36 pb-24 relative overflow-hidden border-b border-slate-200">
-        <!-- Background Apparel Video -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-90 scale-105">
-            <source src="https://videos.pexels.com/video-files/4487373/4487373-hd_1920_1080_25fps.mp4" type="video/mp4">
-        </video>
-        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/35 via-white/25 to-sky-100/15 backdrop-blur-[1px]"></div>
+        <!-- Background: 3D Apparel Image -->
+        <div class="absolute inset-0 z-0 scale-105" style="background-image:url('{{ asset('images/apparel-3d-scene-4.png') }}'); background-size:cover; background-position:center; opacity:0.50;"></div>
+        <div class="absolute inset-0 z-1 bg-gradient-to-r from-white/70 via-white/50 to-sky-100/30 backdrop-blur-[1px]"></div>
 
         <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
             <div class="flex flex-wrap items-center justify-center gap-3 mb-6">
@@ -393,9 +391,7 @@
 
     <!-- Interactive Next Page Continuous Journey Teaser -->
     <section class="py-16 bg-gradient-to-r from-slate-900 via-sky-950 to-indigo-950 text-white relative overflow-hidden border-t border-sky-400/20 shadow-2xl">
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
-            <source src="https://videos.pexels.com/video-files/3295499/3295499-hd_1920_1080_30fps.mp4" type="video/mp4">
-        </video>
+        <div class="absolute inset-0 opacity-20" style="background-image:url('{{ asset('images/apparel-3d-scene-2.png') }}'); background-size:cover; background-position:center;"></div>
         <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[2px]"></div>
         
         <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
