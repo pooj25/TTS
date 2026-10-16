@@ -480,56 +480,71 @@
                             <svg id="products-chevron" class="w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                         </button>
 
-                        <!-- Dropdown Panel — Clean vertical list like website-tts.vercel.app -->
+                        <!-- Dropdown Panel — Hierarchical tree like 2nd image -->
                         <div
                             id="products-dropdown-panel"
-                            class="absolute top-full left-0 mt-2 w-64 rounded-xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden"
+                            class="absolute top-full left-0 mt-2 w-72 rounded-xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden"
                             style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
 
-                            <div class="py-2">
-                                <a href="/products#quality"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150 {{ request()->is('products*') ? 'bg-teal-50 text-teal-700 border-l-2 border-teal-500' : '' }}">
-                                    Quality Control
-                                </a>
-                                <a href="/products#production"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
-                                    Production Tracking
-                                </a>
-                                <a href="/products#mtrak"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
-                                    Machine Maintenance
-                                </a>
-                                <a href="/products#fabric"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
-                                    Fabric Optimization
-                                </a>
-                                <a href="/products#planning"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
-                                    Production Planning
-                                </a>
-                                <a href="/products#warehouse"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
-                                    Warehouse Management
-                                </a>
+                            <div class="py-3">
 
-                                <div class="my-1 mx-4 border-t border-slate-100"></div>
+                                {{-- Section header --}}
+                                <p class="px-5 pt-1 pb-2 text-[10px] font-black uppercase tracking-widest text-slate-400">Products</p>
 
+                                {{-- TrakWel — parent with sub-items --}}
                                 <a href="/products#trakwel"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     TrakWel
                                 </a>
+                                {{-- TrakWel sub-items --}}
+                                <a href="/products#fabric"
+                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                    Fabric Inventory Management
+                                </a>
+                                <a href="/products#cutting"
+                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                    Cutting Room Digitisation
+                                </a>
+                                <a href="/products#production"
+                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                    Production Tracking
+                                </a>
+                                <a href="/products#quality"
+                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                    Quality Control
+                                </a>
+
+                                {{-- PlanWel, mTrak, SewIoT --}}
                                 <a href="/products#planwel"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     PlanWel
                                 </a>
                                 <a href="/products#mtrak"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     mTrak
                                 </a>
                                 <a href="/products#sewiot"
-                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     SewIoT
                                 </a>
+
+                                <div class="my-2 mx-5 border-t border-slate-100"></div>
+
+                                {{-- Industry Solutions section --}}
+                                <p class="px-5 pt-1 pb-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400">Industry Solutions</p>
+                                <a href="/products#laundry"
+                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
+                                    Laundry Management
+                                </a>
+                                <a href="/products#jig"
+                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
+                                    Jig Management
+                                </a>
+                                <a href="/products#shrinkage"
+                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
+                                    Shrinkage Testing App
+                                </a>
+
                             </div>
                         </div>
                     </div>
