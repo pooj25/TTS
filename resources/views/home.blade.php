@@ -255,31 +255,27 @@ body { background: var(--white); color: var(--dark); }
 
         <div class="hero-badge mb-8 bg-sky-500/10 border-sky-500/40 text-sky-700">
             <span class="bg-sky-500"></span>
-            Industry 4.0 · Apparel &amp; Textile Manufacturing
+            Built for the way garment factories work
         </div>
 
-        <h1 class="max-w-5xl mx-auto leading-[1.05] tracking-tight text-slate-900" style="font-size:clamp(2.5rem,6vw,5.5rem);font-weight:900;">
-            <span class="h-anim-1 block">Reduce Defects</span>
-            <span class="h-anim-2 block text-sky-600">by 40%.</span>
-            <span class="h-anim-3 block">Boost OEE</span>
-            <span class="h-anim-4 block text-teal-600">by 25%.</span>
+        <h1 class="max-w-4xl mx-auto leading-[1.05] tracking-tight text-slate-900" style="font-size:clamp(2.5rem,6vw,5rem);font-weight:900;">
+            <span class="h-anim-1 block">A clearer way to</span>
+            <span class="h-anim-2 block text-sky-600">run your factory</span>
         </h1>
 
         <p class="h-anim-2 mt-8 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-semibold text-slate-700">
-            Track Tech Solutions gives apparel manufacturers real-time visibility across
-            fabric, cutting, production, and quality — so you make smarter decisions, faster.
+            From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening, fix issues sooner and keep every order moving.
         </p>
 
         <div class="h-anim-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             <a href="/contact"
                class="group flex items-center gap-3 px-10 py-4 rounded-full text-white font-bold text-lg shadow-xl transition-all hover:scale-105 bg-gradient-to-r from-sky-500 to-teal-600 hover:from-sky-600 hover:to-teal-700">
-                Book a Demo
+                Book a demo
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
-            <a href="#how-it-works"
+            <a href="/products"
                class="flex items-center gap-2 px-10 py-4 rounded-full font-bold text-slate-800 text-lg transition-all bg-white/80 hover:bg-white border-2 border-slate-300 shadow-md backdrop-blur-md">
-                <svg class="w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                See How It Works
+                Explore products
             </a>
         </div>
 
@@ -311,10 +307,10 @@ body { background: var(--white); color: var(--dark); }
     <div class="max-w-6xl mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             @foreach([
-                ['250+', 'Active Production Lines'],
-                ['40%',  'Avg Defect Reduction'],
-                ['25%',  'OEE Improvement'],
-                ['90',   'Days to Full ROI'],
+                ['2019',  'Established'],
+                ['74+',   'Factories Supported'],
+                ['02',    'Countries'],
+                ['36',    'Professionals'],
             ] as $s)
             <div class="stat-card reveal">
                 <div class="num">{{ $s[0] }}</div>
@@ -333,7 +329,7 @@ body { background: var(--white); color: var(--dark); }
     <p class="text-center mb-6" style="font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:.25em;text-transform:uppercase;">Trusted by Leading Manufacturers</p>
     <div class="flex overflow-hidden" style="mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);">
         <div class="marquee-run">
-            @foreach(['Arvind Ltd', 'Shahi Exports', 'PDS Group', 'Modelama Exports', 'Armstrong Intl', 'Pearl Global', 'Gokaldas Exports', 'KPR Mill Ltd', 'Arvind Ltd', 'Shahi Exports', 'PDS Group', 'Modelama Exports', 'Armstrong Intl', 'Pearl Global', 'Gokaldas Exports', 'KPR Mill Ltd'] as $c)
+            @foreach(['Shahi Exports', 'Arvind Ltd', 'PDS Group', 'Texport', 'Penguin Apparels', 'Modelarna Exports', 'Armstrong Intl', 'Sahana', 'Trendy Fits', 'Mehala', 'Shahi Exports', 'Arvind Ltd', 'PDS Group', 'Texport', 'Penguin Apparels', 'Modelarna Exports'] as $c)
             <span style="font-weight:800;font-size:18px;color:#1e293b;letter-spacing:-.01em;flex-shrink:0;">{{ $c }}</span>
             @endforeach
         </div>

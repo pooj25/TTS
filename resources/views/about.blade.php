@@ -70,48 +70,30 @@
 
     <!-- ABOUT COMPANY -->
     <section class="py-24 relative">
-
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
             <div class="grid lg:grid-cols-2 gap-16">
-
                 <div>
                     <p class="text-sm font-semibold uppercase tracking-widest text-sky-400">
-                        Who We Are
+                        Track Tech Solutions <span class="text-slate-400">/ EST. 2019</span>
                     </p>
-
                     <h2 class="text-4xl lg:text-5xl font-bold mt-4 leading-tight text-slate-800">
-                        Digitising the apparel
-                        manufacturing ecosystem.
+                        Digital clarity for the people who make apparel
                     </h2>
+                    <a href="https://www.linkedin.com/company/track-tech-solution/about/" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 mt-8 text-sky-600 font-semibold hover:text-sky-700 transition">
+                        Company profile on LinkedIn <span aria-hidden="true">↗</span>
+                    </a>
                 </div>
-
                 <div class="text-slate-700 text-lg leading-8 space-y-6">
-
                     <p>
-                        Track Tech Solutions is a technology-driven company
-                        focused on solving real-world challenges in apparel
-                        manufacturing.
+                        Track Tech Solutions builds practical digital tools for apparel manufacturing. The platform connects production, quality, planning, materials and factory-floor teams, helping people see what is happening and act while there is still time to improve the outcome.
                     </p>
-
                     <p>
-                        We combine software, automation, IoT and real-time
-                        data to help factories move away from traditional
-                        paper-based processes.
+                        Since 2019, the team has focused on bringing useful technology closer to everyday factory work, supporting implementation across more than <strong>74 factories in two countries.</strong>
                     </p>
-
-                    <p>
-                        From fabric inventory to production, quality and
-                        dispatch, our solutions provide businesses with
-                        better visibility and control over their operations.
-                    </p>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
 
@@ -277,91 +259,89 @@
 
     <!-- STATS -->
     <section class="py-20 relative bg-black/20 border-t border-b border-slate-200">
-
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-
                 <div>
-                    <div class="text-4xl font-bold text-slate-800">
-                        100+
-                    </div>
+                    <div class="text-4xl font-bold text-slate-800">2019</div>
+                    <p class="mt-2 text-sky-400">Established</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-slate-800">74+</div>
+                    <p class="mt-2 text-sky-400">Factories Supported</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-slate-800">02</div>
+                    <p class="mt-2 text-sky-400">Countries</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-slate-800">36</div>
+                    <p class="mt-2 text-sky-400">Professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <p class="mt-2 text-sky-400">
-                        Digital Projects
-                    </p>
+
+    <!-- LEADERSHIP -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mb-14">
+                <p class="text-sm font-semibold uppercase tracking-widest text-sky-400">Our leadership team</p>
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4 text-slate-800">Built around manufacturing, operations and technology</h2>
+                <p class="mt-5 text-slate-600 text-lg leading-8">Three perspectives working together to make factory software practical, dependable and useful on the floor.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Gopinath -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-200">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center text-white text-xl font-black mb-5">GM</div>
+                    <p class="text-xs font-black uppercase tracking-widest text-sky-500 mb-2">Chief Executive Officer</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Gopinath M. (Muniraj)</h3>
+                    <p class="text-slate-600 leading-7 text-sm">Gopinath's career spans apparel manufacturing and digital solutions, including regional sales leadership at Coats Digital and roles associated with Arvind Limited and K Mohan Exports. At Track Tech, he leads the company's direction and its focus on bringing technology into everyday factory operations.</p>
+                    <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-5 text-sm text-sky-600 font-semibold hover:text-sky-700 transition">Professional profile ↗</a>
                 </div>
 
-
-                <div>
-                    <div class="text-4xl font-bold text-slate-800">
-                        50+
-                    </div>
-
-                    <p class="mt-2 text-sky-400">
-                        Factory Processes
-                    </p>
+                <!-- Lebinesh -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-200">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white text-xl font-black mb-5">LB</div>
+                    <p class="text-xs font-black uppercase tracking-widest text-sky-500 mb-2">Chief Operating Officer</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Lebinesh Balan</h3>
+                    <p class="text-slate-600 leading-7 text-sm">Lebinesh focuses on turning strategy into consistent delivery: aligning customer implementation, teams and day-to-day operations. His work as COO supports smooth adoption of Track Tech across factory environments and keeps customer needs connected to execution.</p>
+                    <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-5 text-sm text-sky-600 font-semibold hover:text-sky-700 transition">LinkedIn profile ↗</a>
                 </div>
 
-
-                <div>
-                    <div class="text-4xl font-bold text-slate-800">
-                        10+
-                    </div>
-
-                    <p class="mt-2 text-sky-400">
-                        Years Experience
-                    </p>
-                </div>
-
-
-                <div>
-                    <div class="text-4xl font-bold text-slate-800">
-                        24/7
-                    </div>
-
-                    <p class="mt-2 text-sky-400">
-                        Operational Visibility
-                    </p>
+                <!-- Deepak -->
+                <div class="glass-card p-8 rounded-3xl border border-slate-200">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl font-black mb-5">DR</div>
+                    <p class="text-xs font-black uppercase tracking-widest text-sky-500 mb-2">Chief Technology Officer</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Deepak Rajkumar</h3>
+                    <p class="text-slate-600 leading-7 text-sm">Deepak guides the technology behind the platform, with a focus on reliable product engineering, useful integrations and clear information for factory teams. As CTO, he helps turn complex manufacturing workflows into software people can use with confidence.</p>
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
 
     <!-- CTA -->
     <section class="py-24 relative">
-
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            
             <div class="absolute inset-0 flex justify-center items-center pointer-events-none -z-10">
                 <div class="w-96 h-96 bg-sky-500/10 rounded-full blur-[100px]"></div>
             </div>
-
-            <h2 class="text-4xl lg:text-5xl font-bold text-slate-800">
-                Ready to digitise
-                your factory?
-            </h2>
-
-            <p class="mt-6 text-lg text-slate-600">
-                Let's build a smarter and more connected manufacturing
-                operation together.
-            </p>
-
-            <div class="mt-9">
-
-                <a href="/contact"
-                   class="inline-flex bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800 px-8 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 transition hover:-translate-y-1">
-                    Talk to Our Team →
+            <h2 class="text-4xl lg:text-5xl font-bold text-slate-800">Want a clearer view of your factory?</h2>
+            <p class="mt-6 text-lg text-slate-600">Tell us how your lines work today. We will show you where Track Tech can remove the manual follow-up and make the next step easier.</p>
+            <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="mailto:sales@tracktechsolutions.com"
+                   class="inline-flex bg-gradient-to-r from-sky-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 transition hover:-translate-y-1">
+                    Talk to sales
                 </a>
-
+                <a href="tel:+919650613666"
+                   class="inline-flex border-2 border-slate-300 text-slate-800 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 transition hover:-translate-y-1">
+                    Call +91 96506 13666
+                </a>
             </div>
-
         </div>
-
     </section>
 
     <!-- Interactive Next Page Continuous Journey Teaser -->

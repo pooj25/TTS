@@ -632,11 +632,12 @@
                             <span class="font-bold text-lg text-slate-800">Track Tech <span class="text-primary-500">Solution</span></span>
                         </div>
                         <p class="text-slate-800 text-sm leading-relaxed mb-6">
-                            From planning to production, data to decisions, seamlessly connect your entire operation. Boost efficiency, reduce waste, and achieve sustainability.
+                            Practical software for the people who plan, make, check and ship garments every day.
                         </p>
                         <div class="flex flex-col gap-2 text-sm text-slate-800">
                             <a href="mailto:sales@tracktechsolutions.com" class="hover:text-primary-600">sales@tracktechsolutions.com</a>
                             <a href="tel:+919650613666" class="hover:text-primary-600">+91 96506 13666</a>
+                            <a href="tel:+919742060606" class="hover:text-primary-600">+91 97420 60606</a>
                         </div>
                     </div>
                     
@@ -652,10 +653,13 @@
                     <div>
                         <h4 class="font-semibold text-slate-800 mb-6">Products</h4>
                         <ul class="space-y-3 text-sm text-slate-800">
-                            <li><a href="/solutions" class="hover:text-primary-600">Quality Control</a></li>
-                            <li><a href="/solutions" class="hover:text-primary-600">Production Tracking</a></li>
-                            <li><a href="/solutions" class="hover:text-primary-600">Machine Maintenance</a></li>
-                            <li><a href="/solutions" class="hover:text-primary-600">Production Planning</a></li>
+                            <li><a href="/products#quality" class="hover:text-primary-600">Quality Control</a></li>
+                            <li><a href="/products#production" class="hover:text-primary-600">Production Tracking</a></li>
+                            <li><a href="/products#mtrak" class="hover:text-primary-600">Machine Maintenance</a></li>
+                            <li><a href="/products#trakwel" class="hover:text-primary-600">TrakWel</a></li>
+                            <li><a href="/products#planwel" class="hover:text-primary-600">PlanWel</a></li>
+                            <li><a href="/products#mtrak" class="hover:text-primary-600">mTrak</a></li>
+                            <li><a href="/products#sewiot" class="hover:text-primary-600">SewIoT</a></li>
                         </ul>
                     </div>
 

@@ -19,12 +19,12 @@
                 </div>
 
                 <h1 class="text-5xl lg:text-7xl font-black leading-tight text-slate-900">
-                    Let's build a
-                    <span class="text-gradient">smarter apparel factory.</span>
+                    Want a clearer view of
+                    <span class="text-gradient">your factory?</span>
                 </h1>
 
                 <p class="mt-6 text-lg lg:text-xl text-slate-700 leading-relaxed max-w-3xl font-semibold">
-                    Schedule a 30-minute factory audit or explore custom IoT/software integrations with our apparel manufacturing specialists.
+                    Tell us how your lines work today. We will show you where Track Tech can remove the manual follow-up and make the next step easier.
                 </p>
 
                 <div class="flex flex-wrap gap-3 mt-8">
@@ -54,67 +54,52 @@
                 <!-- CONTACT INFO -->
                 <div>
 
-                    <h2 class="text-4xl font-bold text-slate-800">
-                        Talk to our team.
-                    </h2>
+                    <h2 class="text-4xl font-bold text-slate-800">Let's talk</h2>
 
                     <p class="mt-5 text-slate-700 leading-8">
-                        Tell us a little about your business and your
-                        manufacturing challenges. We'll help you understand
-                        how Track Tech Solutions can support your digital journey.
+                        Tell us how your lines work today. We will show you where Track Tech can remove the manual follow-up and make the next step easier.
                     </p>
-
 
                     <div class="mt-10 space-y-7">
 
-                        <a href="mailto:info@tracktechsolutions.com" class="flex gap-5 group">
-
+                        <a href="mailto:sales@tracktechsolutions.com" class="flex gap-5 group">
                             <div class="w-12 h-12 rounded-xl bg-white border border-slate-300 flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-sky-500/20 group-hover:border-sky-500/30 transition shadow-sm">
                                 📧
                             </div>
-
                             <div>
-                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Email Us</h3>
-
-                                <p class="text-slate-600 mt-1">
-                                    info@tracktechsolutions.com
-                                </p>
+                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Sales</h3>
+                                <p class="text-slate-600 mt-1">sales@tracktechsolutions.com</p>
                             </div>
-
                         </a>
 
-
-                        <a href="https://maps.google.com/?q=Coimbatore,Tamil+Nadu,India" target="_blank" class="flex gap-5 group">
-
+                        <a href="https://maps.google.com/?q=Electronic+City+Phase+2+Bangalore" target="_blank" class="flex gap-5 group">
                             <div class="w-12 h-12 rounded-xl bg-white border border-slate-300 flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-sky-500/20 group-hover:border-sky-500/30 transition shadow-sm">
                                 📍
                             </div>
-
                             <div>
-                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Location</h3>
-
-                                <p class="text-slate-600 mt-1">
-                                    Coimbatore, Tamil Nadu, India
-                                </p>
+                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Head Office</h3>
+                                <p class="text-slate-600 mt-1">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</p>
                             </div>
-
                         </a>
 
-
                         <a href="tel:+919650613666" class="flex gap-5 group">
-
                             <div class="w-12 h-12 rounded-xl bg-white border border-slate-300 flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-sky-500/20 group-hover:border-sky-500/30 transition shadow-sm">
                                 📞
                             </div>
-
                             <div>
-                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Call Us</h3>
-
-                                <p class="text-slate-600 mt-1">
-                                    +91 96506 13666
-                                </p>
+                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Phone</h3>
+                                <p class="text-slate-600 mt-1">+91 96506 13666 · +91 97420 60606</p>
                             </div>
+                        </a>
 
+                        <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener" class="flex gap-5 group">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-slate-300 flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-sky-500/20 group-hover:border-sky-500/30 transition shadow-sm">
+                                🔗
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">LinkedIn</h3>
+                                <p class="text-slate-600 mt-1">linkedin.com/company/track-tech-solution</p>
+                            </div>
                         </a>
 
                     </div>
