@@ -480,80 +480,56 @@
                             <svg id="products-chevron" class="w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                         </button>
 
-                        <!-- Dropdown Panel -->
+                        <!-- Dropdown Panel — Clean vertical list like website-tts.vercel.app -->
                         <div
                             id="products-dropdown-panel"
-                            class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[620px] rounded-2xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden"
-                            style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow: 0 25px 60px -10px rgba(0,0,0,0.22), 0 10px 25px -8px rgba(0,0,0,0.14);">
+                            class="absolute top-full left-0 mt-2 w-64 rounded-xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden"
+                            style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
 
+                            <div class="py-2">
+                                <a href="/products#quality"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150 {{ request()->is('products*') ? 'bg-teal-50 text-teal-700 border-l-2 border-teal-500' : '' }}">
+                                    Quality Control
+                                </a>
+                                <a href="/products#production"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    Production Tracking
+                                </a>
+                                <a href="/products#mtrak"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    Machine Maintenance
+                                </a>
+                                <a href="/products#fabric"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    Fabric Optimization
+                                </a>
+                                <a href="/products#planning"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    Production Planning
+                                </a>
+                                <a href="/products#warehouse"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    Warehouse Management
+                                </a>
 
-                            <!-- Arrow pointer -->
-                            <div class="absolute -top-[7px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-white border-l border-t border-slate-200 rotate-45"></div>
+                                <div class="my-1 mx-4 border-t border-slate-100"></div>
 
-                            <div class="p-6 grid grid-cols-2 gap-x-8 gap-y-1">
-
-                                <!-- LEFT: TrakWel + PlanWel -->
-                                <div>
-                                    <a href="/products#trakwel" class="flex items-center gap-2.5 mb-1 group/prod hover:opacity-90 transition">
-                                        <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center text-white text-[11px] font-black shadow-md shadow-sky-400/30 shrink-0">TW</span>
-                                        <div>
-                                            <span class="font-bold text-slate-800 text-sm group-hover/prod:text-sky-600 transition block leading-tight">TrakWel</span>
-                                            <span class="text-[10px] text-slate-400 leading-tight">Manufacturing Execution System</span>
-                                        </div>
-                                    </a>
-                                    <ul class="pl-[42px] space-y-1.5 mt-2 mb-4">
-                                        <li><a href="/products#fabric" class="flex items-center gap-2 text-xs text-slate-600 hover:text-sky-600 transition py-0.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Fabric Inventory Management</a></li>
-                                        <li><a href="/products#cutting" class="flex items-center gap-2 text-xs text-slate-600 hover:text-sky-600 transition py-0.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Cutting Room Digitisation</a></li>
-                                        <li><a href="/products#production" class="flex items-center gap-2 text-xs text-slate-600 hover:text-sky-600 transition py-0.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Production Tracking</a></li>
-                                        <li><a href="/products#quality" class="flex items-center gap-2 text-xs text-slate-600 hover:text-sky-600 transition py-0.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Quality Control</a></li>
-                                    </ul>
-
-                                    <div class="border-t border-slate-100 my-3"></div>
-
-                                    <a href="/products#planwel" class="flex items-center gap-2.5 group/prod hover:opacity-90 transition">
-                                        <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white text-[11px] font-black shadow-md shadow-violet-400/30 shrink-0">PW</span>
-                                        <div>
-                                            <span class="font-bold text-slate-800 text-sm group-hover/prod:text-violet-600 transition block leading-tight">PlanWel</span>
-                                            <span class="text-[10px] text-slate-400 leading-tight">Advanced Planning & Scheduling</span>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- RIGHT: mTrak + SewIoT + Industry Solutions -->
-                                <div>
-                                    <a href="/products#mtrak" class="flex items-center gap-2.5 mb-4 group/prod hover:opacity-90 transition">
-                                        <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-white text-[11px] font-black shadow-md shadow-emerald-400/30 shrink-0">MT</span>
-                                        <div>
-                                            <span class="font-bold text-slate-800 text-sm group-hover/prod:text-emerald-600 transition block leading-tight">mTrak</span>
-                                            <span class="text-[10px] text-slate-400 leading-tight">Machine Maintenance Management</span>
-                                        </div>
-                                    </a>
-
-                                    <div class="border-t border-slate-100 my-3"></div>
-
-                                    <a href="/products#sewiot" class="flex items-center gap-2.5 mb-4 group/prod hover:opacity-90 transition">
-                                        <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center text-white text-[11px] font-black shadow-md shadow-cyan-400/30 shrink-0">SI</span>
-                                        <div>
-                                            <span class="font-bold text-slate-800 text-sm group-hover/prod:text-cyan-600 transition block leading-tight">SewIoT</span>
-                                            <span class="text-[10px] text-slate-400 leading-tight">IoT for Sewing Lines</span>
-                                        </div>
-                                    </a>
-
-                                    <div class="border-t border-slate-100 my-3"></div>
-
-                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Industry Solutions</p>
-                                    <ul class="space-y-1.5">
-                                        <li><a href="/products#laundry" class="flex items-center gap-2 text-xs text-slate-600 hover:text-orange-500 transition py-0.5"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Laundry Management</a></li>
-                                        <li><a href="/products#jig" class="flex items-center gap-2 text-xs text-slate-600 hover:text-orange-500 transition py-0.5"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Jig Management</a></li>
-                                        <li><a href="/products#shrinkage" class="flex items-center gap-2 text-xs text-slate-600 hover:text-orange-500 transition py-0.5"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Shrinkage Testing App</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Bottom CTA bar -->
-                            <div class="bg-gradient-to-r from-sky-50 to-indigo-50 border-t border-slate-100 px-6 py-3 flex items-center justify-between">
-                                <span class="text-xs text-slate-500">Explore the full product suite →</span>
-                                <a href="/products" class="text-xs font-semibold text-sky-600 hover:text-sky-700 flex items-center gap-1 transition">View All Products <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+                                <a href="/products#trakwel"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    TrakWel
+                                </a>
+                                <a href="/products#planwel"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    PlanWel
+                                </a>
+                                <a href="/products#mtrak"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    mTrak
+                                </a>
+                                <a href="/products#sewiot"
+                                   class="flex items-center px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 border-l-2 border-transparent hover:border-teal-500 transition-all duration-150">
+                                    SewIoT
+                                </a>
                             </div>
                         </div>
                     </div>
