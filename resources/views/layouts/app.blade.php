@@ -458,7 +458,7 @@
         <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-sky-400 via-emerald-400 to-cyan-500 z-[100] transition-all duration-150 pointer-events-none" style="width: 0%"></div>
 
         <!-- Navigation -->
-        <header class="fixed top-0 w-full glass-nav z-50 transition-all duration-300 py-4">
+        <header class="fixed top-0 w-full glass-nav z-[9999] transition-all duration-300 py-4">
             <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <a href="/" class="flex items-center gap-3 group">
                     <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-10 h-10 object-contain transition-transform group-hover:scale-105 bg-white rounded-full p-1 shadow-sm">
@@ -483,8 +483,9 @@
                         <!-- Dropdown Panel -->
                         <div
                             id="products-dropdown-panel"
-                            class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[600px] bg-white/98 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-2xl shadow-slate-300/30 opacity-0 invisible translate-y-2 transition-all duration-300 z-[999] overflow-hidden"
-                            style="pointer-events:none;">
+                            class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[620px] rounded-2xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden"
+                            style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow: 0 25px 60px -10px rgba(0,0,0,0.22), 0 10px 25px -8px rgba(0,0,0,0.14);">
+
 
                             <!-- Arrow pointer -->
                             <div class="absolute -top-[7px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-white border-l border-t border-slate-200 rotate-45"></div>
