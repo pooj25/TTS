@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Track Tech Solution - The Missing Piece in Your Production Puzzle')</title>
-    
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>@yield('title', 'Track Tech Solution — Digital Intelligence for Garment Manufacturing')</title>
+    <meta name="description" content="Track materials, orders, production and quality in one clear view, from the first roll of fabric to the final shipment.">
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
     <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,32 +24,25 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         heading: ['Outfit', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
                     },
                     colors: {
                         primary: {
-                            400: '#00bbf0', // Cyan light
-                            500: '#00a3e0', // Cyan base
-                            600: '#008bbf', // Cyan dark
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
                         },
-                        accent: {
-                            400: '#c25ea8', // Magenta light
-                            500: '#a74b94', // Magenta base
-                            600: '#8e3f7d', // Magenta dark
-                        },
-                        dark: {
-                            800: '#171329', // Deep space
-                            900: '#0f0e17', // Obsidian
-                            950: '#07070a', // Ultra dark
-                        }
-                    },
-                    animation: {
-                        'marquee': 'marquee 25s linear infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        marquee: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-100%)' },
+                        navy: {
+                            800: '#0f2552',
+                            900: '#0a1e2b',
+                            950: '#061119',
                         }
                     }
                 }
@@ -53,1032 +50,396 @@
         }
     </script>
 
-    <!-- Three.js & GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
         body {
             margin: 0;
-            background:
-                linear-gradient(135deg, rgba(0, 163, 224, 0.08), transparent 28%),
-                linear-gradient(315deg, rgba(167, 75, 148, 0.08), transparent 32%),
-                #f8fafc;
-            color: #020617; /* Dark text */
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4, h5, h6, .font-heading {
             font-family: 'Outfit', sans-serif;
         }
 
-        /* Content Overlay Layer */
-        #content-layer {
-            position: relative;
-            z-index: 10;
-        }
-
-        #site-ambient-3d {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.42;
-        }
-
-        .ambient-depth-plane {
-            position: fixed;
-            inset: auto 0 0 auto;
-            width: min(52vw, 760px);
-            height: min(52vw, 760px);
-            z-index: 1;
-            pointer-events: none;
-            transform: translate(26%, 16%) rotateX(64deg) rotateZ(-18deg);
-            transform-style: preserve-3d;
-            opacity: 0.34;
-        }
-
-        .ambient-depth-plane::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border: 1px solid rgba(0, 163, 224, 0.24);
-            background-image:
-                linear-gradient(rgba(0, 163, 224, 0.12) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 163, 224, 0.12) 1px, transparent 1px);
-            background-size: 44px 44px;
-            box-shadow: 0 32px 90px rgba(15, 23, 42, 0.12);
-        }
-
-        main > section {
-            position: relative;
-            isolation: isolate;
-        }
-
-        main > section::after {
-            content: "";
-            position: absolute;
-            top: 2.5rem;
-            right: max(1.5rem, calc((100vw - 80rem) / 2));
-            width: 9rem;
-            height: 9rem;
-            z-index: -1;
-            pointer-events: none;
-            border: 1px solid rgba(0, 163, 224, 0.18);
-            background:
-                linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(0, 163, 224, 0.08)),
-                linear-gradient(90deg, rgba(0, 163, 224, 0.12) 1px, transparent 1px),
-                linear-gradient(rgba(167, 75, 148, 0.08) 1px, transparent 1px);
-            background-size: auto, 18px 18px, 18px 18px;
-            box-shadow: 18px 24px 55px rgba(15, 23, 42, 0.08);
-            transform: perspective(700px) rotateX(58deg) rotateZ(-18deg);
-            opacity: 0.75;
-        }
-
-        main > section:first-child::before {
-            content: "";
-            position: absolute;
-            top: 5rem;
-            right: max(2rem, calc((100vw - 78rem) / 2));
-            width: min(34vw, 28rem);
-            height: min(34vw, 28rem);
-            z-index: -1;
-            pointer-events: none;
-            border-radius: 1rem;
-            border: 1px solid rgba(0, 163, 224, 0.24);
-            background:
-                linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(0, 163, 224, 0.14) 42%, rgba(167, 75, 148, 0.12)),
-                linear-gradient(90deg, rgba(0, 163, 224, 0.16) 1px, transparent 1px),
-                linear-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
-            background-size: auto, 32px 32px, 32px 32px;
-            box-shadow:
-                -22px 28px 0 rgba(0, 163, 224, 0.09),
-                24px -18px 0 rgba(167, 75, 148, 0.08),
-                0 34px 80px rgba(15, 23, 42, 0.12);
-            transform: perspective(900px) rotateX(58deg) rotateZ(-24deg);
-            opacity: 0.86;
-        }
-
-        /* Premium Glassmorphism Utilities */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-        }
-        
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
 
-        /* Spotlight Glass Card */
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 1rem;
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: 1.25rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-        .glass-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: inherit;
-            padding: 2px;
-            background: linear-gradient(
-                135deg,
-                rgba(45, 212, 191, 0.4), /* Teal */
-                rgba(139, 92, 246, 0.4) /* Violet */
-            );
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
         .glass-card:hover {
-            transform: perspective(900px) rotateX(2deg) rotateY(-2deg) translateY(-8px);
-            box-shadow: 0 24px 50px -14px rgba(15, 23, 42, 0.18), 0 12px 30px -18px rgba(0, 163, 224, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.15);
+            border-color: rgba(14, 165, 233, 0.3);
         }
 
-        .glass-card:hover::before {
-            opacity: 1;
-        }
-
-        /* Spotlight mouse effect added via JS */
-        .glass-card.spotlight::after {
-            content: "";
-            position: absolute;
-            top: var(--y);
-            left: var(--x);
-            transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, transparent 70%);
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .glass-card:hover::after {
-            opacity: 1;
-        }
-
-        /* Gradient Text */
         .text-gradient {
-            background: linear-gradient(135deg, #2dd4bf, #8b5cf6, #c084fc);
+            background: linear-gradient(135deg, #0ea5e9, #0284c7, #2563eb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .text-gradient-primary {
-            background: linear-gradient(to right, #2dd4bf, #0d9488);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 28s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
         }
 
-        /* Marquee */
-        .marquee-container {
-            display: flex;
-            overflow: hidden;
-            user-select: none;
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
-        .marquee-content {
-            display: flex;
-            flex-shrink: 0;
-            justify-content: space-around;
-            min-width: 100%;
-            gap: 3rem;
-            animation: scroll 25s linear infinite;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-        
-        /* Utility */
         .min-h-screen-content {
-            min-height: calc(100vh - 400px);
-        }
-
-        /* 3D Apparel Ken-Burns Animation Reel */
-        @keyframes kb-scene-1 {
-            0% { transform: scale(1.05) translate3d(0%, 0%, 0) rotate(0deg); }
-            50% { transform: scale(1.15) translate3d(-1.5%, -1.2%, 0) rotate(0.4deg); }
-            100% { transform: scale(1.05) translate3d(0%, 0%, 0) rotate(0deg); }
-        }
-        @keyframes kb-scene-2 {
-            0% { transform: scale(1.12) translate3d(1%, 0.8%, 0) rotate(0deg); }
-            50% { transform: scale(1.05) translate3d(-1%, -1.5%, 0) rotate(-0.5deg); }
-            100% { transform: scale(1.12) translate3d(1%, 0.8%, 0) rotate(0deg); }
-        }
-        @keyframes kb-scene-3 {
-            0% { transform: scale(1.08) translate3d(-1%, 1%, 0) rotate(-0.3deg); }
-            50% { transform: scale(1.18) translate3d(1.5%, -1%, 0) rotate(0.3deg); }
-            100% { transform: scale(1.08) translate3d(-1%, 1%, 0) rotate(-0.3deg); }
-        }
-        @keyframes kb-scene-4 {
-            0% { transform: scale(1.06) translate3d(0.5%, -0.5%, 0) rotate(0deg); }
-            50% { transform: scale(1.14) translate3d(-1.2%, 1%, 0) rotate(0.4deg); }
-            100% { transform: scale(1.06) translate3d(0.5%, -0.5%, 0) rotate(0deg); }
-        }
-        @keyframes kb-scene-5 {
-            0% { transform: scale(1.15) translate3d(-1%, -1%, 0) rotate(0.3deg); }
-            50% { transform: scale(1.06) translate3d(1%, 0.5%, 0) rotate(-0.3deg); }
-            100% { transform: scale(1.15) translate3d(-1%, -1%, 0) rotate(-0.3deg); }
-        }
-
-        .kb-active-1 { animation: kb-scene-1 20s ease-in-out infinite alternate; }
-        .kb-active-2 { animation: kb-scene-2 22s ease-in-out infinite alternate; }
-        .kb-active-3 { animation: kb-scene-3 24s ease-in-out infinite alternate; }
-        .kb-active-4 { animation: kb-scene-4 21s ease-in-out infinite alternate; }
-        .kb-active-5 { animation: kb-scene-5 23s ease-in-out infinite alternate; }
-
-        /* 3D Infinite Scrolling Track Animation */
-        @keyframes scrollTrack3D {
-            0% { transform: perspective(1200px) rotateX(10deg) rotateY(-6deg) rotateZ(-2deg) translate3d(0%, 0, 0) scale(1.1); }
-            50% { transform: perspective(1200px) rotateX(14deg) rotateY(-10deg) rotateZ(-4deg) translate3d(-25%, 0, 0) scale(1.15); }
-            100% { transform: perspective(1200px) rotateX(10deg) rotateY(-6deg) rotateZ(-2deg) translate3d(-50%, 0, 0) scale(1.1); }
-        }
-
-        .animate-scroll-track-3d {
-            animation: scrollTrack3D 35s linear infinite;
-        }
-
-        /* Site-Wide Dynamic 3D Card Elevation Engine */
-        .glass-card, .stat-card, .prob-card, .prod-card, .cs-card, .solution-card, .resource-card, .product-card, .feature-card {
-            transform-style: preserve-3d;
-            perspective: 1200px;
-            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-        }
-
-        .glass-card:hover, .stat-card:hover, .prob-card:hover, .prod-card:hover, .cs-card:hover, .solution-card:hover, .resource-card:hover, .product-card:hover, .feature-card:hover {
-            transform: perspective(1200px) rotateX(4deg) rotateY(-4deg) translateZ(16px) translateY(-8px);
-            box-shadow:
-                0 24px 60px -10px rgba(0, 163, 224, 0.25),
-                0 14px 35px -15px rgba(167, 75, 148, 0.28),
-                inset 0 1px 0 rgba(255, 255, 255, 0.8);
-        }
-
-        @media (max-width: 767px) {
-            #site-ambient-3d {
-                display: none;
-            }
-
-            .ambient-depth-plane {
-                width: 90vw;
-                height: 90vw;
-                transform: translate(42%, 22%) rotateX(64deg) rotateZ(-18deg);
-                opacity: 0.18;
-            }
-
-            main > section::after {
-                width: 5.5rem;
-                height: 5.5rem;
-                right: 1rem;
-                opacity: 0.32;
-            }
-
-            main > section:first-child::before {
-                top: 6rem;
-                right: -3rem;
-                width: 14rem;
-                height: 14rem;
-                opacity: 0.28;
-            }
+            min-height: calc(100vh - 420px);
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen">
 
-    <!-- High-Tech 3D Page Transition Overlay -->
-    <div id="page-transition-overlay" class="fixed inset-0 z-[9999] pointer-events-none opacity-0 transition-all duration-300 bg-slate-950/90 backdrop-blur-xl flex flex-col items-center justify-center text-white">
-        <div class="relative flex flex-col items-center gap-4 transform scale-90 transition-transform duration-300" id="page-transition-box">
-            <div class="relative w-16 h-16 flex items-center justify-center">
-                <div class="absolute inset-0 rounded-full border-4 border-sky-400/20 border-t-sky-400 animate-spin"></div>
-                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-400 to-emerald-400 animate-pulse shadow-lg shadow-cyan-400/50"></div>
-            </div>
-            <div class="text-center">
-                <p class="text-xs font-mono uppercase tracking-widest text-sky-400 mb-1">Track Tech 3D Routing</p>
-                <h4 class="text-xl font-black text-white tracking-tight" id="page-transition-text">Navigating Module...</h4>
-            </div>
-        </div>
-    </div>
+    <!-- Top Reading Progress Indicator -->
+    <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-sky-400 to-blue-600 z-[100] transition-all duration-150 pointer-events-none" style="width: 0%"></div>
 
-    <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
-    <div class="ambient-depth-plane" aria-hidden="true"></div>
-
-    <!-- Global 3D Apparel Manufacturing Video & Screenshot Reel Layer -->
-    <div id="apparel-3d-bg-container" class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-slate-950">
-        <!-- Continuous 3D Apparel Image Filmstrip Reel Track (Infinite Scroll Mode) -->
-        <div id="apparel-3d-scrolling-track" class="absolute inset-0 w-[240%] h-full flex items-center gap-8 opacity-45 pointer-events-none transform-gpu animate-scroll-track-3d">
-            <div class="flex items-center gap-8 shrink-0 h-[80vh]">
-                <img src="{{ asset('images/apparel-3d-scene-1.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-sky-400/40 shadow-2xl shadow-sky-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-2.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-emerald-400/40 shadow-2xl shadow-emerald-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-3.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-teal-400/40 shadow-2xl shadow-teal-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-4.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-cyan-400/40 shadow-2xl shadow-cyan-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-5.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-indigo-400/40 shadow-2xl shadow-indigo-500/20">
-            </div>
-            <!-- Duplicated track for infinite seamless 3D loop -->
-            <div class="flex items-center gap-8 shrink-0 h-[80vh]">
-                <img src="{{ asset('images/apparel-3d-scene-1.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-sky-400/40 shadow-2xl shadow-sky-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-2.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-emerald-400/40 shadow-2xl shadow-emerald-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-3.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-teal-400/40 shadow-2xl shadow-teal-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-4.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-cyan-400/40 shadow-2xl shadow-cyan-500/20">
-                <img src="{{ asset('images/apparel-3d-scene-5.png') }}" class="h-full w-auto object-cover rounded-3xl border-2 border-indigo-400/40 shadow-2xl shadow-indigo-500/20">
-            </div>
-        </div>
-
-        <!-- 3D Scene Spotlight Layer 1: Smart Sewing Machine IoT Device -->
-        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-60" data-scene="1">
-            <img src="{{ asset('images/apparel-3d-scene-1.png') }}" alt="3D Sewing Machine IoT Workstation" class="w-full h-full object-cover scale-105 kb-active-1 transition-transform duration-700 ease-out transform-gpu">
-        </div>
-        <!-- 3D Scene Spotlight Layer 2: Smart Factory Sewing Floor Layout -->
-        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="2">
-            <img src="{{ asset('images/apparel-3d-scene-2.png') }}" alt="3D Smart Factory Sewing Floor" class="w-full h-full object-cover scale-105 kb-active-2 transition-transform duration-700 ease-out transform-gpu">
-        </div>
-        <!-- 3D Scene Spotlight Layer 3: Apparel Manufacturing Complex Architecture -->
-        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="3">
-            <img src="{{ asset('images/apparel-3d-scene-3.png') }}" alt="3D Apparel Plant Architecture" class="w-full h-full object-cover scale-105 kb-active-3 transition-transform duration-700 ease-out transform-gpu">
-        </div>
-        <!-- 3D Scene Spotlight Layer 4: Real-time SaaS Manufacturing Analytics Dashboard -->
-        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="4">
-            <img src="{{ asset('images/apparel-3d-scene-4.png') }}" alt="3D SaaS Manufacturing Analytics" class="w-full h-full object-cover scale-105 kb-active-4 transition-transform duration-700 ease-out transform-gpu">
-        </div>
-        <!-- 3D Scene Spotlight Layer 5: Multi-Operator Sewing Assembly Line Fleet -->
-        <div class="apparel-3d-scene absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0" data-scene="5">
-            <img src="{{ asset('images/apparel-3d-scene-5.png') }}" alt="3D Multi-Operator Assembly Fleet" class="w-full h-full object-cover scale-105 kb-active-5 transition-transform duration-700 ease-out transform-gpu">
-        </div>
-
-        <!-- Ambient Lighting Grid Overlay & Glass Mask -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(248,250,252,0.50)_100%)]"></div>
-        <div id="video-overlay-mask" class="absolute inset-0 bg-gradient-to-br from-white/65 via-white/50 to-sky-100/35 backdrop-blur-[1px]"></div>
-    </div>
-
-    <!-- Main Content Layer -->
-    <div id="content-layer">
-
-        <!-- Top Scroll Reading Progress Indicator -->
-        <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-sky-400 via-emerald-400 to-cyan-500 z-[100] transition-all duration-150 pointer-events-none" style="width: 0%"></div>
-
-        <!-- Navigation -->
-        <header class="fixed top-0 w-full glass-nav z-[9999] transition-all duration-300 py-4">
-            <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <a href="/" class="flex items-center gap-3 group">
-                    <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-10 h-10 object-contain transition-transform group-hover:scale-105 bg-white rounded-full p-1 shadow-sm">
-                    <div>
-                        <span class="text-xl font-bold tracking-tight text-slate-800">Track Tech <span class="text-primary-500">Solution</span></span>
-                    </div>
-                </a>
-                
-                <nav class="hidden md:flex gap-3 items-center text-sm font-semibold">
-
-                    <a href="/#clients" class="px-4 py-2 rounded-full transition-all duration-300 text-slate-800 hover:text-sky-600 hover:bg-slate-100/60">Clients</a>
-
-                    <!-- ── Products Mega Dropdown ── -->
-                    <div class="relative" id="products-nav-group">
-                        <button
-                            id="products-nav-btn"
-                            onclick="toggleProductsDropdown()"
-                            class="flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('products*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}"
-                            aria-haspopup="true" aria-expanded="false">
-                            Products
-                            <svg id="products-chevron" class="w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-
-                        <!-- Dropdown Panel — Hierarchical tree like 2nd image -->
-                        <div
-                            id="products-dropdown-panel"
-                            class="absolute top-full left-0 mt-2 w-72 rounded-xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden"
-                            style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
-
-                            <div class="py-3">
-                                {{-- Section header --}}
-                                <p class="px-5 pt-1 pb-2 text-[10px] font-black uppercase tracking-widest text-slate-400">Products</p>
-
-                                {{-- TrakWel — parent with sub-items --}}
-                                <a href="/products#trakwel" data-product-choice="trakwel"
-                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
-                                    TrakWel
-                                </a>
-                                {{-- TrakWel sub-items --}}
-                                <a href="/products#fabric" data-product-choice="fabric"
-                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
-                                    Fabric Inventory Management
-                                </a>
-                                <a href="/products#cutting" data-product-choice="cutting"
-                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
-                                    Cutting Room Digitisation
-                                </a>
-                                <a href="/products#production" data-product-choice="production"
-                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
-                                    Production Tracking
-                                </a>
-                                <a href="/products#quality" data-product-choice="quality"
-                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
-                                    Quality Control
-                                </a>
-
-                                {{-- PlanWel, mTrak, SewIoT --}}
-                                <a href="/products#planwel" data-product-choice="planwel"
-                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
-                                    PlanWel
-                                </a>
-                                <a href="/products#mtrak" data-product-choice="mtrak"
-                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
-                                    mTrak
-                                </a>
-                                <a href="/products#sewiot" data-product-choice="sewiot"
-                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
-                                    SewIoT
-                                </a>
-
-                                <div class="my-2 mx-5 border-t border-slate-100"></div>
-
-                                {{-- Industry Solutions section --}}
-                                <p class="px-5 pt-1 pb-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400">Industry Solutions</p>
-                                <a href="/products#laundry" data-product-choice="laundry"
-                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
-                                    Laundry Management
-                                </a>
-                                <a href="/products#jig" data-product-choice="jig"
-                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
-                                    Jig Management
-                                </a>
-                                <a href="/products#shrinkage" data-product-choice="shrinkage"
-                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
-                                    Shrinkage Testing App
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ── End Products Dropdown ── -->
-
-                    <!-- About Dropdown -->
-                    <div class="relative" id="about-nav-group">
-                        <button
-                            id="about-nav-btn"
-                            onclick="toggleAboutDropdown()"
-                            class="flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 {{ (request()->is('about*') || request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}"
-                            aria-haspopup="true" aria-expanded="false">
-                            About
-                            <svg id="about-chevron" class="w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div id="about-dropdown-panel" class="absolute top-full left-0 mt-2 w-56 rounded-xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden" style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow:0 8px 32px rgba(0,0,0,0.12);">
-                            <div class="py-2">
-                                <a href="/business-stories" class="block px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition">Business Stories</a>
-                                <a href="/about" class="block px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition">Company</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="/contact" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('contact*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Contact Us</a>
-                </nav>
-
-                <div class="hidden md:block">
-                    <a href="/contact" class="bg-primary-500 hover:bg-primary-400 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 text-sm">
-                        Request a Demo
-                    </a>
-                </div>
-
-                <!-- Mobile Hamburger -->
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-slate-100 transition" aria-label="Menu">
-                    <span class="block w-6 h-0.5 bg-slate-800 transition-all" id="bar1"></span>
-                    <span class="block w-6 h-0.5 bg-slate-800 transition-all" id="bar2"></span>
-                    <span class="block w-4 h-0.5 bg-slate-800 transition-all ml-auto" id="bar3"></span>
-                </button>
-            </div>
-
-            <!-- Mobile Menu Panel -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-t border-slate-200 shadow-xl max-h-[80vh] overflow-y-auto">
-                <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-3">
-                    <a href="/#clients" class="text-slate-800 font-medium py-2.5 border-b border-slate-100 hover:text-primary-500 transition">Clients</a>
-                    <!-- Mobile Products Accordion -->
-                    <div>
-                        <button onclick="toggleMobileProducts()" class="w-full flex items-center justify-between text-slate-800 font-medium py-2.5 border-b border-slate-100 hover:text-primary-500 transition" id="mobile-products-btn">
-                            <span>Products</span>
-                            <svg id="mobile-products-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div id="mobile-products-panel" class="hidden pl-4 pb-2 space-y-1 mt-2">
-                            <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 pt-1">TrakWel Suite</p>
-                            <a href="/products#trakwel" data-product-choice="trakwel" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">TrakWel (MES)</a>
-                            <a href="/products#fabric" data-product-choice="fabric" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Fabric Inventory Management</a>
-                            <a href="/products#cutting" data-product-choice="cutting" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Cutting Room Digitisation</a>
-                            <a href="/products#production" data-product-choice="production" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Production Tracking</a>
-                            <a href="/products#quality" data-product-choice="quality" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Quality Control</a>
-
-                            <div class="border-t border-slate-100 my-2"></div>
-                            <p class="text-[10px] font-black uppercase tracking-wider text-slate-400">Specialised Modules</p>
-                            <a href="/products#planwel" data-product-choice="planwel" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">PlanWel</a>
-                            <a href="/products#mtrak" data-product-choice="mtrak" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">mTrak</a>
-                            <a href="/products#sewiot" data-product-choice="sewiot" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">SewIoT</a>
-
-                            <div class="border-t border-slate-100 my-2"></div>
-                            <p class="text-[10px] font-black uppercase tracking-wider text-slate-400">Industry Solutions</p>
-                            <a href="/products#laundry" data-product-choice="laundry" class="block py-1 text-xs text-slate-600 hover:text-orange-600 pl-3">Laundry Management</a>
-                            <a href="/products#jig" data-product-choice="jig" class="block py-1 text-xs text-slate-600 hover:text-orange-600 pl-3">Jig Management</a>
-                            <a href="/products#shrinkage" data-product-choice="shrinkage" class="block py-1 text-xs text-slate-600 hover:text-orange-600 pl-3">Shrinkage Testing App</a>
-                        </div>
-                    </div>
-                    <!-- Mobile About Accordion -->
-                    <div>
-                        <button onclick="toggleMobileAbout()" class="w-full flex items-center justify-between text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition" id="mobile-about-btn" aria-expanded="false">
-                            <span>About</span>
-                            <svg id="mobile-about-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div id="mobile-about-panel" class="hidden pl-4 pb-2">
-                            <a href="/business-stories" class="block py-2 text-sm text-slate-600 hover:text-sky-600">Business Stories</a>
-                            <a href="/about" class="block py-2 text-sm text-slate-600 hover:text-sky-600">Company</a>
-                        </div>
-                    </div>
-                    <a href="/contact" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Contact Us</a>
-                    <a href="/contact" class="mt-2 bg-primary-500 text-white text-center px-6 py-3 rounded-full font-medium shadow-lg">
-                        Request a Demo
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="min-h-screen-content pt-20">
-            @yield('content')
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-white/80 backdrop-blur-md border-t border-slate-200 pt-20 pb-10 mt-20">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid md:grid-cols-4 gap-12 mb-16">
-                    <div class="md:col-span-1">
-                        <div class="flex items-center gap-3 mb-6">
-                            <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="w-8 h-8 object-contain bg-white rounded-full p-1 shadow-sm">
-                            <span class="font-bold text-lg text-slate-800">Track Tech <span class="text-primary-500">Solution</span></span>
-                        </div>
-                        <p class="text-slate-800 text-sm leading-relaxed mb-6">
-                            Practical software for the people who plan, make, check and ship garments every day.
-                        </p>
-                        <div class="flex flex-col gap-2 text-sm text-slate-800">
-                            <a href="mailto:sales@tracktechsolutions.com" class="hover:text-primary-600">sales@tracktechsolutions.com</a>
-                            <a href="tel:+919650613666" class="hover:text-primary-600">+91 96506 13666</a>
-                            <a href="tel:+919742060606" class="hover:text-primary-600">+91 97420 60606</a>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h4 class="font-semibold text-slate-800 mb-6">Company</h4>
-                        <ul class="space-y-3 text-sm text-slate-800">
-                            <li><a href="/about" class="hover:text-primary-600">About Us</a></li>
-                            <li><a href="/contact" class="hover:text-primary-600">Contact Us</a></li>
-                            <li><a href="/contact" class="hover:text-primary-600">Careers</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="font-semibold text-slate-800 mb-6">Products</h4>
-                        <ul class="space-y-3 text-sm text-slate-800">
-                            <li><a href="/products#trakwel" class="hover:text-primary-600">Quality Control</a></li>
-                            <li><a href="/products#trakwel" class="hover:text-primary-600">Production Tracking</a></li>
-                            <li><a href="/products#mtrak" class="hover:text-primary-600">Machine Maintenance</a></li>
-                            <li><a href="/products#trakwel" class="hover:text-primary-600">TrakWel</a></li>
-                            <li><a href="/products#planwel" class="hover:text-primary-600">PlanWel</a></li>
-                            <li><a href="/products#mtrak" class="hover:text-primary-600">mTrak</a></li>
-                            <li><a href="/products#sewiot" class="hover:text-primary-600">SewIoT</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="font-semibold text-slate-800 mb-6">Resources</h4>
-                        <ul class="space-y-3 text-sm text-slate-800">
-                            <li><a href="/resources" class="hover:text-primary-600">Success Stories</a></li>
-                            <li><a href="/resources" class="hover:text-primary-600">FAQ</a></li>
-                            <li><a href="/resources" class="hover:text-primary-600">Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-                    <p>&copy; {{ date('Y') }} Track Tech Solution. All rights reserved.</p>
-                    <div class="flex gap-6">
-                        <a href="/about" class="hover:text-slate-900">Privacy Policy</a>
-                        <a href="/about" class="hover:text-slate-900">Terms & Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-
-    <!-- Floating 3D Apparel Video Telemetry & Scene Controller HUD -->
-    <div id="apparel-3d-hud-control" class="fixed bottom-6 left-6 z-50 flex flex-col gap-2 transition-all duration-300">
-        <div class="flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-xl border border-sky-400/40 shadow-2xl text-white text-xs font-mono">
-            <div class="relative flex items-center justify-center w-3 h-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </div>
-            <div class="flex flex-col">
-                <div class="flex items-center gap-2">
-                    <span class="text-sky-400 font-bold uppercase tracking-wider text-[10px]">3D Apparel Stream</span>
-                    <span class="bg-sky-500/20 text-sky-300 px-1.5 py-0.5 rounded text-[9px] font-sans font-semibold">60 FPS</span>
-                </div>
-                <span id="hud-scene-title" class="font-sans font-semibold text-slate-200 text-xs truncate max-w-[180px] sm:max-w-[260px]">
-                    Scene 1: Smart IoT Sewing Node
+    <!-- ══ NAVBAR ══════════════════════════════════════════════════════════ -->
+    <header class="fixed top-0 w-full glass-nav z-50 transition-all duration-300 py-3.5 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            
+            <!-- Brand Logo -->
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="h-10 w-10 object-contain transition-transform group-hover:scale-105 bg-white rounded-full p-1 shadow-sm border border-slate-100">
+                <span class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 font-heading">
+                    Track Tech <span class="text-primary-500">Solution</span>
                 </span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-semibold text-slate-700">
+                <a href="/#clients" class="px-4 py-2 rounded-full hover:text-sky-600 hover:bg-slate-100/70 transition-all">Clients</a>
+
+                <!-- ── Products Dropdown ── -->
+                <div class="relative" id="products-nav-group">
+                    <button
+                        id="products-nav-btn"
+                        onclick="toggleProductsDropdown()"
+                        class="flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-200 {{ request()->is('products*') ? 'bg-sky-50 text-sky-600 font-bold border border-sky-200' : 'hover:text-sky-600 hover:bg-slate-100/70' }}"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span>Products</span>
+                        <svg id="products-chevron" class="w-3.5 h-3.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+
+                    <!-- Dropdown Panel -->
+                    <div
+                        id="products-dropdown-panel"
+                        class="absolute top-full left-0 mt-2 w-72 rounded-2xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden shadow-2xl bg-white"
+                        style="pointer-events:none; z-index:99999;">
+
+                        <div class="py-3">
+                            <p class="px-5 pt-1 pb-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400">Products</p>
+
+                            <!-- TrakWel (MES) -->
+                            <a href="/products#trakwel" data-product-choice="trakwel"
+                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
+                                TrakWel
+                            </a>
+                            <!-- TrakWel Sub-modules -->
+                            <a href="/products#fabric" data-product-choice="fabric"
+                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
+                                Fabric Inventory Management
+                            </a>
+                            <a href="/products#cutting" data-product-choice="cutting"
+                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
+                                Cutting Room Digitisation
+                            </a>
+                            <a href="/products#production" data-product-choice="production"
+                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
+                                Production Tracking
+                            </a>
+                            <a href="/products#quality" data-product-choice="quality"
+                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
+                                Quality Control
+                            </a>
+
+                            <!-- PlanWel, mTrak, SewIoT -->
+                            <a href="/products#planwel" data-product-choice="planwel"
+                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
+                                PlanWel
+                            </a>
+                            <a href="/products#mtrak" data-product-choice="mtrak"
+                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
+                                mTrak
+                            </a>
+                            <a href="/products#sewiot" data-product-choice="sewiot"
+                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
+                                SewIoT
+                            </a>
+
+                            <div class="my-2 mx-5 border-t border-slate-100"></div>
+
+                            <!-- Industry Solutions -->
+                            <p class="px-5 pt-1 pb-1 text-[10px] font-black uppercase tracking-widest text-slate-400">Industry Solutions</p>
+                            <a href="/products#laundry" data-product-choice="laundry"
+                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition">
+                                Laundry Management
+                            </a>
+                            <a href="/products#jig" data-product-choice="jig"
+                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition">
+                                Jig Management
+                            </a>
+                            <a href="/products#shrinkage" data-product-choice="shrinkage"
+                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition">
+                                Shrinkage Testing App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── About Dropdown ── -->
+                <div class="relative" id="about-nav-group">
+                    <button
+                        id="about-nav-btn"
+                        onclick="toggleAboutDropdown()"
+                        class="flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-200 {{ (request()->is('about*') || request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-50 text-sky-600 font-bold border border-sky-200' : 'hover:text-sky-600 hover:bg-slate-100/70' }}"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span>About</span>
+                        <svg id="about-chevron" class="w-3.5 h-3.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="about-dropdown-panel" class="absolute top-full left-0 mt-2 w-56 rounded-2xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden shadow-2xl bg-white" style="pointer-events:none; z-index:99999;">
+                        <div class="py-2">
+                            <a href="/about#company-profile" class="block px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition">Track Tech Solutions</a>
+                            <a href="/about#leadership" class="block px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition">Our Leadership Team</a>
+                            <a href="/business-stories" class="block px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition">Business Stories</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/contact" class="px-4 py-2 rounded-full hover:text-sky-600 hover:bg-slate-100/70 transition-all {{ request()->is('contact*') ? 'bg-sky-50 text-sky-600 font-bold border border-sky-200' : '' }}">Contact Us</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="/contact" class="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md shadow-sky-500/25 hover:scale-105 text-sm">
+                    Book Demo
+                </a>
             </div>
 
-            <!-- Scene selector buttons 1..5 -->
-            <div class="flex items-center gap-1.5 ml-2 pl-2 border-l border-slate-700/80">
-                <button onclick="switchApparel3DScene(1)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-sky-500 text-white shadow-md shadow-sky-500/50 scale-110" data-scene-num="1" title="Scene 1: IoT Sewing Terminal">1</button>
-                <button onclick="switchApparel3DScene(2)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="2" title="Scene 2: Factory Sewing Lines">2</button>
-                <button onclick="switchApparel3DScene(3)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="3" title="Scene 3: Factory Architecture">3</button>
-                <button onclick="switchApparel3DScene(4)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="4" title="Scene 4: Analytics Dashboard">4</button>
-                <button onclick="switchApparel3DScene(5)" class="hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700" data-scene-num="5" title="Scene 5: Multi-Operator Fleet">5</button>
-                
-                <button id="hud-play-pause-btn" onclick="toggleApparel3DAutoPlay()" class="w-6 h-6 ml-1 rounded-lg text-[12px] bg-slate-800 text-slate-300 hover:bg-slate-700 transition flex items-center justify-center" title="Pause/Play 3D Loop">
-                    ⏸
-                </button>
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-xl hover:bg-slate-100 transition" aria-label="Toggle Menu">
+                <span class="block w-6 h-0.5 bg-slate-800"></span>
+                <span class="block w-6 h-0.5 bg-slate-800"></span>
+                <span class="block w-4 h-0.5 bg-slate-800 ml-auto"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl max-h-[85vh] overflow-y-auto">
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-3">
+                <a href="/#clients" class="text-slate-800 font-semibold py-2 border-b border-slate-100">Clients</a>
+
+                <!-- Mobile Products Accordion -->
+                <div>
+                    <button onclick="toggleMobileProducts()" class="w-full flex items-center justify-between text-slate-800 font-semibold py-2 border-b border-slate-100">
+                        <span>Products</span>
+                        <svg id="mobile-products-chevron" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="mobile-products-panel" class="hidden pl-4 pb-2 space-y-1 mt-2">
+                        <p class="text-[10px] font-black uppercase text-slate-400">TrakWel</p>
+                        <a href="/products#trakwel" data-product-choice="trakwel" class="block py-1.5 text-sm font-bold text-slate-900">TrakWel (MES)</a>
+                        <a href="/products#fabric" data-product-choice="fabric" class="block py-1 text-xs text-slate-600 pl-3">Fabric Inventory Management</a>
+                        <a href="/products#cutting" data-product-choice="cutting" class="block py-1 text-xs text-slate-600 pl-3">Cutting Room Digitisation</a>
+                        <a href="/products#production" data-product-choice="production" class="block py-1 text-xs text-slate-600 pl-3">Production Tracking</a>
+                        <a href="/products#quality" data-product-choice="quality" class="block py-1 text-xs text-slate-600 pl-3">Quality Control</a>
+                        <div class="border-t border-slate-100 my-2"></div>
+                        <a href="/products#planwel" data-product-choice="planwel" class="block py-1.5 text-sm font-bold text-slate-900">PlanWel</a>
+                        <a href="/products#mtrak" data-product-choice="mtrak" class="block py-1.5 text-sm font-bold text-slate-900">mTrak</a>
+                        <a href="/products#sewiot" data-product-choice="sewiot" class="block py-1.5 text-sm font-bold text-slate-900">SewIoT</a>
+                        <div class="border-t border-slate-100 my-2"></div>
+                        <p class="text-[10px] font-black uppercase text-slate-400">Industry Solutions</p>
+                        <a href="/products#laundry" data-product-choice="laundry" class="block py-1 text-xs text-slate-600 pl-3">Laundry Management</a>
+                        <a href="/products#jig" data-product-choice="jig" class="block py-1 text-xs text-slate-600 pl-3">Jig Management</a>
+                        <a href="/products#shrinkage" data-product-choice="shrinkage" class="block py-1 text-xs text-slate-600 pl-3">Shrinkage Testing App</a>
+                    </div>
+                </div>
+
+                <!-- Mobile About Accordion -->
+                <div>
+                    <button onclick="toggleMobileAbout()" class="w-full flex items-center justify-between text-slate-800 font-semibold py-2 border-b border-slate-100">
+                        <span>About</span>
+                        <svg id="mobile-about-chevron" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="mobile-about-panel" class="hidden pl-4 pb-2 space-y-1 mt-2">
+                        <a href="/about#company-profile" class="block py-1.5 text-sm text-slate-700">Track Tech Solutions</a>
+                        <a href="/about#leadership" class="block py-1.5 text-sm text-slate-700">Our Leadership Team</a>
+                        <a href="/business-stories" class="block py-1.5 text-sm text-slate-700">Business Stories</a>
+                    </div>
+                </div>
+
+                <a href="/contact" class="text-slate-800 font-semibold py-2 border-b border-slate-100">Contact Us</a>
+                <a href="/contact" class="mt-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-center px-6 py-3 rounded-full font-semibold shadow-md">
+                    Book Demo
+                </a>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Floating 3D Navigation & Quick Router Dock -->
-    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-2">
-        <!-- Quick Page Router Dock -->
-        <div class="hidden lg:flex items-center gap-1.5 p-2 rounded-full bg-slate-900/90 backdrop-blur-xl border border-sky-400/30 shadow-2xl text-white text-xs font-bold">
-            <a href="/#clients" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 text-slate-300">
-                <span>Clients</span>
-            </a>
-            <a href="/products" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('products*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>Products</span>
-            </a>
-            <a href="/about" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ (request()->is('about*') || request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>About</span>
-            </a>
-            <a href="/contact" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('contact*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>Contact</span>
-            </a>
+    <!-- ══ MAIN CONTENT ════════════════════════════════════════════════════ -->
+    <main class="flex-grow pt-20">
+        @yield('content')
+    </main>
+
+    <!-- ══ FOOTER ══════════════════════════════════════════════════════════ -->
+    <footer class="bg-slate-900 text-white border-t border-slate-800 pt-16 pb-12 mt-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="h-9 w-9 object-contain bg-white rounded-full p-1 shadow-sm">
+                        <span class="font-bold text-xl text-white font-heading">Track Tech <span class="text-sky-400">Solution</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening, fix issues sooner and keep every order moving.
+                    </p>
+                    <div class="flex flex-col gap-2 text-sm text-slate-300">
+                        <a href="mailto:sales@tracktechsolutions.com" class="hover:text-sky-400 transition">sales@tracktechsolutions.com</a>
+                        <a href="mailto:info@tracktechsolutions.com" class="hover:text-sky-400 transition">info@tracktechsolutions.com</a>
+                        <a href="tel:+919742060606" class="hover:text-sky-400 transition">+91 97420 60606</a>
+                        <a href="tel:+919650613666" class="hover:text-sky-400 transition">+91 96506 13666</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-5 font-heading">Products</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="/products#trakwel" class="hover:text-white transition">TrakWel (MES)</a></li>
+                        <li><a href="/products#fabric" class="hover:text-white transition">Fabric Inventory</a></li>
+                        <li><a href="/products#cutting" class="hover:text-white transition">Cutting Room</a></li>
+                        <li><a href="/products#production" class="hover:text-white transition">Production Tracking</a></li>
+                        <li><a href="/products#quality" class="hover:text-white transition">Quality Control</a></li>
+                        <li><a href="/products#planwel" class="hover:text-white transition">PlanWel</a></li>
+                        <li><a href="/products#mtrak" class="hover:text-white transition">mTrak</a></li>
+                        <li><a href="/products#sewiot" class="hover:text-white transition">SewIoT</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-5 font-heading">Company</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="/about#company-profile" class="hover:text-white transition">About Track Tech</a></li>
+                        <li><a href="/about#leadership" class="hover:text-white transition">Leadership Team</a></li>
+                        <li><a href="/business-stories" class="hover:text-white transition">Business Stories</a></li>
+                        <li><a href="/#clients" class="hover:text-white transition">Key Customers</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-5 font-heading">Head Office</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Bangalore, Karnataka, India
+                    </p>
+                    <div class="mt-6">
+                        <a href="https://wa.me/919650613666" target="_blank" rel="noopener"
+                           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-md transition">
+                            <span>💬 WhatsApp Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; {{ date('Y') }} Track Tech Solutions. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="/privacy" class="hover:text-slate-400 transition">Privacy Policy</a>
+                    <a href="/terms" class="hover:text-slate-400 transition">Terms of Service</a>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <!-- Scroll Back To Top Button -->
-        <button id="scroll-to-top-btn" class="w-11 h-11 rounded-full bg-sky-500 hover:bg-sky-400 text-white flex items-center justify-center shadow-lg shadow-sky-500/40 transition hover:scale-110" title="Back to Top">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+    <!-- ══ FLOATING WHATSAPP & SCROLL TOP BUTTONS ════════════════════════ -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <button id="scroll-to-top-btn" class="w-10 h-10 rounded-full bg-white text-slate-800 border border-slate-200 shadow-lg flex items-center justify-center hover:bg-slate-50 transition hover:scale-105" title="Back to Top">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
         </button>
+
+        <a href="https://wa.me/919650613666" target="_blank" rel="noopener"
+           class="w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-xl shadow-emerald-500/30 transition hover:scale-110"
+           title="Chat on WhatsApp">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
     </div>
 
-    <!-- Shared UI Setup -->
+    <!-- ══ SCRIPTS ═════════════════════════════════════════════════════════ -->
     <script>
+        // Init AOS animations
         if (typeof AOS !== 'undefined') {
-            AOS.init({
-                duration: 700,
-                once: true,
-                offset: 80,
-                disable: function () {
-                    return window.innerWidth < 768;
-                },
-            });
+            AOS.init({ duration: 600, once: true, offset: 50 });
         }
 
-        (function() {
-            var menuBtn = document.getElementById('mobile-menu-btn');
-            var mobileMenu = document.getElementById('mobile-menu');
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-        })();
-
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.classList.add('spotlight');
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--x', `${x}px`);
-                card.style.setProperty('--y', `${y}px`);
-            });
-        });
-
-        (function () {
-            var canvas = document.getElementById('site-ambient-3d');
-            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            var isSmallScreen = window.innerWidth < 768;
-            if (!canvas || typeof THREE === 'undefined' || reduceMotion || isSmallScreen) {
-                return;
-            }
-
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 1000);
-            camera.position.set(0, 4, 13);
-
-            var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-            renderer.setSize(window.innerWidth, window.innerHeight);
-
-            scene.add(new THREE.AmbientLight(0xffffff, 0.75));
-            var light = new THREE.DirectionalLight(0xffffff, 1);
-            light.position.set(4, 7, 6);
-            scene.add(light);
-
-            var group = new THREE.Group();
-            group.position.set(3.2, -0.25, 0);
-            scene.add(group);
-
-            var colors = [0x00a3e0, 0xa74b94, 0x22c55e, 0xf8fafc];
-            for (var i = 0; i < 18; i++) {
-                var geometry = i % 3 === 0
-                    ? new THREE.BoxGeometry(0.7, 0.32, 0.56)
-                    : new THREE.IcosahedronGeometry(0.28, 0);
-                var material = new THREE.MeshStandardMaterial({
-                    color: colors[i % colors.length],
-                    roughness: 0.48,
-                    metalness: 0.08,
-                    transparent: true,
-                    opacity: i % 3 === 0 ? 0.62 : 0.72
-                });
-                var mesh = new THREE.Mesh(geometry, material);
-                mesh.position.set((i % 6) * 1.15 - 3.3, Math.floor(i / 6) * 1.05 - 1.1, (i % 2) * -1.4);
-                mesh.rotation.set(i * 0.21, i * 0.17, i * 0.09);
-                group.add(mesh);
-            }
-
-            var grid = new THREE.GridHelper(10, 10, 0x00a3e0, 0xcbd5e1);
-            grid.position.y = -1.7;
-            grid.material.transparent = true;
-            grid.material.opacity = 0.22;
-            group.add(grid);
-
-            function resize() {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            }
-
-            function animate(time) {
-                requestAnimationFrame(animate);
-                group.rotation.y = Math.sin(time * 0.00024) * 0.22 - 0.22;
-                group.rotation.x = Math.sin(time * 0.00018) * 0.08;
-                group.children.forEach(function (child, index) {
-                    if (child.isMesh) {
-                        child.position.y += Math.sin(time * 0.001 + index) * 0.0009;
-                        child.rotation.y += 0.002;
-                    }
-                });
-                camera.lookAt(0, 0, 0);
-                renderer.render(scene, camera);
-            }
-
-            window.addEventListener('resize', resize);
-        })();
-
-        // Smooth Scroll Reading Progress Bar Tracker
+        // Scroll reading indicator
         window.addEventListener('scroll', function() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (height > 0) ? (winScroll / height) * 100 : 0;
-            var progressBar = document.getElementById('scroll-progress-bar');
-            if (progressBar) {
-                progressBar.style.width = scrolled + '%';
-            }
-        });
-
-        // 3D Page Transition FX & Link Interceptor
-        document.addEventListener('DOMContentLoaded', function() {
-            var overlay = document.getElementById('page-transition-overlay');
-            var transitionText = document.getElementById('page-transition-text');
-            var transitionBox = document.getElementById('page-transition-box');
-
-            document.querySelectorAll('a[href]').forEach(function(link) {
-                var href = link.getAttribute('href');
-                if (href && !href.startsWith('#') && !href.startsWith('javascript') && !href.startsWith('mailto') && !href.startsWith('tel') && link.target !== '_blank') {
-                    link.addEventListener('click', function(e) {
-                        if (e.metaKey || e.ctrlKey) return;
-                        var targetName = href.replace('/', '').toUpperCase() || 'HOME';
-                        if (overlay && transitionText && transitionBox) {
-                            e.preventDefault();
-                            transitionText.textContent = 'Loading ' + targetName + ' Module...';
-                            overlay.classList.remove('pointer-events-none', 'opacity-0');
-                            overlay.classList.add('opacity-100');
-                            transitionBox.classList.remove('scale-90');
-                            transitionBox.classList.add('scale-100');
-                            setTimeout(function() {
-                                window.location.href = href;
-                            }, 240);
-                        }
-                    });
-                }
-            });
+            var doc = document.documentElement;
+            var winScroll = doc.scrollTop || document.body.scrollTop;
+            var height = doc.scrollHeight - doc.clientHeight;
+            var scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            var bar = document.getElementById('scroll-progress-bar');
+            if (bar) bar.style.width = scrolled + '%';
 
             var topBtn = document.getElementById('scroll-to-top-btn');
-            if (topBtn) {
-                topBtn.addEventListener('click', function() {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
+            if (topBtn) topBtn.style.display = winScroll > 300 ? 'flex' : 'none';
         });
-    </script>
 
-    <!-- SweetAlert2 for beautiful form notifications -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            @if(session('success'))
-            Swal.fire({
-                title: '✅ Message Sent!',
-                text: @json(session('success')),
-                icon: 'success',
-                confirmButtonText: 'Great!',
-                confirmButtonColor: '#0ea5e9',
-                background: '#ffffff',
-                color: '#1e293b',
-                iconColor: '#22c55e',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                }
-            });
-            @endif
-
-            @if($errors->any())
-            var errorMessages = @json($errors->all());
-            Swal.fire({
-                title: 'Please fix these errors',
-                html: errorMessages.map(function(e){ return '• ' + e; }).join('<br>'),
-                icon: 'error',
-                confirmButtonText: 'Try Again',
-                confirmButtonColor: '#0ea5e9',
-                background: '#ffffff',
-                color: '#1e293b',
-            });
-            @endif
+        // Scroll to top
+        document.getElementById('scroll-to-top-btn')?.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var openModalBtn = document.getElementById('open-apparel-video-modal');
-            var closeModalBtn = document.getElementById('close-apparel-video-modal');
-            var videoModal = document.getElementById('apparel-video-modal');
-            var modalVideo = document.getElementById('modal-apparel-video');
-            var modalTitle = document.getElementById('modal-video-title');
-            var tabBtns = document.querySelectorAll('.video-tab-btn');
 
-            if (openModalBtn && videoModal) {
-                openModalBtn.addEventListener('click', function() {
-                    videoModal.classList.remove('hidden');
-                    if (modalVideo) modalVideo.play();
-                });
-            }
-
-            if (closeModalBtn && videoModal) {
-                closeModalBtn.addEventListener('click', function() {
-                    videoModal.classList.add('hidden');
-                    if (modalVideo) modalVideo.pause();
-                });
-            }
-
-            if (videoModal) {
-                videoModal.addEventListener('click', function(e) {
-                    if (e.target === videoModal) {
-                        videoModal.classList.add('hidden');
-                        if (modalVideo) modalVideo.pause();
-                    }
-                });
-            }
-
-            tabBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    tabBtns.forEach(function(b) {
-                        b.classList.remove('bg-sky-500', 'text-white');
-                        b.classList.add('bg-slate-100', 'text-slate-700');
-                    });
-                    btn.classList.remove('bg-slate-100', 'text-slate-700');
-                    btn.classList.add('bg-sky-500', 'text-white');
-
-                    var videoSrc = btn.getAttribute('data-video');
-                    var title = btn.getAttribute('data-title');
-
-                    if (modalVideo && videoSrc) {
-                        modalVideo.src = videoSrc;
-                        modalVideo.play();
-                    }
-                    if (modalTitle && title) {
-                        modalTitle.textContent = title;
-                    }
-                });
-            });
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+            document.getElementById('mobile-menu')?.classList.toggle('hidden');
         });
-    </script>
-    <script>
-        (function() {
-            var currentScene = 1;
-            var autoPlay = true;
-            var sceneTimer = null;
-            var totalScenes = 5;
 
-            var titles = {
-                1: "Scene 1: Smart IoT Sewing Node",
-                2: "Scene 2: Smart Factory Sewing Floor",
-                3: "Scene 3: Apparel Complex & Docks",
-                4: "Scene 4: SaaS Manufacturing Analytics",
-                5: "Scene 5: Multi-Operator Assembly Fleet"
-            };
+        // Products Dropdown
+        var _prodOpen = false;
+        window.toggleProductsDropdown = function() {
+            _prodOpen = !_prodOpen;
+            var panel = document.getElementById('products-dropdown-panel');
+            var chevron = document.getElementById('products-chevron');
+            var btn = document.getElementById('products-nav-btn');
+            if (!panel) return;
+            panel.classList.toggle('opacity-0', !_prodOpen);
+            panel.classList.toggle('invisible', !_prodOpen);
+            panel.classList.toggle('translate-y-2', !_prodOpen);
+            panel.classList.toggle('opacity-100', _prodOpen);
+            panel.classList.toggle('visible', _prodOpen);
+            panel.classList.toggle('translate-y-0', _prodOpen);
+            panel.style.pointerEvents = _prodOpen ? 'auto' : 'none';
+            if (chevron) chevron.style.transform = _prodOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+            if (btn) btn.setAttribute('aria-expanded', _prodOpen ? 'true' : 'false');
+        };
 
-            var path = window.location.pathname;
-            if (path.indexOf('products') !== -1) currentScene = 1;
-            else if (path.indexOf('business-stories') !== -1 || path.indexOf('industries') !== -1) currentScene = 2;
-            else if (path.indexOf('about') !== -1) currentScene = 3;
-            else if (path.indexOf('resources') !== -1) currentScene = 4;
-            else if (path.indexOf('contact') !== -1) currentScene = 5;
-
-            window.switchApparel3DScene = function(num) {
-                currentScene = num;
-                var scenes = document.querySelectorAll('.apparel-3d-scene');
-                var btns = document.querySelectorAll('.hud-scene-btn');
-                var titleEl = document.getElementById('hud-scene-title');
-
-                scenes.forEach(function(s) {
-                    var sNum = parseInt(s.getAttribute('data-scene'), 10);
-                    if (sNum === num) {
-                        s.classList.remove('opacity-0');
-                        s.classList.add('opacity-100');
-                    } else {
-                        s.classList.remove('opacity-100');
-                        s.classList.add('opacity-0');
-                    }
-                });
-
-                btns.forEach(function(b) {
-                    var bNum = parseInt(b.getAttribute('data-scene-num'), 10);
-                    if (bNum === num) {
-                        b.className = 'hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-sky-500 text-white shadow-md shadow-sky-500/50 scale-110';
-                    } else {
-                        b.className = 'hud-scene-btn w-6 h-6 rounded-lg text-[11px] font-bold transition flex items-center justify-center bg-slate-800 text-slate-300 hover:bg-slate-700';
-                    }
-                });
-
-                if (titleEl && titles[num]) {
-                    titleEl.textContent = titles[num];
-                }
-            };
-
-            window.toggleApparel3DAutoPlay = function() {
-                autoPlay = !autoPlay;
-                var btn = document.getElementById('hud-play-pause-btn');
-                if (btn) btn.textContent = autoPlay ? '⏸' : '▶';
-                if (autoPlay) startAutoPlay();
-                else clearInterval(sceneTimer);
-            };
-
-            function startAutoPlay() {
-                clearInterval(sceneTimer);
-                sceneTimer = setInterval(function() {
-                    if (!autoPlay) return;
-                    currentScene = (currentScene % totalScenes) + 1;
-                    switchApparel3DScene(currentScene);
-                }, 6000);
-            }
-
-            var bgContainer = document.getElementById('apparel-3d-bg-container');
-            if (bgContainer && window.innerWidth >= 768) {
-                document.addEventListener('mousemove', function(e) {
-                    var xPct = (e.clientX / window.innerWidth - 0.5) * 2;
-                    var yPct = (e.clientY / window.innerHeight - 0.5) * 2;
-                    var activeImg = bgContainer.querySelector('.apparel-3d-scene.opacity-100 img');
-                    if (activeImg) {
-                        activeImg.style.transform = 'scale(1.1) translate3d(' + (xPct * 10) + 'px, ' + (yPct * 10) + 'px, 0px) rotateX(' + (-yPct * 1.5) + 'deg) rotateY(' + (xPct * 1.5) + 'deg)';
-                    }
-                });
-            }
-
-            switchApparel3DScene(currentScene);
-            startAutoPlay();
-        })();
-    </script>
-    <script>
-        /* About Dropdown */
+        // About Dropdown
         var _aboutOpen = false;
-
-        window.toggleAboutDropdown = function () {
+        window.toggleAboutDropdown = function() {
             _aboutOpen = !_aboutOpen;
             var panel = document.getElementById('about-dropdown-panel');
             var chevron = document.getElementById('about-chevron');
-            var button = document.getElementById('about-nav-btn');
+            var btn = document.getElementById('about-nav-btn');
             if (!panel) return;
             panel.classList.toggle('opacity-0', !_aboutOpen);
             panel.classList.toggle('invisible', !_aboutOpen);
@@ -1088,113 +449,61 @@
             panel.classList.toggle('translate-y-0', _aboutOpen);
             panel.style.pointerEvents = _aboutOpen ? 'auto' : 'none';
             if (chevron) chevron.style.transform = _aboutOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-            if (button) button.setAttribute('aria-expanded', _aboutOpen ? 'true' : 'false');
+            if (btn) btn.setAttribute('aria-expanded', _aboutOpen ? 'true' : 'false');
         };
 
-        document.addEventListener('click', function (event) {
-            var group = document.getElementById('about-nav-group');
-            if (_aboutOpen && group && !group.contains(event.target)) {
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+            var prodGroup = document.getElementById('products-nav-group');
+            if (_prodOpen && prodGroup && !prodGroup.contains(e.target)) {
+                window.toggleProductsDropdown();
+            }
+            var aboutGroup = document.getElementById('about-nav-group');
+            if (_aboutOpen && aboutGroup && !aboutGroup.contains(e.target)) {
                 window.toggleAboutDropdown();
             }
         });
 
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && _aboutOpen) {
-                window.toggleAboutDropdown();
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (_prodOpen) window.toggleProductsDropdown();
+                if (_aboutOpen) window.toggleAboutDropdown();
             }
         });
 
-        window.toggleMobileAbout = function () {
+        // Mobile accordions
+        window.toggleMobileProducts = function() {
+            var panel = document.getElementById('mobile-products-panel');
+            var chevron = document.getElementById('mobile-products-chevron');
+            if (panel) {
+                panel.classList.toggle('hidden');
+                if (chevron) chevron.style.transform = panel.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        };
+
+        window.toggleMobileAbout = function() {
             var panel = document.getElementById('mobile-about-panel');
             var chevron = document.getElementById('mobile-about-chevron');
-            var button = document.getElementById('mobile-about-btn');
-            if (!panel) return;
-            panel.classList.toggle('hidden');
-            var isExpanded = !panel.classList.contains('hidden');
-            if (chevron) chevron.style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
-            if (button) button.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-        };
-    </script>
-    <script>
-        /* ══ Products Mega Dropdown ══ */
-        var _prodOpen = false;
-
-        window.toggleProductsDropdown = function () {
-            _prodOpen = !_prodOpen;
-            var panel   = document.getElementById('products-dropdown-panel');
-            var chevron = document.getElementById('products-chevron');
-            var btn     = document.getElementById('products-nav-btn');
-            if (!panel) return;
-            if (_prodOpen) {
-                panel.classList.remove('opacity-0', 'invisible', 'translate-y-2');
-                panel.classList.add('opacity-100', 'visible', 'translate-y-0');
-                panel.style.pointerEvents = 'auto';
-                if (chevron) chevron.style.transform = 'rotate(180deg)';
-                if (btn) btn.setAttribute('aria-expanded', 'true');
-            } else {
-                _closeProductsDropdown();
-            }
-        };
-
-        function _closeProductsDropdown() {
-            _prodOpen = false;
-            var panel   = document.getElementById('products-dropdown-panel');
-            var chevron = document.getElementById('products-chevron');
-            var btn     = document.getElementById('products-nav-btn');
             if (panel) {
-                panel.classList.add('opacity-0', 'invisible', 'translate-y-2');
-                panel.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                panel.style.pointerEvents = 'none';
-            }
-            if (chevron) chevron.style.transform = 'rotate(0deg)';
-            if (btn) btn.setAttribute('aria-expanded', 'false');
-        }
-
-        /* Close when clicking outside */
-        document.addEventListener('click', function (e) {
-            var grp = document.getElementById('products-nav-group');
-            if (_prodOpen && grp && !grp.contains(e.target)) {
-                _closeProductsDropdown();
-            }
-        });
-
-        /* Close on Escape */
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && _prodOpen) {
-                _closeProductsDropdown();
-            }
-        });
-
-        /* ══ Mobile Products Accordion ══ */
-        window.toggleMobileProducts = function () {
-            var panel   = document.getElementById('mobile-products-panel');
-            var chevron = document.getElementById('mobile-products-chevron');
-            if (!panel) return;
-            panel.classList.toggle('hidden');
-            if (chevron) {
-                chevron.style.transform = panel.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                panel.classList.toggle('hidden');
+                if (chevron) chevron.style.transform = panel.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
             }
         };
 
-        /* Handle clicks on [data-product-choice] */
-        document.addEventListener('click', function (e) {
+        // When a product choice is clicked on /products, smoothly switch it
+        document.addEventListener('click', function(e) {
             var target = e.target.closest('[data-product-choice]');
             if (!target) return;
             var choice = target.getAttribute('data-product-choice');
             if (window.selectProduct) {
                 e.preventDefault();
                 window.selectProduct(choice);
-                _closeProductsDropdown();
-                var mobPanel = document.getElementById('mobile-products-panel');
-                if (mobPanel && !mobPanel.classList.contains('hidden')) {
-                    toggleMobileProducts();
-                }
-                var mobMenu = document.getElementById('mobile-menu');
-                if (mobMenu) mobMenu.classList.add('hidden');
+                if (_prodOpen) window.toggleProductsDropdown();
+                var mob = document.getElementById('mobile-menu');
+                if (mob && !mob.classList.contains('hidden')) mob.classList.add('hidden');
                 var exp = document.getElementById('product-experience');
-                if (exp) {
-                    exp.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+                if (exp) exp.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         });
     </script>

@@ -8,18 +8,30 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::where('status', 'active')
-            ->latest()
-            ->get();
+        try {
+            $products = Product::where('status', 'active')
+                ->latest()
+                ->get();
+        } catch (\Throwable $e) {
+            $products = collect([]);
+        }
 
         return view('products', compact('products'));
     }
 
     public function show($slug)
     {
-        $product = Product::where('slug', $slug)
-            ->where('status', 'active')
-            ->firstOrFail();
+        try {
+            $product = Product::where('slug', $slug)
+                ->where('status', 'active')
+                ->first();
+        } catch (\Throwable $e) {
+            $product = null;
+        }
+
+        if (!$product) {
+            return redirect()->route('products');
+        }
 
         return view('product-details', compact('product'));
     }
