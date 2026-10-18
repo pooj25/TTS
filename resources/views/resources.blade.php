@@ -234,7 +234,7 @@
                 <p>Key benefits include: <strong>reduced WIP (Work in Progress) pile-up</strong>, accurate delivery date commitments to buyers, and automated shift reports that save supervisors 2–3 hours every day.</p>
                 <p>Real-time visibility is the foundation of a truly smart factory. Everything else — quality control, planning, machine maintenance — works better when you know exactly what is happening, right now.</p>
             </div>
-            <a href="/contact" class="inline-block mt-8 px-7 py-3.5 bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-full font-semibold hover:-translate-y-1 transition shadow-lg">Book a Demo →</a>
+            <a href="/contact" class="inline-block mt-8 px-7 py-3.5 bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-full font-semibold hover:-translate-y-1 transition shadow-lg">Request a Demo →</a>
         </div>
     </div>
 
@@ -398,7 +398,7 @@
             <div>
                 <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 mb-3">
                     <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                    Next Chapter: Contact Us & Book Demo
+                    Next Chapter: Contact Us & Request a Demo
                 </span>
                 <h3 class="text-2xl md:text-4xl font-black text-white">
                     Schedule Your Free 30-Minute Factory Audit
@@ -409,7 +409,7 @@
             </div>
 
             <a href="/contact" class="group inline-flex items-center gap-4 bg-gradient-to-r from-cyan-400 via-sky-500 to-emerald-400 text-slate-950 font-black text-lg px-8 py-4 rounded-full shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/60 hover:scale-105 transition-all duration-300 whitespace-nowrap">
-                <span>Contact Us &amp; Book Demo</span>
+                <span>Contact Us &amp; Request a Demo</span>
                 <span class="w-9 h-9 rounded-full bg-slate-950/20 flex items-center justify-center group-hover:translate-x-1.5 transition-transform">➔</span>
             </a>
         </div>

@@ -322,22 +322,6 @@
             animation: scrollTrack3D 35s linear infinite;
         }
 
-        /* Laser Scan Sweep Beam */
-        @keyframes laserScanSweep {
-            0% { top: -5%; opacity: 0; }
-            20% { opacity: 0.85; }
-            80% { opacity: 0.85; }
-            100% { top: 105%; opacity: 0; }
-        }
-
-        .laser-scan-beam {
-            position: fixed; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, transparent, rgba(0, 187, 240, 0.9), rgba(194, 94, 168, 0.9), transparent);
-            box-shadow: 0 0 20px rgba(0, 187, 240, 0.9);
-            pointer-events: none; z-index: 1;
-            animation: laserScanSweep 9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
         /* Site-Wide Dynamic 3D Card Elevation Engine */
         .glass-card, .stat-card, .prob-card, .prod-card, .cs-card, .solution-card, .resource-card, .product-card, .feature-card {
             transform-style: preserve-3d;
@@ -400,9 +384,6 @@
 
     <canvas id="site-ambient-3d" aria-hidden="true"></canvas>
     <div class="ambient-depth-plane" aria-hidden="true"></div>
-
-    <!-- Laser Beam Scanner Line -->
-    <div class="laser-scan-beam"></div>
 
     <!-- Global 3D Apparel Manufacturing Video & Screenshot Reel Layer -->
     <div id="apparel-3d-bg-container" class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden bg-slate-950">
@@ -469,6 +450,8 @@
                 
                 <nav class="hidden md:flex gap-3 items-center text-sm font-semibold">
 
+                    <a href="/#clients" class="px-4 py-2 rounded-full transition-all duration-300 text-slate-800 hover:text-sky-600 hover:bg-slate-100/60">Clients</a>
+
                     <!-- ── Products Mega Dropdown ── -->
                     <div class="relative" id="products-nav-group">
                         <button
@@ -487,44 +470,43 @@
                             style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
 
                             <div class="py-3">
-
                                 {{-- Section header --}}
                                 <p class="px-5 pt-1 pb-2 text-[10px] font-black uppercase tracking-widest text-slate-400">Products</p>
 
                                 {{-- TrakWel — parent with sub-items --}}
-                                <a href="/products#trakwel"
-                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
+                                <a href="/products#trakwel" data-product-choice="trakwel"
+                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     TrakWel
                                 </a>
                                 {{-- TrakWel sub-items --}}
-                                <a href="/products#fabric"
-                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                <a href="/products#fabric" data-product-choice="fabric"
+                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
                                     Fabric Inventory Management
                                 </a>
-                                <a href="/products#cutting"
-                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                <a href="/products#cutting" data-product-choice="cutting"
+                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
                                     Cutting Room Digitisation
                                 </a>
-                                <a href="/products#production"
-                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                <a href="/products#production" data-product-choice="production"
+                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
                                     Production Tracking
                                 </a>
-                                <a href="/products#quality"
-                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
+                                <a href="/products#quality" data-product-choice="quality"
+                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all duration-150">
                                     Quality Control
                                 </a>
 
                                 {{-- PlanWel, mTrak, SewIoT --}}
-                                <a href="/products#planwel"
-                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
+                                <a href="/products#planwel" data-product-choice="planwel"
+                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     PlanWel
                                 </a>
-                                <a href="/products#mtrak"
-                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
+                                <a href="/products#mtrak" data-product-choice="mtrak"
+                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     mTrak
                                 </a>
-                                <a href="/products#sewiot"
-                                   class="flex items-center px-5 py-2.5 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
+                                <a href="/products#sewiot" data-product-choice="sewiot"
+                                   class="flex items-center px-5 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 hover:text-sky-600 transition-all duration-150">
                                     SewIoT
                                 </a>
 
@@ -532,33 +514,46 @@
 
                                 {{-- Industry Solutions section --}}
                                 <p class="px-5 pt-1 pb-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400">Industry Solutions</p>
-                                <a href="/products#laundry"
-                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
+                                <a href="/products#laundry" data-product-choice="laundry"
+                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
                                     Laundry Management
                                 </a>
-                                <a href="/products#jig"
-                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
+                                <a href="/products#jig" data-product-choice="jig"
+                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
                                     Jig Management
                                 </a>
-                                <a href="/products#shrinkage"
-                                   class="flex items-center pl-10 pr-5 py-2 text-xs text-slate-500 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
+                                <a href="/products#shrinkage" data-product-choice="shrinkage"
+                                   class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-150">
                                     Shrinkage Testing App
                                 </a>
-
                             </div>
                         </div>
                     </div>
                     <!-- ── End Products Dropdown ── -->
 
-                    <a href="/business-stories" class="px-4 py-2 rounded-full transition-all duration-300 {{ (request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Business Stories</a>
-                    <a href="/about" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('about*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Company</a>
-                    <a href="/resources" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('resources*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Resources</a>
+                    <!-- About Dropdown -->
+                    <div class="relative" id="about-nav-group">
+                        <button
+                            id="about-nav-btn"
+                            onclick="toggleAboutDropdown()"
+                            class="flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 {{ (request()->is('about*') || request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}"
+                            aria-haspopup="true" aria-expanded="false">
+                            About
+                            <svg id="about-chevron" class="w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div id="about-dropdown-panel" class="absolute top-full left-0 mt-2 w-56 rounded-xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden" style="pointer-events:none; background:#ffffff; z-index:99999; box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+                            <div class="py-2">
+                                <a href="/business-stories" class="block px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition">Business Stories</a>
+                                <a href="/about" class="block px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600 transition">Company</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="/contact" class="px-4 py-2 rounded-full transition-all duration-300 {{ request()->is('contact*') ? 'bg-sky-500/15 text-sky-600 border border-sky-400/40 font-extrabold shadow-sm' : 'text-slate-800 hover:text-sky-600 hover:bg-slate-100/60' }}">Contact Us</a>
                 </nav>
 
                 <div class="hidden md:block">
                     <a href="/contact" class="bg-primary-500 hover:bg-primary-400 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40 text-sm">
-                        Book Demo
+                        Request a Demo
                     </a>
                 </div>
 
@@ -571,38 +566,50 @@
             </div>
 
             <!-- Mobile Menu Panel -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-t border-slate-200 shadow-xl">
-                <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-t border-slate-200 shadow-xl max-h-[80vh] overflow-y-auto">
+                <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-3">
+                    <a href="/#clients" class="text-slate-800 font-medium py-2.5 border-b border-slate-100 hover:text-primary-500 transition">Clients</a>
                     <!-- Mobile Products Accordion -->
                     <div>
-                        <button onclick="toggleMobileProducts()" class="w-full flex items-center justify-between text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition" id="mobile-products-btn">
+                        <button onclick="toggleMobileProducts()" class="w-full flex items-center justify-between text-slate-800 font-medium py-2.5 border-b border-slate-100 hover:text-primary-500 transition" id="mobile-products-btn">
                             <span>Products</span>
                             <svg id="mobile-products-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                         </button>
-                        <div id="mobile-products-panel" class="hidden pl-4 pb-2">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-sky-500 mt-3 mb-2">TrakWel</p>
-                            <a href="/products#fabric" class="block py-1.5 text-sm text-slate-600 hover:text-sky-600">Fabric Inventory Management</a>
-                            <a href="/products#cutting" class="block py-1.5 text-sm text-slate-600 hover:text-sky-600">Cutting Room Digitisation</a>
-                            <a href="/products#production" class="block py-1.5 text-sm text-slate-600 hover:text-sky-600">Production Tracking</a>
-                            <a href="/products#quality" class="block py-1.5 text-sm text-slate-600 hover:text-sky-600">Quality Control</a>
+                        <div id="mobile-products-panel" class="hidden pl-4 pb-2 space-y-1 mt-2">
+                            <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 pt-1">TrakWel Suite</p>
+                            <a href="/products#trakwel" data-product-choice="trakwel" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">TrakWel (MES)</a>
+                            <a href="/products#fabric" data-product-choice="fabric" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Fabric Inventory Management</a>
+                            <a href="/products#cutting" data-product-choice="cutting" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Cutting Room Digitisation</a>
+                            <a href="/products#production" data-product-choice="production" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Production Tracking</a>
+                            <a href="/products#quality" data-product-choice="quality" class="block py-1 text-xs text-slate-600 hover:text-sky-600 pl-3">Quality Control</a>
+
                             <div class="border-t border-slate-100 my-2"></div>
-                            <a href="/products#planwel" class="block py-1.5 text-sm font-semibold text-violet-600 hover:text-violet-700">PlanWel</a>
-                            <a href="/products#mtrak" class="block py-1.5 text-sm font-semibold text-emerald-600 hover:text-emerald-700">mTrak</a>
-                            <a href="/products#sewiot" class="block py-1.5 text-sm font-semibold text-cyan-600 hover:text-cyan-700">SewIoT</a>
+                            <p class="text-[10px] font-black uppercase tracking-wider text-slate-400">Specialised Modules</p>
+                            <a href="/products#planwel" data-product-choice="planwel" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">PlanWel</a>
+                            <a href="/products#mtrak" data-product-choice="mtrak" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">mTrak</a>
+                            <a href="/products#sewiot" data-product-choice="sewiot" class="block py-1.5 text-sm font-bold text-slate-800 hover:text-sky-600">SewIoT</a>
+
                             <div class="border-t border-slate-100 my-2"></div>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-2">Industry Solutions</p>
-                            <a href="/products#laundry" class="block py-1.5 text-sm text-slate-600 hover:text-orange-500">Laundry Management</a>
-                            <a href="/products#jig" class="block py-1.5 text-sm text-slate-600 hover:text-orange-500">Jig Management</a>
-                            <a href="/products#shrinkage" class="block py-1.5 text-sm text-slate-600 hover:text-orange-500">Shrinkage Testing App</a>
-                            <a href="/products" class="mt-3 mb-1 inline-flex items-center gap-1 text-xs font-semibold text-sky-600 hover:text-sky-700">View All Products →</a>
+                            <p class="text-[10px] font-black uppercase tracking-wider text-slate-400">Industry Solutions</p>
+                            <a href="/products#laundry" data-product-choice="laundry" class="block py-1 text-xs text-slate-600 hover:text-orange-600 pl-3">Laundry Management</a>
+                            <a href="/products#jig" data-product-choice="jig" class="block py-1 text-xs text-slate-600 hover:text-orange-600 pl-3">Jig Management</a>
+                            <a href="/products#shrinkage" data-product-choice="shrinkage" class="block py-1 text-xs text-slate-600 hover:text-orange-600 pl-3">Shrinkage Testing App</a>
                         </div>
                     </div>
-                    <a href="/industries" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Business Stories</a>
-                    <a href="/about" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Company</a>
-                    <a href="/resources" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Resources</a>
+                    <!-- Mobile About Accordion -->
+                    <div>
+                        <button onclick="toggleMobileAbout()" class="w-full flex items-center justify-between text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition" id="mobile-about-btn" aria-expanded="false">
+                            <span>About</span>
+                            <svg id="mobile-about-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div id="mobile-about-panel" class="hidden pl-4 pb-2">
+                            <a href="/business-stories" class="block py-2 text-sm text-slate-600 hover:text-sky-600">Business Stories</a>
+                            <a href="/about" class="block py-2 text-sm text-slate-600 hover:text-sky-600">Company</a>
+                        </div>
+                    </div>
                     <a href="/contact" class="text-slate-800 font-medium py-3 border-b border-slate-100 hover:text-primary-500 transition">Contact Us</a>
                     <a href="/contact" class="mt-2 bg-primary-500 text-white text-center px-6 py-3 rounded-full font-medium shadow-lg">
-                        Book Demo
+                        Request a Demo
                     </a>
                 </div>
             </div>
@@ -644,8 +651,8 @@
                     <div>
                         <h4 class="font-semibold text-slate-800 mb-6">Products</h4>
                         <ul class="space-y-3 text-sm text-slate-800">
-                            <li><a href="/products#quality" class="hover:text-primary-600">Quality Control</a></li>
-                            <li><a href="/products#production" class="hover:text-primary-600">Production Tracking</a></li>
+                            <li><a href="/products#trakwel" class="hover:text-primary-600">Quality Control</a></li>
+                            <li><a href="/products#trakwel" class="hover:text-primary-600">Production Tracking</a></li>
                             <li><a href="/products#mtrak" class="hover:text-primary-600">Machine Maintenance</a></li>
                             <li><a href="/products#trakwel" class="hover:text-primary-600">TrakWel</a></li>
                             <li><a href="/products#planwel" class="hover:text-primary-600">PlanWel</a></li>
@@ -712,20 +719,17 @@
     <div class="fixed bottom-6 right-6 z-50 flex items-center gap-2">
         <!-- Quick Page Router Dock -->
         <div class="hidden lg:flex items-center gap-1.5 p-2 rounded-full bg-slate-900/90 backdrop-blur-xl border border-sky-400/30 shadow-2xl text-white text-xs font-bold">
+            <a href="/#clients" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 text-slate-300">
+                <span>Clients</span>
+            </a>
             <a href="/products" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('products*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>🛍️ Products</span>
+                <span>Products</span>
             </a>
-            <a href="/business-stories" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ (request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>📈 Stories</span>
-            </a>
-            <a href="/about" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('about*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>🏢 Company</span>
-            </a>
-            <a href="/resources" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('resources*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>📚 Resources</span>
+            <a href="/about" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ (request()->is('about*') || request()->is('business-stories*') || request()->is('industries*')) ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
+                <span>About</span>
             </a>
             <a href="/contact" class="px-3.5 py-1.5 rounded-full hover:bg-sky-500/20 hover:text-sky-300 transition flex items-center gap-1.5 {{ request()->is('contact*') ? 'bg-sky-500 text-white' : 'text-slate-300' }}">
-                <span>📞 Contact</span>
+                <span>Contact</span>
             </a>
         </div>
 
@@ -1067,6 +1071,51 @@
         })();
     </script>
     <script>
+        /* About Dropdown */
+        var _aboutOpen = false;
+
+        window.toggleAboutDropdown = function () {
+            _aboutOpen = !_aboutOpen;
+            var panel = document.getElementById('about-dropdown-panel');
+            var chevron = document.getElementById('about-chevron');
+            var button = document.getElementById('about-nav-btn');
+            if (!panel) return;
+            panel.classList.toggle('opacity-0', !_aboutOpen);
+            panel.classList.toggle('invisible', !_aboutOpen);
+            panel.classList.toggle('translate-y-2', !_aboutOpen);
+            panel.classList.toggle('opacity-100', _aboutOpen);
+            panel.classList.toggle('visible', _aboutOpen);
+            panel.classList.toggle('translate-y-0', _aboutOpen);
+            panel.style.pointerEvents = _aboutOpen ? 'auto' : 'none';
+            if (chevron) chevron.style.transform = _aboutOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+            if (button) button.setAttribute('aria-expanded', _aboutOpen ? 'true' : 'false');
+        };
+
+        document.addEventListener('click', function (event) {
+            var group = document.getElementById('about-nav-group');
+            if (_aboutOpen && group && !group.contains(event.target)) {
+                window.toggleAboutDropdown();
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && _aboutOpen) {
+                window.toggleAboutDropdown();
+            }
+        });
+
+        window.toggleMobileAbout = function () {
+            var panel = document.getElementById('mobile-about-panel');
+            var chevron = document.getElementById('mobile-about-chevron');
+            var button = document.getElementById('mobile-about-btn');
+            if (!panel) return;
+            panel.classList.toggle('hidden');
+            var isExpanded = !panel.classList.contains('hidden');
+            if (chevron) chevron.style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+            if (button) button.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        };
+    </script>
+    <script>
         /* ══ Products Mega Dropdown ══ */
         var _prodOpen = false;
 
@@ -1126,6 +1175,28 @@
                 chevron.style.transform = panel.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
             }
         };
+
+        /* Handle clicks on [data-product-choice] */
+        document.addEventListener('click', function (e) {
+            var target = e.target.closest('[data-product-choice]');
+            if (!target) return;
+            var choice = target.getAttribute('data-product-choice');
+            if (window.selectProduct) {
+                e.preventDefault();
+                window.selectProduct(choice);
+                _closeProductsDropdown();
+                var mobPanel = document.getElementById('mobile-products-panel');
+                if (mobPanel && !mobPanel.classList.contains('hidden')) {
+                    toggleMobileProducts();
+                }
+                var mobMenu = document.getElementById('mobile-menu');
+                if (mobMenu) mobMenu.classList.add('hidden');
+                var exp = document.getElementById('product-experience');
+                if (exp) {
+                    exp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
     </script>
     @stack('scripts')
 </body>

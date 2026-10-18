@@ -10,9 +10,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-100">
+<body class="bg-transparent">
 
-<div class="min-h-screen flex">
+<video autoplay muted loop playsinline preload="metadata" poster="{{ asset('images/apparel-3d-scene-3.png') }}" aria-hidden="true" class="fixed inset-0 z-0 h-full w-full object-cover opacity-80 pointer-events-none">
+    <source src="{{ asset('videos/factory-loop.mp4') }}" type="video/mp4">
+</video>
+<div aria-hidden="true" class="fixed inset-0 z-0 bg-white/10 pointer-events-none"></div>
+
+<div class="relative z-10 min-h-screen flex">
 
     <!-- ================= SIDEBAR ================= -->
     <aside class="w-64 bg-slate-950 text-white hidden md:flex flex-col">
@@ -113,7 +118,7 @@
 
 
         <!-- TOP BAR -->
-        <header class="bg-white border-b border-slate-200">
+        <header class="bg-white/55 backdrop-blur-md border-b border-slate-200">
 
             <div class="px-6 py-5 flex items-center justify-between">
 
@@ -168,7 +173,7 @@
 
 
                 <!-- Total Enquiries -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 p-6">
 
                     <div class="flex items-center justify-between">
 
@@ -195,7 +200,7 @@
 
 
                 <!-- Website Leads -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 p-6">
 
                     <div class="flex items-center justify-between">
 
@@ -222,7 +227,7 @@
 
 
                 <!-- Services -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 p-6">
 
                     <div class="flex items-center justify-between">
 
@@ -253,7 +258,7 @@
 
 
                 <!-- System Status -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 p-6">
 
                     <div class="flex items-center justify-between">
 
@@ -287,7 +292,7 @@
 
 
                 <!-- Products -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 p-6">
 
                     <div class="flex items-center justify-between">
 
@@ -325,7 +330,7 @@
 
 
                 <!-- Resources -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 p-6">
 
                     <div class="flex items-center justify-between">
 
@@ -363,7 +368,7 @@
 
 
                 <!-- Active Services -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 p-6">
 
                     <div class="flex items-center justify-between">
 
@@ -404,7 +409,7 @@
 
             <!-- ================= ENQUIRIES ================= -->
 
-            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+            <div class="bg-white/55 backdrop-blur-md rounded-2xl border border-slate-200 overflow-hidden">
 
 
                 <!-- Heading -->
@@ -447,7 +452,7 @@
 
                         <table class="w-full min-w-[900px]">
 
-                            <thead class="bg-slate-50">
+                            <thead class="bg-slate-50/55 backdrop-blur-md">
 
                                 <tr>
 
@@ -485,7 +490,7 @@
 
                                 @foreach($contactMessages->take(10) as $message)
 
-                                    <tr class="hover:bg-slate-50 transition">
+                                    <tr class="hover:bg-slate-50/80 transition">
 
                                         <!-- Name -->
                                         <td class="px-6 py-5">
@@ -608,7 +613,7 @@
                     <a
                         href="/"
                         target="_blank"
-                        class="bg-white border border-slate-200 rounded-xl p-5
+                        class="bg-white/55 backdrop-blur-md border border-slate-200 rounded-xl p-5
                                hover:shadow-md transition"
                     >
 
@@ -630,7 +635,7 @@
                     <!-- Contact Enquiries -->
                     <a
                         href="{{ route('admin.enquiries') }}"
-                        class="bg-white border border-slate-200 rounded-xl p-5
+                        class="bg-white/55 backdrop-blur-md border border-slate-200 rounded-xl p-5
                                hover:shadow-md transition"
                     >
 
@@ -652,7 +657,7 @@
                     <!-- Manage Services -->
                     <a
                         href="{{ route('admin.services') }}"
-                        class="bg-white border border-slate-200 rounded-xl p-5
+                        class="bg-white/55 backdrop-blur-md border border-slate-200 rounded-xl p-5
                                hover:shadow-md transition"
                     >
 
@@ -674,7 +679,7 @@
                     <!-- Manage Products -->
                     <a
                         href="{{ route('admin.products') }}"
-                        class="bg-white border border-slate-200 rounded-xl p-5
+                        class="bg-white/55 backdrop-blur-md border border-slate-200 rounded-xl p-5
                                hover:shadow-md transition"
                     >
 

@@ -53,7 +53,7 @@
                     <div class="mt-9 flex flex-wrap gap-4">
                         <a href="/contact"
                            class="inline-flex bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800 px-7 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 hover:-translate-y-1 transition">
-                            Book a Demo →
+                            Request a Demo →
                         </a>
 
                         <a href="/products"

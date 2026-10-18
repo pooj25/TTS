@@ -21,6 +21,8 @@
 
 body { background: var(--white); color: var(--dark); }
 
+#video-overlay-mask { opacity: .35; }
+
 /* ── Hero ───────────────────────────────────────────────────────────── */
 #hero { position: relative; min-height: 100vh; overflow: hidden; }
 #hero-video {
@@ -270,7 +272,7 @@ body { background: var(--white); color: var(--dark); }
         <div class="h-anim-3 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             <a href="/contact"
                class="group flex items-center gap-3 px-10 py-4 rounded-full text-white font-bold text-lg shadow-xl transition-all hover:scale-105 bg-gradient-to-r from-sky-500 to-teal-600 hover:from-sky-600 hover:to-teal-700">
-                Book a demo
+                Request a Demo
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
             <a href="/products"
@@ -325,7 +327,7 @@ body { background: var(--white); color: var(--dark); }
 {{-- ══════════════════════════════════════════════════════════════════
      SECTION 3: TRUST BAR
      ══════════════════════════════════════════════════════════════════ --}}
-<section class="py-10 bg-white overflow-hidden" style="border-bottom:1px solid #f1f5f9;">
+<section id="clients" class="py-10 bg-white/65 backdrop-blur-sm overflow-hidden" style="border-bottom:1px solid #f1f5f9;">
     <p class="text-center mb-6" style="font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:.25em;text-transform:uppercase;">Trusted by Leading Manufacturers</p>
     <div class="flex overflow-hidden" style="mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);">
         <div class="marquee-run">
@@ -931,8 +933,8 @@ function switchSimStage(stage) {
 
                     {{-- Mini video or image --}}
                     <video autoplay muted loop playsinline class="w-full object-cover" style="height:360px;filter:saturate(0.7) brightness(0.85);"
-                           poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80">
-                        <source src="https://videos.pexels.com/video-files/3205981/3205981-hd_1920_1080_25fps.mp4" type="video/mp4">
+                           poster="{{ asset('images/factory-aerial.jpg') }}">
+                        <source src="{{ asset('videos/factory-loop.mp4') }}" type="video/mp4">
                     </video>
                     <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(15,37,82,0.3) 0%,rgba(15,37,82,0.6) 100%);"></div>
 

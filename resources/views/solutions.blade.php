@@ -342,7 +342,7 @@
                class="inline-flex mt-9 bg-gradient-to-r from-sky-500 to-blue-600 text-slate-800
                       px-8 py-4 rounded-full font-semibold shadow-lg shadow-sky-500/30
                       hover:shadow-sky-500/50 hover:-translate-y-1 transition-all">
-                Book a Demo →
+                Request a Demo →
             </a>
 
         </div>
