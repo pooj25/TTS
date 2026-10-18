@@ -53,6 +53,9 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <style>
         body {
             margin: 0;
@@ -130,6 +133,7 @@
 
             <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-semibold text-slate-700">
+                <a href="/#dashboards-section" class="px-4 py-2 rounded-full hover:text-sky-600 hover:bg-slate-100/70 transition-all">Dashboards</a>
                 <a href="/#clients" class="px-4 py-2 rounded-full hover:text-sky-600 hover:bg-slate-100/70 transition-all">Clients</a>
 
                 <!-- ── Products Dropdown ── -->
@@ -249,6 +253,7 @@
         <!-- Mobile Drawer -->
         <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl max-h-[85vh] overflow-y-auto">
             <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-3">
+                <a href="/#dashboards-section" class="text-slate-800 font-semibold py-2 border-b border-slate-100">Live Dashboards</a>
                 <a href="/#clients" class="text-slate-800 font-semibold py-2 border-b border-slate-100">Clients</a>
 
                 <!-- Mobile Products Accordion -->
