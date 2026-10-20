@@ -112,6 +112,79 @@
         .min-h-screen-content {
             min-height: calc(100vh - 420px);
         }
+
+        /* ══ 3D APPAREL ANIMATIONS & KEN-BURNS KEYFRAMES ══ */
+        @keyframes kenBurns1 {
+            0%   { transform: scale(1.0) translate(0%, 0%); }
+            50%  { transform: scale(1.12) translate(-2%, -1.5%); }
+            100% { transform: scale(1.05) translate(1.5%, 1%); }
+        }
+        @keyframes kenBurns2 {
+            0%   { transform: scale(1.05) translate(1%, 0%); }
+            50%  { transform: scale(1.15) translate(-1.5%, 2%); }
+            100% { transform: scale(1.0) translate(0%, -1%); }
+        }
+        @keyframes kenBurns3 {
+            0%   { transform: scale(1.0) translate(0%, 2%); }
+            50%  { transform: scale(1.14) translate(2%, -1%); }
+            100% { transform: scale(1.06) translate(-1%, 0%); }
+        }
+        @keyframes kenBurns4 {
+            0%   { transform: scale(1.08) translate(-1.5%, -1%); }
+            50%  { transform: scale(1.02) translate(1%, 1.5%); }
+            100% { transform: scale(1.12) translate(0%, -2%); }
+        }
+        @keyframes kenBurns5 {
+            0%   { transform: scale(1.0) translate(1%, 1%); }
+            50%  { transform: scale(1.13) translate(-2%, -1%); }
+            100% { transform: scale(1.04) translate(0%, 0%); }
+        }
+
+        .anim-kenburns-1 { animation: kenBurns1 24s ease-in-out infinite alternate; }
+        .anim-kenburns-2 { animation: kenBurns2 24s ease-in-out infinite alternate; }
+        .anim-kenburns-3 { animation: kenBurns3 24s ease-in-out infinite alternate; }
+        .anim-kenburns-4 { animation: kenBurns4 24s ease-in-out infinite alternate; }
+        .anim-kenburns-5 { animation: kenBurns5 24s ease-in-out infinite alternate; }
+
+        @keyframes laserScan {
+            0% { transform: translateY(-100%); opacity: 0; }
+            15% { opacity: 0.8; }
+            85% { opacity: 0.8; }
+            100% { transform: translateY(1000%); opacity: 0; }
+        }
+        .anim-laser-scan {
+            animation: laserScan 9s ease-in-out infinite;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(0.5deg); }
+        }
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(10px) rotate(-0.5deg); }
+        }
+        .anim-float { animation: floatSlow 6s ease-in-out infinite; }
+        .anim-float-rev { animation: floatReverse 7s ease-in-out infinite; }
+
+        /* 3D Card Hover Depth */
+        .card-3d-tilt {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+        }
+        .card-3d-tilt:hover {
+            transform: translateY(-8px) scale(1.01) rotateX(1.5deg);
+            box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
+        }
+
+        /* Glass HUD Pill */
+        .glass-hud {
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(56, 189, 248, 0.1);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen">

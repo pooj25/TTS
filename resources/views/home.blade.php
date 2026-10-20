@@ -6,7 +6,76 @@
 
 <div x-data="{ 
     demoModalOpen: false, 
+    sceneModalOpen: false,
     activeTab: 'trakwel',
+    activeScene: 1,
+    autoPlay: true,
+    sceneTimer: null,
+    scenes: [
+        { 
+            id: 1, 
+            tag: 'FACTORY FLOOR & CONVEYORS', 
+            title: 'Smart Factory Sewing Floor & Overhead Conveyor Lines', 
+            desc: 'Multi-operator workstations, overhead bundle rails, and circular garment conveyor sorting lines with real-time digital telemetry.',
+            img: '{{ asset('images/apparel-3d-scene-1.png') }}',
+            stats: '18 Active Lines • 42 Bundles/hr • Zero Bottlenecks'
+        },
+        { 
+            id: 2, 
+            tag: 'SMART IOT WORKSTATION', 
+            title: 'IoT Sewing Machine Telemetry Box & Needle Run-Time', 
+            desc: 'Direct-drive lockstitch machine equipped with optical stitch sensor, tracking real-time RPM, pitch speed, and operator performance.',
+            img: '{{ asset('images/apparel-3d-scene-2.png') }}',
+            stats: '4,850 RPM • 92.4% Needle Uptime • 18.4s Pitch'
+        },
+        { 
+            id: 3, 
+            tag: 'CLOUD DIGITAL TWIN', 
+            title: 'Holographic Cloud IoT Pipelines & Data Network', 
+            desc: 'High-frequency telemetry rising from every sewing station into encrypted cloud intelligence for live shopfloor insights.',
+            img: '{{ asset('images/apparel-3d-scene-3.png') }}',
+            stats: '248 Connected Nodes • 1.48M Stitches/day • Sub-second Latency'
+        },
+        { 
+            id: 4, 
+            tag: 'SAAS CONTROL ROOM', 
+            title: '3D SaaS Sewing Dashboard & Live Breakdown Alerts', 
+            desc: 'Comprehensive executive cockpit showing live WIP garment progression, efficiency dials, and instant mechanic dispatch triggers.',
+            img: '{{ asset('images/apparel-3d-scene-4.png') }}',
+            stats: '91.8% Target Pacing • AQL 1.5 Compliant • 14.2 min MTTR'
+        },
+        { 
+            id: 5, 
+            tag: 'LOGISTICS & DISPATCH', 
+            title: 'Modern Apparel Smart Factory Campus & Loading Bays', 
+            desc: 'Architectural overview of fully connected apparel production facility, from raw fabric intake to final export container dispatch.',
+            img: '{{ asset('images/apparel-3d-scene-5.png') }}',
+            stats: '74+ Facilities • 25 Countries • 50M+ Pcs Checked/mo'
+        }
+    ],
+    init() {
+        this.startAutoPlay();
+    },
+    startAutoPlay() {
+        if (this.sceneTimer) clearInterval(this.sceneTimer);
+        this.sceneTimer = setInterval(() => {
+            if (this.autoPlay) {
+                this.activeScene = (this.activeScene % 5) + 1;
+            }
+        }, 7000);
+    },
+    toggleAutoPlay() {
+        this.autoPlay = !this.autoPlay;
+    },
+    selectScene(num) {
+        this.activeScene = num;
+    },
+    nextScene() {
+        this.activeScene = (this.activeScene % 5) + 1;
+    },
+    prevScene() {
+        this.activeScene = this.activeScene === 1 ? 5 : this.activeScene - 1;
+    },
     scrollDashboard(id) {
         this.activeTab = id;
         const el = document.getElementById('dashboard-' + id);
@@ -14,29 +83,98 @@
             el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
-}">
+}" x-init="init()">
 
 {{-- ════════════════════════════════════════════════════════════════════════
-     1. HERO SECTION (OFFICIAL VIDEO & HIGH-TECH AMBIENT OVERLAY)
-     Matches original aesthetic with centered typography and glowing badges
+     1. HERO SECTION (CLASSIC 3D APPAREL MULTI-SCENE BACKGROUND & HUD)
+     Dynamic 5-scene 3D apparel animation engine, Ken-Burns glide, laser scan & 3D tilt
 ════════════════════════════════════════════════════════════════════════ --}}
-<section class="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-center items-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
+<section class="relative min-h-[95vh] lg:min-h-screen flex flex-col justify-center items-center pt-28 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    {{-- High-Tech Garment Manufacturing Video Background --}}
-    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-60 scale-105 filter contrast-105 saturate-110" poster="{{ asset('images/factory-aerial.jpg') }}">
-            <source src="{{ asset('videos/factory-loop.mp4') }}" type="video/mp4">
-        </video>
+    {{-- 5-Scene 3D Apparel Animated Video Background Engine --}}
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
+        
+        {{-- Scene 1: Factory Floor & Conveyor --}}
+        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+             :class="activeScene === 1 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
+            <img src="{{ asset('images/apparel-3d-scene-1.png') }}" alt="3D Smart Apparel Factory Floor"
+                 class="w-full h-full object-cover anim-kenburns-1 filter contrast-105 saturate-110">
+        </div>
 
-        {{-- Creative Radial Vignette Overlay --}}
-        <div class="absolute inset-0" style="background:radial-gradient(circle at center, transparent 0%, transparent 25%, rgba(3, 7, 18, 0.45) 55%, rgba(3, 7, 18, 0.85) 85%, rgba(3, 7, 18, 0.98) 100%)"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/40 to-slate-950/95"></div>
+        {{-- Scene 2: IoT Machine Node & Operator --}}
+        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+             :class="activeScene === 2 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
+            <img src="{{ asset('images/apparel-3d-scene-2.png') }}" alt="3D Smart IoT Sewing Machine"
+                 class="w-full h-full object-cover anim-kenburns-2 filter contrast-105 saturate-110">
+        </div>
 
-        {{-- Glowing Ambient Orbs --}}
-        <div class="absolute inset-0">
-            <div class="absolute top-[20%] right-[10%] w-32 h-32 bg-sky-400/20 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-[25%] left-[12%] w-48 h-48 bg-blue-500/20 rounded-full blur-3xl"></div>
-            <div class="absolute top-[15%] left-[8%] w-16 h-16 bg-sky-300/30 rounded-full blur-xl"></div>
+        {{-- Scene 3: Cloud IoT Telemetry Pipelines --}}
+        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+             :class="activeScene === 3 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
+            <img src="{{ asset('images/apparel-3d-scene-3.png') }}" alt="3D Cloud IoT Holographic Pipeline"
+                 class="w-full h-full object-cover anim-kenburns-3 filter contrast-105 saturate-110">
+        </div>
+
+        {{-- Scene 4: 3D SaaS Sewing Dashboard --}}
+        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+             :class="activeScene === 4 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
+            <img src="{{ asset('images/apparel-3d-scene-4.png') }}" alt="3D SaaS Sewing Control Room"
+                 class="w-full h-full object-cover anim-kenburns-4 filter contrast-105 saturate-110">
+        </div>
+
+        {{-- Scene 5: Modern Apparel Complex Campus --}}
+        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+             :class="activeScene === 5 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
+            <img src="{{ asset('images/apparel-3d-scene-5.png') }}" alt="3D Apparel Smart Factory Complex"
+                 class="w-full h-full object-cover anim-kenburns-5 filter contrast-105 saturate-110">
+        </div>
+
+        {{-- Cyan Sweeping Laser Scan Line --}}
+        <div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-sky-400 to-transparent blur-[1px] anim-laser-scan pointer-events-none"></div>
+
+        {{-- Cinematic Vignette Overlay (keeps text perfectly legible while highlighting 3D graphics) --}}
+        <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(3, 7, 18, 0.25) 0%, rgba(3, 7, 18, 0.55) 50%, rgba(3, 7, 18, 0.90) 85%, rgba(3, 7, 18, 0.98) 100%)"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/30 to-slate-950/95"></div>
+
+        {{-- Ambient Glowing Orbs --}}
+        <div class="absolute top-[18%] right-[8%] w-44 h-44 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-[20%] left-[8%] w-56 h-56 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    </div>
+
+    {{-- Floating 3D Telemetry Widgets (Desktop Parallax) --}}
+    <div class="hidden xl:block absolute left-8 top-1/3 z-20 anim-float pointer-events-auto">
+        <div class="p-4 rounded-2xl glass-hud border border-sky-400/30 shadow-2xl w-64 space-y-2">
+            <div class="flex items-center justify-between text-[10px] font-black tracking-wider uppercase text-sky-400">
+                <span>IoT TELEMETRY ACTIVE</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            </div>
+            <div class="text-xs font-bold text-white">Line 03 • Station 09</div>
+            <div class="flex items-baseline justify-between text-xs pt-1 border-t border-sky-400/20">
+                <span class="text-slate-300">Needle Speed:</span>
+                <span class="font-black text-sky-300 font-mono">4,850 RPM</span>
+            </div>
+            <div class="flex items-baseline justify-between text-xs">
+                <span class="text-slate-300">Run-Time Ratio:</span>
+                <span class="font-black text-emerald-400 font-mono">92.4% Optimal</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden xl:block absolute right-8 top-1/3 z-20 anim-float-rev pointer-events-auto">
+        <div class="p-4 rounded-2xl glass-hud border border-sky-400/30 shadow-2xl w-64 space-y-2">
+            <div class="flex items-center justify-between text-[10px] font-black tracking-wider uppercase text-sky-400">
+                <span>CLOUD MES STREAM</span>
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+            </div>
+            <div class="text-xs font-bold text-white">Today's Total Output</div>
+            <div class="flex items-baseline justify-between text-xs pt-1 border-t border-sky-400/20">
+                <span class="text-slate-300">Pcs Checked:</span>
+                <span class="font-black text-white font-mono">1,690 / 1,840</span>
+            </div>
+            <div class="flex items-baseline justify-between text-xs">
+                <span class="text-slate-300">Line Efficiency:</span>
+                <span class="font-black text-sky-300 font-mono">91.8% Ahead</span>
+            </div>
         </div>
     </div>
 
@@ -50,7 +188,7 @@
         </div>
 
         {{-- Centered Main Title --}}
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-heading max-w-4xl drop-shadow-xl">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-heading max-w-4xl drop-shadow-2xl">
             Revolutionizing <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-blue-400">Garment Manufacturing</span> <br class="hidden sm:inline" />
             With Real-Time Digital Intelligence
         </h1>
@@ -62,7 +200,7 @@
         </p>
 
         {{-- Action Buttons --}}
-        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
+        <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
             <button @click="demoModalOpen = true"
                     class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-500 hover:from-sky-400 hover:to-blue-600 text-white font-bold text-base px-10 py-4 rounded-full shadow-2xl shadow-sky-500/40 hover:scale-105 transition-all cursor-pointer">
                 <svg class="w-5 h-5 text-sky-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -77,7 +215,7 @@
         </div>
 
         {{-- Feature Badges --}}
-        <div class="pt-8 border-t border-white/15 flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-slate-200 w-full">
+        <div class="pt-4 border-t border-white/15 flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-slate-200 w-full">
             <span class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-sky-400"></span> Quality Control AI
             </span>
@@ -91,8 +229,117 @@
                 <span class="w-2 h-2 rounded-full bg-sky-400"></span> Smart Gantt Scheduling
             </span>
         </div>
+
+        {{-- ── 3D APPAREL ENGINE INTERACTIVE HUD DOCK ── --}}
+        <div class="pt-6 w-full max-w-3xl mx-auto">
+            <div class="glass-hud rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-2xl border border-sky-400/40">
+                
+                {{-- Current Scene Label --}}
+                <div class="flex items-center gap-3 text-left">
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping shrink-0"></span>
+                    <div>
+                        <div class="text-[10px] font-black uppercase tracking-wider text-sky-400 flex items-center gap-2">
+                            <span>3D APPAREL ENGINE</span>
+                            <span class="text-slate-500">•</span>
+                            <span x-text="'SCENE ' + activeScene + ' / 5'"></span>
+                        </div>
+                        <div class="text-xs sm:text-sm font-bold text-white truncate max-w-xs sm:max-w-sm"
+                             x-text="scenes[activeScene - 1].title"></div>
+                    </div>
+                </div>
+
+                {{-- Interactive Scene Selector Buttons & Controls --}}
+                <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                    <template x-for="s in scenes" :key="s.id">
+                        <button @click="selectScene(s.id)"
+                                :class="activeScene === s.id ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/50 scale-110 border-sky-300' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border-slate-700'"
+                                class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-black transition-all flex items-center justify-center border cursor-pointer"
+                                :title="s.title">
+                            <span x-text="'0' + s.id"></span>
+                        </button>
+                    </template>
+
+                    <button @click="toggleAutoPlay()"
+                            class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition flex items-center gap-1 border border-slate-700 cursor-pointer"
+                            :title="autoPlay ? 'Pause 3D rotation' : 'Resume 3D auto-glide'">
+                        <span x-text="autoPlay ? '⏸ Pause' : '▶ Play'"></span>
+                    </button>
+
+                    <button @click="sceneModalOpen = true"
+                            class="px-3 py-1.5 rounded-lg bg-sky-600/80 hover:bg-sky-500 text-white text-xs font-bold transition flex items-center gap-1.5 border border-sky-400/40 cursor-pointer"
+                            title="Open Fullscreen 3D Scene Viewer">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                        <span class="hidden sm:inline">Inspect 3D</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+
+{{-- ── FULLSCREEN 3D APPAREL SCENE WALKTHROUGH MODAL ── --}}
+<div x-show="sceneModalOpen" x-cloak
+     class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/85 backdrop-blur-xl"
+     x-transition:enter="transition ease-out duration-200"
+     x-transition:enter-start="opacity-0"
+     x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-150"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0">
+    
+    <div class="relative w-full max-w-5xl bg-slate-900 border border-sky-400/40 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
+         @click.outside="sceneModalOpen = false">
+        
+        {{-- Modal Header --}}
+        <div class="p-5 sm:p-6 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 border border-sky-400/30 text-xs font-black uppercase"
+                      x-text="scenes[activeScene - 1].tag"></span>
+                <h3 class="text-base sm:text-xl font-black text-white font-heading"
+                    x-text="scenes[activeScene - 1].title"></h3>
+            </div>
+
+            <button @click="sceneModalOpen = false" class="p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white cursor-pointer">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        {{-- Modal Image Stage with 3D Glide --}}
+        <div class="relative h-[360px] sm:h-[480px] w-full overflow-hidden bg-black flex items-center justify-center">
+            <img :src="scenes[activeScene - 1].img" :alt="scenes[activeScene - 1].title"
+                 class="w-full h-full object-cover anim-kenburns-1">
+            
+            {{-- Navigation Arrows --}}
+            <button @click="prevScene()"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 text-white hover:bg-sky-500 transition border border-white/20 cursor-pointer">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+
+            <button @click="nextScene()"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 text-white hover:bg-sky-500 transition border border-white/20 cursor-pointer">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+
+        {{-- Modal Footer with Scene Details --}}
+        <div class="p-5 sm:p-6 bg-slate-950 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div class="space-y-1 text-left">
+                <div class="text-sky-300 font-bold" x-text="scenes[activeScene - 1].desc"></div>
+                <div class="text-slate-400 font-mono" x-text="'Shopfloor Metrics: ' + scenes[activeScene - 1].stats"></div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <template x-for="s in scenes" :key="s.id">
+                    <button @click="selectScene(s.id)"
+                            :class="activeScene === s.id ? 'bg-sky-500 text-white' : 'bg-slate-800 text-slate-400'"
+                            class="px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer"
+                            x-text="'Scene ' + s.id"></button>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {{-- ════════════════════════════════════════════════════════════════════════
@@ -215,7 +462,7 @@
              DASHBOARD 1: TRAKWEL (MES & SHOPFLOOR TELEMETRY)
         ───────────────────────────────────────────────────────────── --}}
         <div id="dashboard-trakwel" class="scroll-mt-36" x-intersect="activeTab = 'trakwel'">
-            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden">
+            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden card-3d-tilt">
                 
                 {{-- Dashboard Header --}}
                 <div class="bg-slate-900 text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800">
@@ -475,7 +722,7 @@
              DASHBOARD 2: PLANWEL (CAPACITY PLANNING & GANTT SCHEDULER)
         ───────────────────────────────────────────────────────────── --}}
         <div id="dashboard-planwel" class="scroll-mt-36" x-intersect="activeTab = 'planwel'">
-            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden">
+            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden card-3d-tilt">
                 
                 {{-- Dashboard Header --}}
                 <div class="bg-slate-900 text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800">
@@ -599,7 +846,7 @@
              DASHBOARD 3: MTRAK (PREDICTIVE MACHINE MAINTENANCE & OEE)
         ───────────────────────────────────────────────────────────── --}}
         <div id="dashboard-mtrak" class="scroll-mt-36" x-intersect="activeTab = 'mtrak'">
-            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden">
+            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden card-3d-tilt">
                 
                 {{-- Dashboard Header --}}
                 <div class="bg-slate-900 text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800">
@@ -753,7 +1000,7 @@
              DASHBOARD 4: SEWIOT (SMART SEWING LINE & OPERATOR TERMINALS)
         ───────────────────────────────────────────────────────────── --}}
         <div id="dashboard-sewiot" class="scroll-mt-36" x-intersect="activeTab = 'sewiot'">
-            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden">
+            <div class="bg-white rounded-3xl border border-sky-100 shadow-2xl overflow-hidden card-3d-tilt">
                 
                 {{-- Dashboard Header --}}
                 <div class="bg-slate-900 text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800">
