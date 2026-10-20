@@ -6,75 +6,115 @@
 
 <div x-data="{ 
     demoModalOpen: false, 
-    sceneModalOpen: false,
+    videoModalOpen: false,
     activeTab: 'trakwel',
-    activeScene: 1,
-    autoPlay: true,
-    sceneTimer: null,
-    scenes: [
+    activeChapter: 1,
+    videoPlaying: true,
+    videoMuted: true,
+    videoProgress: 0,
+    chapters: [
         { 
             id: 1, 
-            tag: 'FACTORY FLOOR & CONVEYORS', 
-            title: 'Smart Factory Sewing Floor & Overhead Conveyor Lines', 
-            desc: 'Multi-operator workstations, overhead bundle rails, and circular garment conveyor sorting lines with real-time digital telemetry.',
-            img: '{{ asset('images/apparel-3d-scene-1.png') }}',
-            stats: '18 Active Lines • 42 Bundles/hr • Zero Bottlenecks'
+            time: 0, 
+            tag: 'SMART CAMPUS', 
+            title: 'Modern Apparel Complex Campus & Logistics Loading Docks', 
+            desc: 'End-to-end digital plant architecture connecting raw material intake, production lines, and dispatch.',
+            stats: '74+ Facilities • 25 Countries • 50M+ Pcs Checked/mo'
         },
         { 
             id: 2, 
-            tag: 'SMART IOT WORKSTATION', 
-            title: 'IoT Sewing Machine Telemetry Box & Needle Run-Time', 
-            desc: 'Direct-drive lockstitch machine equipped with optical stitch sensor, tracking real-time RPM, pitch speed, and operator performance.',
-            img: '{{ asset('images/apparel-3d-scene-2.png') }}',
-            stats: '4,850 RPM • 92.4% Needle Uptime • 18.4s Pitch'
+            time: 10, 
+            tag: 'FACTORY FLOOR', 
+            title: 'Smart Factory Sewing Floor & Overhead Conveyor Lines', 
+            desc: 'Multi-operator workstations, overhead bundle rails, and circular garment conveyor sorting lines with real-time digital telemetry.',
+            stats: '18 Active Lines • 42 Bundles/hr • Zero Bottlenecks'
         },
         { 
             id: 3, 
-            tag: 'CLOUD DIGITAL TWIN', 
-            title: 'Holographic Cloud IoT Pipelines & Data Network', 
-            desc: 'High-frequency telemetry rising from every sewing station into encrypted cloud intelligence for live shopfloor insights.',
-            img: '{{ asset('images/apparel-3d-scene-3.png') }}',
-            stats: '248 Connected Nodes • 1.48M Stitches/day • Sub-second Latency'
+            time: 18, 
+            tag: 'SMART IOT NODE', 
+            title: 'IoT Sewing Machine Telemetry Box & Needle Run-Time', 
+            desc: 'Direct-drive lockstitch machine equipped with optical stitch sensor, tracking real-time RPM, pitch speed, and operator performance.',
+            stats: '4,850 RPM • 92.4% Needle Uptime • 18.4s Pitch'
         },
         { 
             id: 4, 
-            tag: 'SAAS CONTROL ROOM', 
-            title: '3D SaaS Sewing Dashboard & Live Breakdown Alerts', 
-            desc: 'Comprehensive executive cockpit showing live WIP garment progression, efficiency dials, and instant mechanic dispatch triggers.',
-            img: '{{ asset('images/apparel-3d-scene-4.png') }}',
-            stats: '91.8% Target Pacing • AQL 1.5 Compliant • 14.2 min MTTR'
+            time: 32, 
+            tag: 'CLOUD DIGITAL TWIN', 
+            title: 'Holographic Cloud IoT Pipelines & Data Network', 
+            desc: 'High-frequency telemetry rising from every sewing station into encrypted cloud intelligence for live shopfloor insights.',
+            stats: '248 Connected Nodes • 1.48M Stitches/day • Sub-second Latency'
         },
         { 
             id: 5, 
-            tag: 'LOGISTICS & DISPATCH', 
-            title: 'Modern Apparel Smart Factory Campus & Loading Bays', 
-            desc: 'Architectural overview of fully connected apparel production facility, from raw fabric intake to final export container dispatch.',
-            img: '{{ asset('images/apparel-3d-scene-5.png') }}',
-            stats: '74+ Facilities • 25 Countries • 50M+ Pcs Checked/mo'
+            time: 42, 
+            tag: 'SAAS CONTROL ROOM', 
+            title: '3D SaaS Sewing Dashboard & Live Breakdown Alerts', 
+            desc: 'Comprehensive executive cockpit showing live WIP garment progression, efficiency dials, and instant mechanic dispatch triggers.',
+            stats: '91.8% Target Pacing • AQL 1.5 Compliant • 14.2 min MTTR'
         }
     ],
     init() {
-        this.startAutoPlay();
-    },
-    startAutoPlay() {
-        if (this.sceneTimer) clearInterval(this.sceneTimer);
-        this.sceneTimer = setInterval(() => {
-            if (this.autoPlay) {
-                this.activeScene = (this.activeScene % 5) + 1;
+        this.$nextTick(() => {
+            const v = document.getElementById('hero-3d-apparel-video');
+            if (v) {
+                v.addEventListener('timeupdate', () => {
+                    if (v.duration) {
+                        this.videoProgress = Math.round((v.currentTime / v.duration) * 100);
+                    }
+                    const t = v.currentTime;
+                    if (t >= 42) this.activeChapter = 5;
+                    else if (t >= 32) this.activeChapter = 4;
+                    else if (t >= 18) this.activeChapter = 3;
+                    else if (t >= 10) this.activeChapter = 2;
+                    else this.activeChapter = 1;
+                });
             }
-        }, 7000);
+        });
     },
-    toggleAutoPlay() {
-        this.autoPlay = !this.autoPlay;
+    seekChapter(time, id) {
+        this.activeChapter = id;
+        const v = document.getElementById('hero-3d-apparel-video');
+        if (v) {
+            v.currentTime = time;
+            if (v.paused) v.play();
+            this.videoPlaying = true;
+        }
     },
-    selectScene(num) {
-        this.activeScene = num;
+    togglePlay() {
+        const v = document.getElementById('hero-3d-apparel-video');
+        if (v) {
+            if (v.paused) {
+                v.play();
+                this.videoPlaying = true;
+            } else {
+                v.pause();
+                this.videoPlaying = false;
+            }
+        }
     },
-    nextScene() {
-        this.activeScene = (this.activeScene % 5) + 1;
+    toggleMute() {
+        const v = document.getElementById('hero-3d-apparel-video');
+        if (v) {
+            v.muted = !v.muted;
+            this.videoMuted = v.muted;
+        }
     },
-    prevScene() {
-        this.activeScene = this.activeScene === 1 ? 5 : this.activeScene - 1;
+    openVideoModal() {
+        this.videoModalOpen = true;
+        this.$nextTick(() => {
+            const mv = document.getElementById('modal-3d-apparel-video');
+            const hv = document.getElementById('hero-3d-apparel-video');
+            if (mv && hv) {
+                mv.currentTime = hv.currentTime;
+                mv.play();
+            }
+        });
+    },
+    closeVideoModal() {
+        this.videoModalOpen = false;
+        const mv = document.getElementById('modal-3d-apparel-video');
+        if (mv) mv.pause();
     },
     scrollDashboard(id) {
         this.activeTab = id;
@@ -86,59 +126,31 @@
 }" x-init="init()">
 
 {{-- ════════════════════════════════════════════════════════════════════════
-     1. HERO SECTION (CLASSIC 3D APPAREL MULTI-SCENE BACKGROUND & HUD)
-     Dynamic 5-scene 3D apparel animation engine, Ken-Burns glide, laser scan & 3D tilt
+     1. HERO SECTION (CLASSIC 3D APPAREL ANIMATED VIDEO BACKGROUND & HUD)
+     Real continuous 3D apparel animation video playing seamlessly in background
 ════════════════════════════════════════════════════════════════════════ --}}
 <section class="relative min-h-[95vh] lg:min-h-screen flex flex-col justify-center items-center pt-28 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    {{-- 5-Scene 3D Apparel Animated Video Background Engine --}}
+    {{-- Continuous 3D Apparel Video Background Engine --}}
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         
-        {{-- Scene 1: Factory Floor & Conveyor --}}
-        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-             :class="activeScene === 1 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
-            <img src="{{ asset('images/apparel-3d-scene-1.png') }}" alt="3D Smart Apparel Factory Floor"
-                 class="w-full h-full object-cover anim-kenburns-1 filter contrast-105 saturate-110">
-        </div>
-
-        {{-- Scene 2: IoT Machine Node & Operator --}}
-        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-             :class="activeScene === 2 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
-            <img src="{{ asset('images/apparel-3d-scene-2.png') }}" alt="3D Smart IoT Sewing Machine"
-                 class="w-full h-full object-cover anim-kenburns-2 filter contrast-105 saturate-110">
-        </div>
-
-        {{-- Scene 3: Cloud IoT Telemetry Pipelines --}}
-        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-             :class="activeScene === 3 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
-            <img src="{{ asset('images/apparel-3d-scene-3.png') }}" alt="3D Cloud IoT Holographic Pipeline"
-                 class="w-full h-full object-cover anim-kenburns-3 filter contrast-105 saturate-110">
-        </div>
-
-        {{-- Scene 4: 3D SaaS Sewing Dashboard --}}
-        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-             :class="activeScene === 4 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
-            <img src="{{ asset('images/apparel-3d-scene-4.png') }}" alt="3D SaaS Sewing Control Room"
-                 class="w-full h-full object-cover anim-kenburns-4 filter contrast-105 saturate-110">
-        </div>
-
-        {{-- Scene 5: Modern Apparel Complex Campus --}}
-        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-             :class="activeScene === 5 ? 'opacity-70' : 'opacity-0 pointer-events-none'">
-            <img src="{{ asset('images/apparel-3d-scene-5.png') }}" alt="3D Apparel Smart Factory Complex"
-                 class="w-full h-full object-cover anim-kenburns-5 filter contrast-105 saturate-110">
-        </div>
+        {{-- High-Tech 3D Apparel Video Loop (53s Continuous 3D Animation) --}}
+        <video id="hero-3d-apparel-video" autoplay loop muted playsinline preload="auto"
+               class="w-full h-full object-cover scale-105 filter contrast-105 saturate-110 opacity-70"
+               poster="{{ asset('images/apparel-3d-scene-1.png') }}">
+            <source src="{{ asset('videos/apparel-3d-loop.mp4') }}" type="video/mp4">
+        </video>
 
         {{-- Cyan Sweeping Laser Scan Line --}}
         <div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-sky-400 to-transparent blur-[1px] anim-laser-scan pointer-events-none"></div>
 
-        {{-- Cinematic Vignette Overlay (keeps text perfectly legible while highlighting 3D graphics) --}}
-        <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(3, 7, 18, 0.25) 0%, rgba(3, 7, 18, 0.55) 50%, rgba(3, 7, 18, 0.90) 85%, rgba(3, 7, 18, 0.98) 100%)"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/30 to-slate-950/95"></div>
+        {{-- Cinematic Vignette Overlay (keeps moving 3D video clearly visible while text stays ultra-readable) --}}
+        <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(3, 7, 18, 0.20) 0%, rgba(3, 7, 18, 0.50) 45%, rgba(3, 7, 18, 0.85) 80%, rgba(3, 7, 18, 0.98) 100%)"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/20 to-slate-950/95"></div>
 
         {{-- Ambient Glowing Orbs --}}
-        <div class="absolute top-[18%] right-[8%] w-44 h-44 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-[20%] left-[8%] w-56 h-56 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-[18%] right-[8%] w-48 h-48 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-[20%] left-[8%] w-60 h-60 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
     </div>
 
     {{-- Floating 3D Telemetry Widgets (Desktop Parallax) --}}
@@ -230,47 +242,70 @@
             </span>
         </div>
 
-        {{-- ── 3D APPAREL ENGINE INTERACTIVE HUD DOCK ── --}}
-        <div class="pt-6 w-full max-w-3xl mx-auto">
-            <div class="glass-hud rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-2xl border border-sky-400/40">
+        {{-- ── 3D APPAREL ANIMATED VIDEO INTERACTIVE HUD DOCK ── --}}
+        <div class="pt-6 w-full max-w-4xl mx-auto">
+            <div class="glass-hud rounded-2xl p-3.5 sm:p-4 shadow-2xl border border-sky-400/40 space-y-3">
                 
-                {{-- Current Scene Label --}}
-                <div class="flex items-center gap-3 text-left">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping shrink-0"></span>
-                    <div>
-                        <div class="text-[10px] font-black uppercase tracking-wider text-sky-400 flex items-center gap-2">
-                            <span>3D APPAREL ENGINE</span>
-                            <span class="text-slate-500">•</span>
-                            <span x-text="'SCENE ' + activeScene + ' / 5'"></span>
+                {{-- HUD Top Bar: Current Scene & Live Video Progress --}}
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-left">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                        <div>
+                            <div class="text-[10px] font-black uppercase tracking-wider text-sky-400 flex items-center gap-2">
+                                <span>3D APPAREL VIDEO STREAM</span>
+                                <span class="text-slate-500">•</span>
+                                <span class="text-emerald-400" x-text="videoPlaying ? 'PLAYING LIVE' : 'PAUSED'"></span>
+                                <span class="text-slate-500">•</span>
+                                <span x-text="'CHAPTER ' + activeChapter + ' / 5'"></span>
+                            </div>
+                            <div class="text-xs sm:text-sm font-bold text-white truncate max-w-xs sm:max-w-md"
+                                 x-text="chapters[activeChapter - 1].title"></div>
                         </div>
-                        <div class="text-xs sm:text-sm font-bold text-white truncate max-w-xs sm:max-w-sm"
-                             x-text="scenes[activeScene - 1].title"></div>
+                    </div>
+
+                    {{-- Play / Pause / Mute / Fullscreen Controls --}}
+                    <div class="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+                        <button @click="togglePlay()"
+                                class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition flex items-center gap-1 border border-slate-700 cursor-pointer"
+                                :title="videoPlaying ? 'Pause 3D Video' : 'Play 3D Video'">
+                            <span x-text="videoPlaying ? '⏸' : '▶'"></span>
+                            <span class="hidden sm:inline" x-text="videoPlaying ? 'Pause' : 'Play'"></span>
+                        </button>
+
+                        <button @click="toggleMute()"
+                                class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs transition border border-slate-700 cursor-pointer"
+                                :title="videoMuted ? 'Unmute' : 'Mute'">
+                            <span x-text="videoMuted ? '🔇' : '🔊'"></span>
+                        </button>
+
+                        <button @click="openVideoModal()"
+                                class="px-3 py-1 rounded-lg bg-sky-600/90 hover:bg-sky-500 text-white text-xs font-bold transition flex items-center gap-1.5 border border-sky-400/40 cursor-pointer"
+                                title="Open Fullscreen 3D Video Walkthrough">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                            <span class="hidden sm:inline">Cinema View</span>
+                        </button>
                     </div>
                 </div>
 
-                {{-- Interactive Scene Selector Buttons & Controls --}}
-                <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                    <template x-for="s in scenes" :key="s.id">
-                        <button @click="selectScene(s.id)"
-                                :class="activeScene === s.id ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/50 scale-110 border-sky-300' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border-slate-700'"
-                                class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-black transition-all flex items-center justify-center border cursor-pointer"
-                                :title="s.title">
-                            <span x-text="'0' + s.id"></span>
+                {{-- Live Video Progress Bar --}}
+                <div class="w-full bg-slate-800/80 rounded-full h-1.5 overflow-hidden">
+                    <div class="bg-gradient-to-r from-sky-400 to-blue-500 h-1.5 rounded-full transition-all duration-300"
+                         :style="'width: ' + videoProgress + '%'"></div>
+                </div>
+
+                {{-- Interactive 5 Chapter Jump Buttons --}}
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 pt-1">
+                    <template x-for="ch in chapters" :key="ch.id">
+                        <button @click="seekChapter(ch.time, ch.id)"
+                                :class="activeChapter === ch.id ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/40 border-sky-300 scale-[1.02]' : 'bg-slate-800/90 text-slate-300 hover:bg-slate-700 border-slate-700'"
+                                class="p-2 rounded-xl text-left border transition-all cursor-pointer">
+                            <div class="flex items-center justify-between text-[10px] font-black">
+                                <span x-text="'0' + ch.id"></span>
+                                <span class="text-[9px] opacity-75 font-mono" x-text="ch.time + 's'"></span>
+                            </div>
+                            <div class="text-[11px] font-bold truncate mt-0.5" x-text="ch.tag"></div>
                         </button>
                     </template>
-
-                    <button @click="toggleAutoPlay()"
-                            class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition flex items-center gap-1 border border-slate-700 cursor-pointer"
-                            :title="autoPlay ? 'Pause 3D rotation' : 'Resume 3D auto-glide'">
-                        <span x-text="autoPlay ? '⏸ Pause' : '▶ Play'"></span>
-                    </button>
-
-                    <button @click="sceneModalOpen = true"
-                            class="px-3 py-1.5 rounded-lg bg-sky-600/80 hover:bg-sky-500 text-white text-xs font-bold transition flex items-center gap-1.5 border border-sky-400/40 cursor-pointer"
-                            title="Open Fullscreen 3D Scene Viewer">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
-                        <span class="hidden sm:inline">Inspect 3D</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -278,9 +313,9 @@
     </div>
 </section>
 
-{{-- ── FULLSCREEN 3D APPAREL SCENE WALKTHROUGH MODAL ── --}}
-<div x-show="sceneModalOpen" x-cloak
-     class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/85 backdrop-blur-xl"
+{{-- ── FULLSCREEN 3D APPAREL CINEMA WALKTHROUGH MODAL ── --}}
+<div x-show="videoModalOpen" x-cloak
+     class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/90 backdrop-blur-xl"
      x-transition:enter="transition ease-out duration-200"
      x-transition:enter-start="opacity-0"
      x-transition:enter-end="opacity-100"
@@ -289,52 +324,43 @@
      x-transition:leave-end="opacity-0">
     
     <div class="relative w-full max-w-5xl bg-slate-900 border border-sky-400/40 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
-         @click.outside="sceneModalOpen = false">
+         @click.outside="closeVideoModal()">
         
         {{-- Modal Header --}}
         <div class="p-5 sm:p-6 bg-slate-950/80 border-b border-slate-800 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-400 border border-sky-400/30 text-xs font-black uppercase"
-                      x-text="scenes[activeScene - 1].tag"></span>
+                      x-text="chapters[activeChapter - 1].tag"></span>
                 <h3 class="text-base sm:text-xl font-black text-white font-heading"
-                    x-text="scenes[activeScene - 1].title"></h3>
+                    x-text="chapters[activeChapter - 1].title"></h3>
             </div>
 
-            <button @click="sceneModalOpen = false" class="p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white cursor-pointer">
+            <button @click="closeVideoModal()" class="p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white cursor-pointer">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
 
-        {{-- Modal Image Stage with 3D Glide --}}
-        <div class="relative h-[360px] sm:h-[480px] w-full overflow-hidden bg-black flex items-center justify-center">
-            <img :src="scenes[activeScene - 1].img" :alt="scenes[activeScene - 1].title"
-                 class="w-full h-full object-cover anim-kenburns-1">
-            
-            {{-- Navigation Arrows --}}
-            <button @click="prevScene()"
-                    class="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 text-white hover:bg-sky-500 transition border border-white/20 cursor-pointer">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
-            </button>
-
-            <button @click="nextScene()"
-                    class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-slate-900/80 text-white hover:bg-sky-500 transition border border-white/20 cursor-pointer">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-            </button>
+        {{-- Cinema Video Stage --}}
+        <div class="relative h-[360px] sm:h-[520px] w-full overflow-hidden bg-black flex items-center justify-center">
+            <video id="modal-3d-apparel-video" controls autoplay loop playsinline
+                   class="w-full h-full object-contain bg-black">
+                <source src="{{ asset('videos/apparel-3d-loop.mp4') }}" type="video/mp4">
+            </video>
         </div>
 
-        {{-- Modal Footer with Scene Details --}}
+        {{-- Modal Footer with Details & Quick Seek --}}
         <div class="p-5 sm:p-6 bg-slate-950 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
             <div class="space-y-1 text-left">
-                <div class="text-sky-300 font-bold" x-text="scenes[activeScene - 1].desc"></div>
-                <div class="text-slate-400 font-mono" x-text="'Shopfloor Metrics: ' + scenes[activeScene - 1].stats"></div>
+                <div class="text-sky-300 font-bold" x-text="chapters[activeChapter - 1].desc"></div>
+                <div class="text-slate-400 font-mono" x-text="'Shopfloor Metrics: ' + chapters[activeChapter - 1].stats"></div>
             </div>
 
             <div class="flex items-center gap-2">
-                <template x-for="s in scenes" :key="s.id">
-                    <button @click="selectScene(s.id)"
-                            :class="activeScene === s.id ? 'bg-sky-500 text-white' : 'bg-slate-800 text-slate-400'"
+                <template x-for="ch in chapters" :key="ch.id">
+                    <button @click="seekChapter(ch.time, ch.id); const mv = document.getElementById('modal-3d-apparel-video'); if (mv) { mv.currentTime = ch.time; mv.play(); }"
+                            :class="activeChapter === ch.id ? 'bg-sky-500 text-white' : 'bg-slate-800 text-slate-400'"
                             class="px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer"
-                            x-text="'Scene ' + s.id"></button>
+                            x-text="'Ch ' + ch.id"></button>
                 </template>
             </div>
         </div>
