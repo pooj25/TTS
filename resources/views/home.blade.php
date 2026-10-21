@@ -192,7 +192,7 @@
       <!-- Desktop Nav Items -->
       <div class="hidden md:flex items-center gap-1 xl:gap-3 text-sm md:text-[15px] font-semibold text-stone-700">
         <a href="#about" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">About</a>
-        <a href="#products-studio" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Products</a>
+        <a href="#products" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Products</a>
         <a href="#leadership" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Leadership</a>
         <a href="#contact" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Contact</a>
       </div>
@@ -217,7 +217,7 @@
   <!-- Mobile Dropdown Drawer -->
   <div id="mobileDrawer" class="fixed inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
     <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">About</a>
-    <a href="#products-studio" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Products Studio</a>
+    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Products Studio</a>
     <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Leadership Team</a>
     <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600">Contact Us</a>
   </div>
@@ -250,7 +250,7 @@
             class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-amber-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-sm shadow-xl shadow-orange-500/30 hover:scale-105 transition-all text-center">
             Schedule Factory Walkthrough
           </a>
-          <a href="#products-studio"
+          <a href="#products"
             class="w-full sm:w-auto px-7 py-4 rounded-full bg-white/80 hover:bg-orange-50 text-stone-700 hover:text-stone-900 font-semibold text-sm border border-stone-200 hover:border-orange-500 transition-all text-center flex items-center justify-center gap-2">
             <span>Explore Product Studio</span>
             <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -363,85 +363,218 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════════════════════════
-       5. INTERACTIVE PRODUCTS EXPERIENCE STUDIO
+    <!-- ═══════════════════════════════════════════════════════════════════
+       5. COMPREHENSIVE SOFTWARE SUITE (From website-tts.vercel.app)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="products-studio" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto space-y-12">
+  <section id="products" class="relative py-24 sm:py-28 px-4 sm:px-6 lg:px-8 z-10">
+    <span id="products-studio" class="absolute -top-10"></span>
+    <div class="max-w-7xl mx-auto space-y-20">
       
-      <div class="text-center space-y-3 max-w-3xl mx-auto">
-        <span class="text-xs font-bold uppercase tracking-widest text-orange-400 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 inline-block">
-          Interactive Product Studio
+      <!-- Section Header -->
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 inline-block font-sans shadow-sm">
+          Comprehensive Software Suite
         </span>
-        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
-          The tools your factory team needs, in one place
+        <h2 class="text-3xl sm:text-5xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
+          Designed for <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 italic">Smart Garment Factories</span>
         </h2>
-        <p class="text-stone-500 text-sm sm:text-base">
-          Click any product below to preview live software dashboards, operational stages, and factory benefits.
-        </p>
       </div>
 
-      <!-- Studio Grid: Left Tabs / Right Display -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- 4 Core Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <!-- Left Product Selection Pills -->
-        <div class="lg:col-span-4 space-y-2" id="productTabContainer">
-          <!-- Populated by JavaScript below -->
-        </div>
-
-        <!-- Right Interactive Display Card -->
-        <div class="lg:col-span-8 glass-card p-6 sm:p-8 border border-stone-200 space-y-6" id="productDisplayCard">
-          
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-stone-200">
-            <div>
-              <span class="text-xs font-mono font-bold text-orange-400 uppercase tracking-widest" id="studioProductNumber">PRODUCT 01 / MES</span>
-              <h3 class="text-2xl sm:text-3xl font-bold font-heading text-stone-900 mt-0.5" id="studioProductTitle">TrakWel</h3>
+        <!-- 1. Quality Control AI -->
+        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">AI Powered</span>
             </div>
-            <a href="#contact" class="px-5 py-2 rounded-full bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-600 font-bold text-xs transition flex items-center gap-2 self-start sm:self-auto">
-              <span>Book Solution Walkthrough</span>
-              <span>→</span>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Quality Control AI</h3>
+              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">Predict & Prevent Defects Inline</p>
+            </div>
+            <p class="text-sm text-stone-600 font-sans leading-relaxed">
+              Flawless quality assurance powered by vision AI. Automate fabric roll inspection, stitching flaw detection, and inline quality logging to reduce defects by up to 35%.
+            </p>
+          </div>
+          <div class="pt-8 mt-8 border-t border-stone-100">
+            <a href="{{ url('/products/quality-control') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
+              <span>Explore Quality Control Module</span>
+              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
             </a>
           </div>
+        </div>
 
-          <p class="text-sm text-stone-600 leading-relaxed" id="studioProductDesc">
-            Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.
-          </p>
+        <!-- 2. Production Tracking -->
+        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">Live Telemetry</span>
+            </div>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Production Tracking</h3>
+              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">End-to-End Real Time Visibility</p>
+            </div>
+            <p class="text-sm text-stone-600 font-sans leading-relaxed">
+              Gain 100% transparent tracking across all production stages—from cutting room and sewing lines to finishing and final dispatch.
+            </p>
+          </div>
+          <div class="pt-8 mt-8 border-t border-stone-100">
+            <a href="{{ url('/products/production-tracking') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
+              <span>Explore Production Tracking</span>
+              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+          </div>
+        </div>
 
-          <!-- 3 Stages Workflow -->
-          <div class="grid grid-cols-3 gap-3">
-            <div class="p-3 rounded-xl bg-white/90 border border-stone-100 text-center">
-              <span class="text-[10px] font-mono text-slate-500 font-bold block">STAGE 01</span>
-              <span class="text-xs font-bold text-stone-700 mt-1 block" id="studioStage1">Track</span>
+        <!-- 3. Machine Maintenance (OEE) -->
+        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">IoT Connected</span>
             </div>
-            <div class="p-3 rounded-xl bg-white/90 border border-stone-100 text-center">
-              <span class="text-[10px] font-mono text-slate-500 font-bold block">STAGE 02</span>
-              <span class="text-xs font-bold text-stone-700 mt-1 block" id="studioStage2">Monitor</span>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Machine Maintenance (OEE)</h3>
+              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">Equipment Health & Downtime Prevention</p>
             </div>
-            <div class="p-3 rounded-xl bg-white/90 border border-stone-100 text-center">
-              <span class="text-[10px] font-mono text-slate-500 font-bold block">STAGE 03</span>
-              <span class="text-xs font-bold text-stone-700 mt-1 block" id="studioStage3">Improve</span>
+            <p class="text-sm text-stone-600 font-sans leading-relaxed">
+              Maximize overall equipment effectiveness (OEE). Monitor machine run hours, predict motor failures, and schedule servicing automatically.
+            </p>
+          </div>
+          <div class="pt-8 mt-8 border-t border-stone-100">
+            <a href="{{ url('/products/machine-maintenance') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
+              <span>Explore Machine Maintenance</span>
+              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Production Planning -->
+        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">Smart Gantt</span>
+            </div>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Production Planning</h3>
+              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">Intelligent Scheduling & Line Optimization</p>
+            </div>
+            <p class="text-sm text-stone-600 font-sans leading-relaxed">
+              Schedule customer orders against exact line capacities, section skills, and delivery deadlines with an intuitive digital planner.
+            </p>
+          </div>
+          <div class="pt-8 mt-8 border-t border-stone-100">
+            <a href="{{ url('/products/production-planning') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
+              <span>Explore Production Planning</span>
+              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Garment Manufacturing Industry Modules Grid -->
+      <div class="mt-16 pt-16 border-t border-stone-200/80 space-y-12">
+        <div class="text-center space-y-3 max-w-2xl mx-auto">
+          <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 inline-block font-sans shadow-sm">
+            Garment Industry Modules
+          </span>
+          <h3 class="text-2xl sm:text-4xl font-bold text-stone-900 font-heading tracking-tight">
+            End-to-End Digitalization for Apparel Factories
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Module 1: Quality Management System -->
+          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="h-44 relative overflow-hidden bg-stone-100">
+                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Quality Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">QMS AI</span>
+              </div>
+              <div class="p-5 space-y-2">
+                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Quality Management System</h4>
+                <p class="text-xs text-stone-600 font-sans leading-relaxed">
+                  Inline fabric inspection, stitch defect tagging, and AQL automated scoring dashboards.
+                </p>
+              </div>
             </div>
           </div>
 
-          <!-- Software Screenshot Device Preview -->
-          <div class="rounded-2xl overflow-hidden border border-stone-200 bg-orange-50 shadow-2xl relative group">
-            <div class="bg-white px-4 py-2 border-b border-stone-100 flex items-center justify-between text-xs">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <span class="ml-2 font-mono text-[10px] text-stone-500" id="studioUrlMock">track-tech.live/apps/trakwel</span>
+          <!-- Module 2: Production Tracking System -->
+          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="h-44 relative overflow-hidden bg-stone-100">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Production Tracking System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">RFID & Barcode</span>
               </div>
-              <span class="text-[10px] font-mono text-orange-400" id="studioStatusMock">LIVE DASHBOARD</span>
+              <div class="p-5 space-y-2">
+                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Production Tracking System</h4>
+                <p class="text-xs text-stone-600 font-sans leading-relaxed">
+                  Real-time bundle tracking across sewing lines with real-time WIP updates and operator efficiency metrics.
+                </p>
+              </div>
             </div>
-            <div class="relative max-h-96 overflow-hidden">
-              <img id="studioImage" src="{{ asset('assets/img/production-tracking.jpg') }}" alt="Track Tech Software Interface" class="w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+
+          <!-- Module 3: Cutting Room Digitisation -->
+          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="h-44 relative overflow-hidden bg-stone-100">
+                <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" alt="Cutting Room Digitisation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">Smart Spreading</span>
+              </div>
+              <div class="p-5 space-y-2">
+                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Cutting Room Digitisation</h4>
+                <p class="text-xs text-stone-600 font-sans leading-relaxed">
+                  Digital marker planning, fabric roll optimization, and automated ply-count tracking.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 4: Fabric Inventory Management -->
+          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
+            <div>
+              <div class="h-44 relative overflow-hidden bg-stone-100">
+                <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=600&q=80" alt="Fabric Inventory Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">Warehouse IoT</span>
+              </div>
+              <div class="p-5 space-y-2">
+                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Fabric Inventory Management</h4>
+                <p class="text-xs text-stone-600 font-sans leading-relaxed">
+                  Barcode-driven roll allocation, shade grouping, shrinkage matching, and zero-loss fabric storage.
+                </p>
+              </div>
             </div>
           </div>
 
         </div>
-
       </div>
 
     </div>
@@ -606,7 +739,7 @@
         </div>
         <div class="flex items-center gap-6">
           <a href="#about" class="hover:text-stone-600 transition">Home</a>
-          <a href="#products-studio" class="hover:text-stone-600 transition">Products</a>
+          <a href="#products" class="hover:text-stone-600 transition">Products</a>
           <a href="#leadership" class="hover:text-stone-600 transition">Leadership</a>
           <a href="#contact" class="hover:text-stone-600 transition">Contact</a>
         </div>
@@ -630,122 +763,7 @@
        JAVASCRIPT FOR INTERACTIVE STUDIO & MOBILE NAV
   ═══════════════════════════════════════════════════════════════════ -->
   <script>
-    const productsData = {
-      trakwel: {
-        number: 'PRODUCT 01 / MES',
-        title: 'TrakWel',
-        desc: 'Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.',
-        stage1: 'Track', stage2: 'Monitor', stage3: 'Improve',
-        img: "{{ asset('assets/img/production-tracking.jpg') }}",
-        url: 'track-tech.live/apps/trakwel'
-      },
-      'fabric-inventory': {
-        number: 'PRODUCT 02 / WAREHOUSE',
-        title: 'Fabric Inventory Management',
-        desc: 'Barcode-driven roll allocation, shade grouping, shrinkage matching, and zero-loss fabric storage from receiving to spreading.',
-        stage1: 'Receive', stage2: 'Inspect', stage3: 'Allocate',
-        img: "{{ asset('assets/img/fabric-inventory-management.png') }}",
-        url: 'track-tech.live/apps/fabric-inventory'
-      },
-      'cutting-digitalization': {
-        number: 'PRODUCT 03 / CAD & CUT',
-        title: 'Cutting Room Digitalization',
-        desc: 'Digital marker planning, fabric roll optimization, and automated ply-count tracking to eliminate fabric scrap before sewing.',
-        stage1: 'Plan', stage2: 'Spread', stage3: 'Cut',
-        img: "{{ asset('assets/img/cutting-room-digitalization.png') }}",
-        url: 'track-tech.live/apps/cutting-room'
-      },
-      'tracking': {
-        number: 'PRODUCT 04 / WIP',
-        title: 'Production Tracking',
-        desc: 'Real-time bundle tracking across sewing lines with real-time WIP updates, operator efficiency metrics, and line balancing.',
-        stage1: 'Bundle', stage2: 'Sew', stage3: 'Assemble',
-        img: "{{ asset('assets/img/product-tracking.png') }}",
-        url: 'track-tech.live/apps/production-tracking'
-      },
-      'quality': {
-        number: 'PRODUCT 05 / QC AI',
-        title: 'Quality Control',
-        desc: 'Inline and end-line inspection with automated AQL reports, defect heatmaps, and repair loop tracking for zero garment rework.',
-        stage1: 'Inspect', stage2: 'Score', stage3: 'Certify',
-        img: "{{ asset('assets/img/quality-control.png') }}",
-        url: 'track-tech.live/apps/quality-control'
-      },
-      'planwel': {
-        number: 'PRODUCT 06 / APS',
-        title: 'PlanWel',
-        desc: 'Advanced Planning & Scheduling (APS) for fast-react multi-line scheduling, SAM variance management, and milestone forecasting.',
-        stage1: 'Schedule', stage2: 'Balance', stage3: 'Deliver',
-        img: "{{ asset('assets/img/planwel.png') }}",
-        url: 'track-tech.live/apps/planwel'
-      },
-      'mtrak': {
-        number: 'PRODUCT 07 / IOT',
-        title: 'mTrak',
-        desc: 'Predictive maintenance and machine uptime monitoring with vibration sensors, temperature telemetry, and QR mechanic dispatch.',
-        stage1: 'Monitor', stage2: 'Alert', stage3: 'Maintain',
-        img: "{{ asset('assets/img/mTrak.png') }}",
-        url: 'track-tech.live/apps/mtrak'
-      },
-      'sewiot': {
-        number: 'PRODUCT 08 / SENSORS',
-        title: 'SewIoT',
-        desc: 'Smart IoT sensors for sewing machines that monitor needle run-time, stitches-per-minute, and provide operator pace scorecards.',
-        stage1: 'Sense', stage2: 'Pace', stage3: 'Excel',
-        img: "{{ asset('assets/img/sew-IoT.png') }}",
-        url: 'track-tech.live/apps/sewiot'
-      },
-      'laundry': {
-        number: 'PRODUCT 09 / INDUSTRY',
-        title: 'Laundry Management',
-        desc: 'Specialized industrial garment washing, recipe management, chemical dosage monitoring, and batch process control.',
-        stage1: 'Load', stage2: 'Process', stage3: 'Dispatch',
-        img: "{{ asset('assets/img/laundry-management.png') }}",
-        url: 'track-tech.live/apps/laundry'
-      },
-      'jig': {
-        number: 'PRODUCT 10 / PRECISION',
-        title: 'Jig Management',
-        desc: 'Precision template and jig life tracking, usage limits, and maintenance calibration for complex seam stitching.',
-        stage1: 'Calibrate', stage2: 'Track', stage3: 'Renew',
-        img: "{{ asset('assets/img/Jig-management.png') }}",
-        url: 'track-tech.live/apps/jig-management'
-      },
-      'shrinkage': {
-        number: 'PRODUCT 11 / LAB',
-        title: 'Shrinkage Testing App',
-        desc: 'Digital fabric shrinkage testing, wash relaxation ratios, and shade grouping for precision pattern adjustments.',
-        stage1: 'Test', stage2: 'Analyze', stage3: 'Adjust',
-        img: "{{ asset('assets/img/shrinkage-testing-app.png') }}",
-        url: 'track-tech.live/apps/shrinkage'
-      }
-    };
-
-    const container = document.getElementById('productTabContainer');
-    let activeKey = 'trakwel';
-
-    function renderTabs() {
-      container.innerHTML = '';
-      Object.keys(productsData).forEach(key => {
-        const item = productsData[key];
-        const isActive = key === activeKey;
-        const btn = document.createElement('button');
-        btn.className = `w-full text-left p-3.5 rounded-2xl transition-all flex items-center justify-between text-xs font-semibold cursor-pointer ${
-          isActive 
-            ? 'bg-orange-500/20 border border-orange-500/50 text-stone-900 shadow-lg shadow-orange-500/15' 
-            : 'bg-white/60 border border-stone-100 text-stone-500 hover:bg-orange-50/80 hover:text-stone-700'
-        }`;
-        btn.innerHTML = `
-          <div class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full ${isActive ? 'bg-orange-400 shadow-sm shadow-sky-400' : 'bg-slate-600'}"></span>
-            <span>${item.title}</span>
-          </div>
-          <span class="text-[10px] font-mono opacity-60">${item.number.split(' ')[0]}</span>
-        `;
-        btn.onclick = () => {
-          activeKey = key;
-          renderTabs();
-          updateDisplay();
+    // Products suite loaded dynamically
         };
         container.appendChild(btn);
       });
