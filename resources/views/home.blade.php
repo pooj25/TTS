@@ -182,12 +182,9 @@
     <nav class="floating-nav w-full max-w-6xl rounded-full px-4 sm:px-6 py-3 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#about" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full bg-white border border-orange-500/40 p-1 flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform">
-          <img src="{{ asset('assets/img/track-tech-logo.png') }}" alt="Track Tech Solution Logo" class="w-full h-full object-contain">
-        </div>
-        <span class="font-heading font-bold text-base sm:text-lg tracking-tight text-stone-900">
-          Track<span class="text-orange-400">Tech</span> <span class="text-xs uppercase tracking-widest text-stone-500 font-sans ml-0.5">Solution</span>
+      <a href="#about" class="flex items-center group py-0.5">
+        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-stone-900 group-hover:opacity-90 transition">
+          Track Tech <span class="text-orange-500">Solution</span>
         </span>
       </a>
 
@@ -204,7 +201,7 @@
       <!-- Action Button -->
       <div class="flex items-center gap-2">
         <a href="#contact"
-          class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-stone-900 text-xs font-bold px-5 py-2.5 rounded-full shadow-lg shadow-orange-500/25 hover:shadow-orange-400/40 hover:scale-105 transition-all">
+          class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-lg shadow-orange-500/25 hover:shadow-orange-400/40 hover:scale-105 transition-all">
           Experience Live Demo
         </a>
 
@@ -253,7 +250,7 @@
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
           <a href="#contact"
-            class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-amber-600 hover:from-orange-400 hover:to-red-500 text-stone-900 font-bold text-sm shadow-xl shadow-orange-500/30 hover:scale-105 transition-all text-center">
+            class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-amber-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-sm shadow-xl shadow-orange-500/30 hover:scale-105 transition-all text-center">
             Schedule Factory Walkthrough
           </a>
           <a href="#products-studio"
@@ -584,7 +581,7 @@
         <!-- Gopinath M. -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-stone-900 font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
               GM
             </div>
             <div>
@@ -606,7 +603,7 @@
         <!-- Lebinesh Balan -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-stone-900 font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-amber-500/20">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-amber-500/20">
               LB
             </div>
             <div>
@@ -628,7 +625,7 @@
         <!-- Deepak Rajkumar -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 text-stone-900 font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/20">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/20">
               DR
             </div>
             <div>
@@ -669,7 +666,7 @@
 
           <div class="pt-2 flex flex-col sm:flex-row gap-4">
             <a href="mailto:sales@tracktechsolutions.com"
-              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-stone-900 font-bold text-sm shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
+              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
               Email Sales Team
             </a>
             <a href="tel:+919650613666"
