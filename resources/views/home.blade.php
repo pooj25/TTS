@@ -182,7 +182,8 @@
     <nav class="floating-nav w-full max-w-6xl rounded-full px-4 sm:px-6 py-3 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#about" class="flex items-center group py-0.5">
+      <a href="#about" class="flex items-center gap-2.5 group py-0.5">
+        <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Track Tech Solution Logo" class="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105">
         <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-stone-900 group-hover:opacity-90 transition">
           Track Tech <span class="text-orange-500">Solution</span>
         </span>
