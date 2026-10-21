@@ -585,10 +585,10 @@
 
 
 
-  <!-- ═══════════════════════════════════════════════════════════════════
-       6. KEY CUSTOMERS & STRATEGIC CLIENTS (Infinite Glass Marquee)
+    <!-- ═══════════════════════════════════════════════════════════════════
+       6. KEY CUSTOMERS & DIRECTORY (Stable Grid & Metrics)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="clients" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden">
+  <section id="clients" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
     <div class="max-w-6xl mx-auto space-y-10">
       
       <div class="text-center space-y-3 max-w-2xl mx-auto">
@@ -599,49 +599,146 @@
           Technology trusted by apparel makers
         </h2>
         <p class="text-stone-500 text-sm sm:text-base font-sans">
-          From established manufacturing giants to specialist apparel exporters.
+          From established manufacturing groups to specialist apparel exporters, Track Tech brings production, quality and order visibility together.
         </p>
       </div>
 
-      <!-- Marquee Wrapper with soft cream edge masks -->
-      <div class="relative w-full overflow-hidden py-4">
-        <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#fdf8f3] via-[#fdf8f3]/80 to-transparent z-10 pointer-events-none"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#fdf8f3] via-[#fdf8f3]/80 to-transparent z-10 pointer-events-none"></div>
+      <!-- SVG Symbols Definition (hidden) -->
+      <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+        <symbol id="shahi" viewBox="0 0 200 80">
+          <rect x="8" y="16" width="184" height="48" fill="#26345f" />
+          <text x="100" y="52" fill="#fff" font-family="Arial,sans-serif" font-size="39" font-weight="800" text-anchor="middle">SHAHI</text>
+        </symbol>
+        <symbol id="arvind" viewBox="0 0 200 80">
+          <text x="100" y="45" fill="#a11e3c" font-family="Georgia,serif" font-size="36" text-anchor="middle">ARVIND</text>
+          <text x="100" y="62" fill="#a11e3c" font-family="Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle">FASHIONING POSSIBILITIES</text>
+        </symbol>
+        <symbol id="pds" viewBox="0 0 200 80">
+          <circle cx="49" cy="40" r="28" fill="none" stroke="#b42b48" stroke-width="3" />
+          <path d="M49 12v56M39 14v52M29 20v40M19 29v22M59 14v52M69 20v40M79 29v22" stroke="#b42b48" stroke-width="4" />
+          <text x="127" y="53" fill="#17191c" font-family="Georgia,serif" font-size="39" text-anchor="middle">PDS</text>
+        </symbol>
+        <symbol id="texport" viewBox="0 0 200 80">
+          <text x="100" y="51" fill="#243c70" font-family="Arial,sans-serif" font-size="32" font-weight="800" text-anchor="middle">texport</text>
+        </symbol>
+        <symbol id="modelarna" viewBox="0 0 200 80">
+          <ellipse cx="100" cy="31" rx="39" ry="23" fill="none" stroke="#24252a" stroke-width="3" />
+          <path d="M66 31h68M100 9v44" stroke="#24252a" stroke-width="2" />
+          <path d="M82 17 100 10l18 7v24l-18 12-18-12z" fill="#b32333" stroke="#202126" stroke-width="2" />
+          <text x="100" y="72" fill="#17191c" font-family="Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">MODELARNA EXPORTS</text>
+        </symbol>
+        <symbol id="armstrong" viewBox="0 0 200 80">
+          <path d="M12 16h30L18 64H0z" fill="#c93635" />
+          <path d="M38 16h150l-24 48H14z" fill="#66676b" />
+          <text x="107" y="42" fill="#fff" font-family="Georgia,serif" font-size="22" font-weight="700" text-anchor="middle">Armstrong</text>
+          <text x="105" y="55" fill="#fff" font-family="Georgia,serif" font-size="9" font-style="italic" text-anchor="middle">The name for Quality</text>
+        </symbol>
+        <symbol id="penguin" viewBox="0 0 200 80">
+          <ellipse cx="36" cy="39" rx="14" ry="25" fill="#fff" stroke="#172331" stroke-width="2.5" />
+          <ellipse cx="36" cy="44" rx="8" ry="13" fill="#172331" />
+          <circle cx="32" cy="28" r="2" fill="#172331" />
+          <circle cx="40" cy="28" r="2" fill="#172331" />
+          <path d="m34 32 5 2-5 2z" fill="#d8a344" />
+          <path d="M23 57h9M39 57h9" stroke="#d8a344" stroke-width="3" stroke-linecap="round" />
+          <text x="119" y="37" fill="#384878" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Penguin</text>
+          <text x="119" y="53" fill="#384878" font-family="Arial,sans-serif" font-size="12" text-anchor="middle">Apparels (P) Ltd</text>
+        </symbol>
+        <symbol id="sahana" viewBox="0 0 200 80">
+          <path d="M100 37C83 27 87 11 101 5c12 12 10 24-1 32ZM100 37c1-19 17-25 30-16-3 17-14 23-30 16ZM100 37c18-3 28 10 22 25-17 1-24-9-22-25ZM100 37c-3 18-18 24-30 13 4-17 16-22 30-13ZM100 37C81 40 72 27 79 13c17-1 24 9 21 24Z" fill="#d9a22d" />
+          <text x="100" y="71" fill="#7c735f" font-family="Georgia,serif" font-size="17" letter-spacing="2" text-anchor="middle">SAHANA</text>
+        </symbol>
+        <symbol id="trendyfits" viewBox="0 0 200 80">
+          <rect x="8" y="10" width="184" height="60" fill="#153b73" />
+          <circle cx="34" cy="39" r="14" fill="#f4ca35" />
+          <path d="M27 48V29h13v4h-8v4h7v4h-7v7z" fill="#1d5a9a" />
+          <text x="117" y="41" fill="#fff" font-family="Arial,sans-serif" font-size="19" font-weight="800" text-anchor="middle">TRENDY FITS</text>
+          <text x="117" y="54" fill="#f4ca35" font-family="Arial,sans-serif" font-size="7" text-anchor="middle">COMFORT FASHION FIT</text>
+        </symbol>
+        <symbol id="mehala" viewBox="0 0 200 80">
+          <text x="100" y="42" fill="#df3b3d" font-family="Georgia,serif" font-size="36" font-weight="700" text-anchor="middle">MEHALA</text>
+          <text x="100" y="59" fill="#393238" font-family="Georgia,serif" font-size="10" font-style="italic" text-anchor="middle">Committed to Customer Delight</text>
+        </symbol>
+      </svg>
 
-        <div class="marquee-track flex gap-4">
+      <!-- Customer Directory Stable Showcase Card (Screenshot 1) -->
+      <div class="glass-card p-6 sm:p-8 border border-stone-200/90 shadow-lg">
+        
+        <!-- Header: Customer Directory / Key customers -->
+        <div class="flex items-center justify-between pb-4 border-b border-stone-200">
+          <span class="text-xs font-bold uppercase tracking-wider text-stone-500 font-sans">CUSTOMER DIRECTORY</span>
+          <span class="text-sm font-bold text-stone-900 font-heading">Key customers</span>
+        </div>
+
+        <!-- 5x2 Stable Logo Grid with clean cell borders -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-2xl overflow-hidden mt-6 shadow-sm">
           
-          @php
-            $clients = [
-              ['name' => 'SHAHI EXPORTS', 'desc' => "India's Largest Apparel Exporter"],
-              ['name' => 'ARVIND LTD', 'desc' => 'Fashioning Possibilities'],
-              ['name' => 'PDS GLOBAL', 'desc' => 'Global Manufacturing Platform'],
-              ['name' => 'TEXPORT', 'desc' => 'Quality Apparel Manufacturer'],
-              ['name' => 'MODELAMA', 'desc' => 'Specialist Garment Exporter'],
-              ['name' => 'ARMSTRONG', 'desc' => 'The Name for Quality'],
-              ['name' => 'PENGUIN APPARELS', 'desc' => 'Specialist Apparel Makers'],
-              ['name' => 'SAHANA', 'desc' => 'Apparel Manufacturing'],
-              ['name' => 'TRENDY FITS', 'desc' => 'Comfort Fashion Fit'],
-              ['name' => 'MEHALA', 'desc' => 'Customer Delight in Garments'],
-            ];
-          @endphp
-
-          <!-- Loop 1 -->
-          @foreach($clients as $c)
-          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-stone-200/90 hover:border-orange-500/50 shadow-sm hover:shadow-lg transition">
-            <span class="font-heading font-black text-stone-900 text-base tracking-wider">{{ $c['name'] }}</span>
-            <span class="text-[11px] text-orange-600 font-medium mt-1 font-sans">{{ $c['desc'] }}</span>
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#shahi" xlink:href="#shahi"></use></svg>
           </div>
-          @endforeach
 
-          <!-- Loop 2 (Seamless loop) -->
-          @foreach($clients as $c)
-          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-stone-200/90 hover:border-orange-500/50 shadow-sm hover:shadow-lg transition" aria-hidden="true">
-            <span class="font-heading font-black text-stone-900 text-base tracking-wider">{{ $c['name'] }}</span>
-            <span class="text-[11px] text-orange-600 font-medium mt-1 font-sans">{{ $c['desc'] }}</span>
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
           </div>
-          @endforeach
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#pds" xlink:href="#pds"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#texport" xlink:href="#texport"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#penguin" xlink:href="#penguin"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#modelarna" xlink:href="#modelarna"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#sahana" xlink:href="#sahana"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-12 max-w-[140px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
+          </div>
 
         </div>
+
+      </div>
+
+      <!-- Stable Company Facts & Metrics Bar (Screenshot 2) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-0 bg-white/95 glass-card border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-stone-200/90">
+        
+        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">2</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Countries</span>
+        </div>
+
+        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">74+</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Factories</span>
+        </div>
+
+        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">6000+</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Users</span>
+        </div>
+
+        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">36</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Professionals</span>
+        </div>
+
       </div>
 
     </div>
