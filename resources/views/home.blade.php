@@ -190,11 +190,12 @@
       </a>
 
       <!-- Desktop Nav Items -->
-      <div class="hidden md:flex items-center gap-1 xl:gap-3 text-sm md:text-[15px] font-semibold text-stone-700">
-        <a href="#about" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">About</a>
-        <a href="#products" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Products</a>
-        <a href="#leadership" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Leadership</a>
-        <a href="#contact" class="px-3.5 py-1.5 xl:px-4 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Contact</a>
+      <div class="hidden md:flex items-center gap-1 xl:gap-2 text-sm md:text-[15px] font-semibold text-stone-700">
+        <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">About</a>
+        <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Products</a>
+        <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Clients</a>
+        <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Leadership</a>
+        <a href="#contact" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Contact</a>
       </div>
 
       <!-- Action Button -->
@@ -217,7 +218,8 @@
   <!-- Mobile Dropdown Drawer -->
   <div id="mobileDrawer" class="fixed inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
     <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">About</a>
-    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Products Studio</a>
+    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Products</a>
+    <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Clients</a>
     <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Leadership Team</a>
     <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600">Contact Us</a>
   </div>
@@ -581,6 +583,70 @@
   </section>
 
 
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       6. KEY CUSTOMERS & STRATEGIC CLIENTS (Infinite Glass Marquee)
+  ═══════════════════════════════════════════════════════════════════ -->
+  <section id="clients" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden">
+    <div class="max-w-6xl mx-auto space-y-10">
+      
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 inline-block font-sans shadow-sm">
+          Trusted Worldwide
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
+          Technology trusted by apparel makers
+        </h2>
+        <p class="text-stone-500 text-sm sm:text-base font-sans">
+          From established manufacturing giants to specialist apparel exporters.
+        </p>
+      </div>
+
+      <!-- Marquee Wrapper with soft cream edge masks -->
+      <div class="relative w-full overflow-hidden py-4">
+        <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#fdf8f3] via-[#fdf8f3]/80 to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#fdf8f3] via-[#fdf8f3]/80 to-transparent z-10 pointer-events-none"></div>
+
+        <div class="marquee-track flex gap-4">
+          
+          @php
+            $clients = [
+              ['name' => 'SHAHI EXPORTS', 'desc' => "India's Largest Apparel Exporter"],
+              ['name' => 'ARVIND LTD', 'desc' => 'Fashioning Possibilities'],
+              ['name' => 'PDS GLOBAL', 'desc' => 'Global Manufacturing Platform'],
+              ['name' => 'TEXPORT', 'desc' => 'Quality Apparel Manufacturer'],
+              ['name' => 'MODELAMA', 'desc' => 'Specialist Garment Exporter'],
+              ['name' => 'ARMSTRONG', 'desc' => 'The Name for Quality'],
+              ['name' => 'PENGUIN APPARELS', 'desc' => 'Specialist Apparel Makers'],
+              ['name' => 'SAHANA', 'desc' => 'Apparel Manufacturing'],
+              ['name' => 'TRENDY FITS', 'desc' => 'Comfort Fashion Fit'],
+              ['name' => 'MEHALA', 'desc' => 'Customer Delight in Garments'],
+            ];
+          @endphp
+
+          <!-- Loop 1 -->
+          @foreach($clients as $c)
+          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-stone-200/90 hover:border-orange-500/50 shadow-sm hover:shadow-lg transition">
+            <span class="font-heading font-black text-stone-900 text-base tracking-wider">{{ $c['name'] }}</span>
+            <span class="text-[11px] text-orange-600 font-medium mt-1 font-sans">{{ $c['desc'] }}</span>
+          </div>
+          @endforeach
+
+          <!-- Loop 2 (Seamless loop) -->
+          @foreach($clients as $c)
+          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-stone-200/90 hover:border-orange-500/50 shadow-sm hover:shadow-lg transition" aria-hidden="true">
+            <span class="font-heading font-black text-stone-900 text-base tracking-wider">{{ $c['name'] }}</span>
+            <span class="text-[11px] text-orange-600 font-medium mt-1 font-sans">{{ $c['desc'] }}</span>
+          </div>
+          @endforeach
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ═══════════════════════════════════════════════════════════════════
        7. LEADERSHIP TEAM (Glass Executive Profiles)
   ═══════════════════════════════════════════════════════════════════ -->
@@ -740,6 +806,7 @@
         <div class="flex items-center gap-6">
           <a href="#about" class="hover:text-stone-600 transition">Home</a>
           <a href="#products" class="hover:text-stone-600 transition">Products</a>
+          <a href="#clients" class="hover:text-stone-600 transition">Clients</a>
           <a href="#leadership" class="hover:text-stone-600 transition">Leadership</a>
           <a href="#contact" class="hover:text-stone-600 transition">Contact</a>
         </div>
