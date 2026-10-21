@@ -28,11 +28,11 @@
           },
           colors: {
             brand: {
-              orange: '#f97316',
-              red: '#ef4444',
-              amber: '#f59e0b',
-              dark: '#030508',
-              card: 'rgba(10, 8, 5, 0.75)',
+              orange: '#ea580c',
+              red: '#dc2626',
+              amber: '#d97706',
+              light: '#faf7f4',
+              card: 'rgba(255, 255, 255, 0.80)',
             }
           }
         }
@@ -43,12 +43,12 @@
   <!-- Custom Cyber-Glass Styling -->
   <style>
     :root {
-      color-scheme: dark;
+      color-scheme: light;
     }
 
     body {
-      background-color: #030508;
-      color: #f1f5f9;
+      background: linear-gradient(135deg, #fdf8f3 0%, #faf4ee 40%, #fef9f5 100%);
+      color: #1c1917;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
       margin: 0;
@@ -65,9 +65,9 @@
       pointer-events: none;
       z-index: 0;
       background: 
-        radial-gradient(circle at 15% 20%, rgba(251, 113, 33, 0.14) 0%, transparent 45%),
-        radial-gradient(circle at 85% 65%, rgba(239, 68, 68, 0.10) 0%, transparent 50%),
-        radial-gradient(circle at 50% 90%, rgba(249, 115, 22, 0.08) 0%, transparent 40%);
+        radial-gradient(circle at 15% 20%, rgba(251, 113, 33, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(239, 68, 68, 0.07) 0%, transparent 50%),
+        radial-gradient(circle at 50% 90%, rgba(249, 115, 22, 0.06) 0%, transparent 40%);
     }
 
     /* Continuous 3D Apparel Background Video */
@@ -77,7 +77,7 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      opacity: 0.18;
+      opacity: 0.10;
       pointer-events: none;
       z-index: 0;
       filter: contrast(1.15) saturate(1.2);
@@ -85,27 +85,27 @@
 
     /* Glassmorphic Cards */
     .glass-card {
-      background: rgba(13, 20, 36, 0.72);
+      background: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 1.5rem;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .glass-card:hover {
-      border-color: rgba(251, 113, 33, 0.40);
-      box-shadow: 0 20px 40px -15px rgba(251, 113, 33, 0.22);
+      border-color: rgba(234, 88, 12, 0.50);
+      box-shadow: 0 20px 40px -15px rgba(234, 88, 12, 0.18);
       transform: translateY(-3px);
     }
 
     /* Floating Pill Navbar */
     .floating-nav {
-      background: rgba(8, 14, 27, 0.82);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(251, 113, 33, 0.10);
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.15), 0 0 20px rgba(234, 88, 12, 0.08);
     }
 
     /* Custom Cursor Follower Glow */
@@ -113,7 +113,7 @@
       position: fixed;
       width: 480px;
       height: 480px;
-      background: radial-gradient(circle, rgba(251, 113, 33, 0.14), transparent 70%);
+      background: radial-gradient(circle, rgba(234, 88, 12, 0.10), transparent 70%);
       border-radius: 50%;
       pointer-events: none;
       transform: translate(-50%, -50%);
@@ -140,8 +140,8 @@
     /* Scanline effect for Hero Showcase */
     .cyber-frame {
       position: relative;
-      border: 1px solid rgba(251, 113, 33, 0.25);
-      box-shadow: 0 0 35px rgba(251, 113, 33, 0.15), inset 0 0 30px rgba(251, 113, 33, 0.05);
+      border: 1px solid rgba(234, 88, 12, 0.30);
+      box-shadow: 0 0 35px rgba(234, 88, 12, 0.12), inset 0 0 30px rgba(234, 88, 12, 0.04);
     }
 
     /* Smooth Custom Scrollbar */
@@ -149,10 +149,10 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #030508;
+      background: #f5f0eb;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1e293b;
+      background: #d4c4b0;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -183,33 +183,33 @@
       
       <!-- Brand Logo -->
       <a href="#about" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full bg-slate-900 border border-orange-500/40 p-1 flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform">
+        <div class="w-9 h-9 rounded-full bg-white border border-orange-500/40 p-1 flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform">
           <img src="{{ asset('assets/img/track-tech-logo.png') }}" alt="Track Tech Solution Logo" class="w-full h-full object-contain">
         </div>
-        <span class="font-heading font-bold text-base sm:text-lg tracking-tight text-white">
-          Track<span class="text-orange-400">Tech</span> <span class="text-xs uppercase tracking-widest text-slate-400 font-sans ml-0.5">Solution</span>
+        <span class="font-heading font-bold text-base sm:text-lg tracking-tight text-stone-900">
+          Track<span class="text-orange-400">Tech</span> <span class="text-xs uppercase tracking-widest text-stone-500 font-sans ml-0.5">Solution</span>
         </span>
       </a>
 
       <!-- Desktop Nav Items -->
-      <div class="hidden md:flex items-center gap-1 text-xs font-semibold text-slate-300">
-        <a href="#about" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-white/5 transition">About</a>
-        <a href="#products-studio" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-white/5 transition">Products</a>
-        <a href="#impact-stats" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-white/5 transition">Platform Impact</a>
-        <a href="#clients" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-white/5 transition">Key Clients</a>
-        <a href="#leadership" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-white/5 transition">Leadership</a>
-        <a href="#contact" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-white/5 transition">Contact</a>
+      <div class="hidden md:flex items-center gap-1 text-xs font-semibold text-stone-600">
+        <a href="#about" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-orange-50 transition">About</a>
+        <a href="#products-studio" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-orange-50 transition">Products</a>
+        <a href="#impact-stats" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-orange-50 transition">Platform Impact</a>
+        <a href="#clients" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-orange-50 transition">Key Clients</a>
+        <a href="#leadership" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-orange-50 transition">Leadership</a>
+        <a href="#contact" class="px-3.5 py-1.5 rounded-full hover:text-orange-400 hover:bg-orange-50 transition">Contact</a>
       </div>
 
       <!-- Action Button -->
       <div class="flex items-center gap-2">
         <a href="#contact"
-          class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-lg shadow-orange-500/25 hover:shadow-orange-400/40 hover:scale-105 transition-all">
+          class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-stone-900 text-xs font-bold px-5 py-2.5 rounded-full shadow-lg shadow-orange-500/25 hover:shadow-orange-400/40 hover:scale-105 transition-all">
           Experience Live Demo
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileNavBtn" class="md:hidden p-2 text-slate-300 hover:text-white" aria-label="Toggle Navigation">
+        <button id="mobileNavBtn" class="md:hidden p-2 text-stone-600 hover:text-stone-900" aria-label="Toggle Navigation">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -219,13 +219,13 @@
   </div>
 
   <!-- Mobile Dropdown Drawer -->
-  <div id="mobileDrawer" class="fixed inset-x-4 top-20 z-40 hidden md:hidden glass-card p-5 border border-white/10 shadow-2xl space-y-3">
-    <a href="#about" class="block py-2 text-sm font-semibold text-slate-300 hover:text-orange-400 border-b border-white/5">About</a>
-    <a href="#products-studio" class="block py-2 text-sm font-semibold text-slate-300 hover:text-orange-400 border-b border-white/5">Products Studio</a>
-    <a href="#impact-stats" class="block py-2 text-sm font-semibold text-slate-300 hover:text-orange-400 border-b border-white/5">Platform Impact</a>
-    <a href="#clients" class="block py-2 text-sm font-semibold text-slate-300 hover:text-orange-400 border-b border-white/5">Key Clients</a>
-    <a href="#leadership" class="block py-2 text-sm font-semibold text-slate-300 hover:text-orange-400 border-b border-white/5">Leadership Team</a>
-    <a href="#contact" class="block py-2 text-sm font-semibold text-slate-300 hover:text-orange-400">Contact Us</a>
+  <div id="mobileDrawer" class="fixed inset-x-4 top-20 z-40 hidden md:hidden glass-card p-5 border border-stone-200 shadow-2xl space-y-3">
+    <a href="#about" class="block py-2 text-sm font-semibold text-stone-600 hover:text-orange-400 border-b border-stone-100">About</a>
+    <a href="#products-studio" class="block py-2 text-sm font-semibold text-stone-600 hover:text-orange-400 border-b border-stone-100">Products Studio</a>
+    <a href="#impact-stats" class="block py-2 text-sm font-semibold text-stone-600 hover:text-orange-400 border-b border-stone-100">Platform Impact</a>
+    <a href="#clients" class="block py-2 text-sm font-semibold text-stone-600 hover:text-orange-400 border-b border-stone-100">Key Clients</a>
+    <a href="#leadership" class="block py-2 text-sm font-semibold text-stone-600 hover:text-orange-400 border-b border-stone-100">Leadership Team</a>
+    <a href="#contact" class="block py-2 text-sm font-semibold text-stone-600 hover:text-orange-400">Contact Us</a>
   </div>
 
 
@@ -237,27 +237,27 @@
       
       <!-- Headline & Introduction -->
       <div class="text-center space-y-6 max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-900/90 border border-orange-500/40 text-orange-300 backdrop-blur-md shadow-lg shadow-orange-500/10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-50 border border-orange-400/50 text-orange-600 backdrop-blur-md shadow-lg shadow-orange-500/10">
           <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span>
           Next-Gen Garment Manufacturing Intelligence
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-heading">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-stone-900 font-heading">
           A Clearer Way To <br class="hidden sm:inline" />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">Run Your Garment Factory</span>
         </h1>
 
-        <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        <p class="text-base sm:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
           From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening in real time, fix bottlenecks sooner and keep every order moving.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
           <a href="#contact"
-            class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-amber-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-sm shadow-xl shadow-orange-500/30 hover:scale-105 transition-all text-center">
+            class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-amber-600 hover:from-orange-400 hover:to-red-500 text-stone-900 font-bold text-sm shadow-xl shadow-orange-500/30 hover:scale-105 transition-all text-center">
             Schedule Factory Walkthrough
           </a>
           <a href="#products-studio"
-            class="w-full sm:w-auto px-7 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-white/15 hover:border-orange-500 transition-all text-center flex items-center justify-center gap-2">
+            class="w-full sm:w-auto px-7 py-4 rounded-full bg-white/80 hover:bg-orange-50 text-stone-700 hover:text-stone-900 font-semibold text-sm border border-stone-200 hover:border-orange-500 transition-all text-center flex items-center justify-center gap-2">
             <span>Explore Product Studio</span>
             <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </a>
@@ -265,14 +265,14 @@
       </div>
 
       <!-- 3D Apparel Video Showcase Screen -->
-      <div class="cyber-frame rounded-3xl overflow-hidden bg-slate-950/80 backdrop-blur-2xl shadow-2xl relative group">
+      <div class="cyber-frame rounded-3xl overflow-hidden bg-white/90 backdrop-blur-2xl shadow-2xl relative group">
         <!-- Top Tech Bar -->
-        <div class="bg-slate-900/90 px-5 py-3 border-b border-white/10 flex items-center justify-between text-xs">
+        <div class="bg-white/90 px-5 py-3 border-b border-stone-200 flex items-center justify-between text-xs">
           <div class="flex items-center gap-2">
             <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
             <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
             <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-            <span class="ml-2 font-mono text-[11px] text-slate-400">track-tech-os.live/telemetry/3d-apparel-simulation</span>
+            <span class="ml-2 font-mono text-[11px] text-stone-500">track-tech-os.live/telemetry/3d-apparel-simulation</span>
           </div>
           <div class="flex items-center gap-2 text-orange-400 font-mono text-[11px]">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -281,7 +281,7 @@
         </div>
 
         <!-- Video Viewport -->
-        <div class="relative aspect-[16/9] sm:aspect-[21/9] max-h-[480px] overflow-hidden bg-slate-950">
+        <div class="relative aspect-[16/9] sm:aspect-[21/9] max-h-[480px] overflow-hidden bg-orange-50">
           <video autoplay loop muted playsinline class="w-full h-full object-cover filter contrast-110 saturate-110">
             <source src="{{ asset('assets/video/apparel-3d-loop.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/apparel-3d-loop.mp4') }}" type="video/mp4">
@@ -289,16 +289,16 @@
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/20 pointer-events-none"></div>
 
           <!-- Floating Live Telemetry Cards on Video -->
-          <div class="absolute top-4 left-4 p-3 rounded-xl bg-slate-900/85 backdrop-blur-md border border-white/15 text-xs text-slate-300 space-y-1 hidden sm:block">
+          <div class="absolute top-4 left-4 p-3 rounded-xl bg-white/85 backdrop-blur-md border border-stone-200 text-xs text-stone-600 space-y-1 hidden sm:block">
             <div class="text-[10px] font-mono text-orange-400 font-bold uppercase">Workstation Speed</div>
-            <div class="font-bold text-white text-sm">4,280 Stitches / Min</div>
+            <div class="font-bold text-stone-900 text-sm">4,280 Stitches / Min</div>
             <div class="text-[10px] text-emerald-400">Zero skipped stitches detected</div>
           </div>
 
-          <div class="absolute bottom-4 right-4 p-3 rounded-xl bg-slate-900/85 backdrop-blur-md border border-white/15 text-xs text-slate-300 space-y-1 text-right hidden sm:block">
+          <div class="absolute bottom-4 right-4 p-3 rounded-xl bg-white/85 backdrop-blur-md border border-stone-200 text-xs text-stone-600 space-y-1 text-right hidden sm:block">
             <div class="text-[10px] font-mono text-amber-400 font-bold uppercase">AQL 1.5 Compliance</div>
-            <div class="font-bold text-white text-sm">99.1% First-Pass Pass</div>
-            <div class="text-[10px] text-orange-300">Active lines: 18 / 20 Operational</div>
+            <div class="font-bold text-stone-900 text-sm">99.1% First-Pass Pass</div>
+            <div class="text-[10px] text-orange-600">Active lines: 18 / 20 Operational</div>
           </div>
         </div>
       </div>
@@ -318,32 +318,32 @@
           <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 font-heading">
             500+
           </div>
-          <p class="text-sm font-bold text-slate-200">Active Sewing Lines</p>
-          <p class="text-xs text-slate-400">Across 74+ factory campuses</p>
+          <p class="text-sm font-bold text-stone-700">Active Sewing Lines</p>
+          <p class="text-xs text-stone-500">Across 74+ factory campuses</p>
         </div>
 
         <div class="glass-card p-6 text-center space-y-2">
           <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 font-heading">
             10M+
           </div>
-          <p class="text-sm font-bold text-slate-200">Daily Operations Logged</p>
-          <p class="text-xs text-slate-400">Floor operators and supervisors</p>
+          <p class="text-sm font-bold text-stone-700">Daily Operations Logged</p>
+          <p class="text-xs text-stone-500">Floor operators and supervisors</p>
         </div>
 
         <div class="glass-card p-6 text-center space-y-2">
           <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 font-heading">
             50M+
           </div>
-          <p class="text-sm font-bold text-slate-200">Pieces Inspected Monthly</p>
-          <p class="text-xs text-slate-400">Automated AQL and defect tracking</p>
+          <p class="text-sm font-bold text-stone-700">Pieces Inspected Monthly</p>
+          <p class="text-xs text-stone-500">Automated AQL and defect tracking</p>
         </div>
 
         <div class="glass-card p-6 text-center space-y-2">
           <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 font-heading">
             74+
           </div>
-          <p class="text-sm font-bold text-slate-200">Garment Factories</p>
-          <p class="text-xs text-slate-400">Established 2019 • 36 Specialists</p>
+          <p class="text-sm font-bold text-stone-700">Garment Factories</p>
+          <p class="text-xs text-stone-500">Established 2019 • 36 Specialists</p>
         </div>
 
       </div>
@@ -355,25 +355,25 @@
        4. COMPANY PROFILE SECTION
   ═══════════════════════════════════════════════════════════════════ -->
   <section id="company-profile" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-12 lg:p-16 border border-white/10">
+    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-12 lg:p-16 border border-stone-200">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <div class="lg:col-span-6 space-y-6">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
             <span>Track Tech Solutions</span>
             <span class="text-slate-500">/</span>
-            <span class="text-slate-400">EST. 2019</span>
+            <span class="text-stone-500">EST. 2019</span>
           </div>
 
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white leading-tight">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-stone-900 leading-tight">
             Digital clarity for the people who make apparel
           </h2>
 
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
             Track Tech Solutions builds practical digital tools engineered specifically for apparel manufacturing. The platform connects production, quality, planning, materials, and factory-floor teams—helping people see what is happening and act while there is still time to improve the outcome.
           </p>
 
-          <div class="pt-2 flex items-center gap-6 text-xs font-semibold text-slate-400">
+          <div class="pt-2 flex items-center gap-6 text-xs font-semibold text-stone-500">
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-orange-400"></span> 2 Global Countries
             </div>
@@ -387,24 +387,24 @@
         </div>
 
         <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-2 hover:border-orange-500/40 transition">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">01. Floor MES</div>
-            <p class="text-xs text-slate-400 leading-relaxed">Bundle RFID tracking, cutting-to-pack pipelines, and live operator scorecards.</p>
+            <p class="text-xs text-stone-500 leading-relaxed">Bundle RFID tracking, cutting-to-pack pipelines, and live operator scorecards.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-2 hover:border-orange-500/40 transition">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">02. Dynamic Gantt</div>
-            <p class="text-xs text-slate-400 leading-relaxed">Fast-react multi-line scheduling, SAM variance management, and milestone forecasting.</p>
+            <p class="text-xs text-stone-500 leading-relaxed">Fast-react multi-line scheduling, SAM variance management, and milestone forecasting.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-2 hover:border-orange-500/40 transition">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">03. Machine IoT</div>
-            <p class="text-xs text-slate-400 leading-relaxed">RPM telemetry, vibration sensors, predictive motor alerts, and QR mechanic dispatch.</p>
+            <p class="text-xs text-stone-500 leading-relaxed">RPM telemetry, vibration sensors, predictive motor alerts, and QR mechanic dispatch.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-2 hover:border-orange-500/40 transition">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">04. Quality AI</div>
-            <p class="text-xs text-slate-400 leading-relaxed">Inline stitch defect heatmaps, zero-scrap fabric markers, and automated AQL 1.5 audits.</p>
+            <p class="text-xs text-stone-500 leading-relaxed">Inline stitch defect heatmaps, zero-scrap fabric markers, and automated AQL 1.5 audits.</p>
           </div>
         </div>
 
@@ -423,10 +423,10 @@
         <span class="text-xs font-bold uppercase tracking-widest text-orange-400 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 inline-block">
           Interactive Product Studio
         </span>
-        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
           The tools your factory team needs, in one place
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base">
+        <p class="text-stone-500 text-sm sm:text-base">
           Click any product below to preview live software dashboards, operational stages, and factory benefits.
         </p>
       </div>
@@ -440,47 +440,47 @@
         </div>
 
         <!-- Right Interactive Display Card -->
-        <div class="lg:col-span-8 glass-card p-6 sm:p-8 border border-white/10 space-y-6" id="productDisplayCard">
+        <div class="lg:col-span-8 glass-card p-6 sm:p-8 border border-stone-200 space-y-6" id="productDisplayCard">
           
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-stone-200">
             <div>
               <span class="text-xs font-mono font-bold text-orange-400 uppercase tracking-widest" id="studioProductNumber">PRODUCT 01 / MES</span>
-              <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white mt-0.5" id="studioProductTitle">TrakWel</h3>
+              <h3 class="text-2xl sm:text-3xl font-bold font-heading text-stone-900 mt-0.5" id="studioProductTitle">TrakWel</h3>
             </div>
-            <a href="#contact" class="px-5 py-2 rounded-full bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-300 font-bold text-xs transition flex items-center gap-2 self-start sm:self-auto">
+            <a href="#contact" class="px-5 py-2 rounded-full bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/40 text-orange-600 font-bold text-xs transition flex items-center gap-2 self-start sm:self-auto">
               <span>Book Solution Walkthrough</span>
               <span>→</span>
             </a>
           </div>
 
-          <p class="text-sm text-slate-300 leading-relaxed" id="studioProductDesc">
+          <p class="text-sm text-stone-600 leading-relaxed" id="studioProductDesc">
             Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.
           </p>
 
           <!-- 3 Stages Workflow -->
           <div class="grid grid-cols-3 gap-3">
-            <div class="p-3 rounded-xl bg-slate-900/90 border border-white/5 text-center">
+            <div class="p-3 rounded-xl bg-white/90 border border-stone-100 text-center">
               <span class="text-[10px] font-mono text-slate-500 font-bold block">STAGE 01</span>
-              <span class="text-xs font-bold text-slate-200 mt-1 block" id="studioStage1">Track</span>
+              <span class="text-xs font-bold text-stone-700 mt-1 block" id="studioStage1">Track</span>
             </div>
-            <div class="p-3 rounded-xl bg-slate-900/90 border border-white/5 text-center">
+            <div class="p-3 rounded-xl bg-white/90 border border-stone-100 text-center">
               <span class="text-[10px] font-mono text-slate-500 font-bold block">STAGE 02</span>
-              <span class="text-xs font-bold text-slate-200 mt-1 block" id="studioStage2">Monitor</span>
+              <span class="text-xs font-bold text-stone-700 mt-1 block" id="studioStage2">Monitor</span>
             </div>
-            <div class="p-3 rounded-xl bg-slate-900/90 border border-white/5 text-center">
+            <div class="p-3 rounded-xl bg-white/90 border border-stone-100 text-center">
               <span class="text-[10px] font-mono text-slate-500 font-bold block">STAGE 03</span>
-              <span class="text-xs font-bold text-slate-200 mt-1 block" id="studioStage3">Improve</span>
+              <span class="text-xs font-bold text-stone-700 mt-1 block" id="studioStage3">Improve</span>
             </div>
           </div>
 
           <!-- Software Screenshot Device Preview -->
-          <div class="rounded-2xl overflow-hidden border border-white/10 bg-slate-950 shadow-2xl relative group">
-            <div class="bg-slate-900 px-4 py-2 border-b border-white/5 flex items-center justify-between text-xs">
+          <div class="rounded-2xl overflow-hidden border border-stone-200 bg-orange-50 shadow-2xl relative group">
+            <div class="bg-white px-4 py-2 border-b border-stone-100 flex items-center justify-between text-xs">
               <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <span class="ml-2 font-mono text-[10px] text-slate-400" id="studioUrlMock">track-tech.live/apps/trakwel</span>
+                <span class="ml-2 font-mono text-[10px] text-stone-500" id="studioUrlMock">track-tech.live/apps/trakwel</span>
               </div>
               <span class="text-[10px] font-mono text-orange-400" id="studioStatusMock">LIVE DASHBOARD</span>
             </div>
@@ -508,10 +508,10 @@
         <span class="text-xs font-bold uppercase tracking-widest text-orange-400 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 inline-block">
           Trusted Worldwide
         </span>
-        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
           Technology trusted by apparel makers
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base">
+        <p class="text-stone-500 text-sm sm:text-base">
           From established manufacturing giants to specialist apparel exporters.
         </p>
       </div>
@@ -540,16 +540,16 @@
 
           <!-- Loop 1 -->
           @foreach($clients as $c)
-          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-white/10 hover:border-orange-500/50 transition">
-            <span class="font-heading font-black text-white text-base tracking-wider">{{ $c['name'] }}</span>
+          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-stone-200 hover:border-orange-500/50 transition">
+            <span class="font-heading font-black text-stone-900 text-base tracking-wider">{{ $c['name'] }}</span>
             <span class="text-[11px] text-orange-400 font-medium mt-1">{{ $c['desc'] }}</span>
           </div>
           @endforeach
 
           <!-- Loop 2 (Seamless loop) -->
           @foreach($clients as $c)
-          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-white/10 hover:border-orange-500/50 transition" aria-hidden="true">
-            <span class="font-heading font-black text-white text-base tracking-wider">{{ $c['name'] }}</span>
+          <div class="w-64 p-5 rounded-2xl glass-card flex flex-col justify-center text-center shrink-0 border border-stone-200 hover:border-orange-500/50 transition" aria-hidden="true">
+            <span class="font-heading font-black text-stone-900 text-base tracking-wider">{{ $c['name'] }}</span>
             <span class="text-[11px] text-orange-400 font-medium mt-1">{{ $c['desc'] }}</span>
           </div>
           @endforeach
@@ -571,10 +571,10 @@
         <span class="text-xs font-bold uppercase tracking-widest text-orange-400 px-3.5 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 inline-block">
           Our Leadership Team
         </span>
-        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
           Built around manufacturing, operations & tech
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base">
+        <p class="text-stone-500 text-sm sm:text-base">
           Three perspectives working together to make factory software practical, dependable and useful on the floor.
         </p>
       </div>
@@ -584,19 +584,19 @@
         <!-- Gopinath M. -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-stone-900 font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
               GM
             </div>
             <div>
               <span class="text-[11px] font-mono text-orange-400 font-bold uppercase">CHIEF EXECUTIVE OFFICER</span>
-              <h3 class="text-xl font-bold font-heading text-white mt-0.5">Gopinath M. (Muniraj)</h3>
+              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Gopinath M. (Muniraj)</h3>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
+            <p class="text-xs text-stone-600 leading-relaxed">
               Gopinath's career spans apparel manufacturing and digital solutions, including regional sales leadership at Coats Digital and roles associated with Arvind Limited and K Mohan Exports. At Track Tech, he leads the company's direction and factory digital transformation.
             </p>
           </div>
-          <div class="pt-4 border-t border-white/10">
-            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener" class="text-xs font-bold text-orange-400 hover:text-orange-300 transition flex items-center gap-1.5">
+          <div class="pt-4 border-t border-stone-200">
+            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener" class="text-xs font-bold text-orange-400 hover:text-orange-600 transition flex items-center gap-1.5">
               <span>Professional Profile</span>
               <span>↗</span>
             </a>
@@ -606,18 +606,18 @@
         <!-- Lebinesh Balan -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-amber-500/20">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-stone-900 font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-amber-500/20">
               LB
             </div>
             <div>
               <span class="text-[11px] font-mono text-amber-400 font-bold uppercase">CHIEF OPERATING OFFICER</span>
-              <h3 class="text-xl font-bold font-heading text-white mt-0.5">Lebinesh Balan</h3>
+              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Lebinesh Balan</h3>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
+            <p class="text-xs text-stone-600 leading-relaxed">
               Lebinesh focuses on turning strategy into consistent delivery: aligning customer implementation, teams, and day-to-day operations. His work as COO supports smooth adoption of Track Tech across factory environments and keeps customer needs connected to execution.
             </p>
           </div>
-          <div class="pt-4 border-t border-white/10">
+          <div class="pt-4 border-t border-stone-200">
             <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener" class="text-xs font-bold text-amber-400 hover:text-amber-300 transition flex items-center gap-1.5">
               <span>LinkedIn Profile</span>
               <span>↗</span>
@@ -628,19 +628,19 @@
         <!-- Deepak Rajkumar -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/20">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 text-stone-900 font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/20">
               DR
             </div>
             <div>
               <span class="text-[11px] font-mono text-red-400 font-bold uppercase">CHIEF TECHNOLOGY OFFICER</span>
-              <h3 class="text-xl font-bold font-heading text-white mt-0.5">Deepak Rajkumar</h3>
+              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Deepak Rajkumar</h3>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
+            <p class="text-xs text-stone-600 leading-relaxed">
               Deepak guides the technology behind the platform, with a focus on reliable product engineering, useful integrations, and clear information for factory teams. As CTO, he helps turn complex manufacturing workflows into software people can use with confidence.
             </p>
           </div>
-          <div class="pt-4 border-t border-white/10">
-            <span class="text-xs font-mono text-slate-400">Software Architecture & IoT</span>
+          <div class="pt-4 border-t border-stone-200">
+            <span class="text-xs font-mono text-stone-500">Software Architecture & IoT</span>
           </div>
         </div>
 
@@ -654,56 +654,56 @@
        8. CONTACT & FOOTER SECTION
   ═══════════════════════════════════════════════════════════════════ -->
   <section id="contact" class="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-12 lg:p-16 border border-white/10 space-y-12">
+    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-12 lg:p-16 border border-stone-200 space-y-12">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
         <div class="lg:col-span-6 space-y-6">
           <span class="text-xs font-bold uppercase tracking-widest text-orange-400">Let's Connect</span>
-          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
             Want a clearer view of your factory?
           </h2>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
             Tell us how your lines work today. We will show you where Track Tech can remove manual follow-up, optimize floor WIP, and keep every shipment on time.
           </p>
 
           <div class="pt-2 flex flex-col sm:flex-row gap-4">
             <a href="mailto:sales@tracktechsolutions.com"
-              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
+              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-stone-900 font-bold text-sm shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
               Email Sales Team
             </a>
             <a href="tel:+919650613666"
-              class="px-7 py-3.5 rounded-full bg-slate-900 border border-white/15 hover:border-orange-500 text-slate-200 hover:text-white font-bold text-sm transition text-center">
+              class="px-7 py-3.5 rounded-full bg-white border border-stone-200 hover:border-orange-500 text-stone-700 hover:text-stone-900 font-bold text-sm transition text-center">
               Call +91 96506 13666
             </a>
           </div>
         </div>
 
         <div class="lg:col-span-6 space-y-4">
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-1">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
             <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Head Office</div>
-            <div class="text-sm font-semibold text-white">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
+            <div class="text-sm font-semibold text-stone-900">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-1">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
             <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Direct Mail</div>
-            <div class="text-sm font-semibold text-white">
+            <div class="text-sm font-semibold text-stone-900">
               <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-400 transition">Lebinesh@tracktechsolutions.com</a> • 
               <a href="mailto:sales@tracktechsolutions.com" class="hover:text-orange-400 transition">sales@tracktechsolutions.com</a>
             </div>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-1">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
             <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Phone Telephony</div>
-            <div class="text-sm font-semibold text-white">
+            <div class="text-sm font-semibold text-stone-900">
               <a href="tel:+919650613666" class="hover:text-orange-400 transition">+91 96506 13666</a> / 
               <a href="tel:+919742060606" class="hover:text-orange-400 transition">+91 97420 60606</a>
             </div>
           </div>
 
-          <div class="p-5 rounded-2xl bg-slate-900/80 border border-white/5 space-y-1">
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
             <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">LinkedIn Company</div>
-            <div class="text-sm font-semibold text-white">
+            <div class="text-sm font-semibold text-stone-900">
               <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener" class="hover:text-orange-400 transition">linkedin.com/company/track-tech-solution</a>
             </div>
           </div>
@@ -712,16 +712,16 @@
       </div>
 
       <!-- Footer Bottom Bar -->
-      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="pt-8 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <div class="flex items-center gap-3">
           <img src="{{ asset('assets/img/track-tech-logo.png') }}" alt="Logo" class="w-6 h-6 object-contain opacity-70">
           <span>&copy; {{ date('Y') }} Track Tech Solution. All rights reserved. Made in India.</span>
         </div>
         <div class="flex items-center gap-6">
-          <a href="#about" class="hover:text-slate-300 transition">Home</a>
-          <a href="#products-studio" class="hover:text-slate-300 transition">Products</a>
-          <a href="#clients" class="hover:text-slate-300 transition">Clients</a>
-          <a href="#contact" class="hover:text-slate-300 transition">Contact</a>
+          <a href="#about" class="hover:text-stone-600 transition">Home</a>
+          <a href="#products-studio" class="hover:text-stone-600 transition">Products</a>
+          <a href="#clients" class="hover:text-stone-600 transition">Clients</a>
+          <a href="#contact" class="hover:text-stone-600 transition">Contact</a>
         </div>
       </div>
 
@@ -729,7 +729,7 @@
   </section>
 
   <!-- Floating WhatsApp Quick Button -->
-  <a class="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl shadow-emerald-500/30 hover:scale-110 transition-transform flex items-center justify-center"
+  <a class="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-stone-900 shadow-xl shadow-emerald-500/30 hover:scale-110 transition-transform flex items-center justify-center"
     href="https://wa.me/919650613666?text=Hello%20Track%20Tech%20Solution%2C%20I%27d%20like%20to%20know%20more%20about%20your%20solutions."
     target="_blank" rel="noopener" aria-label="Chat with Track Tech Solution on WhatsApp">
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -845,8 +845,8 @@
         const btn = document.createElement('button');
         btn.className = `w-full text-left p-3.5 rounded-2xl transition-all flex items-center justify-between text-xs font-semibold cursor-pointer ${
           isActive 
-            ? 'bg-orange-500/20 border border-orange-500/50 text-white shadow-lg shadow-orange-500/15' 
-            : 'bg-slate-900/60 border border-white/5 text-slate-400 hover:bg-slate-800/80 hover:text-slate-200'
+            ? 'bg-orange-500/20 border border-orange-500/50 text-stone-900 shadow-lg shadow-orange-500/15' 
+            : 'bg-white/60 border border-stone-100 text-stone-500 hover:bg-orange-50/80 hover:text-stone-700'
         }`;
         btn.innerHTML = `
           <div class="flex items-center gap-3">
