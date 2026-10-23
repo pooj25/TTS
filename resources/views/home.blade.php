@@ -322,7 +322,10 @@
           </h2>
 
           <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
-            Track Tech Solutions builds practical digital tools engineered specifically for apparel manufacturing. The platform connects production, quality, planning, materials, and factory-floor teams—helping people see what is happening and act while there is still time to improve the outcome.
+            Track Tech Solutions builds practical digital tools for apparel manufacturing. The platform connects production, quality, planning, materials and factory-floor teams, helping people see what is happening and act while there is still time to improve the outcome.
+          </p>
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+            Since 2019, the team has focused on bringing useful technology closer to everyday factory work, supporting implementation across more than 74 factories in two countries.
           </p>
 
           <div class="pt-2 flex items-center gap-6 text-xs font-semibold text-stone-500">
@@ -333,7 +336,7 @@
               <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 36 Tech Specialists
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-indigo-400"></span> 100% Customer Focused
+              <span class="w-2 h-2 rounded-full bg-indigo-400"></span> 74+ Factories
             </div>
           </div>
         </div>
@@ -625,7 +628,7 @@
           <ellipse cx="100" cy="31" rx="39" ry="23" fill="none" stroke="#24252a" stroke-width="3" />
           <path d="M66 31h68M100 9v44" stroke="#24252a" stroke-width="2" />
           <path d="M82 17 100 10l18 7v24l-18 12-18-12z" fill="#b32333" stroke="#202126" stroke-width="2" />
-          <text x="100" y="72" fill="#17191c" font-family="Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">MODELARNA EXPORTS</text>
+          <text x="100" y="72" fill="#17191c" font-family="Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">MODELAMA EXPORTS</text>
         </symbol>
         <symbol id="armstrong" viewBox="0 0 200 80">
           <path d="M12 16h30L18 64H0z" fill="#c93635" />
@@ -716,7 +719,7 @@
 
       </div>
 
-      <!-- Stable Company Facts & Metrics Bar (Screenshot 2) -->
+      <!-- Stable Company Facts & Metrics Bar -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-0 bg-white/95 glass-card border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-stone-200/90">
         
         <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
@@ -727,6 +730,11 @@
         <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
           <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">74+</strong>
           <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Factories</span>
+        </div>
+
+        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
+          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">6000+</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Users</span>
         </div>
 
         <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
@@ -771,11 +779,14 @@
               GM
             </div>
             <div>
-              <span class="text-[11px] font-mono text-orange-400 font-bold uppercase">CHIEF EXECUTIVE OFFICER</span>
-              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Gopinath M. (Muniraj)</h3>
+              <span class="text-[11px] font-mono text-orange-400 font-bold uppercase">Founder & Chief Executive Officer (CEO)</span>
+              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Gopinath Muniraj</h3>
             </div>
             <p class="text-xs text-stone-600 leading-relaxed">
-              Gopinath's career spans apparel manufacturing and digital solutions, including regional sales leadership at Coats Digital and roles associated with Arvind Limited and K Mohan Exports. At Track Tech, he leads the company's direction and factory digital transformation.
+              Gopinath Muniraj is a technology entrepreneur and innovator with over two decades of experience addressing challenges in apparel manufacturing. Having worked closely with factories across South India, he brings deep industry understanding and a vision for technology-driven transformation.
+            </p>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              As Founder and CEO of Track Tech Solution, he leads the development of intelligent digital solutions that help apparel manufacturers streamline operations, leverage data and improve productivity through automation, AI and Industrial IoT. His vision is to empower factory teams, enable data-driven decisions and build smarter, more efficient and connected manufacturing environments.
             </p>
           </div>
           <div class="pt-4 border-t border-stone-200">
@@ -793,11 +804,14 @@
               LB
             </div>
             <div>
-              <span class="text-[11px] font-mono text-amber-400 font-bold uppercase">CHIEF OPERATING OFFICER</span>
+              <span class="text-[11px] font-mono text-amber-400 font-bold uppercase">Co-Founder & Chief Operating Officer (COO)</span>
               <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Lebinesh Balan</h3>
             </div>
             <p class="text-xs text-stone-600 leading-relaxed">
-              Lebinesh focuses on turning strategy into consistent delivery: aligning customer implementation, teams, and day-to-day operations. His work as COO supports smooth adoption of Track Tech across factory environments and keeps customer needs connected to execution.
+              With close to two decades of experience in digital transformation, particularly in apparel manufacturing, Lebinesh Balan leads business strategy, sales, operations, and commercial growth. He helps apparel manufacturers embrace digital technologies to digitise shop-floor operations, optimise production planning, and enhance productivity and operational visibility.
+            </p>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Combining deep industry understanding with strategic leadership, he bridges the gap between manufacturing challenges and technology innovation to deliver measurable business outcomes, build lasting customer partnerships, and drive sustainable growth.
             </p>
           </div>
           <div class="pt-4 border-t border-stone-200">
@@ -815,11 +829,14 @@
               DR
             </div>
             <div>
-              <span class="text-[11px] font-mono text-red-400 font-bold uppercase">CHIEF TECHNOLOGY OFFICER</span>
+              <span class="text-[11px] font-mono text-red-400 font-bold uppercase">Co-Founder & Chief Technology Officer (CTO)</span>
               <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Deepak Rajkumar</h3>
             </div>
             <p class="text-xs text-stone-600 leading-relaxed">
-              Deepak guides the technology behind the platform, with a focus on reliable product engineering, useful integrations, and clear information for factory teams. As CTO, he helps turn complex manufacturing workflows into software people can use with confidence.
+              Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, building scalable solutions that address complex manufacturing challenges.
+            </p>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              His expertise spans software architecture, production tracking, fabric inventory management, cutting-room digitisation, AI and Industrial IoT. Passionate about innovation, he focuses on connecting traditional manufacturing processes with intelligent, data-driven factory ecosystems to improve operational efficiency, visibility and business performance.
             </p>
           </div>
           <div class="pt-4 border-t border-stone-200">
@@ -842,18 +859,19 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
         <div class="lg:col-span-6 space-y-6">
-          <span class="text-xs font-bold uppercase tracking-widest text-orange-400">Let's Connect</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-400">Let's Talk</span>
           <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
-            Want a clearer view of your factory?
+            Make Your Factory Smarter with Track Tech Solution
           </h2>
           <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
-            Tell us how your lines work today. We will show you where Track Tech can remove manual follow-up, optimize floor WIP, and keep every shipment on time.
+            Discover how our integrated digital solutions for shop-floor monitoring, cutting room management, production planning, Time and Action (T&A) and machine maintenance can help you improve efficiency, enhance visibility, and drive operational excellence.<br><br>
+            Let's discuss your challenges and find the right solution for your factory.
           </p>
 
           <div class="pt-2 flex flex-col sm:flex-row gap-4">
             <a href="mailto:sales@tracktechsolutions.com"
               class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
-              Email Sales Team
+              Talk to Sales
             </a>
             <a href="tel:+919650613666"
               class="px-7 py-3.5 rounded-full bg-white border border-stone-200 hover:border-orange-500 text-stone-700 hover:text-stone-900 font-bold text-sm transition text-center">
