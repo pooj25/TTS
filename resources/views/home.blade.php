@@ -192,7 +192,37 @@
       <!-- Desktop Nav Items -->
       <div class="hidden md:flex items-center gap-1 xl:gap-2 text-sm md:text-[17px] font-semibold text-stone-700">
         <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">About</a>
-        <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Products</a>
+
+        <!-- Products Dropdown Menu -->
+        <div class="relative group">
+          <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition flex items-center gap-1.5 cursor-pointer">
+            <span>Products</span>
+            <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-orange-600 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <!-- Dropdown Popup -->
+          <div class="absolute left-0 top-full pt-2 w-80 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200 shadow-2xl p-3 space-y-1">
+              <div class="text-[11px] font-bold uppercase tracking-wider text-teal-700 px-3 py-1 bg-teal-50 rounded-lg">TrakWel Suite</div>
+              <a href="#products" onclick="navigateToProduct('trakwel')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">TrakWel (MES)</a>
+              <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Fabric Inventory Management</a>
+              <a href="#products" onclick="navigateToProduct('cutting-room')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Cutting Room Digitization</a>
+              <a href="#products" onclick="navigateToProduct('production-tracking')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Real-Time Production Tracking</a>
+              <a href="#products" onclick="navigateToProduct('quality-management')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Quality Management System</a>
+              <div class="pt-2 border-t border-stone-100">
+                <a href="#products" onclick="navigateToProduct('planwel')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">PlanWel</a>
+                <a href="#products" onclick="navigateToProduct('mtrak')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">mTrak</a>
+                <a href="#products" onclick="navigateToProduct('sewiot')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">SewIoT</a>
+              </div>
+              <div class="pt-2 border-t border-stone-100">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-teal-700 px-3 py-1 bg-teal-50 rounded-lg">Industry Solutions</div>
+                <a href="#products" onclick="navigateToProduct('laundry')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Laundry Management</a>
+                <a href="#products" onclick="navigateToProduct('jig')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Jig Management</a>
+                <a href="#products" onclick="navigateToProduct('shrinkage')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Shrinkage Testing App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Clients</a>
         <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Leadership</a>
         <a href="#contact" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Contact</a>
@@ -389,21 +419,22 @@
       <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
 
         <!-- LEFT: Accordion Sidebar -->
-        <div class="w-full lg:w-72 xl:w-80 flex-shrink-0 bg-white/90 glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-sm" id="prod-sidebar">
+        <div class="w-full lg:w-72 xl:w-80 flex-shrink-0 bg-white/95 glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-sm" id="prod-sidebar">
 
-          <!-- TrakWel group — clickable + expandable -->
+          <!-- TrakWel group: Single unified row with chevron (Expanded by default) -->
           <div>
-            <div class="flex items-stretch border-b border-stone-200">
-              <button onclick="selectProduct('trakwel')" id="btn-trakwel" class="prod-item flex-1 text-left px-5 py-4 font-bold text-base text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition active-prod">TrakWel</button>
-              <button onclick="toggleGroup('trakwel')" class="px-3 bg-teal-50 hover:bg-teal-100 transition border-l border-stone-200" id="grp-trakwel-btn" title="Expand sub-products">
-                <svg id="grp-trakwel-icon" class="w-4 h-4 transition-transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-            </div>
-            <div id="grp-trakwel" class="divide-y divide-stone-100 hidden">
-              <button onclick="selectProduct('fabric-inventory')" id="btn-fabric-inventory" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Fabric Inventory Management</button>
-              <button onclick="selectProduct('cutting-room')" id="btn-cutting-room" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Cutting Room Digitization</button>
-              <button onclick="selectProduct('production-tracking')" id="btn-production-tracking" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Real-Time Production Tracking</button>
-              <button onclick="selectProduct('quality-management')" id="btn-quality-management" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Quality Management System</button>
+            <button onclick="handleGroupClick('trakwel')" id="btn-trakwel" class="prod-item w-full flex items-center justify-between px-5 py-4 font-bold text-base transition border-b border-stone-200 active-prod">
+              <span>TrakWel</span>
+              <svg id="grp-trakwel-icon" class="w-4 h-4 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <!-- Dropdown sub-items (visible by default) -->
+            <div id="grp-trakwel" class="divide-y divide-stone-100 bg-white">
+              <button onclick="selectProduct('fabric-inventory')" id="btn-fabric-inventory" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50/70 hover:text-teal-700 transition">Fabric Inventory Management</button>
+              <button onclick="selectProduct('cutting-room')" id="btn-cutting-room" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50/70 hover:text-teal-700 transition">Cutting Room Digitization</button>
+              <button onclick="selectProduct('production-tracking')" id="btn-production-tracking" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50/70 hover:text-teal-700 transition">Real-Time Production Tracking</button>
+              <button onclick="selectProduct('quality-management')" id="btn-quality-management" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50/70 hover:text-teal-700 transition">Quality Management System</button>
             </div>
           </div>
 
@@ -430,19 +461,21 @@
 
           <!-- Industry Solutions group -->
           <div class="border-t border-stone-200">
-            <button onclick="toggleGroup('industry')" class="w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-900 bg-teal-50 hover:bg-teal-100 transition" id="grp-industry-btn">
+            <button onclick="handleGroupClick('industry')" id="btn-industry" class="prod-item w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">
               <span>Industry Solutions</span>
-              <svg id="grp-industry-icon" class="w-4 h-4 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+              <svg id="grp-industry-icon" class="w-4 h-4 transition-transform duration-200 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+              </svg>
             </button>
-            <div id="grp-industry" class="divide-y divide-stone-100 hidden">
-              <button onclick="selectProduct('laundry')" id="btn-laundry" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Laundry Management</button>
-              <button onclick="selectProduct('jig')" id="btn-jig" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Jig Management</button>
-              <button onclick="selectProduct('shrinkage')" id="btn-shrinkage" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Shrinkage Testing App</button>
+            <!-- Dropdown sub-items (hidden by default) -->
+            <div id="grp-industry" class="divide-y divide-stone-100 hidden bg-white">
+              <button onclick="selectProduct('laundry')" id="btn-laundry" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50/70 hover:text-teal-700 transition">Laundry Management</button>
+              <button onclick="selectProduct('jig')" id="btn-jig" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50/70 hover:text-teal-700 transition">Jig Management</button>
+              <button onclick="selectProduct('shrinkage')" id="btn-shrinkage" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50/70 hover:text-teal-700 transition">Shrinkage Testing App</button>
             </div>
           </div>
 
         </div>
-
         <!-- RIGHT: Product Detail Panel -->
         <div class="flex-1 glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-sm min-h-[380px]" id="prod-detail">
 
@@ -602,6 +635,23 @@
             <div class="md:w-1/2 h-56 md:h-auto">
               <img src="{{ asset('images/shrinkage-testing-app.png') }}" alt="Shrinkage Testing App" class="w-full h-full object-cover">
             </div>
+
+          <!-- industry solutions overview panel -->
+          <div id="panel-industry" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Industry Solutions</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Specialized shop-floor applications tailored for apparel manufacturers. From Laundry Management to Jig tracking and Shrinkage testing, digitise every specialised corner of your manufacturing workflow.</p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <button onclick="selectProduct('laundry')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Laundry Management →</button>
+                <button onclick="selectProduct('jig')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Jig Management →</button>
+                <button onclick="selectProduct('shrinkage')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Shrinkage Testing App →</button>
+              </div>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow mt-3">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/laundry-management.png') }}" alt="Industry Solutions" class="w-full h-full object-cover">
+            </div>
+          </div>
           </div>
 
         </div>
@@ -610,34 +660,106 @@
   </section>
 
   <script>
+    function handleGroupClick(group) {
+      var el = document.getElementById('grp-' + group);
+      var icon = document.getElementById('grp-' + group + '-icon');
+      
+      if (el) {
+        if (el.classList.contains('hidden')) {
+          el.classList.remove('hidden');
+          if (icon) {
+            icon.classList.add('rotate-180');
+            icon.classList.remove('rotate-0');
+          }
+        } else {
+          el.classList.add('hidden');
+          if (icon) {
+            icon.classList.remove('rotate-180');
+            icon.classList.add('rotate-0');
+          }
+        }
+      }
+      selectProduct(group);
+    }
+
     function selectProduct(key) {
       // Hide all panels
-      document.querySelectorAll('.prod-panel').forEach(p => { p.classList.add('hidden'); p.classList.remove('flex'); });
-      // Remove active from all buttons
-      document.querySelectorAll('.prod-item').forEach(b => b.classList.remove('active-prod'));
+      document.querySelectorAll('.prod-panel').forEach(function(p) { 
+        p.classList.add('hidden'); 
+        p.classList.remove('flex'); 
+      });
+
+      // Remove active classes from all buttons
+      document.querySelectorAll('.prod-item').forEach(function(b) {
+        b.classList.remove('active-prod', 'active-subprod');
+      });
+
+      // Auto-open parent group if subproduct is clicked
+      var trakwelSubs = ['fabric-inventory', 'cutting-room', 'production-tracking', 'quality-management'];
+      var industrySubs = ['laundry', 'jig', 'shrinkage'];
+
+      if (trakwelSubs.indexOf(key) !== -1) {
+        var trakwelEl = document.getElementById('grp-trakwel');
+        var trakwelIcon = document.getElementById('grp-trakwel-icon');
+        if (trakwelEl && trakwelEl.classList.contains('hidden')) {
+          trakwelEl.classList.remove('hidden');
+          if (trakwelIcon) {
+            trakwelIcon.classList.add('rotate-180');
+            trakwelIcon.classList.remove('rotate-0');
+          }
+        }
+      }
+
+      if (industrySubs.indexOf(key) !== -1) {
+        var indEl = document.getElementById('grp-industry');
+        var indIcon = document.getElementById('grp-industry-icon');
+        if (indEl && indEl.classList.contains('hidden')) {
+          indEl.classList.remove('hidden');
+          if (indIcon) {
+            indIcon.classList.add('rotate-180');
+            indIcon.classList.remove('rotate-0');
+          }
+        }
+      }
+
       // Show selected panel
       var panel = document.getElementById('panel-' + key);
-      if (panel) { panel.classList.remove('hidden'); panel.classList.add('flex'); }
-      // Highlight button
+      if (panel) { 
+        panel.classList.remove('hidden'); 
+        panel.classList.add('flex'); 
+      }
+
+      // Highlight active button
       var btn = document.getElementById('btn-' + key);
-      if (btn) btn.classList.add('active-prod');
+      if (btn) {
+        if (trakwelSubs.indexOf(key) !== -1 || industrySubs.indexOf(key) !== -1) {
+          btn.classList.add('active-subprod');
+        } else {
+          btn.classList.add('active-prod');
+        }
+      }
     }
-    function toggleGroup(id) {
-      var el = document.getElementById('grp-' + id);
-      var icon = document.getElementById('grp-' + id + '-icon');
-      if (el.classList.contains('hidden')) {
-        el.classList.remove('hidden');
-        icon.classList.add('rotate-0');
-        icon.classList.remove('rotate-180');
-      } else {
-        el.classList.add('hidden');
-        icon.classList.remove('rotate-0');
-        icon.classList.add('rotate-180');
+
+    function navigateToProduct(key) {
+      selectProduct(key);
+      var sec = document.getElementById('products');
+      if (sec) {
+        sec.scrollIntoView({ behavior: 'smooth' });
       }
     }
   </script>
   <style>
-    .active-prod { background-color: #ccfbf1; color: #0f766e; font-weight: 700; border-left: 3px solid #14b8a6; }
+    .active-prod { 
+      background-color: #d9fbf1 !important; 
+      color: #0d8070 !important; 
+      font-weight: 700 !important; 
+    }
+    .active-subprod { 
+      background-color: #e6faf5 !important; 
+      color: #0d8070 !important; 
+      font-weight: 700 !important; 
+      border-left: 4px solid #0d9488 !important; 
+    }
   </style>
 
 
