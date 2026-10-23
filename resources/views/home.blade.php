@@ -391,14 +391,16 @@
         <!-- LEFT: Accordion Sidebar -->
         <div class="w-full lg:w-72 xl:w-80 flex-shrink-0 bg-white/90 glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-sm" id="prod-sidebar">
 
-          <!-- TrakWel group -->
+          <!-- TrakWel group — clickable + expandable -->
           <div>
-            <button onclick="toggleGroup('trakwel')" class="w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-900 bg-teal-50 hover:bg-teal-100 transition border-b border-stone-200" id="grp-trakwel-btn">
-              <span>TrakWel</span>
-              <svg id="grp-trakwel-icon" class="w-4 h-4 transition-transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
-            </button>
-            <div id="grp-trakwel" class="divide-y divide-stone-100">
-              <button onclick="selectProduct('fabric-inventory')" id="btn-fabric-inventory" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition active-prod">Fabric Inventory Management</button>
+            <div class="flex items-stretch border-b border-stone-200">
+              <button onclick="selectProduct('trakwel')" id="btn-trakwel" class="prod-item flex-1 text-left px-5 py-4 font-bold text-base text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition active-prod">TrakWel</button>
+              <button onclick="toggleGroup('trakwel')" class="px-3 bg-teal-50 hover:bg-teal-100 transition border-l border-stone-200" id="grp-trakwel-btn" title="Expand sub-products">
+                <svg id="grp-trakwel-icon" class="w-4 h-4 transition-transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            </div>
+            <div id="grp-trakwel" class="divide-y divide-stone-100 hidden">
+              <button onclick="selectProduct('fabric-inventory')" id="btn-fabric-inventory" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Fabric Inventory Management</button>
               <button onclick="selectProduct('cutting-room')" id="btn-cutting-room" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Cutting Room Digitization</button>
               <button onclick="selectProduct('production-tracking')" id="btn-production-tracking" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Real-Time Production Tracking</button>
               <button onclick="selectProduct('quality-management')" id="btn-quality-management" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Quality Management System</button>
@@ -444,8 +446,46 @@
         <!-- RIGHT: Product Detail Panel -->
         <div class="flex-1 glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-sm min-h-[380px]" id="prod-detail">
 
-          <!-- fabric-inventory (default visible) -->
-          <div id="panel-fabric-inventory" class="prod-panel flex flex-col md:flex-row">
+          <!-- trakwel (default visible) -->
+          <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row">
+            <!-- Left: text -->
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">TrakWel</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <!-- Center: image -->
+            <div class="md:w-2/5 h-56 md:h-auto overflow-hidden">
+              <img src="{{ asset('images/sew-IoT.png') }}" alt="TrakWel IoT Device" class="w-full h-full object-cover">
+            </div>
+            <!-- Right: dark dashboard -->
+            <div class="md:w-64 bg-[#0f2033] text-white flex flex-col justify-center p-6 space-y-5">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white/10 rounded-xl p-3 space-y-1">
+                  <div class="text-[10px] font-bold uppercase tracking-widest text-teal-400">Output</div>
+                  <div class="text-3xl font-extrabold text-white">842</div>
+                  <div class="text-xs text-stone-400">pieces today</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 space-y-1">
+                  <div class="text-[10px] font-bold uppercase tracking-widest text-teal-400">Efficiency</div>
+                  <div class="text-3xl font-extrabold text-white">92%</div>
+                  <div class="text-xs text-stone-400">on target</div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-xs font-semibold">
+                  <span class="text-stone-400">ORDER 4821</span>
+                  <span class="text-teal-400">78%</span>
+                </div>
+                <div class="w-full bg-white/10 rounded-full h-2">
+                  <div class="bg-teal-400 h-2 rounded-full" style="width:78%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- fabric-inventory -->
+          <div id="panel-fabric-inventory" class="prod-panel hidden flex-col md:flex-row">
             <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
               <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Fabric Inventory<br>Management</h2>
               <p class="text-base text-stone-700 leading-relaxed">Digitise fabric inspection and inventory management with Inspection 4.0 and automatic grouping by shade, width and shrinkage. Gain real-time visibility into stock levels and material consumption, improve fabric traceability and ensure better inventory control.</p>
