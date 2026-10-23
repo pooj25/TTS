@@ -190,7 +190,7 @@
       </a>
 
       <!-- Desktop Nav Items -->
-      <div class="hidden md:flex items-center gap-1 xl:gap-2 text-sm md:text-[15px] font-semibold text-stone-700">
+      <div class="hidden md:flex items-center gap-1 xl:gap-2 text-sm md:text-[17px] font-semibold text-stone-700">
         <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">About</a>
         <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Products</a>
         <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Clients</a>
@@ -243,7 +243,7 @@
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">Run Your Garment Factory</span>
         </h1>
 
-        <p class="text-base sm:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
+        <p class="text-lg sm:text-2xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
           From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening in real time, fix bottlenecks sooner and keep every order moving.
         </p>
 
@@ -321,10 +321,10 @@
             Digital clarity for the people who make apparel
           </h2>
 
-          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
             Track Tech Solutions builds practical digital tools for apparel manufacturing. The platform connects production, quality, planning, materials and factory-floor teams, helping people see what is happening and act while there is still time to improve the outcome.
           </p>
-          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
             Since 2019, the team has focused on bringing useful technology closer to everyday factory work, supporting implementation across more than 74 factories in two countries.
           </p>
 
@@ -344,22 +344,22 @@
         <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">01. Floor MES</div>
-            <p class="text-xs text-stone-500 leading-relaxed">Bundle RFID tracking, cutting-to-pack pipelines, and live operator scorecards.</p>
+            <p class="text-sm text-stone-500 leading-relaxed">Bundle RFID tracking, cutting-to-pack pipelines, and live operator scorecards.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">02. Dynamic Gantt</div>
-            <p class="text-xs text-stone-500 leading-relaxed">Fast-react multi-line scheduling, SAM variance management, and milestone forecasting.</p>
+            <p class="text-sm text-stone-500 leading-relaxed">Fast-react multi-line scheduling, SAM variance management, and milestone forecasting.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">03. Machine IoT</div>
-            <p class="text-xs text-stone-500 leading-relaxed">RPM telemetry, vibration sensors, predictive motor alerts, and QR mechanic dispatch.</p>
+            <p class="text-sm text-stone-500 leading-relaxed">RPM telemetry, vibration sensors, predictive motor alerts, and QR mechanic dispatch.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
             <div class="text-orange-400 font-heading font-bold text-lg">04. Quality AI</div>
-            <p class="text-xs text-stone-500 leading-relaxed">Inline stitch defect heatmaps, zero-scrap fabric markers, and automated AQL 1.5 audits.</p>
+            <p class="text-sm text-stone-500 leading-relaxed">Inline stitch defect heatmaps, zero-scrap fabric markers, and automated AQL 1.5 audits.</p>
           </div>
         </div>
 
@@ -782,10 +782,10 @@
                 <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Gopinath Muniraj</h3>
               </div>
             </div>
-            <p class="text-xs text-stone-600 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed">
               Gopinath Muniraj is a technology entrepreneur and innovator with over two decades of experience addressing challenges in apparel manufacturing. Having worked closely with factories across South India, he brings deep industry understanding and a vision for technology-driven transformation.
             </p>
-            <p class="text-xs text-stone-600 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed">
               As Founder and CEO of Track Tech Solution, he leads the development of intelligent digital solutions that help apparel manufacturers streamline operations, leverage data and improve productivity through automation, AI and Industrial IoT. His vision is to empower factory teams, enable data-driven decisions and build smarter, more efficient and connected manufacturing environments.
             </p>
           </div>
@@ -807,10 +807,10 @@
                 <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Lebinesh Balan</h3>
               </div>
             </div>
-            <p class="text-xs text-stone-600 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed">
               With close to two decades of experience in digital transformation, particularly in apparel manufacturing, Lebinesh Balan leads business strategy, sales, operations, and commercial growth. He helps apparel manufacturers embrace digital technologies to digitise shop-floor operations, optimise production planning, and enhance productivity and operational visibility.
             </p>
-            <p class="text-xs text-stone-600 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed">
               Combining deep industry understanding with strategic leadership, he bridges the gap between manufacturing challenges and technology innovation to deliver measurable business outcomes, build lasting customer partnerships, and drive sustainable growth.
             </p>
           </div>
@@ -832,10 +832,10 @@
                 <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Deepak Rajkumar</h3>
               </div>
             </div>
-            <p class="text-xs text-stone-600 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed">
               Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, building scalable solutions that address complex manufacturing challenges.
             </p>
-            <p class="text-xs text-stone-600 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed">
               His expertise spans software architecture, production tracking, fabric inventory management, cutting-room digitisation, AI and Industrial IoT. Passionate about innovation, he focuses on connecting traditional manufacturing processes with intelligent, data-driven factory ecosystems to improve operational efficiency, visibility and business performance.
             </p>
           </div>
@@ -863,7 +863,7 @@
           <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
             Make Your Factory Smarter with Track Tech Solution
           </h2>
-          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
             Discover how our integrated digital solutions for shop-floor monitoring, cutting room management, production planning, Time and Action (T&A) and machine maintenance can help you improve efficiency, enhance visibility, and drive operational excellence.<br><br>
             Let's discuss your challenges and find the right solution for your factory.
           </p>
