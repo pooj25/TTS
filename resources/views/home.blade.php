@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -775,12 +775,12 @@
         <!-- Gopinath M. -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
-              GM
-            </div>
-            <div>
-              <span class="text-[11px] font-mono text-orange-400 font-bold uppercase">Founder & Chief Executive Officer (CEO)</span>
-              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Gopinath Muniraj</h3>
+            <div class="flex items-center gap-4">
+              <img src="{{ asset('images/gopinath.png') }}" alt="Gopinath Muniraj" class="w-20 h-20 rounded-2xl object-cover object-top shadow-lg shadow-orange-500/20 border-2 border-orange-100 flex-shrink-0">
+              <div>
+                <span class="text-[11px] font-mono text-orange-400 font-bold uppercase block">Founder &amp; Chief Executive Officer (CEO)</span>
+                <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Gopinath Muniraj</h3>
+              </div>
             </div>
             <p class="text-xs text-stone-600 leading-relaxed">
               Gopinath Muniraj is a technology entrepreneur and innovator with over two decades of experience addressing challenges in apparel manufacturing. Having worked closely with factories across South India, he brings deep industry understanding and a vision for technology-driven transformation.
@@ -800,12 +800,12 @@
         <!-- Lebinesh Balan -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-amber-500/20">
-              LB
-            </div>
-            <div>
-              <span class="text-[11px] font-mono text-amber-400 font-bold uppercase">Co-Founder & Chief Operating Officer (COO)</span>
-              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Lebinesh Balan</h3>
+            <div class="flex items-center gap-4">
+              <img src="{{ asset('images/lebinesh.png') }}" alt="Lebinesh Balan" class="w-20 h-20 rounded-2xl object-cover object-top shadow-lg shadow-amber-500/20 border-2 border-amber-100 flex-shrink-0">
+              <div>
+                <span class="text-[11px] font-mono text-amber-400 font-bold uppercase block">Co-Founder &amp; Chief Operating Officer (COO)</span>
+                <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Lebinesh Balan</h3>
+              </div>
             </div>
             <p class="text-xs text-stone-600 leading-relaxed">
               With close to two decades of experience in digital transformation, particularly in apparel manufacturing, Lebinesh Balan leads business strategy, sales, operations, and commercial growth. He helps apparel manufacturers embrace digital technologies to digitise shop-floor operations, optimise production planning, and enhance productivity and operational visibility.
@@ -825,12 +825,12 @@
         <!-- Deepak Rajkumar -->
         <div class="glass-card p-7 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/20">
-              DR
-            </div>
-            <div>
-              <span class="text-[11px] font-mono text-red-400 font-bold uppercase">Co-Founder & Chief Technology Officer (CTO)</span>
-              <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Deepak Rajkumar</h3>
+            <div class="flex items-center gap-4">
+              <img src="{{ asset('images/deepak.png') }}" alt="Deepak Rajkumar" class="w-20 h-20 rounded-2xl object-cover object-top shadow-lg shadow-red-500/20 border-2 border-red-100 flex-shrink-0">
+              <div>
+                <span class="text-[11px] font-mono text-red-400 font-bold uppercase block">Co-Founder &amp; Chief Technology Officer (CTO)</span>
+                <h3 class="text-xl font-bold font-heading text-stone-900 mt-0.5">Deepak Rajkumar</h3>
+              </div>
             </div>
             <p class="text-xs text-stone-600 leading-relaxed">
               Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, building scalable solutions that address complex manufacturing challenges.
