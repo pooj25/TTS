@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -371,10 +371,10 @@
     <!-- ═══════════════════════════════════════════════════════════════════
        5. COMPREHENSIVE SOFTWARE SUITE (From website-tts.vercel.app)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="products" class="relative py-24 sm:py-28 px-4 sm:px-6 lg:px-8 z-10">
+  <section id="products" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
     <span id="products-studio" class="absolute -top-10"></span>
-    <div class="max-w-7xl mx-auto space-y-20">
-      
+    <div class="max-w-7xl mx-auto space-y-10">
+
       <!-- Section Header -->
       <div class="text-center space-y-4 max-w-3xl mx-auto">
         <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 inline-block font-sans shadow-sm">
@@ -385,205 +385,220 @@
         </h2>
       </div>
 
-      <!-- 4 Core Products Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- 1. Quality Control AI -->
-        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
-          <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">AI Powered</span>
+      <!-- Products: Sidebar Accordion + Detail Panel -->
+      <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+
+        <!-- LEFT: Accordion Sidebar -->
+        <div class="w-full lg:w-72 xl:w-80 flex-shrink-0 bg-white/90 glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-sm" id="prod-sidebar">
+
+          <!-- TrakWel group -->
+          <div>
+            <button onclick="toggleGroup('trakwel')" class="w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-900 bg-teal-50 hover:bg-teal-100 transition border-b border-stone-200" id="grp-trakwel-btn">
+              <span>TrakWel</span>
+              <svg id="grp-trakwel-icon" class="w-4 h-4 transition-transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+            </button>
+            <div id="grp-trakwel" class="divide-y divide-stone-100">
+              <button onclick="selectProduct('fabric-inventory')" id="btn-fabric-inventory" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition active-prod">Fabric Inventory Management</button>
+              <button onclick="selectProduct('cutting-room')" id="btn-cutting-room" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Cutting Room Digitization</button>
+              <button onclick="selectProduct('production-tracking')" id="btn-production-tracking" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Real-Time Production Tracking</button>
+              <button onclick="selectProduct('quality-management')" id="btn-quality-management" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Quality Management System</button>
             </div>
-            <div>
-              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Quality Control AI</h3>
-              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">Predict & Prevent Defects Inline</p>
+          </div>
+
+          <!-- PlanWel -->
+          <div class="border-t border-stone-200">
+            <button onclick="selectProduct('planwel')" id="btn-planwel" class="prod-item w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">
+              <span>PlanWel</span>
+            </button>
+          </div>
+
+          <!-- mTrak -->
+          <div class="border-t border-stone-200">
+            <button onclick="selectProduct('mtrak')" id="btn-mtrak" class="prod-item w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">
+              <span>mTrak</span>
+            </button>
+          </div>
+
+          <!-- SewIoT -->
+          <div class="border-t border-stone-200">
+            <button onclick="selectProduct('sewiot')" id="btn-sewiot" class="prod-item w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">
+              <span>SewIoT</span>
+            </button>
+          </div>
+
+          <!-- Industry Solutions group -->
+          <div class="border-t border-stone-200">
+            <button onclick="toggleGroup('industry')" class="w-full flex items-center justify-between px-5 py-4 font-bold text-base text-stone-900 bg-teal-50 hover:bg-teal-100 transition" id="grp-industry-btn">
+              <span>Industry Solutions</span>
+              <svg id="grp-industry-icon" class="w-4 h-4 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+            </button>
+            <div id="grp-industry" class="divide-y divide-stone-100 hidden">
+              <button onclick="selectProduct('laundry')" id="btn-laundry" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Laundry Management</button>
+              <button onclick="selectProduct('jig')" id="btn-jig" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Jig Management</button>
+              <button onclick="selectProduct('shrinkage')" id="btn-shrinkage" class="prod-item w-full text-left px-7 py-3.5 text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition">Shrinkage Testing App</button>
             </div>
-            <p class="text-sm text-stone-600 font-sans leading-relaxed">
-              Flawless quality assurance powered by vision AI. Automate fabric roll inspection, stitching flaw detection, and inline quality logging to reduce defects by up to 35%.
-            </p>
           </div>
-          <div class="pt-8 mt-8 border-t border-stone-100">
-            <a href="{{ url('/products/quality-control') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
-              <span>Explore Quality Control Module</span>
-              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </a>
-          </div>
+
         </div>
 
-        <!-- 2. Production Tracking -->
-        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
-          <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">Live Telemetry</span>
-            </div>
-            <div>
-              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Production Tracking</h3>
-              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">End-to-End Real Time Visibility</p>
-            </div>
-            <p class="text-sm text-stone-600 font-sans leading-relaxed">
-              Gain 100% transparent tracking across all production stages—from cutting room and sewing lines to finishing and final dispatch.
-            </p>
-          </div>
-          <div class="pt-8 mt-8 border-t border-stone-100">
-            <a href="{{ url('/products/production-tracking') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
-              <span>Explore Production Tracking</span>
-              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </a>
-          </div>
-        </div>
+        <!-- RIGHT: Product Detail Panel -->
+        <div class="flex-1 glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-sm min-h-[380px]" id="prod-detail">
 
-        <!-- 3. Machine Maintenance (OEE) -->
-        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
-          <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                </svg>
-              </div>
-              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">IoT Connected</span>
+          <!-- fabric-inventory (default visible) -->
+          <div id="panel-fabric-inventory" class="prod-panel flex flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Fabric Inventory<br>Management</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Digitise fabric inspection and inventory management with Inspection 4.0 and automatic grouping by shade, width and shrinkage. Gain real-time visibility into stock levels and material consumption, improve fabric traceability and ensure better inventory control.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
             </div>
-            <div>
-              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Machine Maintenance (OEE)</h3>
-              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">Equipment Health & Downtime Prevention</p>
-            </div>
-            <p class="text-sm text-stone-600 font-sans leading-relaxed">
-              Maximize overall equipment effectiveness (OEE). Monitor machine run hours, predict motor failures, and schedule servicing automatically.
-            </p>
-          </div>
-          <div class="pt-8 mt-8 border-t border-stone-100">
-            <a href="{{ url('/products/machine-maintenance') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
-              <span>Explore Machine Maintenance</span>
-              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 4. Production Planning -->
-        <div class="p-8 sm:p-10 rounded-3xl glass-card border border-stone-200/90 hover:border-orange-500/50 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
-          <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <div class="p-3.5 rounded-2xl bg-orange-100 text-orange-600 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:text-white transition-all shadow-sm">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <span class="text-xs font-semibold text-orange-700 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 font-sans">Smart Gantt</span>
-            </div>
-            <div>
-              <h3 class="text-2xl sm:text-3xl font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Production Planning</h3>
-              <p class="text-xs font-semibold text-orange-500 mt-1 uppercase tracking-wider font-sans">Intelligent Scheduling & Line Optimization</p>
-            </div>
-            <p class="text-sm text-stone-600 font-sans leading-relaxed">
-              Schedule customer orders against exact line capacities, section skills, and delivery deadlines with an intuitive digital planner.
-            </p>
-          </div>
-          <div class="pt-8 mt-8 border-t border-stone-100">
-            <a href="{{ url('/products/production-planning') }}" class="inline-flex items-center gap-2 text-sm font-bold text-orange-600 hover:text-orange-700 transition group/link">
-              <span>Explore Production Planning</span>
-              <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Garment Manufacturing Industry Modules Grid -->
-      <div class="mt-16 pt-16 border-t border-stone-200/80 space-y-12">
-        <div class="text-center space-y-3 max-w-2xl mx-auto">
-          <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 inline-block font-sans shadow-sm">
-            Garment Industry Modules
-          </span>
-          <h3 class="text-2xl sm:text-4xl font-bold text-stone-900 font-heading tracking-tight">
-            End-to-End Digitalization for Apparel Factories
-          </h3>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- Module 1: Quality Management System -->
-          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
-            <div>
-              <div class="h-44 relative overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Quality Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">QMS AI</span>
-              </div>
-              <div class="p-5 space-y-2">
-                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Quality Management System</h4>
-                <p class="text-xs text-stone-600 font-sans leading-relaxed">
-                  Inline fabric inspection, stitch defect tagging, and AQL automated scoring dashboards.
-                </p>
-              </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/fabric-inventory-management.png') }}" alt="Fabric Inventory Management" class="w-full h-full object-cover">
             </div>
           </div>
 
-          <!-- Module 2: Production Tracking System -->
-          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
-            <div>
-              <div class="h-44 relative overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Production Tracking System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">RFID & Barcode</span>
-              </div>
-              <div class="p-5 space-y-2">
-                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Production Tracking System</h4>
-                <p class="text-xs text-stone-600 font-sans leading-relaxed">
-                  Real-time bundle tracking across sewing lines with real-time WIP updates and operator efficiency metrics.
-                </p>
-              </div>
+          <!-- cutting-room -->
+          <div id="panel-cutting-room" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Cutting Room<br>Digitization</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Digitise cut planning, optimize end-bit utilization and streamline fabric reconciliation. Improve cutting-room efficiency, reduce fabric wastage and gain better visibility and control over material usage and cutting operations.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/cutting-room-digitalization.png') }}" alt="Cutting Room Digitization" class="w-full h-full object-cover">
             </div>
           </div>
 
-          <!-- Module 3: Cutting Room Digitisation -->
-          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
-            <div>
-              <div class="h-44 relative overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" alt="Cutting Room Digitisation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">Smart Spreading</span>
-              </div>
-              <div class="p-5 space-y-2">
-                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Cutting Room Digitisation</h4>
-                <p class="text-xs text-stone-600 font-sans leading-relaxed">
-                  Digital marker planning, fabric roll optimization, and automated ply-count tracking.
-                </p>
-              </div>
+          <!-- production-tracking -->
+          <div id="panel-production-tracking" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Real-Time Production<br>Tracking</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Track real time production, monitor efficiency and performance in real time, and compare planned versus actual output. Gain actionable insights into production progress, identify bottlenecks early and improve operational control.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/product-tracking.png') }}" alt="Real-Time Production Tracking" class="w-full h-full object-cover">
             </div>
           </div>
 
-          <!-- Module 4: Fabric Inventory Management -->
-          <div class="bg-white/95 rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/50 transition-all group flex flex-col justify-between">
-            <div>
-              <div class="h-44 relative overflow-hidden bg-stone-100">
-                <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=600&q=80" alt="Fabric Inventory Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
-                <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-orange-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm">Warehouse IoT</span>
-              </div>
-              <div class="p-5 space-y-2">
-                <h4 class="text-lg font-bold text-stone-900 font-heading group-hover:text-orange-600 transition-colors">Fabric Inventory Management</h4>
-                <p class="text-xs text-stone-600 font-sans leading-relaxed">
-                  Barcode-driven roll allocation, shade grouping, shrinkage matching, and zero-loss fabric storage.
-                </p>
-              </div>
+          <!-- quality-management -->
+          <div id="panel-quality-management" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Quality Management<br>System</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Monitor defect rates, track rework levels and identify recurring quality issues in real time. Gain actionable insights into defect trends, improve quality control and drive continuous improvement across production.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/quality-control.png') }}" alt="Quality Management System" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- planwel -->
+          <div id="panel-planwel" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">PlanWel</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Intelligent production planning and scheduling for apparel factories. Schedule customer orders against exact line capacities, section skills, and delivery deadlines with an intuitive digital planner and smart Gantt views.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/planwel.png') }}" alt="PlanWel" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- mtrak -->
+          <div id="panel-mtrak" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">mTrak</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Mobile-first tracking solution for real-time shop-floor data collection. Enable operators and supervisors to update production, quality and attendance data from any device on the factory floor.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/mTrak.png') }}" alt="mTrak" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- sewiot -->
+          <div id="panel-sewiot" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">SewIoT</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Industrial IoT solution connecting sewing machines to the digital factory. Monitor RPM, stitch count, downtime and machine health in real time to maximise overall equipment effectiveness (OEE) and prevent unplanned breakdowns.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/sew-IoT.png') }}" alt="SewIoT" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- laundry -->
+          <div id="panel-laundry" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Laundry<br>Management</h2>
+              <p class="text-base text-stone-700 leading-relaxed">End-to-end digital laundry management for garment factories. Track lot-wise processing, monitor recipe compliance, record chemical usage and ensure on-time delivery with full traceability across wash cycles.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/laundry-management.png') }}" alt="Laundry Management" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- jig -->
+          <div id="panel-jig" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Jig<br>Management</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Digitise jig tracking and management across your factory. Monitor jig allocation, usage, condition and maintenance schedules to reduce downtime, prevent losses and ensure production continuity.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/Jig-management.png') }}" alt="Jig Management" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- shrinkage -->
+          <div id="panel-shrinkage" class="prod-panel hidden flex-col md:flex-row">
+            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 font-heading leading-tight">Shrinkage<br>Testing App</h2>
+              <p class="text-base text-stone-700 leading-relaxed">Automate fabric shrinkage testing and recording. Capture pre- and post-wash measurements, calculate shrinkage percentages and maintain a digital log of test results to ensure fabric compliance and reduce rejection rates.</p>
+              <a href="mailto:sales@tracktechsolutions.com" class="inline-block w-fit px-7 py-3 rounded-lg bg-teal-500 hover:bg-teal-600 text-white font-bold text-sm transition shadow">Talk to our team</a>
+            </div>
+            <div class="md:w-1/2 h-56 md:h-auto">
+              <img src="{{ asset('images/shrinkage-testing-app.png') }}" alt="Shrinkage Testing App" class="w-full h-full object-cover">
             </div>
           </div>
 
         </div>
       </div>
-
     </div>
   </section>
+
+  <script>
+    function selectProduct(key) {
+      // Hide all panels
+      document.querySelectorAll('.prod-panel').forEach(p => { p.classList.add('hidden'); p.classList.remove('flex'); });
+      // Remove active from all buttons
+      document.querySelectorAll('.prod-item').forEach(b => b.classList.remove('active-prod'));
+      // Show selected panel
+      var panel = document.getElementById('panel-' + key);
+      if (panel) { panel.classList.remove('hidden'); panel.classList.add('flex'); }
+      // Highlight button
+      var btn = document.getElementById('btn-' + key);
+      if (btn) btn.classList.add('active-prod');
+    }
+    function toggleGroup(id) {
+      var el = document.getElementById('grp-' + id);
+      var icon = document.getElementById('grp-' + id + '-icon');
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        icon.classList.add('rotate-0');
+        icon.classList.remove('rotate-180');
+      } else {
+        el.classList.add('hidden');
+        icon.classList.remove('rotate-0');
+        icon.classList.add('rotate-180');
+      }
+    }
+  </script>
+  <style>
+    .active-prod { background-color: #ccfbf1; color: #0f766e; font-weight: 700; border-left: 3px solid #14b8a6; }
+  </style>
 
 
 
