@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -882,8 +882,7 @@
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
             <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Direct Mail</div>
             <div class="text-sm font-semibold text-stone-900">
-              <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-400 transition">Lebinesh@tracktechsolutions.com</a> • 
-              <a href="mailto:sales@tracktechsolutions.com" class="hover:text-orange-400 transition">sales@tracktechsolutions.com</a>
+              <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-400 transition">Lebinesh@tracktechsolutions.com</a>
             </div>
           </div>
 
