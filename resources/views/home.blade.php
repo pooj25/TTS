@@ -184,20 +184,20 @@
       <!-- Brand Logo -->
       <a href="#about" class="flex items-center gap-2.5 group py-0.5">
         <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Track Tech Solution Logo" class="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105">
-        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-stone-900 group-hover:opacity-90 transition">
-          Track Tech <span class="text-orange-500">Solution</span>
+        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight group-hover:opacity-95 transition">
+          <span class="text-[#087e8b]">Track</span> <span class="text-[#14d5b2]">Tech</span> <span class="text-[#087e8b]">Solution</span>
         </span>
       </a>
 
       <!-- Desktop Nav Items -->
       <div class="hidden md:flex items-center gap-1 xl:gap-2 text-sm md:text-[17px] font-semibold text-stone-700">
-        <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">About</a>
+        <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">About</a>
 
         <!-- Products Dropdown Menu -->
         <div class="relative group">
-          <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition flex items-center gap-1.5 cursor-pointer">
+          <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition flex items-center gap-1.5 cursor-pointer">
             <span>Products</span>
-            <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-orange-600 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-[#087e8b] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </a>
           <!-- Dropdown Popup -->
           <div class="absolute left-0 top-full pt-2 w-[350px] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
@@ -223,9 +223,9 @@
           </div>
         </div>
 
-        <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Clients</a>
-        <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Leadership</a>
-        <a href="#contact" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-600 hover:bg-orange-50 transition">Contact</a>
+        <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Clients</a>
+        <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Leadership</a>
+        <a href="#contact" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Contact</a>
       </div>
 
       <!-- Action Button -->
@@ -247,11 +247,11 @@
 
   <!-- Mobile Dropdown Drawer -->
   <div id="mobileDrawer" class="fixed inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
-    <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">About</a>
-    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Products</a>
-    <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Clients</a>
-    <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600 border-b border-stone-100">Leadership Team</a>
-    <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-600">Contact Us</a>
+    <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">About</a>
+    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Products</a>
+    <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Clients</a>
+    <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Leadership Team</a>
+    <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b]">Contact Us</a>
   </div>
 
 

@@ -197,10 +197,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             
             <!-- Brand Logo -->
-            <a href="/" class="flex items-center gap-3 group">
-                <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="h-10 w-10 object-contain transition-transform group-hover:scale-105 bg-white rounded-full p-1 shadow-sm border border-slate-100">
-                <span class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 font-heading">
-                    Track Tech <span class="text-primary-500">Solution</span>
+            <a href="/" class="flex items-center gap-2.5 group">
+                <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Track Tech Solution Logo" class="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                <span class="text-xl sm:text-2xl font-extrabold tracking-tight font-heading">
+                    <span class="text-[#087e8b]">Track</span> <span class="text-[#14d5b2]">Tech</span> <span class="text-[#087e8b]">Solution</span>
                 </span>
             </a>
 
@@ -386,8 +386,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-1">
                     <div class="flex items-center gap-3 mb-5">
-                        <img src="{{ asset('images/logo.png') }}" alt="Track Tech Solution Logo" class="h-9 w-9 object-contain bg-white rounded-full p-1 shadow-sm">
-                        <span class="font-bold text-xl text-white font-heading">Track Tech <span class="text-sky-400">Solution</span></span>
+                        <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Track Tech Solution Logo" class="h-9 w-auto object-contain bg-white rounded-full p-1 shadow-sm">
+                        <span class="font-bold text-xl text-white font-heading">Track <span class="text-[#14d5b2]">Tech</span> Solution</span>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed mb-6">
                         From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening, fix issues sooner and keep every order moving.
