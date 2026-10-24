@@ -62,13 +62,13 @@
 
                     <div class="mt-10 space-y-7">
 
-                        <a href="mailto:sales@tracktechsolutions.com" class="flex gap-5 group">
+                        <a href="mailto:info@tracktechsolutions.com" class="flex gap-5 group">
                             <div class="w-12 h-12 rounded-xl bg-white border border-slate-300 flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-sky-500/20 group-hover:border-sky-500/30 transition shadow-sm">
                                 📧
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Sales</h3>
-                                <p class="text-slate-600 mt-1">sales@tracktechsolutions.com</p>
+                                <h3 class="font-bold text-slate-800 group-hover:text-sky-500 transition">Email</h3>
+                                <p class="text-slate-600 mt-1">info@tracktechsolutions.com</p>
                             </div>
                         </a>
 

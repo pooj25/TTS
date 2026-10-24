@@ -393,7 +393,6 @@
                         From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening, fix issues sooner and keep every order moving.
                     </p>
                     <div class="flex flex-col gap-2 text-sm text-slate-300">
-                        <a href="mailto:sales@tracktechsolutions.com" class="hover:text-sky-400 transition">sales@tracktechsolutions.com</a>
                         <a href="mailto:info@tracktechsolutions.com" class="hover:text-sky-400 transition">info@tracktechsolutions.com</a>
                         <a href="tel:+919742060606" class="hover:text-sky-400 transition">+91 97420 60606</a>
                         <a href="tel:+919650613666" class="hover:text-sky-400 transition">+91 96506 13666</a>
