@@ -199,26 +199,69 @@
             <span>Products</span>
             <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-[#087e8b] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </a>
-          <!-- Dropdown Popup -->
-          <div class="absolute left-0 top-full pt-2 w-[350px] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-            <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200 shadow-2xl p-4 space-y-1.5">
-              <div class="text-xs font-extrabold uppercase tracking-wider text-teal-700 px-3 py-1.5 bg-teal-50 rounded-lg">TrakWel Suite</div>
-              <a href="#products" onclick="navigateToProduct('trakwel')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">TrakWel</a>
-              <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Fabric Inventory Management</a>
-              <a href="#products" onclick="navigateToProduct('cutting-room')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Cutting Room Digitization</a>
-              <a href="#products" onclick="navigateToProduct('production-tracking')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Real-Time Production Tracking</a>
-              <a href="#products" onclick="navigateToProduct('quality-management')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Quality Management System</a>
-              <div class="pt-2 border-t border-stone-100 space-y-1">
-                <a href="#products" onclick="navigateToProduct('planwel')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">PlanWel</a>
-                <a href="#products" onclick="navigateToProduct('mtrak')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">mTrak</a>
-                <a href="#products" onclick="navigateToProduct('sewiot')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">SewIoT</a>
+          <!-- Dropdown Popup (matching 2nd screenshot exactly) -->
+          <div class="absolute left-0 top-full pt-2 w-72 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-2xl overflow-hidden border-t-4 border-t-[#087e8b]">
+              
+              <!-- TrakWel with expandable sub-items -->
+              <div class="border-b border-stone-100 group/trak">
+                <div class="flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]"
+                     onclick="navigateToProduct('trakwel')">
+                  <span class="text-[17px] font-bold text-stone-800 group-hover/trak:text-[#087e8b]">TrakWel</span>
+                  <button type="button" onclick="event.stopPropagation(); toggleDropdownSub('trakwelSub', 'trakwelArrow')" class="p-1 text-stone-400 hover:text-[#087e8b]">
+                    <svg id="trakwelArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                  </button>
+                </div>
+                <!-- Submenu -->
+                <div id="trakwelSub" class="hidden bg-stone-50/80 py-1 px-3 space-y-0.5 border-t border-stone-100">
+                  <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Fabric Inventory Management</a>
+                  <a href="#products" onclick="navigateToProduct('cutting-room')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Cutting Room Digitization</a>
+                  <a href="#products" onclick="navigateToProduct('production-tracking')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Real-Time Production Tracking</a>
+                  <a href="#products" onclick="navigateToProduct('quality-management')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Quality Management System</a>
+                </div>
               </div>
-              <div class="pt-2 border-t border-stone-100 space-y-1">
-                <div class="text-xs font-extrabold uppercase tracking-wider text-teal-700 px-3 py-1.5 bg-teal-50 rounded-lg">Industry Solutions</div>
-                <a href="#products" onclick="navigateToProduct('laundry')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Laundry Management</a>
-                <a href="#products" onclick="navigateToProduct('jig')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Jig Management</a>
-                <a href="#products" onclick="navigateToProduct('shrinkage')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Shrinkage Testing App</a>
+
+              <!-- PlanWel -->
+              <div class="border-b border-stone-100">
+                <a href="#products" onclick="navigateToProduct('planwel')" 
+                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                  PlanWel
+                </a>
               </div>
+
+              <!-- mTrak -->
+              <div class="border-b border-stone-100">
+                <a href="#products" onclick="navigateToProduct('mtrak')" 
+                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                  mTrak
+                </a>
+              </div>
+
+              <!-- SewIoT -->
+              <div class="border-b border-stone-100">
+                <a href="#products" onclick="navigateToProduct('sewiot')" 
+                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                  SewIoT
+                </a>
+              </div>
+
+              <!-- Industry Solutions with expandable sub-items -->
+              <div class="group/ind">
+                <div class="flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]"
+                     onclick="navigateToProduct('industry')">
+                  <span class="text-[17px] font-bold text-stone-800 group-hover/ind:text-[#087e8b]">Industry Solutions</span>
+                  <button type="button" onclick="event.stopPropagation(); toggleDropdownSub('indSub', 'indArrow')" class="p-1 text-stone-400 hover:text-[#087e8b]">
+                    <svg id="indArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                  </button>
+                </div>
+                <!-- Submenu -->
+                <div id="indSub" class="hidden bg-stone-50/80 py-1 px-3 space-y-0.5 border-t border-stone-100">
+                  <a href="#products" onclick="navigateToProduct('laundry')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Laundry Management</a>
+                  <a href="#products" onclick="navigateToProduct('jig')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Jig Management</a>
+                  <a href="#products" onclick="navigateToProduct('shrinkage')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Shrinkage Testing App</a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -428,8 +471,60 @@
               <p class="text-base text-stone-700 leading-relaxed">Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-auto">
-              <img src="{{ asset('images/trakwel.png') }}" alt="TrakWel" class="w-full h-full object-cover">
+
+            <!-- Right: Dark MES Real-Time Dashboard (SewIoT image removed) -->
+            <div class="md:w-1/2 bg-[#0f2033] text-white flex flex-col justify-center p-8 sm:p-10 space-y-6">
+              
+              <!-- Header Bar -->
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div class="flex items-center gap-2.5">
+                  <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#14d5b2] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#14d5b2]"></span>
+                  </span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-[#14d5b2]">MES Live Factory Floor</span>
+                </div>
+                <span class="text-xs text-stone-400 font-mono bg-white/5 px-2.5 py-1 rounded-md">Shift 01 • Running</span>
+              </div>
+
+              <!-- Main KPI Cards (Output & Efficiency) -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-[#162a40] rounded-2xl p-5 space-y-1.5 border border-white/10 shadow-inner">
+                  <div class="text-[11px] font-bold uppercase tracking-widest text-[#14d5b2]">Output</div>
+                  <div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">842</div>
+                  <div class="text-xs text-stone-400">pieces today</div>
+                </div>
+
+                <div class="bg-[#162a40] rounded-2xl p-5 space-y-1.5 border border-white/10 shadow-inner">
+                  <div class="text-[11px] font-bold uppercase tracking-widest text-[#14d5b2]">Efficiency</div>
+                  <div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">92%</div>
+                  <div class="text-xs text-stone-400">on target</div>
+                </div>
+              </div>
+
+              <!-- Order Progress Bar -->
+              <div class="space-y-2 pt-1">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="font-semibold text-stone-300 tracking-wider">ORDER 4821</span>
+                  <span class="font-bold text-[#14d5b2] text-sm">78%</span>
+                </div>
+                <div class="w-full bg-[#162a40] rounded-full h-3 overflow-hidden p-0.5 border border-white/5">
+                  <div class="bg-[#14d5b2] h-full rounded-full transition-all duration-700" style="width:78%"></div>
+                </div>
+              </div>
+
+              <!-- Live Status Indicators -->
+              <div class="grid grid-cols-2 gap-3 pt-2 text-xs text-stone-400 border-t border-white/10">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-[#14d5b2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                  <span class="text-stone-300 font-medium">12/12 Lines Connected</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-[#14d5b2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  <span class="text-stone-300 font-medium">Real-Time Data Sync</span>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -607,6 +702,20 @@
       var sec = document.getElementById('products');
       if (sec) {
         sec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleDropdownSub(id, arrowId) {
+      var el = document.getElementById(id);
+      var arr = document.getElementById(arrowId);
+      if (el) {
+        if (el.classList.contains('hidden')) {
+          el.classList.remove('hidden');
+          if (arr) arr.classList.add('rotate-180');
+        } else {
+          el.classList.add('hidden');
+          if (arr) arr.classList.remove('rotate-180');
+        }
       }
     }
   </script>

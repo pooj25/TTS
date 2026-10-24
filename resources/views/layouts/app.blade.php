@@ -223,65 +223,61 @@
                     <!-- Dropdown Panel -->
                     <div
                         id="products-dropdown-panel"
-                        class="absolute top-full left-0 mt-2 w-72 rounded-2xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden shadow-2xl bg-white"
+                        class="absolute top-full left-0 mt-2 w-72 rounded-2xl border border-slate-200 opacity-0 invisible translate-y-2 transition-all duration-200 overflow-hidden shadow-2xl bg-white border-t-4 border-t-[#087e8b]"
                         style="pointer-events:none; z-index:99999;">
 
-                        <div class="py-3">
-                            <p class="px-5 pt-1 pb-1.5 text-[10px] font-black uppercase tracking-widest text-slate-400">Products</p>
+                        <div class="py-1">
+                            <!-- TrakWel with expandable sub-items -->
+                            <div class="border-b border-stone-100 group/trak">
+                                <div class="flex items-center justify-between px-5 py-3 cursor-pointer hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                                    <a href="/products#trakwel" data-product-choice="trakwel" class="text-[16px] font-bold text-stone-800 hover:text-[#087e8b] flex-1">TrakWel</a>
+                                    <button type="button" onclick="event.stopPropagation(); var el=document.getElementById('nav-trak-sub'); el.classList.toggle('hidden');" class="p-1 text-stone-400 hover:text-[#087e8b]">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                                    </button>
+                                </div>
+                                <div id="nav-trak-sub" class="hidden bg-stone-50/80 py-1 px-3 space-y-0.5 border-t border-stone-100">
+                                    <a href="/products#fabric" data-product-choice="fabric" class="block px-3 py-1.5 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Fabric Inventory Management</a>
+                                    <a href="/products#cutting" data-product-choice="cutting" class="block px-3 py-1.5 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Cutting Room Digitization</a>
+                                    <a href="/products#production" data-product-choice="production" class="block px-3 py-1.5 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Real-Time Production Tracking</a>
+                                    <a href="/products#quality" data-product-choice="quality" class="block px-3 py-1.5 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Quality Management System</a>
+                                </div>
+                            </div>
 
-                            <!-- TrakWel (MES) -->
-                            <a href="/products#trakwel" data-product-choice="trakwel"
-                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
-                                TrakWel
-                            </a>
-                            <!-- TrakWel Sub-modules -->
-                            <a href="/products#fabric" data-product-choice="fabric"
-                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
-                                Fabric Inventory Management
-                            </a>
-                            <a href="/products#cutting" data-product-choice="cutting"
-                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
-                                Cutting Room Digitisation
-                            </a>
-                            <a href="/products#production" data-product-choice="production"
-                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
-                                Production Tracking
-                            </a>
-                            <a href="/products#quality" data-product-choice="quality"
-                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition">
-                                Quality Control
-                            </a>
+                            <!-- PlanWel -->
+                            <div class="border-b border-stone-100">
+                                <a href="/products#planwel" data-product-choice="planwel" class="block px-5 py-3 text-[16px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                                    PlanWel
+                                </a>
+                            </div>
 
-                            <!-- PlanWel, mTrak, SewIoT -->
-                            <a href="/products#planwel" data-product-choice="planwel"
-                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
-                                PlanWel
-                            </a>
-                            <a href="/products#mtrak" data-product-choice="mtrak"
-                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
-                                mTrak
-                            </a>
-                            <a href="/products#sewiot" data-product-choice="sewiot"
-                               class="flex items-center px-5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-sky-600 transition">
-                                SewIoT
-                            </a>
+                            <!-- mTrak -->
+                            <div class="border-b border-stone-100">
+                                <a href="/products#mtrak" data-product-choice="mtrak" class="block px-5 py-3 text-[16px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                                    mTrak
+                                </a>
+                            </div>
 
-                            <div class="my-2 mx-5 border-t border-slate-100"></div>
+                            <!-- SewIoT -->
+                            <div class="border-b border-stone-100">
+                                <a href="/products#sewiot" data-product-choice="sewiot" class="block px-5 py-3 text-[16px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                                    SewIoT
+                                </a>
+                            </div>
 
                             <!-- Industry Solutions -->
-                            <p class="px-5 pt-1 pb-1 text-[10px] font-black uppercase tracking-widest text-slate-400">Industry Solutions</p>
-                            <a href="/products#laundry" data-product-choice="laundry"
-                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition">
-                                Laundry Management
-                            </a>
-                            <a href="/products#jig" data-product-choice="jig"
-                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition">
-                                Jig Management
-                            </a>
-                            <a href="/products#shrinkage" data-product-choice="shrinkage"
-                               class="flex items-center pl-9 pr-5 py-1.5 text-xs text-slate-600 hover:text-orange-600 hover:bg-orange-50 transition">
-                                Shrinkage Testing App
-                            </a>
+                            <div class="group/ind">
+                                <div class="flex items-center justify-between px-5 py-3 cursor-pointer hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                                    <a href="/products#laundry" data-product-choice="laundry" class="text-[16px] font-bold text-stone-800 hover:text-[#087e8b] flex-1">Industry Solutions</a>
+                                    <button type="button" onclick="event.stopPropagation(); var el=document.getElementById('nav-ind-sub'); el.classList.toggle('hidden');" class="p-1 text-stone-400 hover:text-[#087e8b]">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                                    </button>
+                                </div>
+                                <div id="nav-ind-sub" class="hidden bg-stone-50/80 py-1 px-3 space-y-0.5 border-t border-stone-100">
+                                    <a href="/products#laundry" data-product-choice="laundry" class="block px-3 py-1.5 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Laundry Management</a>
+                                    <a href="/products#jig" data-product-choice="jig" class="block px-3 py-1.5 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Jig Management</a>
+                                    <a href="/products#shrinkage" data-product-choice="shrinkage" class="block px-3 py-1.5 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Shrinkage Testing App</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
