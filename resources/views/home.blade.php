@@ -200,24 +200,24 @@
             <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-orange-600 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </a>
           <!-- Dropdown Popup -->
-          <div class="absolute left-0 top-full pt-2 w-80 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-            <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200 shadow-2xl p-3 space-y-1">
-              <div class="text-[11px] font-bold uppercase tracking-wider text-teal-700 px-3 py-1 bg-teal-50 rounded-lg">TrakWel Suite</div>
-              <a href="#products" onclick="navigateToProduct('trakwel')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">TrakWel (MES)</a>
-              <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Fabric Inventory Management</a>
-              <a href="#products" onclick="navigateToProduct('cutting-room')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Cutting Room Digitization</a>
-              <a href="#products" onclick="navigateToProduct('production-tracking')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Real-Time Production Tracking</a>
-              <a href="#products" onclick="navigateToProduct('quality-management')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Quality Management System</a>
-              <div class="pt-2 border-t border-stone-100">
-                <a href="#products" onclick="navigateToProduct('planwel')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">PlanWel</a>
-                <a href="#products" onclick="navigateToProduct('mtrak')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">mTrak</a>
-                <a href="#products" onclick="navigateToProduct('sewiot')" class="block px-3 py-2 rounded-xl text-sm font-bold text-stone-800 hover:bg-teal-50 hover:text-teal-700 transition">SewIoT</a>
+          <div class="absolute left-0 top-full pt-2 w-[350px] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200 shadow-2xl p-4 space-y-1.5">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-teal-700 px-3 py-1.5 bg-teal-50 rounded-lg">TrakWel Suite</div>
+              <a href="#products" onclick="navigateToProduct('trakwel')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">TrakWel</a>
+              <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Fabric Inventory Management</a>
+              <a href="#products" onclick="navigateToProduct('cutting-room')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Cutting Room Digitization</a>
+              <a href="#products" onclick="navigateToProduct('production-tracking')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Real-Time Production Tracking</a>
+              <a href="#products" onclick="navigateToProduct('quality-management')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Quality Management System</a>
+              <div class="pt-2 border-t border-stone-100 space-y-1">
+                <a href="#products" onclick="navigateToProduct('planwel')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">PlanWel</a>
+                <a href="#products" onclick="navigateToProduct('mtrak')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">mTrak</a>
+                <a href="#products" onclick="navigateToProduct('sewiot')" class="block px-3 py-2 rounded-xl text-base font-bold text-stone-900 hover:bg-teal-50 hover:text-teal-700 transition">SewIoT</a>
               </div>
-              <div class="pt-2 border-t border-stone-100">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-teal-700 px-3 py-1 bg-teal-50 rounded-lg">Industry Solutions</div>
-                <a href="#products" onclick="navigateToProduct('laundry')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Laundry Management</a>
-                <a href="#products" onclick="navigateToProduct('jig')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Jig Management</a>
-                <a href="#products" onclick="navigateToProduct('shrinkage')" class="block px-3 py-1.5 rounded-xl text-xs font-semibold text-stone-600 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Shrinkage Testing App</a>
+              <div class="pt-2 border-t border-stone-100 space-y-1">
+                <div class="text-xs font-extrabold uppercase tracking-wider text-teal-700 px-3 py-1.5 bg-teal-50 rounded-lg">Industry Solutions</div>
+                <a href="#products" onclick="navigateToProduct('laundry')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Laundry Management</a>
+                <a href="#products" onclick="navigateToProduct('jig')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Jig Management</a>
+                <a href="#products" onclick="navigateToProduct('shrinkage')" class="block px-3 py-2 rounded-xl text-sm font-semibold text-stone-700 hover:bg-teal-50 hover:text-teal-700 transition pl-5">Shrinkage Testing App</a>
               </div>
             </div>
           </div>
@@ -415,24 +415,11 @@
         </h2>
       </div>
 
-      <!-- Products: Horizontal Selector Pills & Full-Width Showcase -->
+      <!-- Products: Full-Width Showcase -->
       <div class="space-y-8">
 
-        <!-- Horizontal Product Selector Pills -->
-        <div class="flex items-center justify-center flex-wrap gap-2 sm:gap-2.5 max-w-5xl mx-auto">
-          <button onclick="selectProduct('trakwel')" id="btn-trakwel" class="prod-item px-5 py-2.5 rounded-full text-sm font-bold transition active-prod">TrakWel</button>
-          <button onclick="selectProduct('fabric-inventory')" id="btn-fabric-inventory" class="prod-item px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">Fabric Inventory</button>
-          <button onclick="selectProduct('cutting-room')" id="btn-cutting-room" class="prod-item px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">Cutting Room</button>
-          <button onclick="selectProduct('production-tracking')" id="btn-production-tracking" class="prod-item px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">Production Tracking</button>
-          <button onclick="selectProduct('quality-management')" id="btn-quality-management" class="prod-item px-4 py-2 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">Quality Control</button>
-          <button onclick="selectProduct('planwel')" id="btn-planwel" class="prod-item px-5 py-2.5 rounded-full text-sm font-bold text-stone-700 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">PlanWel</button>
-          <button onclick="selectProduct('mtrak')" id="btn-mtrak" class="prod-item px-5 py-2.5 rounded-full text-sm font-bold text-stone-700 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">mTrak</button>
-          <button onclick="selectProduct('sewiot')" id="btn-sewiot" class="prod-item px-5 py-2.5 rounded-full text-sm font-bold text-stone-700 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">SewIoT</button>
-          <button onclick="selectProduct('industry')" id="btn-industry" class="prod-item px-5 py-2.5 rounded-full text-sm font-bold text-stone-700 hover:text-stone-900 bg-white border border-stone-200 hover:border-teal-400 transition shadow-sm">Industry Solutions</button>
-        </div>
-
         <!-- Full-Width Product Detail Panel -->
-        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-lg min-h-[420px]" id="prod-detail">'
+        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-lg min-h-[420px]" id="prod-detail">
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row">
@@ -742,83 +729,78 @@
         
         <!-- Header: Customer Directory / Key customers -->
         <div class="flex items-center justify-between pb-4 border-b border-stone-200">
-          <span class="text-xs font-bold uppercase tracking-wider text-stone-500 font-sans">CUSTOMER DIRECTORY</span>
-          <span class="text-sm font-bold text-stone-900 font-heading">Key customers</span>
+          <span class="text-sm font-bold uppercase tracking-wider text-stone-500 font-sans">CUSTOMER DIRECTORY</span>
+          <span class="text-base font-bold text-stone-900 font-heading">Key customers</span>
         </div>
 
-        <!-- 5x2 Stable Logo Grid with clean cell borders -->
+        <!-- 5x2 Stable Logo Grid with clean cell borders (Enlarged Logos) -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-2xl overflow-hidden mt-6 shadow-sm">
           
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#shahi" xlink:href="#shahi"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#shahi" xlink:href="#shahi"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#pds" xlink:href="#pds"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#pds" xlink:href="#pds"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#texport" xlink:href="#texport"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#texport" xlink:href="#texport"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#penguin" xlink:href="#penguin"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#penguin" xlink:href="#penguin"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#modelarna" xlink:href="#modelarna"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#modelarna" xlink:href="#modelarna"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#sahana" xlink:href="#sahana"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#sahana" xlink:href="#sahana"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
-            <svg class="w-full h-12 max-w-[140px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
+          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
           </div>
 
         </div>
 
       </div>
 
-      <!-- Stable Company Facts & Metrics Bar -->
+      <!-- Stable Company Facts & Metrics Bar (4 Columns) -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-0 bg-white/95 glass-card border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-stone-200/90">
         
-        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
-          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">2</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Countries</span>
+        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
+          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">2</strong>
+          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Countries</span>
         </div>
 
-        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
-          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">74+</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Factories</span>
+        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
+          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">74+</strong>
+          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Factories</span>
         </div>
 
-        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
-          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">6000+</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Users</span>
+        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
+          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">6000+</strong>
+          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Users</span>
         </div>
 
-        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
-          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">6000+</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Users</span>
-        </div>
-
-        <div class="p-5 sm:p-6 text-center flex flex-col items-center justify-center">
-          <strong class="text-3xl sm:text-4xl font-extrabold text-orange-500 font-heading">36</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-600 mt-1 font-sans">Professionals</span>
+        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
+          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">36</strong>
+          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Professionals</span>
         </div>
 
       </div>
