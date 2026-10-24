@@ -423,39 +423,13 @@
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row">
-            <!-- Left: text -->
-            <div class="flex-1 p-8 md:p-10 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+            <div class="flex-1 p-8 md:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
               <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">TrakWel</h2>
               <p class="text-base text-stone-700 leading-relaxed">Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
-            <!-- Center: image -->
-            <div class="md:w-2/5 h-56 md:h-auto overflow-hidden">
-              <img src="{{ asset('images/sew-IoT.png') }}" alt="TrakWel IoT Device" class="w-full h-full object-cover">
-            </div>
-            <!-- Right: dark dashboard -->
-            <div class="md:w-64 bg-[#0f2033] text-white flex flex-col justify-center p-6 space-y-5">
-              <div class="grid grid-cols-2 gap-3">
-                <div class="bg-white/10 rounded-xl p-3 space-y-1">
-                  <div class="text-[10px] font-bold uppercase tracking-widest text-teal-400">Output</div>
-                  <div class="text-3xl font-extrabold text-white">842</div>
-                  <div class="text-xs text-stone-400">pieces today</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-3 space-y-1">
-                  <div class="text-[10px] font-bold uppercase tracking-widest text-teal-400">Efficiency</div>
-                  <div class="text-3xl font-extrabold text-white">92%</div>
-                  <div class="text-xs text-stone-400">on target</div>
-                </div>
-              </div>
-              <div class="space-y-2">
-                <div class="flex justify-between text-xs font-semibold">
-                  <span class="text-stone-400">ORDER 4821</span>
-                  <span class="text-teal-400">78%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-2">
-                  <div class="bg-teal-400 h-2 rounded-full" style="width:78%"></div>
-                </div>
-              </div>
+            <div class="md:w-3/5 h-64 md:h-auto">
+              <img src="{{ asset('images/trakwel.png') }}" alt="TrakWel" class="w-full h-full object-cover">
             </div>
           </div>
 

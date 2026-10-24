@@ -254,7 +254,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
                         {{-- Dynamic Product Image --}}
                         <div class="w-full h-full relative overflow-hidden rounded-xl">
                             <img id="productImage"
-                                 src="{{ asset('images/production-tracking.jpg') }}"
+                                 src="{{ asset('images/trakwel.png') }}"
                                  alt="Live production tracking across garment factory lines"
                                  class="w-full max-h-[460px] object-cover rounded-xl transition-all duration-500">
 
@@ -447,7 +447,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
             badge: 'All-in-One MES',
             description: 'Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.',
             stages: ['Track', 'Monitor', 'Improve'],
-            image: "{{ asset('images/production-tracking.jpg') }}",
+            image: "{{ asset('images/trakwel.png') }}",
             alt: 'Live production tracking across garment factory lines',
             label: 'LIVE MES',
             value: 'SYSTEM ACTIVE',
