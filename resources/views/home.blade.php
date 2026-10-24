@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -849,7 +849,7 @@
         <!-- Gopinath M. -->
         <div class="glass-card p-8 flex flex-col justify-between space-y-5">
           <div class="space-y-5">
-            <img src="{{ asset('images/gopinath.png') }}" alt="Gopinath Muniraj" class="w-24 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-orange-100">
+            <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="w-28 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-orange-100">
             <div>
               <span class="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-1">Founder &amp; Chief Executive Officer (CEO)</span>
               <h3 class="text-3xl font-extrabold font-heading text-stone-900 leading-tight">Gopinath Muniraj</h3>
@@ -872,7 +872,7 @@
         <!-- Lebinesh Balan -->
         <div class="glass-card p-8 flex flex-col justify-between space-y-5">
           <div class="space-y-5">
-            <img src="{{ asset('images/lebinesh.png') }}" alt="Lebinesh Balan" class="w-24 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-amber-100">
+            <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="w-28 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-amber-100">
             <div>
               <span class="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-1">Co-Founder &amp; Chief Operating Officer (COO)</span>
               <h3 class="text-3xl font-extrabold font-heading text-stone-900 leading-tight">Lebinesh Balan</h3>
@@ -895,7 +895,7 @@
         <!-- Deepak Rajkumar -->
         <div class="glass-card p-8 flex flex-col justify-between space-y-5">
           <div class="space-y-5">
-            <img src="{{ asset('images/deepak.png') }}" alt="Deepak Rajkumar" class="w-24 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-red-100">
+            <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="w-28 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-red-100">
             <div>
               <span class="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-1">Co-Founder &amp; Chief Technology Officer (CTO)</span>
               <h3 class="text-3xl font-extrabold font-heading text-stone-900 leading-tight">Deepak Rajkumar</h3>

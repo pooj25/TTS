@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('title', 'About Us | Track Tech Solutions')
 
@@ -79,27 +79,39 @@ html {
         </div>
 
         <div class="divide-y divide-slate-300/70 border-y border-slate-300/70 bg-white/55 backdrop-blur-md">
-            <details class="about-accordion">
+            <details class="about-accordion" open>
                 <summary class="flex cursor-pointer items-center gap-4 px-5 py-5 sm:px-7 text-slate-900 hover:bg-sky-50/70 transition">
-                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-sky-100 text-sm font-black text-sky-800">GM</span>
-                    <span class="min-w-0 flex-1"><span class="block font-bold">Gopinath M. (Muniraj)</span><span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-slate-500">Chief Executive Officer</span></span>
+                    <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="h-12 w-12 shrink-0 rounded-xl object-cover object-top shadow-sm border border-slate-200">
+                    <span class="min-w-0 flex-1"><span class="block font-bold">Gopinath M. (Muniraj)</span><span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-slate-500">Founder & Chief Executive Officer (CEO)</span></span>
                     <svg class="about-chevron w-5 h-5 shrink-0 text-slate-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
                 </summary>
                 <div class="border-t border-slate-200/80 px-5 py-6 sm:px-7 sm:pl-[5.5rem]">
-                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Gopinath's career spans apparel manufacturing and digital solutions, including regional sales leadership at Coats Digital and roles associated with Arvind Limited and K Mohan Exports. At Track Tech, he leads the company's direction and its focus on bringing technology into everyday factory operations.</p>
+                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Gopinath Muniraj is a technology entrepreneur and innovator with over two decades of experience addressing challenges in apparel manufacturing. Having worked closely with factories across South India, he brings deep industry understanding and a vision for technology-driven transformation.</p>
                     <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-4 text-sm text-sky-700 font-semibold hover:text-sky-800 transition">Professional profile ↗</a>
                 </div>
             </details>
 
             <details class="about-accordion">
                 <summary class="flex cursor-pointer items-center gap-4 px-5 py-5 sm:px-7 text-slate-900 hover:bg-sky-50/70 transition">
-                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-sky-100 text-sm font-black text-sky-800">LB</span>
-                    <span class="min-w-0 flex-1"><span class="block font-bold">Lebinesh Balan</span><span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-slate-500">Chief Operating Officer</span></span>
+                    <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="h-12 w-12 shrink-0 rounded-xl object-cover object-top shadow-sm border border-slate-200">
+                    <span class="min-w-0 flex-1"><span class="block font-bold">Lebinesh Balan</span><span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-slate-500">Co-Founder & Chief Operating Officer (COO)</span></span>
                     <svg class="about-chevron w-5 h-5 shrink-0 text-slate-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
                 </summary>
                 <div class="border-t border-slate-200/80 px-5 py-6 sm:px-7 sm:pl-[5.5rem]">
-                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Lebinesh focuses on turning strategy into consistent delivery: aligning customer implementation, teams and day-to-day operations. His work as COO supports smooth adoption of Track Tech across factory environments and keeps customer needs connected to execution.</p>
+                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">With close to two decades of experience in digital transformation, particularly in apparel manufacturing, Lebinesh Balan leads business strategy, sales, operations, and commercial growth. He helps apparel manufacturers embrace digital technologies to digitise shop-floor operations, optimise production planning, and enhance productivity and operational visibility.</p>
                     <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-4 text-sm text-sky-700 font-semibold hover:text-sky-800 transition">LinkedIn profile ↗</a>
+                </div>
+            </details>
+
+            <details class="about-accordion">
+                <summary class="flex cursor-pointer items-center gap-4 px-5 py-5 sm:px-7 text-slate-900 hover:bg-sky-50/70 transition">
+                    <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="h-12 w-12 shrink-0 rounded-xl object-cover object-top shadow-sm border border-slate-200">
+                    <span class="min-w-0 flex-1"><span class="block font-bold">Deepak Rajkumar</span><span class="mt-1 block text-xs font-semibold uppercase tracking-wide text-slate-500">Co-Founder & Chief Technology Officer (CTO)</span></span>
+                    <svg class="about-chevron w-5 h-5 shrink-0 text-slate-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="border-t border-slate-200/80 px-5 py-6 sm:px-7 sm:pl-[5.5rem]">
+                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, building scalable solutions that address complex manufacturing challenges.</p>
+                    <span class="inline-block mt-4 text-sm text-slate-500 font-semibold">Software Architecture &amp; IoT</span>
                 </div>
             </details>
         </div>
