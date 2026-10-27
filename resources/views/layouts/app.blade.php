@@ -198,10 +198,7 @@
             
             <!-- Brand Logo -->
             <a href="/" class="flex items-center gap-2.5 group">
-                <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Track Tech Solution Logo" class="h-9 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105">
-                <span class="text-xl sm:text-2xl font-extrabold tracking-tight font-heading">
-                    <span class="text-[#087e8b]">Track</span> <span class="text-[#14d5b2]">Tech</span> <span class="text-[#087e8b]">Solution</span>
-                </span>
+                <img src="{{ asset('images/track-tech-full-logo.png') }}" alt="Track Tech Solution Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105">
             </a>
 
             <!-- Desktop Navigation Links -->
