@@ -303,8 +303,8 @@
 
             <!-- CTA Button -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="/contact" class="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md shadow-sky-500/25 hover:scale-105 text-sm">
-                    Book Demo
+                <a href="/contact" class="bg-[#087e8b] hover:bg-[#066570] text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md shadow-[#087e8b]/25 hover:scale-105 text-sm">
+                    Request for Demo
                 </a>
             </div>
 
