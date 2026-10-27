@@ -47,7 +47,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #fdf8f3 0%, #faf4ee 40%, #fef9f5 100%);
+      background: linear-gradient(135deg, #f8fafc 0%, #f0fdfa 40%, #f8fafc 100%);
       color: #1c1917;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
@@ -65,9 +65,9 @@
       pointer-events: none;
       z-index: 0;
       background: 
-        radial-gradient(circle at 15% 20%, rgba(251, 113, 33, 0.10) 0%, transparent 45%),
-        radial-gradient(circle at 85% 65%, rgba(239, 68, 68, 0.07) 0%, transparent 50%),
-        radial-gradient(circle at 50% 90%, rgba(249, 115, 22, 0.06) 0%, transparent 40%);
+        radial-gradient(circle at 15% 20%, rgba(8, 126, 139, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(20, 213, 178, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 90%, rgba(8, 126, 139, 0.05) 0%, transparent 40%);
     }
 
     /* Continuous 3D Apparel Background Video */
@@ -94,8 +94,8 @@
     }
 
     .glass-card:hover {
-      border-color: rgba(234, 88, 12, 0.50);
-      box-shadow: 0 20px 40px -15px rgba(234, 88, 12, 0.18);
+      border-color: rgba(8, 126, 139, 0.40);
+      box-shadow: 0 20px 40px -15px rgba(8, 126, 139, 0.15);
       transform: translateY(-3px);
     }
 
@@ -105,7 +105,7 @@
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       border: 1px solid rgba(0, 0, 0, 0.10);
-      box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.15), 0 0 20px rgba(234, 88, 12, 0.08);
+      box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.15), 0 0 20px rgba(8, 126, 139, 0.08);
     }
 
     /* Custom Cursor Follower Glow */
@@ -113,7 +113,7 @@
       position: fixed;
       width: 480px;
       height: 480px;
-      background: radial-gradient(circle, rgba(234, 88, 12, 0.10), transparent 70%);
+      background: radial-gradient(circle, rgba(8, 126, 139, 0.10), transparent 70%);
       border-radius: 50%;
       pointer-events: none;
       transform: translate(-50%, -50%);
@@ -140,8 +140,8 @@
     /* Scanline effect for Hero Showcase */
     .cyber-frame {
       position: relative;
-      border: 1px solid rgba(234, 88, 12, 0.30);
-      box-shadow: 0 0 35px rgba(234, 88, 12, 0.12), inset 0 0 30px rgba(234, 88, 12, 0.04);
+      border: 1px solid rgba(8, 126, 139, 0.25);
+      box-shadow: 0 0 35px rgba(8, 126, 139, 0.10), inset 0 0 30px rgba(8, 126, 139, 0.03);
     }
 
     /* Smooth Custom Scrollbar */
@@ -149,14 +149,14 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #f5f0eb;
+      background: #f1f5f9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #d4c4b0;
+      background: #cbd5e1;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #f97316;
+      background: #087e8b;
     }
   </style>
 </head>
@@ -303,29 +303,28 @@
       
       <!-- Headline & Introduction -->
       <div class="text-center space-y-6 max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-50 border border-orange-400/50 text-orange-600 backdrop-blur-md shadow-lg shadow-orange-500/10">
-          <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span>
+        <div class="inline-flex items-center px-6 py-2 rounded-full text-sm sm:text-base font-semibold bg-white border border-[#087e8b]/25 text-[#087e8b] shadow-sm tracking-normal">
           Next-Gen Garment Manufacturing Intelligence
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-stone-900 font-heading">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-stone-900 font-heading">
           A Clearer Way To <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">Run Your Garment Factory</span>
+          <span class="text-[#087e8b]">Run Your Garment Factory</span>
         </h1>
 
-        <p class="text-lg sm:text-2xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
+        <p class="text-base sm:text-xl lg:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
           From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening in real time, fix bottlenecks sooner and keep every order moving.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
           <a href="#contact"
-            class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-amber-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-sm shadow-xl shadow-orange-500/30 hover:scale-105 transition-all text-center">
+            class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#087e8b] hover:bg-[#066570] text-white font-bold text-sm shadow-xl shadow-[#087e8b]/20 hover:scale-105 transition-all text-center">
             Schedule Factory Walkthrough
           </a>
           <a href="#products"
-            class="w-full sm:w-auto px-7 py-4 rounded-full bg-white/80 hover:bg-orange-50 text-stone-700 hover:text-stone-900 font-semibold text-sm border border-stone-200 hover:border-orange-500 transition-all text-center flex items-center justify-center gap-2">
+            class="w-full sm:w-auto px-7 py-4 rounded-full bg-white hover:bg-teal-50 text-stone-700 hover:text-[#087e8b] font-semibold text-sm border border-stone-200 hover:border-[#087e8b] transition-all text-center flex items-center justify-center gap-2">
             <span>Explore Product Studio</span>
-            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            <svg class="w-4 h-4 text-[#087e8b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </a>
         </div>
       </div>
@@ -340,14 +339,14 @@
             <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
             <span class="ml-2 font-mono text-[11px] text-stone-500">track-tech-os.live/telemetry/3d-apparel-simulation</span>
           </div>
-          <div class="flex items-center gap-2 text-orange-400 font-mono text-[11px]">
+          <div class="flex items-center gap-2 text-teal-600 font-mono text-[11px]">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>FEED ONLINE • 53.2s DYNAMIC LOOP</span>
           </div>
         </div>
 
         <!-- Video Viewport -->
-        <div class="relative aspect-[16/9] sm:aspect-[21/9] max-h-[480px] overflow-hidden bg-orange-50">
+        <div class="relative aspect-[16/9] sm:aspect-[21/9] max-h-[480px] overflow-hidden bg-teal-50/30">
           <video autoplay loop muted playsinline class="w-full h-full object-cover filter contrast-110 saturate-110">
             <source src="{{ asset('assets/video/apparel-3d-loop.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/apparel-3d-loop.mp4') }}" type="video/mp4">
@@ -356,15 +355,15 @@
 
           <!-- Floating Live Telemetry Cards on Video -->
           <div class="absolute top-4 left-4 p-3 rounded-xl bg-white/85 backdrop-blur-md border border-stone-200 text-xs text-stone-600 space-y-1 hidden sm:block">
-            <div class="text-[10px] font-mono text-orange-400 font-bold uppercase">Workstation Speed</div>
+            <div class="text-[10px] font-mono text-teal-600 font-bold uppercase">Workstation Speed</div>
             <div class="font-bold text-stone-900 text-sm">4,280 Stitches / Min</div>
-            <div class="text-[10px] text-emerald-400">Zero skipped stitches detected</div>
+            <div class="text-[10px] text-emerald-600">Zero skipped stitches detected</div>
           </div>
 
           <div class="absolute bottom-4 right-4 p-3 rounded-xl bg-white/85 backdrop-blur-md border border-stone-200 text-xs text-stone-600 space-y-1 text-right hidden sm:block">
-            <div class="text-[10px] font-mono text-amber-400 font-bold uppercase">AQL 1.5 Compliance</div>
+            <div class="text-[10px] font-mono text-teal-600 font-bold uppercase">AQL 1.5 Compliance</div>
             <div class="font-bold text-stone-900 text-sm">99.1% First-Pass Pass</div>
-            <div class="text-[10px] text-orange-600">Active lines: 18 / 20 Operational</div>
+            <div class="text-[10px] text-teal-700">Active lines: 18 / 20 Operational</div>
           </div>
         </div>
       </div>
