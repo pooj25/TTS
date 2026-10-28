@@ -298,8 +298,8 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        2. HERO SECTION (High-Tech 3D Apparel Centerpiece)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="about" class="relative min-h-[88vh] sm:min-h-screen flex flex-col justify-center items-center pt-32 pb-20 sm:pt-40 sm:pb-28 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-5xl mx-auto text-center space-y-8 flex flex-col items-center justify-center my-auto">
+  <section id="about" class="relative flex flex-col justify-center items-center pt-32 pb-16 sm:pt-36 sm:pb-20 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-5xl mx-auto text-center space-y-6 flex flex-col items-center justify-center my-auto">
       
       <!-- Headline & Introduction -->
       <div class="inline-flex items-center px-6 py-2 rounded-full text-sm sm:text-base font-semibold bg-orange-50 border border-orange-200 text-orange-600 shadow-sm tracking-normal">
@@ -322,8 +322,8 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        4. COMPANY PROFILE SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="company-profile" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-12 lg:p-16 border border-stone-200">
+  <section id="company-profile" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-10 lg:p-12 border border-stone-200">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <div class="lg:col-span-6 space-y-6">
@@ -387,7 +387,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        3. LEADERSHIP TEAM (Glass Executive Profiles)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="leadership" class="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10">
+  <section id="leadership" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
     <div class="max-w-6xl mx-auto">
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
@@ -457,9 +457,9 @@
     <!-- ═══════════════════════════════════════════════════════════════════
        5. COMPREHENSIVE SOFTWARE SUITE (From website-tts.vercel.app)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="products" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
+  <section id="products" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
     <span id="products-studio" class="absolute -top-10"></span>
-    <div class="max-w-6xl mx-auto space-y-8">
+    <div class="max-w-6xl mx-auto space-y-6">
 
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto">
@@ -777,8 +777,8 @@
     <!-- ═══════════════════════════════════════════════════════════════════
        6. KEY CUSTOMERS & DIRECTORY (Stable Grid & Metrics)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="clients" class="relative min-h-screen py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 z-10 flex flex-col justify-center">
-    <div class="max-w-6xl mx-auto w-full space-y-4 sm:space-y-5">
+  <section id="clients" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10 flex flex-col justify-center">
+    <div class="max-w-6xl mx-auto w-full space-y-6">
       
       <!-- Section Title -->
       <div class="text-center max-w-4xl mx-auto pb-1">
@@ -973,8 +973,8 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        8. CONTACT & FOOTER SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="contact" class="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-12 lg:p-16 border border-stone-200 space-y-12">
+  <section id="contact" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-10 lg:p-12 border border-stone-200 space-y-8">
       
       <!-- Contact Info Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
