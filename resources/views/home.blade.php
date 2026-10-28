@@ -305,16 +305,16 @@
       <div class="text-center space-y-6 max-w-4xl mx-auto">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-50 border border-orange-400/50 text-orange-600 backdrop-blur-md shadow-lg shadow-orange-500/10">
           <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span>
-          Next-Gen Garment Manufacturing Intelligence
+          Built for Garment Manufacturers
         </div>
 
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-stone-900 font-heading">
-          A Clearer Way To <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">Run Your Garment Factory</span>
+          Powering Your Factory's <br class="hidden sm:inline" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">Digital Transformation</span>
         </h1>
 
-        <p class="text-lg sm:text-2xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
-          From the first roll of fabric to the final shipment, Track Tech helps your team see what is happening in real time, fix bottlenecks sooner and keep every order moving.
+        <p class="text-lg sm:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
+          Connect every stage of garment manufacturing with intelligent digital solutions for planning, cutting, production, quality and machine monitoring driving higher productivity, reducing waste and enabling on-time delivery.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
