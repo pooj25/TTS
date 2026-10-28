@@ -1039,31 +1039,68 @@
 
             <div>
               <label class="block text-xs font-bold text-stone-700 mb-2">What interests you most? (Select all that apply)</label>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-stone-700">
-                <label class="flex items-center gap-2 cursor-pointer select-none">
-                  <input type="checkbox" name="interests[]" value="Quality Control" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
-                  <span>Quality Control</span>
+              <div class="space-y-2">
+                
+                <!-- TrakWel -->
+                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="TrakWel" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
+                  <div class="w-8 h-8 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0 text-cyan-500">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">TrakWel</span>
+                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">MES for Shop Floor Digitisation</span>
+                  </div>
                 </label>
-                <label class="flex items-center gap-2 cursor-pointer select-none">
-                  <input type="checkbox" name="interests[]" value="Production Tracking" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
-                  <span>Production Tracking</span>
+
+                <!-- CutWel -->
+                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="CutWel" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
+                  <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center shrink-0 text-red-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242 3 3 0 014.242 0zM12 12l-2.879-2.879a3 3 0 10-4.242 4.242 3 3 0 004.242 0z"/></svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">CutWel</span>
+                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Cutting Room Digitisation</span>
+                  </div>
                 </label>
-                <label class="flex items-center gap-2 cursor-pointer select-none">
-                  <input type="checkbox" name="interests[]" value="Machine Maintenance" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
-                  <span>Machine Maintenance</span>
+
+                <!-- PlanWel -->
+                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="PlanWel" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
+                  <div class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center shrink-0 text-purple-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">PlanWel</span>
+                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Planning &amp; Scheduling</span>
+                  </div>
                 </label>
-                <label class="flex items-center gap-2 cursor-pointer select-none">
-                  <input type="checkbox" name="interests[]" value="Production Planning" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
-                  <span>Production Planning</span>
+
+                <!-- Sewing IoT -->
+                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="Sewing IoT" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
+                  <div class="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-teal-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">Sewing IoT</span>
+                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Real-time Sewing Machine Data</span>
+                  </div>
                 </label>
-                <label class="flex items-center gap-2 cursor-pointer select-none">
-                  <input type="checkbox" name="interests[]" value="Analytics & Reporting" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
-                  <span>Analytics &amp; Reporting</span>
+
+                <!-- mTrak -->
+                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="mTrak" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-600">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">mTrak</span>
+                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Machine Maintenance Management</span>
+                  </div>
                 </label>
-                <label class="flex items-center gap-2 cursor-pointer select-none">
-                  <input type="checkbox" name="interests[]" value="Integration Capabilities" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
-                  <span>Integration Capabilities</span>
-                </label>
+
               </div>
             </div>
 
