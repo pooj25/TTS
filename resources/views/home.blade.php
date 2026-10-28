@@ -189,6 +189,7 @@
       <!-- Desktop Nav Items -->
       <div class="hidden md:flex items-center gap-1 xl:gap-2 text-sm md:text-[17px] font-semibold text-stone-700">
         <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">About</a>
+        <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Leadership Team</a>
 
         <!-- Products Dropdown Menu -->
         <div class="relative group">
@@ -264,7 +265,6 @@
         </div>
 
         <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Clients</a>
-        <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Leadership</a>
         <a href="#contact" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Contact</a>
       </div>
 
@@ -288,9 +288,9 @@
   <!-- Mobile Dropdown Drawer -->
   <div id="mobileDrawer" class="absolute inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
     <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">About</a>
+    <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Leadership Team</a>
     <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Products</a>
     <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Clients</a>
-    <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Leadership Team</a>
     <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b]">Contact Us</a>
   </div>
 
@@ -930,9 +930,9 @@
         </div>
         <div class="flex items-center gap-6">
           <a href="#about" class="hover:text-stone-600 transition">Home</a>
+          <a href="#leadership" class="hover:text-stone-600 transition">Leadership Team</a>
           <a href="#products" class="hover:text-stone-600 transition">Products</a>
           <a href="#clients" class="hover:text-stone-600 transition">Clients</a>
-          <a href="#leadership" class="hover:text-stone-600 transition">Leadership</a>
           <a href="#contact" class="hover:text-stone-600 transition">Contact</a>
         </div>
       </div>
