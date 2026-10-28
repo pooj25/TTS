@@ -472,7 +472,7 @@
       <div class="space-y-4">
 
         <!-- Full-Width Product Detail Panel -->
-        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-xl min-h-[460px] md:min-h-[500px]" id="prod-detail">
+        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-xl" id="prod-detail">
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row">
