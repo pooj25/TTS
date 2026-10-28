@@ -553,7 +553,7 @@
           <div id="panel-mtrak" class="prod-panel hidden flex-col md:flex-row">
             <div class="flex-1 p-8 md:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
               <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">mTrak</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Machine maintenance management that maximizes machine uptime, reduces downtime and extends equipment life with preventive maintenance.</p>
+              <p class="text-base text-stone-700 leading-relaxed">mTrak helps maintenance teams maintain a central record of factory assets, respond to breakdowns, schedule servicing, assign tasks, and review downtime and maintenance performance through dashboards and reports.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
@@ -565,7 +565,7 @@
           <div id="panel-sewiot" class="prod-panel hidden flex-col md:flex-row">
             <div class="flex-1 p-8 md:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
               <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">SewIoT</h2>
-              <p class="text-base text-stone-700 leading-relaxed">IoT for sewing lines. Connect the sewing floor with technology to monitor, analyze and improve productivity.</p>
+              <p class="text-base text-stone-700 leading-relaxed">Sewing IoT connects sewing machines to a real-time data layer, helping factory teams see production progress, understand operator performance, identify non-productive time, and respond to issues sooner.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">

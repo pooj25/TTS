@@ -351,7 +351,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
                 </div>
                 <h3 class="text-2xl font-black text-slate-900">mTrak</h3>
                 <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                    Maximize sewing machine uptime, streamline breakdown requests with QR scanning, and maintain equipment proactively.
+                    mTrak helps maintenance teams maintain a central record of factory assets, respond to breakdowns, schedule servicing, assign tasks, and review downtime and maintenance performance through dashboards and reports.
                 </p>
                 <div class="grid grid-cols-2 gap-2 mt-6 text-xs font-semibold text-slate-700">
                     <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>QR Breakdown Calling</div>
@@ -369,7 +369,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
                 </div>
                 <h3 class="text-2xl font-black text-slate-900">SewIoT</h3>
                 <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                    Smart sensor-connected sewing terminals giving live counts, operator cycle times, and needle run-time monitoring in real time.
+                    Sewing IoT connects sewing machines to a real-time data layer, helping factory teams see production progress, understand operator performance, identify non-productive time, and respond to issues sooner.
                 </p>
                 <div class="grid grid-cols-2 gap-2 mt-6 text-xs font-semibold text-slate-700">
                     <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>Live Needle Run-time</div>
@@ -523,7 +523,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
             name: 'mTrak',
             kicker: 'PRODUCT 07 / MTRAK',
             badge: 'Maintenance ERP',
-            description: 'Machine maintenance management that maximizes machine uptime, reduces downtime and extends equipment life with preventive maintenance.',
+            description: 'mTrak helps maintenance teams maintain a central record of factory assets, respond to breakdowns, schedule servicing, assign tasks, and review downtime and maintenance performance through dashboards and reports.',
             stages: ['Monitor', 'Maintain', 'Optimize'],
             image: "{{ asset('images/mTrak.png') }}",
             alt: 'mTrak machine maintenance management interface',
@@ -536,7 +536,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
             name: 'SewIoT',
             kicker: 'PRODUCT 08 / SEWIOT',
             badge: 'Smart Sewing IoT',
-            description: 'IoT for sewing lines. Connect the sewing floor with technology to monitor, analyze and improve productivity in real time.',
+            description: 'Sewing IoT connects sewing machines to a real-time data layer, helping factory teams see production progress, understand operator performance, identify non-productive time, and respond to issues sooner.',
             stages: ['Connect', 'Analyze', 'Improve'],
             image: "{{ asset('images/sew-IoT.png') }}",
             alt: 'SewIoT smart sewing line and connected factory real-time monitoring',
