@@ -188,41 +188,41 @@
 
       <!-- Desktop Nav Items -->
       <div class="hidden md:flex items-center gap-1 xl:gap-2 text-sm md:text-[17px] font-semibold text-stone-700">
-        <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">About</a>
-        <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Leadership Team</a>
+        <a href="#about" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-500 hover:bg-orange-50 transition">About</a>
+        <a href="#leadership" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-500 hover:bg-orange-50 transition">Leadership Team</a>
 
         <!-- Products Dropdown Menu -->
         <div class="relative group">
-          <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition flex items-center gap-1.5 cursor-pointer">
+          <a href="#products" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-500 hover:bg-orange-50 transition flex items-center gap-1.5 cursor-pointer">
             <span>Products</span>
-            <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-[#087e8b] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-orange-500 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </a>
           <!-- Dropdown Popup (matching 2nd screenshot exactly) -->
           <div class="absolute left-0 top-full pt-2 w-72 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-            <div class="bg-white rounded-2xl border border-stone-200 shadow-2xl overflow-hidden border-t-4 border-t-[#087e8b]">
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-2xl overflow-hidden border-t-4 border-t-orange-500">
               
               <!-- TrakWel with expandable sub-items -->
               <div class="border-b border-stone-100 group/trak">
-                <div class="flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]"
+                <div class="flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-orange-50 hover:text-orange-600 transition border-l-4 border-transparent hover:border-l-orange-500"
                      onclick="navigateToProduct('trakwel')">
-                  <span class="text-[17px] font-bold text-stone-800 group-hover/trak:text-[#087e8b]">TrakWel</span>
-                  <button type="button" onclick="event.stopPropagation(); toggleDropdownSub('trakwelSub', 'trakwelArrow')" class="p-1 text-stone-400 hover:text-[#087e8b]">
+                  <span class="text-[17px] font-bold text-stone-800 group-hover/trak:text-orange-600">TrakWel</span>
+                  <button type="button" onclick="event.stopPropagation(); toggleDropdownSub('trakwelSub', 'trakwelArrow')" class="p-1 text-stone-400 hover:text-orange-600">
                     <svg id="trakwelArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                   </button>
                 </div>
                 <!-- Submenu -->
                 <div id="trakwelSub" class="hidden bg-stone-50/80 py-1 px-3 space-y-0.5 border-t border-stone-100">
-                  <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Fabric Inventory Management</a>
-                  <a href="#products" onclick="navigateToProduct('cutting-room')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Cutting Room Digitization</a>
-                  <a href="#products" onclick="navigateToProduct('production-tracking')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Real-Time Production Tracking</a>
-                  <a href="#products" onclick="navigateToProduct('quality-management')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Quality Management System</a>
+                  <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-orange-50 hover:text-orange-600 transition">Fabric Inventory Management</a>
+                  <a href="#products" onclick="navigateToProduct('cutting-room')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-orange-50 hover:text-orange-600 transition">Cutting Room Digitization</a>
+                  <a href="#products" onclick="navigateToProduct('production-tracking')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-orange-50 hover:text-orange-600 transition">Real-Time Production Tracking</a>
+                  <a href="#products" onclick="navigateToProduct('quality-management')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-orange-50 hover:text-orange-600 transition">Quality Management System</a>
                 </div>
               </div>
 
               <!-- PlanWel -->
               <div class="border-b border-stone-100">
                 <a href="#products" onclick="navigateToProduct('planwel')" 
-                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-orange-50 hover:text-orange-600 transition border-l-4 border-transparent hover:border-l-orange-500">
                   PlanWel
                 </a>
               </div>
@@ -230,7 +230,7 @@
               <!-- mTrak -->
               <div class="border-b border-stone-100">
                 <a href="#products" onclick="navigateToProduct('mtrak')" 
-                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-orange-50 hover:text-orange-600 transition border-l-4 border-transparent hover:border-l-orange-500">
                   mTrak
                 </a>
               </div>
@@ -238,25 +238,25 @@
               <!-- SewIoT -->
               <div class="border-b border-stone-100">
                 <a href="#products" onclick="navigateToProduct('sewiot')" 
-                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]">
+                   class="block px-5 py-3.5 text-[17px] font-bold text-stone-800 hover:bg-orange-50 hover:text-orange-600 transition border-l-4 border-transparent hover:border-l-orange-500">
                   SewIoT
                 </a>
               </div>
 
               <!-- Industry Solutions with expandable sub-items -->
               <div class="group/ind">
-                <div class="flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#e0f7f3] hover:text-[#087e8b] transition border-l-4 border-transparent hover:border-l-[#087e8b]"
+                <div class="flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-orange-50 hover:text-orange-600 transition border-l-4 border-transparent hover:border-l-orange-500"
                      onclick="navigateToProduct('industry')">
-                  <span class="text-[17px] font-bold text-stone-800 group-hover/ind:text-[#087e8b]">Industry Solutions</span>
-                  <button type="button" onclick="event.stopPropagation(); toggleDropdownSub('indSub', 'indArrow')" class="p-1 text-stone-400 hover:text-[#087e8b]">
+                  <span class="text-[17px] font-bold text-stone-800 group-hover/ind:text-orange-600">Industry Solutions</span>
+                  <button type="button" onclick="event.stopPropagation(); toggleDropdownSub('indSub', 'indArrow')" class="p-1 text-stone-400 hover:text-orange-600">
                     <svg id="indArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                   </button>
                 </div>
                 <!-- Submenu -->
                 <div id="indSub" class="hidden bg-stone-50/80 py-1 px-3 space-y-0.5 border-t border-stone-100">
-                  <a href="#products" onclick="navigateToProduct('laundry')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Laundry Management</a>
-                  <a href="#products" onclick="navigateToProduct('jig')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Jig Management</a>
-                  <a href="#products" onclick="navigateToProduct('shrinkage')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-[#e0f7f3] hover:text-[#087e8b] transition">Shrinkage Testing App</a>
+                  <a href="#products" onclick="navigateToProduct('laundry')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-orange-50 hover:text-orange-600 transition">Laundry Management</a>
+                  <a href="#products" onclick="navigateToProduct('jig')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-orange-50 hover:text-orange-600 transition">Jig Management</a>
+                  <a href="#products" onclick="navigateToProduct('shrinkage')" class="block px-3 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:bg-orange-50 hover:text-orange-600 transition">Shrinkage Testing App</a>
                 </div>
               </div>
 
@@ -264,19 +264,19 @@
           </div>
         </div>
 
-        <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Clients</a>
-        <a href="#contact" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-[#087e8b] hover:bg-teal-50 transition">Contact</a>
+        <a href="#clients" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-500 hover:bg-orange-50 transition">Clients</a>
+        <a href="#contact" class="px-3 py-1.5 xl:px-3.5 xl:py-2 rounded-full hover:text-orange-500 hover:bg-orange-50 transition">Contact</a>
       </div>
 
       <!-- Action Button -->
       <div class="flex items-center gap-2">
         <a href="#contact"
-          class="bg-[#087e8b] hover:bg-[#066570] text-white text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-2xl shadow-md shadow-[#087e8b]/20 hover:scale-105 transition-all">
+          class="bg-orange-500 hover:bg-orange-600 text-white text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-2xl shadow-md shadow-orange-500/25 hover:scale-105 transition-all">
           Request for Demo
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileNavBtn" class="md:hidden p-2 text-stone-600 hover:text-stone-900" aria-label="Toggle Navigation">
+        <button id="mobileNavBtn" class="md:hidden p-2 text-stone-600 hover:text-orange-500" aria-label="Toggle Navigation">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -287,11 +287,11 @@
 
   <!-- Mobile Dropdown Drawer -->
   <div id="mobileDrawer" class="absolute inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
-    <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">About</a>
-    <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Leadership Team</a>
-    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Products</a>
-    <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Clients</a>
-    <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b]">Contact Us</a>
+    <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">About</a>
+    <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Leadership Team</a>
+    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Products</a>
+    <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Clients</a>
+    <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500">Contact Us</a>
   </div>
 
 
