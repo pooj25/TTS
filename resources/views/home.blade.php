@@ -457,13 +457,13 @@
     <!-- ═══════════════════════════════════════════════════════════════════
        5. COMPREHENSIVE SOFTWARE SUITE (From website-tts.vercel.app)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="products" class="relative py-16 px-4 sm:px-6 lg:px-8 z-10">
+  <section id="products" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
     <span id="products-studio" class="absolute -top-10"></span>
-    <div class="max-w-5xl mx-auto space-y-6">
+    <div class="max-w-6xl mx-auto space-y-8">
 
       <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto">
-        <h2 class="text-2xl sm:text-4xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
           Designed for <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 italic">Smart Garment Factories</span>
         </h2>
       </div>
@@ -472,14 +472,14 @@
       <div class="space-y-4">
 
         <!-- Full-Width Product Detail Panel -->
-        <div class="w-full glass-card rounded-2xl border border-stone-200 overflow-hidden shadow-lg min-h-[350px]" id="prod-detail">
+        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-xl min-h-[460px] md:min-h-[500px]" id="prod-detail">
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">TrakWel</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">TrakWel</h2>
               <p class="text-base text-stone-700 leading-relaxed">Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-auto">
               <img src="{{ asset('images/trakwel.png') }}?v=2" alt="TrakWel - Smarter Manufacturing" class="w-full h-full object-cover">
@@ -488,10 +488,10 @@
 
           <!-- fabric-inventory -->
           <div id="panel-fabric-inventory" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Fabric Inventory<br>Management</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Fabric Inventory<br>Management</h2>
               <p class="text-base text-stone-700 leading-relaxed">Digitise fabric inspection and inventory management with Inspection 4.0 and automatic grouping by shade, width and shrinkage. Gain real-time visibility into stock levels and material consumption, improve fabric traceability and ensure better inventory control.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/fabric-inventory-management.png') }}" alt="Fabric Inventory Management" class="w-full h-full object-cover">
@@ -500,10 +500,10 @@
 
           <!-- cutting-room -->
           <div id="panel-cutting-room" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Cutting Room<br>Digitization</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Cutting Room<br>Digitization</h2>
               <p class="text-base text-stone-700 leading-relaxed">Digitise cut planning, optimize end-bit utilization and streamline fabric reconciliation. Improve cutting-room efficiency, reduce fabric wastage and gain better visibility and control over material usage and cutting operations.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/cutting-room-digitalization.png') }}" alt="Cutting Room Digitization" class="w-full h-full object-cover">
@@ -512,10 +512,10 @@
 
           <!-- production-tracking -->
           <div id="panel-production-tracking" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Real-Time Production<br>Tracking</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Real-Time Production<br>Tracking</h2>
               <p class="text-base text-stone-700 leading-relaxed">Track real time production, monitor efficiency and performance in real time, and compare planned versus actual output. Gain actionable insights into production progress, identify bottlenecks early and improve operational control.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/product-tracking.png') }}" alt="Real-Time Production Tracking" class="w-full h-full object-cover">
@@ -524,10 +524,10 @@
 
           <!-- quality-management -->
           <div id="panel-quality-management" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Quality Management<br>System</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Quality Management<br>System</h2>
               <p class="text-base text-stone-700 leading-relaxed">Monitor defect rates, track rework levels and identify recurring quality issues in real time. Gain actionable insights into defect trends, improve quality control and drive continuous improvement across production.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/quality-control.png') }}" alt="Quality Management System" class="w-full h-full object-cover">
@@ -536,10 +536,10 @@
 
           <!-- planwel -->
           <div id="panel-planwel" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">PlanWel</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">PlanWel</h2>
               <p class="text-base text-stone-700 leading-relaxed">Advanced planning and scheduling to balance capacity, manage orders and keep delivery commitments on track with dynamic schedules.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/planwel.png') }}" alt="PlanWel" class="w-full h-full object-cover">
@@ -548,10 +548,10 @@
 
           <!-- mtrak -->
           <div id="panel-mtrak" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">mTrak</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">mTrak</h2>
               <p class="text-base text-stone-700 leading-relaxed">mTrak helps maintenance teams maintain a central record of factory assets, respond to breakdowns, schedule servicing, assign tasks, and review downtime and maintenance performance through dashboards and reports.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/mTrak.png') }}" alt="mTrak" class="w-full h-full object-cover">
@@ -560,10 +560,10 @@
 
           <!-- sewiot -->
           <div id="panel-sewiot" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">SewIoT</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">SewIoT</h2>
               <p class="text-base text-stone-700 leading-relaxed">Sewing IoT connects sewing machines to a real-time data layer, helping factory teams see production progress, understand operator performance, identify non-productive time, and respond to issues sooner.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/sew-IoT.png') }}" alt="SewIoT" class="w-full h-full object-cover">
@@ -572,10 +572,10 @@
 
           <!-- laundry -->
           <div id="panel-laundry" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Laundry<br>Management</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Laundry<br>Management</h2>
               <p class="text-base text-stone-700 leading-relaxed">Laundry Management is a digital system that tracks garment washing processes, including laundry lots, quantities, shades, machine allocation, and operators. It supports QR code scanning, lot splitting and merging, WIP tracking, and machine and operator management. The system improves traceability, reduces manual errors, and ensures efficient workflow and production control.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-auto">
               <img src="{{ asset('images/laundry-management.png') }}?v=2" alt="Laundry Management" class="w-full h-full object-cover">
@@ -584,10 +584,10 @@
 
           <!-- jig -->
           <div id="panel-jig" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Jig Management</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Jig Management</h2>
               <p class="text-base text-stone-700 leading-relaxed">JIG Management is a digital system for tracking denim pocket jigs, including design codes, sizes, materials, and storage locations. It supports QR code identification, jig allocation, usage, return, and availability tracking. The system reduces manual errors, prevents loss, improves inventory control, and ensures efficient production operations.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-auto">
               <img src="{{ asset('images/Jig-management.png') }}?v=2" alt="Jig Management" class="w-full h-full object-cover">
@@ -596,10 +596,10 @@
 
           <!-- shrinkage -->
           <div id="panel-shrinkage" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Shrinkage Testing App</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Shrinkage Testing App</h2>
               <p class="text-base text-stone-700 leading-relaxed">Record fabric measurements before and after washing, calculate shrinkage and keep test results linked to the material lot for consistent quality decisions.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/shrinkage-testing-app.png') }}" alt="Shrinkage Testing App" class="w-full h-full object-cover">
@@ -608,15 +608,15 @@
 
           <!-- industry solutions overview panel -->
           <div id="panel-industry" class="prod-panel hidden flex-col md:flex-row">
-            <div class="flex-1 p-6 sm:p-8 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-teal-700 font-heading leading-tight">Industry Solutions</h2>
+            <div class="flex-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Industry Solutions</h2>
               <p class="text-base text-stone-700 leading-relaxed">Specialized shop-floor applications tailored for apparel manufacturers. From Laundry Management to Jig tracking and Shrinkage testing, digitise every specialised corner of your manufacturing workflow.</p>
               <div class="flex flex-wrap gap-2 pt-2">
                 <button onclick="selectProduct('laundry')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Laundry Management →</button>
                 <button onclick="selectProduct('jig')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Jig Management →</button>
                 <button onclick="selectProduct('shrinkage')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Shrinkage Testing App →</button>
               </div>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm mt-3">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20 mt-3">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
               <img src="{{ asset('images/laundry-management.png') }}" alt="Industry Solutions" class="w-full h-full object-cover">
@@ -626,29 +626,29 @@
         </div>
 
         <!-- Sleek, Compact Controls Strip Below Card -->
-        <div class="flex items-center justify-center gap-2.5 pt-2 text-stone-600">
+        <div class="flex items-center justify-between px-2 pt-2 text-stone-600">
           <button type="button" onclick="prevProduct()" 
-                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50/50 shadow-sm transition active:scale-95 cursor-pointer"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer"
                   aria-label="Previous Product">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
-            <span>Prev</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            <span>Previous</span>
           </button>
 
-          <div class="flex items-center gap-2 px-3 py-1 bg-white border border-stone-200 rounded-full shadow-sm text-xs">
+          <div class="flex items-center gap-2.5 px-4 py-1.5 bg-white border border-stone-200 rounded-full shadow-sm text-xs">
             <span id="prod-counter" class="font-bold font-mono text-orange-600">
               01 / 11
             </span>
             <span class="text-stone-300">|</span>
-            <span id="prod-current-title" class="font-semibold text-stone-700 truncate max-w-[180px] sm:max-w-none">
+            <span id="prod-current-title" class="font-semibold text-stone-700">
               TrakWel
             </span>
           </div>
 
           <button type="button" onclick="nextProduct()" 
-                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50/50 shadow-sm transition active:scale-95 cursor-pointer"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer"
                   aria-label="Next Product">
             <span>Next</span>
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
 
