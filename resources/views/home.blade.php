@@ -484,60 +484,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Manufacturing Execution System (MES) for real-time visibility and control across the shop floor, improving efficiency, quality and performance.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
-
-            <!-- Right: Dark MES Real-Time Dashboard (SewIoT image removed) -->
-            <div class="md:w-1/2 bg-[#0f2033] text-white flex flex-col justify-center p-8 sm:p-10 space-y-6">
-              
-              <!-- Header Bar -->
-              <div class="flex items-center justify-between pb-4 border-b border-white/10">
-                <div class="flex items-center gap-2.5">
-                  <span class="relative flex h-2.5 w-2.5">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#14d5b2] opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#14d5b2]"></span>
-                  </span>
-                  <span class="text-xs font-bold uppercase tracking-wider text-[#14d5b2]">MES Live Factory Floor</span>
-                </div>
-                <span class="text-xs text-stone-400 font-mono bg-white/5 px-2.5 py-1 rounded-md">Shift 01 • Running</span>
-              </div>
-
-              <!-- Main KPI Cards (Output & Efficiency) -->
-              <div class="grid grid-cols-2 gap-4">
-                <div class="bg-[#162a40] rounded-2xl p-5 space-y-1.5 border border-white/10 shadow-inner">
-                  <div class="text-[11px] font-bold uppercase tracking-widest text-[#14d5b2]">Output</div>
-                  <div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">842</div>
-                  <div class="text-xs text-stone-400">pieces today</div>
-                </div>
-
-                <div class="bg-[#162a40] rounded-2xl p-5 space-y-1.5 border border-white/10 shadow-inner">
-                  <div class="text-[11px] font-bold uppercase tracking-widest text-[#14d5b2]">Efficiency</div>
-                  <div class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">92%</div>
-                  <div class="text-xs text-stone-400">on target</div>
-                </div>
-              </div>
-
-              <!-- Order Progress Bar -->
-              <div class="space-y-2 pt-1">
-                <div class="flex justify-between items-center text-xs">
-                  <span class="font-semibold text-stone-300 tracking-wider">ORDER 4821</span>
-                  <span class="font-bold text-[#14d5b2] text-sm">78%</span>
-                </div>
-                <div class="w-full bg-[#162a40] rounded-full h-3 overflow-hidden p-0.5 border border-white/5">
-                  <div class="bg-[#14d5b2] h-full rounded-full transition-all duration-700" style="width:78%"></div>
-                </div>
-              </div>
-
-              <!-- Live Status Indicators -->
-              <div class="grid grid-cols-2 gap-3 pt-2 text-xs text-stone-400 border-t border-white/10">
-                <div class="flex items-center gap-2">
-                  <svg class="w-4 h-4 text-[#14d5b2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span class="text-stone-300 font-medium">12/12 Lines Connected</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <svg class="w-4 h-4 text-[#14d5b2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  <span class="text-stone-300 font-medium">Real-Time Data Sync</span>
-                </div>
-              </div>
-
+            <div class="md:w-3/5 h-64 md:h-auto">
+              <img src="{{ asset('images/trakwel.png') }}" alt="TrakWel - Smarter Manufacturing" class="w-full h-full object-cover">
             </div>
           </div>
 
