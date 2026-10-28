@@ -697,126 +697,160 @@
        6. KEY CUSTOMERS & DIRECTORY (Stable Grid & Metrics)
   ═══════════════════════════════════════════════════════════════════ -->
   <section id="clients" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto space-y-10">
+    <div class="max-w-6xl mx-auto space-y-8">
       
-      <div class="text-center space-y-3 max-w-2xl mx-auto">
-        <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 inline-block font-sans shadow-sm">
-          Trusted Worldwide
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
-          Technology trusted by apparel makers
+      <!-- Section Title -->
+      <div class="text-center max-w-4xl mx-auto">
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#087e8b] tracking-tight">
+          Technology trusted by apparel manufacturers
         </h2>
-        <p class="text-stone-500 text-sm sm:text-base font-sans">
-          From established manufacturing groups to specialist apparel exporters, Track Tech brings production, quality and order visibility together.
-        </p>
       </div>
 
       <!-- SVG Symbols Definition (hidden) -->
       <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+        <defs>
+          <linearGradient id="shahiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8"/>
+            <stop offset="50%" stop-color="#818cf8"/>
+            <stop offset="100%" stop-color="#c084fc"/>
+          </linearGradient>
+        </defs>
+
+        <!-- 1. shahi (modern gradient lowercase matching screenshot) -->
         <symbol id="shahi" viewBox="0 0 200 80">
-          <rect x="8" y="16" width="184" height="48" fill="#26345f" />
-          <text x="100" y="52" fill="#fff" font-family="Arial,sans-serif" font-size="39" font-weight="800" text-anchor="middle">SHAHI</text>
+          <text x="100" y="52" fill="url(#shahiGrad)" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" letter-spacing="1" text-anchor="middle">shahi</text>
         </symbol>
+
+        <!-- 2. arvind -->
         <symbol id="arvind" viewBox="0 0 200 80">
-          <text x="100" y="45" fill="#a11e3c" font-family="Georgia,serif" font-size="36" text-anchor="middle">ARVIND</text>
-          <text x="100" y="62" fill="#a11e3c" font-family="Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle">FASHIONING POSSIBILITIES</text>
+          <text x="100" y="44" fill="#a11e3c" font-family="Georgia, serif" font-size="34" font-weight="700" letter-spacing="2" text-anchor="middle">ARVIND</text>
+          <text x="100" y="60" fill="#a11e3c" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" letter-spacing="1.5" text-anchor="middle">FASHIONING POSSIBILITIES</text>
         </symbol>
+
+        <!-- 3. pds -->
         <symbol id="pds" viewBox="0 0 200 80">
-          <circle cx="49" cy="40" r="28" fill="none" stroke="#b42b48" stroke-width="3" />
-          <path d="M49 12v56M39 14v52M29 20v40M19 29v22M59 14v52M69 20v40M79 29v22" stroke="#b42b48" stroke-width="4" />
-          <text x="127" y="53" fill="#17191c" font-family="Georgia,serif" font-size="39" text-anchor="middle">PDS</text>
+          <circle cx="49" cy="40" r="27" fill="none" stroke="#b42b48" stroke-width="3" />
+          <path d="M49 13v54M39 15v50M29 21v38M19 30v20M59 15v50M69 21v38M79 30v20" stroke="#b42b48" stroke-width="3.5" />
+          <text x="127" y="52" fill="#17191c" font-family="Georgia, serif" font-size="38" font-weight="700" text-anchor="middle">PDS</text>
         </symbol>
+
+        <!-- 4. texport overseas (ribbon emblem + text) -->
         <symbol id="texport" viewBox="0 0 200 80">
-          <text x="100" y="51" fill="#243c70" font-family="Arial,sans-serif" font-size="32" font-weight="800" text-anchor="middle">texport</text>
+          <g transform="translate(18, 14)">
+            <path d="M18 4 C8 4 1 13 1 24 C1 36 8 46 20 46 C27 46 32 42 36 36 L28 32 C26 36 23 38 20 38 C13 38 9 32 9 24 C9 17 13 12 20 12 C24 12 27 15 29 19 L37 15 C33 8 27 4 18 4 Z" fill="#2563eb" />
+            <path d="M7 23 C9 15 17 9 27 9 L29 15 C23 15 17 19 15 25 Z" fill="#ef4444" />
+            <path d="M19 10 L19 46 L25 46 L25 10 Z" fill="#2563eb" />
+            <path d="M9 25 L33 25 L33 20 L9 20 Z" fill="#ef4444" />
+          </g>
+          <text x="126" y="40" fill="#1e3a8a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" text-anchor="middle">texport</text>
+          <text x="126" y="56" fill="#1e3a8a" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="3" text-anchor="middle">OVERSEAS</text>
         </symbol>
-        <symbol id="modelarna" viewBox="0 0 200 80">
-          <ellipse cx="100" cy="31" rx="39" ry="23" fill="none" stroke="#24252a" stroke-width="3" />
-          <path d="M66 31h68M100 9v44" stroke="#24252a" stroke-width="2" />
-          <path d="M82 17 100 10l18 7v24l-18 12-18-12z" fill="#b32333" stroke="#202126" stroke-width="2" />
-          <text x="100" y="72" fill="#17191c" font-family="Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">MODELAMA EXPORTS</text>
-        </symbol>
-        <symbol id="armstrong" viewBox="0 0 200 80">
-          <path d="M12 16h30L18 64H0z" fill="#c93635" />
-          <path d="M38 16h150l-24 48H14z" fill="#66676b" />
-          <text x="107" y="42" fill="#fff" font-family="Georgia,serif" font-size="22" font-weight="700" text-anchor="middle">Armstrong</text>
-          <text x="105" y="55" fill="#fff" font-family="Georgia,serif" font-size="9" font-style="italic" text-anchor="middle">The name for Quality</text>
-        </symbol>
+
+        <!-- 5. penguin apparels -->
         <symbol id="penguin" viewBox="0 0 200 80">
-          <ellipse cx="36" cy="39" rx="14" ry="25" fill="#fff" stroke="#172331" stroke-width="2.5" />
-          <ellipse cx="36" cy="44" rx="8" ry="13" fill="#172331" />
-          <circle cx="32" cy="28" r="2" fill="#172331" />
-          <circle cx="40" cy="28" r="2" fill="#172331" />
-          <path d="m34 32 5 2-5 2z" fill="#d8a344" />
-          <path d="M23 57h9M39 57h9" stroke="#d8a344" stroke-width="3" stroke-linecap="round" />
-          <text x="119" y="37" fill="#384878" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle">Penguin</text>
-          <text x="119" y="53" fill="#384878" font-family="Arial,sans-serif" font-size="12" text-anchor="middle">Apparels (P) Ltd</text>
+          <ellipse cx="26" cy="40" rx="14" ry="24" fill="#1e293b" />
+          <ellipse cx="26" cy="43" rx="8" ry="17" fill="#ffffff" />
+          <circle cx="23" cy="26" r="1.8" fill="#ffffff" />
+          <circle cx="29" cy="26" r="1.8" fill="#ffffff" />
+          <circle cx="23" cy="26" r="1" fill="#1e293b" />
+          <circle cx="29" cy="26" r="1" fill="#1e293b" />
+          <polygon points="23,30 29,30 26,34" fill="#f59e0b" />
+          <ellipse cx="21" cy="62" rx="4" ry="2" fill="#f59e0b" />
+          <ellipse cx="31" cy="62" rx="4" ry="2" fill="#f59e0b" />
+          <text x="118" y="45" fill="#1e3a8a" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="900" text-anchor="middle" letter-spacing="0.5">PENGUIN APPARELS (P) LTD</text>
         </symbol>
+
+        <!-- 6. modelama -->
+        <symbol id="modelarna" viewBox="0 0 200 80">
+          <ellipse cx="100" cy="29" rx="34" ry="20" fill="none" stroke="#27272a" stroke-width="2.5" />
+          <path d="M70 29h60M100 9v40" stroke="#27272a" stroke-width="2" />
+          <path d="M84 16 100 10l16 6v21l-16 11-16-11z" fill="#dc2626" stroke="#27272a" stroke-width="2" />
+          <text x="100" y="68" fill="#18181b" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="900" letter-spacing="1" text-anchor="middle">MODELAMA</text>
+        </symbol>
+
+        <!-- 7. armstrong -->
+        <symbol id="armstrong" viewBox="0 0 200 80">
+          <path d="M22 18h28L28 62H0z" fill="#dc2626" />
+          <path d="M46 18h140l-22 44H24z" fill="#52525b" />
+          <text x="108" y="42" fill="#fff" font-family="Georgia, serif" font-size="20" font-weight="700" text-anchor="middle">Armstrong</text>
+          <text x="106" y="54" fill="#fff" font-family="Georgia, serif" font-size="9" font-style="italic" text-anchor="middle">The name for Quality</text>
+        </symbol>
+
+        <!-- 8. sahana (3 golden petals) -->
         <symbol id="sahana" viewBox="0 0 200 80">
-          <path d="M100 37C83 27 87 11 101 5c12 12 10 24-1 32ZM100 37c1-19 17-25 30-16-3 17-14 23-30 16ZM100 37c18-3 28 10 22 25-17 1-24-9-22-25ZM100 37c-3 18-18 24-30 13 4-17 16-22 30-13ZM100 37C81 40 72 27 79 13c17-1 24 9 21 24Z" fill="#d9a22d" />
-          <text x="100" y="71" fill="#7c735f" font-family="Georgia,serif" font-size="17" letter-spacing="2" text-anchor="middle">SAHANA</text>
+          <g transform="translate(100, 24)" fill="#f59e0b">
+            <path d="M0 -15 C-5 -6 -5 6 0 13 C5 6 5 -6 0 -15 Z" />
+            <path d="M-3 0 C-11 -11 -21 -4 -17 7 C-13 13 -4 10 -2 2 Z" />
+            <path d="M3 0 C11 -11 21 -4 17 7 C13 13 4 10 2 2 Z" />
+          </g>
+          <text x="100" y="66" fill="#71717a" font-family="Georgia, serif" font-size="15" letter-spacing="3" text-anchor="middle">SAHANA</text>
         </symbol>
+
+        <!-- 9. trendyfits -->
         <symbol id="trendyfits" viewBox="0 0 200 80">
-          <rect x="8" y="10" width="184" height="60" fill="#153b73" />
-          <circle cx="34" cy="39" r="14" fill="#f4ca35" />
-          <path d="M27 48V29h13v4h-8v4h7v4h-7v7z" fill="#1d5a9a" />
-          <text x="117" y="41" fill="#fff" font-family="Arial,sans-serif" font-size="19" font-weight="800" text-anchor="middle">TRENDY FITS</text>
-          <text x="117" y="54" fill="#f4ca35" font-family="Arial,sans-serif" font-size="7" text-anchor="middle">COMFORT FASHION FIT</text>
+          <rect x="8" y="12" width="184" height="56" rx="4" fill="#153b73" />
+          <circle cx="34" cy="40" r="13" fill="#facc15" />
+          <text x="34" y="47" fill="#153b73" font-family="Arial, sans-serif" font-size="20" font-weight="900" text-anchor="middle">T</text>
+          <text x="118" y="41" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="0.5">TRENDY FITS</text>
+          <line x1="60" y1="46" x2="175" y2="46" stroke="#facc15" stroke-width="1.2" />
+          <text x="118" y="55" fill="#facc15" font-family="Arial, sans-serif" font-size="7" font-weight="600" text-anchor="middle" letter-spacing="1">COMFORT FASHION FIT</text>
         </symbol>
+
+        <!-- 10. mehala -->
         <symbol id="mehala" viewBox="0 0 200 80">
-          <text x="100" y="42" fill="#df3b3d" font-family="Georgia,serif" font-size="36" font-weight="700" text-anchor="middle">MEHALA</text>
-          <text x="100" y="59" fill="#393238" font-family="Georgia,serif" font-size="10" font-style="italic" text-anchor="middle">Committed to Customer Delight</text>
+          <text x="100" y="42" fill="#dc2626" font-family="Times New Roman, Georgia, serif" font-size="34" font-weight="800" letter-spacing="2" text-anchor="middle">MEHALA</text>
+          <text x="100" y="58" fill="#27272a" font-family="Georgia, serif" font-size="10" font-style="italic" text-anchor="middle">Committed to Customer Delight</text>
         </symbol>
       </svg>
 
-      <!-- Customer Directory Stable Showcase Card (Screenshot 1) -->
+      <!-- Customer Directory Showcase Card -->
       <div class="glass-card p-6 sm:p-8 border border-stone-200/90 shadow-lg">
         
-        <!-- Header: Customer Directory / Key customers -->
-        <div class="flex items-center justify-between pb-4 border-b border-stone-200">
-          <span class="text-sm font-bold uppercase tracking-wider text-stone-500 font-sans">CUSTOMER DIRECTORY</span>
-          <span class="text-base font-bold text-stone-900 font-heading">Key customers</span>
+        <!-- Header: Key Customers on the left in teal -->
+        <div class="pb-4">
+          <span class="text-base sm:text-lg font-bold text-[#087e8b] font-heading">Key Customers</span>
         </div>
 
-        <!-- 5x2 Stable Logo Grid with clean cell borders (Enlarged Logos) -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-2xl overflow-hidden mt-6 shadow-sm">
+        <!-- 5x2 Stable Logo Grid with clean cell borders -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm">
           
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#shahi" xlink:href="#shahi"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#pds" xlink:href="#pds"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#texport" xlink:href="#texport"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#penguin" xlink:href="#penguin"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#modelarna" xlink:href="#modelarna"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#sahana" xlink:href="#sahana"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-36 flex items-center justify-center hover:bg-orange-50/40 transition-colors">
+          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
             <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
           </div>
 
@@ -824,26 +858,26 @@
 
       </div>
 
-      <!-- Stable Company Facts & Metrics Bar (4 Columns) -->
+      <!-- Stable Company Facts & Metrics Bar (4 Columns matching Screenshot 2) -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-0 bg-white/95 glass-card border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-stone-200/90">
         
         <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">2</strong>
+          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">2</strong>
           <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Countries</span>
         </div>
 
         <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">74+</strong>
+          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">74+</strong>
           <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Factories</span>
         </div>
 
         <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">6000+</strong>
+          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">6000+</strong>
           <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Users</span>
         </div>
 
         <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-orange-500 font-heading">36</strong>
+          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">36</strong>
           <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Professionals</span>
         </div>
 
