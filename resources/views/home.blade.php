@@ -815,7 +815,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm">
           
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#shahi" xlink:href="#shahi"></use></svg>
+            <img src="{{ asset('images/clients/shahi.png') }}" alt="Shahi" class="max-h-11 sm:max-h-12 max-w-[140px] sm:max-w-[160px] w-auto h-auto object-contain">
           </div>
 
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
@@ -823,15 +823,15 @@
           </div>
 
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#pds" xlink:href="#pds"></use></svg>
+            <img src="{{ asset('images/clients/pds.png') }}" alt="PDS" class="max-h-12 sm:max-h-14 max-w-[140px] sm:max-w-[160px] w-auto h-auto object-contain">
           </div>
 
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#texport" xlink:href="#texport"></use></svg>
+            <img src="{{ asset('images/clients/texport.png') }}" alt="Texport Overseas" class="max-h-11 sm:max-h-13 max-w-[150px] sm:max-w-[170px] w-auto h-auto object-contain">
           </div>
 
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#penguin" xlink:href="#penguin"></use></svg>
+            <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-9 sm:max-h-10 max-w-[160px] sm:max-w-[185px] w-auto h-auto object-contain">
           </div>
 
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
@@ -843,7 +843,7 @@
           </div>
 
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#sahana" xlink:href="#sahana"></use></svg>
+            <img src="{{ asset('images/clients/sahana.png') }}" alt="Sahana" class="max-h-12 sm:max-h-14 max-w-[110px] sm:max-w-[130px] w-auto h-auto object-contain">
           </div>
 
           <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
