@@ -271,8 +271,8 @@
       <!-- Action Button -->
       <div class="flex items-center gap-2">
         <a href="#contact"
-          class="bg-[#14d5b2] hover:bg-[#087e8b] hover:text-white text-slate-900 text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-lg shadow-md shadow-[#14d5b2]/20 hover:scale-105 transition-all">
-          Experience It Live
+          class="bg-[#087e8b] hover:bg-[#066570] text-white text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-2xl shadow-md shadow-[#087e8b]/20 hover:scale-105 transition-all">
+          Request for Demo
         </a>
 
         <!-- Mobile Menu Toggle Button -->
