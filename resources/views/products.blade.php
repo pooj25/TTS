@@ -549,7 +549,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
             name: 'Laundry Management',
             kicker: 'PRODUCT 09 / LAUNDRY MANAGEMENT',
             badge: 'Industry Solution',
-            description: 'Laundry Management is a digital system designed to manage and track garment washing processes efficiently within the garment manufacturing industry. The system enables users to monitor laundry lots, quantities, shades, machine allocation, operator details, and washing process sequences from start to finish. It supports QR code-based scanning to track lot movement, record machine activities, manage shade-wise lot splitting and merging, and monitor work-in-progress (WIP). The system also maintains machine and operator master data, captures reasons for skipped scans, and improves process traceability. By reducing manual recordkeeping, minimizing errors, and providing better visibility into production status and efficiency, Laundry Management helps ensure smooth workflow execution, accurate tracking, and improved operational control.',
+            description: 'Laundry Management is a digital system that tracks garment washing processes, including laundry lots, quantities, shades, machine allocation, and operators. It supports QR code scanning, lot splitting and merging, WIP tracking, and machine and operator management. The system improves traceability, reduces manual errors, and ensures efficient workflow and production control.',
             stages: ['Receive', 'Process', 'Inspect'],
             image: "{{ asset('images/laundry-management.png') }}",
             alt: 'Laundry management workflow for garment processing and finishing',
