@@ -387,77 +387,65 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        3. LEADERSHIP TEAM (Glass Executive Profiles)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="leadership" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto space-y-12">
-      
-      <div class="text-center space-y-3 max-w-2xl mx-auto">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#087e8b] px-3.5 py-1 rounded-full bg-teal-50 border border-[#087e8b]/20 inline-block">
-          Our Leadership Team
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
-          Built around manufacturing, operations &amp; tech
-        </h2>
-        <p class="text-stone-500 text-sm sm:text-base">
-          Three perspectives working together to make factory software practical, dependable and useful on the floor.
-        </p>
-      </div>
+  <section id="leadership" class="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto">
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
 
         <!-- Gopinath Muniraj -->
-        <div class="glass-card p-8 flex flex-col justify-between space-y-5">
-          <div class="space-y-5">
-            <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="w-28 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-teal-100">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#087e8b] block mb-1">Founder &amp; Chief Executive Officer (CEO)</span>
-              <h3 class="text-3xl font-extrabold font-heading text-stone-900 leading-tight">Gopinath Muniraj</h3>
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
+          <div>
+            <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-teal-500/40 mx-auto">
+            <div class="text-center mt-5 mb-4">
+              <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Gopinath Muniraj</h3>
+              <span class="text-sm font-semibold text-[#087e8b] block mt-1">Founder &amp; Chief Executive Officer (CEO)</span>
             </div>
-            <p class="text-base text-stone-700 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed text-justify">
               Gopinath Muniraj is a technology entrepreneur with over 20 years of experience in apparel manufacturing. As Founder and CEO of Track Tech Solution, he drives digital transformation through automation, AI and Industrial IoT, helping manufacturers streamline operations, improve productivity, enable data-driven decisions and build smarter, more efficient and connected manufacturing environments.
             </p>
           </div>
-          <div class="pt-4 border-t border-stone-200">
-            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-[#087e8b] hover:text-[#066570] transition flex items-center gap-1.5">
-              <span>Professional Profile</span>
-              <span>&#8599;</span>
+          <div class="pt-6 text-center">
+            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#087e8b] hover:text-[#066570] transition">
+              <span>Professional profile</span>
+              <span>↗</span>
             </a>
           </div>
         </div>
 
         <!-- Lebinesh Balan -->
-        <div class="glass-card p-8 flex flex-col justify-between space-y-5">
-          <div class="space-y-5">
-            <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="w-28 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-teal-100">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#087e8b] block mb-1">Co-Founder &amp; Chief Operating Officer (COO)</span>
-              <h3 class="text-3xl font-extrabold font-heading text-stone-900 leading-tight">Lebinesh Balan</h3>
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
+          <div>
+            <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-teal-500/40 mx-auto">
+            <div class="text-center mt-5 mb-4">
+              <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Lebinesh Balan</h3>
+              <span class="text-sm font-semibold text-[#087e8b] block mt-1">Co-Founder &amp; Chief Operating Officer (COO)</span>
             </div>
-            <p class="text-base text-stone-700 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed text-justify">
               Lebinesh Balan brings nearly 20 years of experience in digital transformation, particularly in apparel manufacturing. At Track Tech Solution, he leads business strategy, sales, operations and commercial growth, helping manufacturers digitise shop-floor processes, optimise production planning, enhance productivity, strengthen customer partnerships and achieve sustainable business growth through technology-driven innovation.
             </p>
           </div>
-          <div class="pt-4 border-t border-stone-200">
-            <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-[#087e8b] hover:text-[#066570] transition flex items-center gap-1.5">
-              <span>LinkedIn Profile</span>
-              <span>&#8599;</span>
+          <div class="pt-6 text-center">
+            <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#087e8b] hover:text-[#066570] transition">
+              <span>LinkedIn profile</span>
+              <span>↗</span>
             </a>
           </div>
         </div>
 
         <!-- Deepak Rajkumar -->
-        <div class="glass-card p-8 flex flex-col justify-between space-y-5">
-          <div class="space-y-5">
-            <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="w-28 h-28 rounded-2xl object-cover object-top shadow-md border-2 border-teal-100">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-widest text-[#087e8b] block mb-1">Co-Founder &amp; Chief Technology Officer (CTO)</span>
-              <h3 class="text-3xl font-extrabold font-heading text-stone-900 leading-tight">Deepak Rajkumar</h3>
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
+          <div>
+            <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-teal-500/40 mx-auto">
+            <div class="text-center mt-5 mb-4">
+              <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Deepak Rajkumar</h3>
+              <span class="text-sm font-semibold text-[#087e8b] block mt-1">Co-Founder &amp; Chief Technology Officer (CTO)</span>
             </div>
-            <p class="text-base text-stone-700 leading-relaxed">
+            <p class="text-sm text-stone-600 leading-relaxed text-justify">
               Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, developing scalable solutions using software architecture, AI and Industrial IoT to improve factory efficiency, operational visibility, manufacturing processes and overall business performance.
             </p>
           </div>
-          <div class="pt-4 border-t border-stone-200">
-            <span class="text-sm font-semibold text-stone-500">Software Architecture &amp; IoT</span>
+          <div class="pt-6 text-center">
+            <span class="inline-block text-transparent text-sm select-none">&nbsp;</span>
           </div>
         </div>
 
