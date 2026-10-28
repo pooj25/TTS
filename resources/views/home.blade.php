@@ -973,58 +973,58 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        8. CONTACT & FOOTER SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="contact" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-6 sm:p-10 lg:p-12 border border-stone-200 rounded-3xl shadow-xl space-y-10">
+  <section id="contact" class="relative py-8 sm:py-10 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto glass-card p-5 sm:p-7 lg:p-8 border border-stone-200 rounded-3xl shadow-xl space-y-6">
       
       <!-- Session Flash Feedback -->
       @if(session('success'))
-        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold flex items-center gap-2.5 shadow-sm">
+        <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-semibold flex items-center gap-2.5 shadow-sm">
           <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           <span>{{ session('success') }}</span>
         </div>
       @endif
 
       <!-- 2-Column Layout: Left Demo Form (Orange Theme) | Right Contact Info Cards -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
 
         <!-- LEFT: Request Your Demo Form (Image 1 in Orange Theme) -->
-        <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-stone-200/90 shadow-sm space-y-6">
+        <div class="lg:col-span-7 bg-white p-5 sm:p-6 rounded-2xl border border-stone-200/90 shadow-sm space-y-4">
           <div>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900 font-heading">Request Your Demo</h3>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-stone-900 font-heading leading-tight">Request Your Demo</h3>
           </div>
 
-          <form action="{{ route('contact.store') }}" method="POST" class="space-y-4">
+          <form action="{{ route('contact.store') }}" method="POST" class="space-y-3">
             @csrf
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label class="block text-xs font-bold text-stone-700 mb-1.5">Full Name <span class="text-orange-500">*</span></label>
+                <label class="block text-xs font-bold text-stone-700 mb-1">Full Name <span class="text-orange-500">*</span></label>
                 <input type="text" name="first_name" required placeholder="John Smith"
-                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
               <div>
-                <label class="block text-xs font-bold text-stone-700 mb-1.5">Work Email <span class="text-orange-500">*</span></label>
+                <label class="block text-xs font-bold text-stone-700 mb-1">Work Email <span class="text-orange-500">*</span></label>
                 <input type="email" name="email" required placeholder="john@company.com"
-                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label class="block text-xs font-bold text-stone-700 mb-1.5">Company <span class="text-orange-500">*</span></label>
+                <label class="block text-xs font-bold text-stone-700 mb-1">Company <span class="text-orange-500">*</span></label>
                 <input type="text" name="company_name" required placeholder="Your Company"
-                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
               <div>
-                <label class="block text-xs font-bold text-stone-700 mb-1.5">Phone Number</label>
+                <label class="block text-xs font-bold text-stone-700 mb-1">Phone Number</label>
                 <input type="tel" name="phone" placeholder="+1 (555) 123-4567"
-                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-stone-700 mb-1.5">Your Role</label>
-              <select name="role" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+              <label class="block text-xs font-bold text-stone-700 mb-1">Your Role</label>
+              <select name="role" class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
                 <option value="" disabled selected>Select your role</option>
                 <option value="Factory Owner / Executive">Factory Owner / Executive</option>
                 <option value="Plant / General Manager">Plant / General Manager</option>
@@ -1038,66 +1038,66 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-stone-700 mb-2">What interests you most? (Select all that apply)</label>
-              <div class="space-y-2">
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">What interests you most? (Select all that apply)</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 
                 <!-- TrakWel -->
-                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                <label class="flex items-center gap-2.5 p-2 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
                   <input type="checkbox" name="interests[]" value="TrakWel" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
-                  <div class="w-8 h-8 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0 text-cyan-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
+                  <div class="w-7 h-7 rounded-lg bg-cyan-50 flex items-center justify-center shrink-0 text-cyan-500">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
                   </div>
-                  <div class="flex flex-col">
-                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">TrakWel</span>
-                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">MES for Shop Floor Digitisation</span>
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-bold text-stone-900 leading-tight">TrakWel</span>
+                    <span class="text-[10px] text-stone-500 leading-tight truncate">MES for Shop Floor</span>
                   </div>
                 </label>
 
                 <!-- CutWel -->
-                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                <label class="flex items-center gap-2.5 p-2 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
                   <input type="checkbox" name="interests[]" value="CutWel" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
-                  <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center shrink-0 text-red-500">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242 3 3 0 014.242 0zM12 12l-2.879-2.879a3 3 0 10-4.242 4.242 3 3 0 004.242 0z"/></svg>
+                  <div class="w-7 h-7 rounded-lg bg-red-50 flex items-center justify-center shrink-0 text-red-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242 3 3 0 014.242 0zM12 12l-2.879-2.879a3 3 0 10-4.242 4.242 3 3 0 004.242 0z"/></svg>
                   </div>
-                  <div class="flex flex-col">
-                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">CutWel</span>
-                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Cutting Room Digitisation</span>
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-bold text-stone-900 leading-tight">CutWel</span>
+                    <span class="text-[10px] text-stone-500 leading-tight truncate">Cutting Room Digitisation</span>
                   </div>
                 </label>
 
                 <!-- PlanWel -->
-                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                <label class="flex items-center gap-2.5 p-2 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
                   <input type="checkbox" name="interests[]" value="PlanWel" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
-                  <div class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center shrink-0 text-purple-600">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <div class="w-7 h-7 rounded-lg bg-purple-50 flex items-center justify-center shrink-0 text-purple-600">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                   </div>
-                  <div class="flex flex-col">
-                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">PlanWel</span>
-                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Planning &amp; Scheduling</span>
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-bold text-stone-900 leading-tight">PlanWel</span>
+                    <span class="text-[10px] text-stone-500 leading-tight truncate">Planning &amp; Scheduling</span>
                   </div>
                 </label>
 
                 <!-- Sewing IoT -->
-                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                <label class="flex items-center gap-2.5 p-2 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
                   <input type="checkbox" name="interests[]" value="Sewing IoT" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
-                  <div class="w-8 h-8 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-teal-600">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                  <div class="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 text-teal-600">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
                   </div>
-                  <div class="flex flex-col">
-                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">Sewing IoT</span>
-                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Real-time Sewing Machine Data</span>
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-bold text-stone-900 leading-tight">Sewing IoT</span>
+                    <span class="text-[10px] text-stone-500 leading-tight truncate">Real-time Machine Data</span>
                   </div>
                 </label>
 
                 <!-- mTrak -->
-                <label class="flex items-center gap-3 p-2.5 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
+                <label class="sm:col-span-2 flex items-center gap-2.5 p-2 rounded-xl border border-stone-200 bg-stone-50/40 hover:bg-orange-50/30 hover:border-orange-300 transition cursor-pointer select-none">
                   <input type="checkbox" name="interests[]" value="mTrak" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500 shrink-0">
-                  <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-600">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+                  <div class="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center shrink-0 text-emerald-600">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
                   </div>
-                  <div class="flex flex-col">
-                    <span class="text-xs sm:text-sm font-bold text-stone-900 leading-tight">mTrak</span>
-                    <span class="text-[11px] sm:text-xs text-stone-500 leading-tight">Machine Maintenance Management</span>
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-bold text-stone-900 leading-tight">mTrak</span>
+                    <span class="text-[10px] text-stone-500 leading-tight truncate">Machine Maintenance Management</span>
                   </div>
                 </label>
 
@@ -1105,53 +1105,53 @@
             </div>
 
             <button type="submit"
-                    class="w-full py-3.5 px-6 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-orange-500/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer mt-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    class="w-full py-2.5 sm:py-3 px-5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer mt-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
               <span>Schedule My Demo</span>
             </button>
           </form>
         </div>
 
         <!-- RIGHT: Contact Info Cards (Image 2 on the right side) -->
-        <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
-          <div class="space-y-2">
-            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-500">
+        <div class="lg:col-span-5 space-y-3.5 flex flex-col justify-between">
+          <div class="space-y-1.5">
+            <div class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-orange-500">
               <span>Connect with us</span>
             </div>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900 font-heading">Make Your Factory Smarter</h3>
-            <p class="text-sm text-stone-600 leading-relaxed">
+            <h3 class="text-xl sm:text-2xl font-extrabold text-stone-900 font-heading leading-tight">Make Your Factory Smarter</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
               Reach out to our shop-floor digitization specialists directly via office, mail, telephony or LinkedIn.
             </p>
           </div>
 
-          <div class="space-y-3.5">
+          <div class="space-y-2.5">
             <!-- Head Office -->
-            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
-              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">Head Office</div>
-              <div class="text-sm font-semibold text-stone-900 leading-relaxed">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
+            <div class="p-3.5 sm:p-4 rounded-xl bg-white/90 border border-stone-200/80 shadow-sm space-y-0.5 hover:border-orange-500/40 transition">
+              <div class="text-[10px] font-mono text-orange-500 font-bold uppercase tracking-wider">Head Office</div>
+              <div class="text-xs sm:text-sm font-semibold text-stone-900 leading-snug">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
             </div>
 
             <!-- Direct Mail -->
-            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
-              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">Direct Mail</div>
-              <div class="text-sm font-semibold text-stone-900">
+            <div class="p-3.5 sm:p-4 rounded-xl bg-white/90 border border-stone-200/80 shadow-sm space-y-0.5 hover:border-orange-500/40 transition">
+              <div class="text-[10px] font-mono text-orange-500 font-bold uppercase tracking-wider">Direct Mail</div>
+              <div class="text-xs sm:text-sm font-semibold text-stone-900">
                 <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-600 transition">Lebinesh@tracktechsolutions.com</a>
               </div>
             </div>
 
             <!-- Phone Telephony -->
-            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
-              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">Phone Telephony</div>
-              <div class="text-sm font-semibold text-stone-900">
+            <div class="p-3.5 sm:p-4 rounded-xl bg-white/90 border border-stone-200/80 shadow-sm space-y-0.5 hover:border-orange-500/40 transition">
+              <div class="text-[10px] font-mono text-orange-500 font-bold uppercase tracking-wider">Phone Telephony</div>
+              <div class="text-xs sm:text-sm font-semibold text-stone-900">
                 <a href="tel:+919650613666" class="hover:text-orange-600 transition">+91 96506 13666</a> / 
                 <a href="tel:+919742060606" class="hover:text-orange-600 transition">+91 97420 60606</a>
               </div>
             </div>
 
             <!-- LinkedIn Company -->
-            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
-              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">LinkedIn Company</div>
-              <div class="text-sm font-semibold text-stone-900">
+            <div class="p-3.5 sm:p-4 rounded-xl bg-white/90 border border-stone-200/80 shadow-sm space-y-0.5 hover:border-orange-500/40 transition">
+              <div class="text-[10px] font-mono text-orange-500 font-bold uppercase tracking-wider">LinkedIn Company</div>
+              <div class="text-xs sm:text-sm font-semibold text-stone-900">
                 <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-600 transition">linkedin.com/company/track-tech-solution</a>
               </div>
             </div>
@@ -1161,7 +1161,7 @@
       </div>
 
       <!-- Footer Bottom Bar -->
-      <div class="pt-8 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="pt-5 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <div class="flex items-center gap-3">
           <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Logo" class="w-6 h-6 object-contain opacity-70">
           <span>&copy; {{ date('Y') }} Track Tech Solution. All rights reserved. Made in India.</span>
