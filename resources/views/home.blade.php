@@ -696,12 +696,12 @@
     <!-- ═══════════════════════════════════════════════════════════════════
        6. KEY CUSTOMERS & DIRECTORY (Stable Grid & Metrics)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="clients" class="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto space-y-8">
+  <section id="clients" class="relative min-h-screen py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 z-10 flex flex-col justify-center">
+    <div class="max-w-6xl mx-auto w-full space-y-4 sm:space-y-5">
       
       <!-- Section Title -->
-      <div class="text-center max-w-4xl mx-auto">
-        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#087e8b] tracking-tight">
+      <div class="text-center max-w-4xl mx-auto pb-1">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading text-[#087e8b] tracking-tight">
           Technology trusted by apparel manufacturers
         </h2>
       </div>
@@ -804,54 +804,54 @@
       </svg>
 
       <!-- Customer Directory Showcase Card -->
-      <div class="glass-card p-6 sm:p-8 border border-stone-200/90 shadow-lg">
+      <div class="glass-card p-4 sm:p-5 border border-stone-200/90 shadow-md rounded-2xl">
         
         <!-- Header: Key Customers on the left in teal -->
-        <div class="pb-4">
-          <span class="text-base sm:text-lg font-bold text-[#087e8b] font-heading">Key Customers</span>
+        <div class="pb-2.5">
+          <span class="text-sm sm:text-base font-bold text-[#087e8b] font-heading">Key Customers</span>
         </div>
 
         <!-- 5x2 Stable Logo Grid with clean cell borders -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-xl overflow-hidden shadow-sm">
           
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/shahi.png') }}" alt="Shahi" class="max-h-11 sm:max-h-12 max-w-[140px] sm:max-w-[160px] w-auto h-auto object-contain">
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/shahi.png') }}" alt="Shahi" class="max-h-8 sm:max-h-10 max-w-[120px] sm:max-w-[145px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/pds.png') }}" alt="PDS" class="max-h-12 sm:max-h-14 max-w-[140px] sm:max-w-[160px] w-auto h-auto object-contain">
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/pds.png') }}" alt="PDS" class="max-h-9 sm:max-h-11 max-w-[120px] sm:max-w-[145px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/texport.png') }}" alt="Texport Overseas" class="max-h-12 sm:max-h-14 max-w-[160px] sm:max-w-[180px] w-auto h-auto object-contain">
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/texport.png') }}" alt="Texport Overseas" class="max-h-9 sm:max-h-11 max-w-[130px] sm:max-w-[155px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-10 sm:max-h-12 max-w-[170px] sm:max-w-[195px] w-auto h-auto object-contain">
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-7 sm:max-h-9 max-w-[140px] sm:max-w-[170px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#modelarna" xlink:href="#modelarna"></use></svg>
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#modelarna" xlink:href="#modelarna"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/sahana.png') }}" alt="Sahana" class="max-h-12 sm:max-h-14 max-w-[110px] sm:max-w-[130px] w-auto h-auto object-contain">
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/sahana.png') }}" alt="Sahana" class="max-h-9 sm:max-h-11 max-w-[90px] sm:max-w-[110px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
           </div>
 
-          <div class="bg-white p-5 h-28 sm:h-32 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-16 sm:h-20 max-w-[170px] sm:max-w-[200px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
+          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
           </div>
 
         </div>
@@ -861,24 +861,24 @@
       <!-- Stable Company Facts & Metrics Bar (4 Columns matching Screenshot 2) -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-0 bg-white/95 glass-card border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-stone-200/90">
         
-        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">2</strong>
-          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Countries</span>
+        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">2</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Countries</span>
         </div>
 
-        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">74+</strong>
-          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Factories</span>
+        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">74+</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Factories</span>
         </div>
 
-        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">6000+</strong>
-          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Users</span>
+        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">6000+</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Users</span>
         </div>
 
-        <div class="p-6 sm:p-7 text-center flex flex-col items-center justify-center">
-          <strong class="text-4xl sm:text-5xl font-extrabold text-[#087e8b] font-heading">36</strong>
-          <span class="text-sm sm:text-base font-semibold text-stone-700 mt-1.5 font-sans">Professionals</span>
+        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">36</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Professionals</span>
         </div>
 
       </div>
