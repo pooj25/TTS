@@ -271,8 +271,8 @@
       <!-- Action Button -->
       <div class="flex items-center gap-2">
         <a href="#contact"
-          class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-full shadow-lg shadow-orange-500/25 hover:shadow-orange-400/40 hover:scale-105 transition-all">
-          Experience Live Demo
+          class="bg-[#14d5b2] hover:bg-[#087e8b] hover:text-white text-slate-900 text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-lg shadow-md shadow-[#14d5b2]/20 hover:scale-105 transition-all">
+          Experience It Live
         </a>
 
         <!-- Mobile Menu Toggle Button -->
@@ -298,64 +298,22 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        2. HERO SECTION (High-Tech 3D Apparel Centerpiece)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="about" class="relative pt-36 pb-20 lg:pt-44 lg:pb-28 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto space-y-12">
+  <section id="about" class="relative min-h-[88vh] sm:min-h-screen flex flex-col justify-center items-center pt-32 pb-20 sm:pt-40 sm:pb-28 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-5xl mx-auto text-center space-y-8 flex flex-col items-center justify-center my-auto">
       
       <!-- Headline & Introduction -->
-      <div class="text-center space-y-6 max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-50 border border-orange-400/50 text-orange-600 backdrop-blur-md shadow-lg shadow-orange-500/10">
-          <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span>
-          Built for Garment Manufacturers
-        </div>
-
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-stone-900 font-heading">
-          Powering Your Factory's <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-amber-500">Digital Transformation</span>
-        </h1>
-
-        <p class="text-lg sm:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
-          Connect every stage of garment manufacturing with intelligent digital solutions for planning, cutting, production, quality and machine monitoring driving higher productivity, reducing waste and enabling on-time delivery.
-        </p>
+      <div class="inline-flex items-center px-6 py-2 rounded-full text-sm sm:text-base font-semibold bg-white/90 backdrop-blur-md border border-[#087e8b]/25 text-[#087e8b] shadow-sm tracking-normal">
+        Built for Garment Manufacturers
       </div>
 
-      <!-- 3D Apparel Video Showcase Screen -->
-      <div class="cyber-frame rounded-3xl overflow-hidden bg-white/90 backdrop-blur-2xl shadow-2xl relative group">
-        <!-- Top Tech Bar -->
-        <div class="bg-white/90 px-5 py-3 border-b border-stone-200 flex items-center justify-between text-xs">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
-            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-            <span class="ml-2 font-mono text-[11px] text-stone-500">track-tech-os.live/telemetry/3d-apparel-simulation</span>
-          </div>
-          <div class="flex items-center gap-2 text-orange-400 font-mono text-[11px]">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>FEED ONLINE • 53.2s DYNAMIC LOOP</span>
-          </div>
-        </div>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.16] text-stone-900 font-heading">
+        Powering Your Factory's <br class="hidden sm:inline" />
+        <span class="text-[#087e8b]">Digital Transformation</span>
+      </h1>
 
-        <!-- Video Viewport -->
-        <div class="relative aspect-[16/9] sm:aspect-[21/9] max-h-[480px] overflow-hidden bg-orange-50">
-          <video autoplay loop muted playsinline class="w-full h-full object-cover filter contrast-110 saturate-110">
-            <source src="{{ asset('assets/video/apparel-3d-loop.mp4') }}" type="video/mp4">
-            <source src="{{ asset('videos/apparel-3d-loop.mp4') }}" type="video/mp4">
-          </video>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/20 pointer-events-none"></div>
-
-          <!-- Floating Live Telemetry Cards on Video -->
-          <div class="absolute top-4 left-4 p-3 rounded-xl bg-white/85 backdrop-blur-md border border-stone-200 text-xs text-stone-600 space-y-1 hidden sm:block">
-            <div class="text-[10px] font-mono text-orange-400 font-bold uppercase">Workstation Speed</div>
-            <div class="font-bold text-stone-900 text-sm">4,280 Stitches / Min</div>
-            <div class="text-[10px] text-emerald-400">Zero skipped stitches detected</div>
-          </div>
-
-          <div class="absolute bottom-4 right-4 p-3 rounded-xl bg-white/85 backdrop-blur-md border border-stone-200 text-xs text-stone-600 space-y-1 text-right hidden sm:block">
-            <div class="text-[10px] font-mono text-amber-400 font-bold uppercase">AQL 1.5 Compliance</div>
-            <div class="font-bold text-stone-900 text-sm">99.1% First-Pass Pass</div>
-            <div class="text-[10px] text-orange-600">Active lines: 18 / 20 Operational</div>
-          </div>
-        </div>
-      </div>
+      <p class="text-base sm:text-xl lg:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
+        Connect every stage of garment manufacturing with intelligent digital solutions for planning, cutting, production, quality and machine monitoring driving higher productivity, reducing waste and enabling on-time delivery.
+      </p>
 
     </div>
   </section>
