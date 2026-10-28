@@ -586,7 +586,7 @@
           <div id="panel-jig" class="prod-panel hidden flex-col md:flex-row">
             <div class="flex-1 p-8 md:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
               <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Jig Management</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Organize sewing aids and jigs by style, line and order. Make availability and readiness visible so teams can reduce setup delays and keep production moving.</p>
+              <p class="text-base text-stone-700 leading-relaxed">JIG Management is a digital system for tracking denim pocket jigs, including design codes, sizes, materials, and storage locations. It supports QR code identification, jig allocation, usage, return, and availability tracking. The system reduces manual errors, prevents loss, improves inventory control, and ensures efficient production operations.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-auto">

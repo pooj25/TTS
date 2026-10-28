@@ -126,13 +126,13 @@ const products = {
   },
   laundry: {
     number: '09', name: 'Laundry Management',
-    description: 'Follow garment lots through washing, treatment and finishing. Track process status and quality checks to keep laundry work aligned with order requirements.',
+    description: 'Laundry Management is a digital system that tracks garment washing processes, including laundry lots, quantities, shades, machine allocation, and operators. It supports QR code scanning, lot splitting and merging, WIP tracking, and machine and operator management. The system improves traceability, reduces manual errors, and ensures efficient workflow and production control.',
     stages: ['Receive', 'Process', 'Inspect'], image: 'assets/img/laundry-management.png',
     alt: 'Laundry management workflow for garment processing and finishing', label: 'LAUNDRY FLOW', value: 'LOT IN PROCESS', visual: 'laundry', imageOnly: true
   },
   jig: {
     number: '10', name: 'Jig Management',
-    description: 'Organize sewing aids and jigs by style, line and order. Make availability and readiness visible so teams can reduce setup delays and keep production moving.',
+    description: 'JIG Management is a digital system for tracking denim pocket jigs, including design codes, sizes, materials, and storage locations. It supports QR code identification, jig allocation, usage, return, and availability tracking. The system reduces manual errors, prevents loss, improves inventory control, and ensures efficient production operations.',
     stages: ['Register', 'Assign', 'Verify'], image: 'assets/img/Jig-management.png',
     alt: 'Jig management illustration showing organized jig storage, tracking and maintenance', label: 'JIG READINESS', value: 'AVAILABLE', visual: 'jig', imageOnly: true
   },

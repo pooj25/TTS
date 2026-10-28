@@ -562,7 +562,7 @@ html.has-product-reveal .product-scroll-reveal.is-visible {
             name: 'Jig Management',
             kicker: 'PRODUCT 10 / JIG MANAGEMENT',
             badge: 'Industry Solution',
-            description: 'Organize sewing aids and jigs by style, line and order. Make availability and readiness visible so teams can reduce setup delays and keep production moving.',
+            description: 'JIG Management is a digital system for tracking denim pocket jigs, including design codes, sizes, materials, and storage locations. It supports QR code identification, jig allocation, usage, return, and availability tracking. The system reduces manual errors, prevents loss, improves inventory control, and ensures efficient production operations.',
             stages: ['Register', 'Assign', 'Verify'],
             image: "{{ asset('images/Jig-management.png') }}",
             alt: 'Jig management illustration showing organized jig storage, tracking and maintenance',
