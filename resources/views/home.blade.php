@@ -462,10 +462,7 @@
     <div class="max-w-7xl mx-auto space-y-10">
 
       <!-- Section Header -->
-      <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <span class="text-xs font-semibold uppercase tracking-widest text-orange-600 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 inline-block font-sans shadow-sm">
-          Comprehensive Software Suite
-        </span>
+      <div class="text-center max-w-3xl mx-auto">
         <h2 class="text-3xl sm:text-5xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
           Designed for <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 italic">Smart Garment Factories</span>
         </h2>
