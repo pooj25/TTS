@@ -86,7 +86,7 @@ html {
                     <svg class="about-chevron w-5 h-5 shrink-0 text-slate-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
                 </summary>
                 <div class="border-t border-slate-200/80 px-5 py-6 sm:px-7 sm:pl-[5.5rem]">
-                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Gopinath Muniraj is a technology entrepreneur and innovator with over two decades of experience addressing challenges in apparel manufacturing. Having worked closely with factories across South India, he brings deep industry understanding and a vision for technology-driven transformation.</p>
+                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Gopinath Muniraj is a technology entrepreneur with over 20 years of experience in apparel manufacturing. As Founder and CEO of Track Tech Solution, he drives digital transformation through automation, AI and Industrial IoT, helping manufacturers streamline operations, improve productivity, enable data-driven decisions and build smarter, more efficient and connected manufacturing environments.</p>
                     <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-4 text-sm text-sky-700 font-semibold hover:text-sky-800 transition">Professional profile ↗</a>
                 </div>
             </details>
@@ -98,7 +98,7 @@ html {
                     <svg class="about-chevron w-5 h-5 shrink-0 text-slate-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
                 </summary>
                 <div class="border-t border-slate-200/80 px-5 py-6 sm:px-7 sm:pl-[5.5rem]">
-                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">With close to two decades of experience in digital transformation, particularly in apparel manufacturing, Lebinesh Balan leads business strategy, sales, operations, and commercial growth. He helps apparel manufacturers embrace digital technologies to digitise shop-floor operations, optimise production planning, and enhance productivity and operational visibility.</p>
+                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Lebinesh Balan brings nearly 20 years of experience in digital transformation, particularly in apparel manufacturing. At Track Tech Solution, he leads business strategy, sales, operations and commercial growth, helping manufacturers digitise shop-floor processes, optimise production planning, enhance productivity, strengthen customer partnerships and achieve sustainable business growth through technology-driven innovation.</p>
                     <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-4 text-sm text-sky-700 font-semibold hover:text-sky-800 transition">LinkedIn profile ↗</a>
                 </div>
             </details>
@@ -110,7 +110,7 @@ html {
                     <svg class="about-chevron w-5 h-5 shrink-0 text-slate-600 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
                 </summary>
                 <div class="border-t border-slate-200/80 px-5 py-6 sm:px-7 sm:pl-[5.5rem]">
-                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, building scalable solutions that address complex manufacturing challenges.</p>
+                    <p class="text-sm sm:text-base leading-relaxed text-slate-700">Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, developing scalable solutions using software architecture, AI and Industrial IoT to improve factory efficiency, operational visibility, manufacturing processes and overall business performance.</p>
                     <span class="inline-block mt-4 text-sm text-slate-500 font-semibold">Software Architecture &amp; IoT</span>
                 </div>
             </details>
