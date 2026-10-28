@@ -47,7 +47,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #f7fbfb 0%, #f4faf9 40%, #f9fcfa 100%);
+      background: linear-gradient(135deg, #fdf8f3 0%, #faf4ee 40%, #fef9f5 100%);
       color: #1c1917;
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
@@ -65,9 +65,9 @@
       pointer-events: none;
       z-index: 0;
       background: 
-        radial-gradient(circle at 15% 20%, rgba(8, 126, 139, 0.10) 0%, transparent 45%),
-        radial-gradient(circle at 85% 65%, rgba(20, 213, 178, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 50% 90%, rgba(8, 126, 139, 0.06) 0%, transparent 40%);
+        radial-gradient(circle at 15% 20%, rgba(251, 113, 33, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(239, 68, 68, 0.07) 0%, transparent 50%),
+        radial-gradient(circle at 50% 90%, rgba(249, 115, 22, 0.06) 0%, transparent 40%);
     }
 
     /* Continuous 3D Apparel Background Video */
@@ -94,8 +94,8 @@
     }
 
     .glass-card:hover {
-      border-color: rgba(8, 126, 139, 0.40);
-      box-shadow: 0 20px 40px -15px rgba(8, 126, 139, 0.18);
+      border-color: rgba(234, 88, 12, 0.50);
+      box-shadow: 0 20px 40px -15px rgba(234, 88, 12, 0.18);
       transform: translateY(-3px);
     }
 
@@ -270,7 +270,7 @@
 
       <!-- Action Button -->
       <div class="flex items-center gap-2">
-        <a href="#demo-form"
+        <a href="#contact"
           class="bg-[#087e8b] hover:bg-[#066570] text-white text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-2xl shadow-md shadow-[#087e8b]/20 hover:scale-105 transition-all">
           Request for Demo
         </a>
@@ -296,172 +296,24 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════════════
-       2. HERO SECTION: REQUEST YOUR DEMO (Full-Width Interactive Demo Page)
+       2. HERO SECTION (High-Tech 3D Apparel Centerpiece)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="about" class="relative min-h-screen flex items-center pt-32 pb-16 sm:pt-36 sm:pb-24 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-7xl mx-auto w-full my-auto">
+  <section id="about" class="relative min-h-[88vh] sm:min-h-screen flex flex-col justify-center items-center pt-32 pb-20 sm:pt-40 sm:pb-28 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-5xl mx-auto text-center space-y-8 flex flex-col items-center justify-center my-auto">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-        
-        <!-- Left Column: Let's Talk & Introduction (Image 1) -->
-        <div class="lg:col-span-6 space-y-6">
-          <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#ea580c] font-sans block">
-            LET'S TALK
-          </span>
-          
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-stone-900 tracking-tight leading-[1.12]">
-            Make Your Factory Smarter with Track Tech Solution
-          </h1>
-
-          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
-            Discover how our integrated digital solutions for shop-floor monitoring, cutting room management, production planning, Time and Action (T&amp;A) and machine maintenance can help you improve efficiency, enhance visibility, and drive operational excellence.
-          </p>
-
-          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
-            Let's discuss your challenges and find the right solution for your factory.
-          </p>
-
-          <div class="pt-2 flex flex-wrap items-center gap-4">
-            <a href="#demo-form"
-              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
-              Talk to Our Team
-            </a>
-            <a href="tel:+919650613666"
-              class="px-7 py-3.5 rounded-full bg-white border border-stone-200 hover:border-orange-500 text-stone-800 hover:text-stone-950 font-bold text-sm sm:text-base shadow-sm hover:scale-105 transition text-center">
-              Call +91 96506 13666
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Column: Request Your Demo Form Card (Image 2) -->
-        <div class="lg:col-span-6">
-          <div id="demo-form" class="bg-[#f1f5fa] border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-xl">
-            
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading mb-6">
-              Request Your Demo
-            </h2>
-
-            <form action="{{ route('contact.store') }}" method="POST" class="space-y-4">
-              @csrf
-
-              <!-- Row 1: Name and Email -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
-                    Full Name <span class="text-red-500">*</span>
-                  </label>
-                  <input type="text" name="first_name" required placeholder="John Smith"
-                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
-                </div>
-
-                <div>
-                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
-                    Work Email <span class="text-red-500">*</span>
-                  </label>
-                  <input type="email" name="email" required placeholder="john@company.com"
-                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
-                </div>
-              </div>
-
-              <!-- Row 2: Company and Phone -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
-                    Company <span class="text-red-500">*</span>
-                  </label>
-                  <input type="text" name="company_name" required placeholder="Your Company"
-                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
-                </div>
-
-                <div>
-                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
-                    Phone Number
-                  </label>
-                  <input type="tel" name="phone" placeholder="+1 (555) 123-4567"
-                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
-                </div>
-              </div>
-
-              <!-- Row 3: Role -->
-              <div>
-                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
-                  Your Role
-                </label>
-                <select name="interested_in"
-                  class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
-                  <option value="">Select your role</option>
-                  <option value="Executive / Plant Head">Executive / Plant Head</option>
-                  <option value="Production Manager">Production Manager</option>
-                  <option value="Quality Manager">Quality Manager</option>
-                  <option value="Maintenance Head">Maintenance Head</option>
-                  <option value="Industrial Engineer">Industrial Engineer</option>
-                  <option value="IT / Digital Transformation">IT / Digital Transformation</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
-              <!-- Hidden message field to satisfy ContactController validation -->
-              <input type="hidden" name="message" value="Demo Request from Homepage Hero Form">
-
-              <!-- Row 4: Checkboxes -->
-              <div class="pt-1">
-                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">
-                  What interests you most? (Select all that apply)
-                </label>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
-                  <label class="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="checkbox" name="interests[]" value="Quality Control" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
-                    <span>Quality Control</span>
-                  </label>
-
-                  <label class="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="checkbox" name="interests[]" value="Production Tracking" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
-                    <span>Production Tracking</span>
-                  </label>
-
-                  <label class="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="checkbox" name="interests[]" value="Machine Maintenance" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
-                    <span>Machine Maintenance</span>
-                  </label>
-
-                  <label class="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="checkbox" name="interests[]" value="Production Planning" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
-                    <span>Production Planning</span>
-                  </label>
-
-                  <label class="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="checkbox" name="interests[]" value="Analytics & Reporting" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
-                    <span>Analytics &amp; Reporting</span>
-                  </label>
-
-                  <label class="flex items-center gap-2 cursor-pointer select-none">
-                    <input type="checkbox" name="interests[]" value="Integration Capabilities" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
-                    <span>Integration Capabilities</span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Row 5: Submit Button -->
-              <div class="pt-3">
-                <button type="submit"
-                  class="w-full py-3.5 px-6 rounded-xl bg-[#0073e7] hover:bg-[#005fbe] text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-md shadow-[#0073e7]/25 hover:scale-[1.01] transition-all">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6" stroke-width="2"></line>
-                    <line x1="8" y1="2" x2="8" y2="6" stroke-width="2"></line>
-                    <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"></line>
-                  </svg>
-                  <span>Schedule My Demo</span>
-                </button>
-              </div>
-
-            </form>
-
-          </div>
-        </div>
-
+      <!-- Headline & Introduction -->
+      <div class="inline-flex items-center px-6 py-2 rounded-full text-sm sm:text-base font-semibold bg-white/90 backdrop-blur-md border border-[#087e8b]/25 text-[#087e8b] shadow-sm tracking-normal">
+        Built for Garment Manufacturers
       </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.16] text-stone-900 font-heading">
+        Powering Your Factory's <br class="hidden sm:inline" />
+        <span class="text-[#087e8b]">Digital Transformation</span>
+      </h1>
+
+      <p class="text-base sm:text-xl lg:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
+        Connect every stage of garment manufacturing with intelligent digital solutions for planning, cutting, production, quality and machine monitoring driving higher productivity, reducing waste and enabling on-time delivery.
+      </p>
 
     </div>
   </section>
@@ -475,7 +327,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#087e8b]">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
             <span>Track Tech Solutions</span>
             <span class="text-slate-500">/</span>
             <span class="text-stone-500">EST. 2019</span>
@@ -494,7 +346,7 @@
 
           <div class="pt-2 flex items-center gap-6 text-xs font-semibold text-stone-500">
             <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-[#087e8b]"></span> 2 Global Countries
+              <span class="w-2 h-2 rounded-full bg-orange-400"></span> 2 Global Countries
             </div>
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 36 Tech Specialists
@@ -506,23 +358,23 @@
         </div>
 
         <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-[#087e8b]/40 transition">
-            <div class="text-[#087e8b] font-heading font-bold text-lg">01. Floor MES</div>
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
+            <div class="text-orange-400 font-heading font-bold text-lg">01. Floor MES</div>
             <p class="text-sm text-stone-500 leading-relaxed">Bundle RFID tracking, cutting-to-pack pipelines, and live operator scorecards.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-[#087e8b]/40 transition">
-            <div class="text-[#087e8b] font-heading font-bold text-lg">02. Dynamic Gantt</div>
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
+            <div class="text-orange-400 font-heading font-bold text-lg">02. Dynamic Gantt</div>
             <p class="text-sm text-stone-500 leading-relaxed">Fast-react multi-line scheduling, SAM variance management, and milestone forecasting.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-[#087e8b]/40 transition">
-            <div class="text-[#087e8b] font-heading font-bold text-lg">03. Machine IoT</div>
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
+            <div class="text-orange-400 font-heading font-bold text-lg">03. Machine IoT</div>
             <p class="text-sm text-stone-500 leading-relaxed">RPM telemetry, vibration sensors, predictive motor alerts, and QR mechanic dispatch.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-[#087e8b]/40 transition">
-            <div class="text-[#087e8b] font-heading font-bold text-lg">04. Quality AI</div>
+          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
+            <div class="text-orange-400 font-heading font-bold text-lg">04. Quality AI</div>
             <p class="text-sm text-stone-500 leading-relaxed">Inline stitch defect heatmaps, zero-scrap fabric markers, and automated AQL 1.5 audits.</p>
           </div>
         </div>
@@ -543,17 +395,17 @@
         <!-- Gopinath Muniraj -->
         <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
           <div>
-            <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-teal-200 mx-auto">
+            <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
             <div class="text-center mt-5 mb-4">
               <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Gopinath Muniraj</h3>
-              <span class="text-sm font-semibold text-[#087e8b] block mt-1">Founder &amp; Chief Executive Officer (CEO)</span>
+              <span class="text-sm font-semibold text-orange-500 block mt-1">Founder &amp; Chief Executive Officer (CEO)</span>
             </div>
             <p class="text-sm text-stone-600 leading-relaxed text-justify">
               Gopinath Muniraj is a technology entrepreneur with over 20 years of experience in apparel manufacturing. As Founder and CEO of Track Tech Solution, he drives digital transformation through automation, AI and Industrial IoT, helping manufacturers streamline operations, improve productivity, enable data-driven decisions and build smarter, more efficient and connected manufacturing environments.
             </p>
           </div>
           <div class="pt-6 text-center">
-            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#087e8b] hover:text-[#066570] transition">
+            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
               <span>Professional profile</span>
               <span>↗</span>
             </a>
@@ -563,17 +415,17 @@
         <!-- Lebinesh Balan -->
         <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
           <div>
-            <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-teal-200 mx-auto">
+            <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
             <div class="text-center mt-5 mb-4">
               <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Lebinesh Balan</h3>
-              <span class="text-sm font-semibold text-[#087e8b] block mt-1">Co-Founder &amp; Chief Operating Officer (COO)</span>
+              <span class="text-sm font-semibold text-orange-500 block mt-1">Co-Founder &amp; Chief Operating Officer (COO)</span>
             </div>
             <p class="text-sm text-stone-600 leading-relaxed text-justify">
               Lebinesh Balan brings nearly 20 years of experience in digital transformation, particularly in apparel manufacturing. At Track Tech Solution, he leads business strategy, sales, operations and commercial growth, helping manufacturers digitise shop-floor processes, optimise production planning, enhance productivity, strengthen customer partnerships and achieve sustainable business growth through technology-driven innovation.
             </p>
           </div>
           <div class="pt-6 text-center">
-            <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#087e8b] hover:text-[#066570] transition">
+            <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
               <span>LinkedIn profile</span>
               <span>↗</span>
             </a>
@@ -583,10 +435,10 @@
         <!-- Deepak Rajkumar -->
         <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
           <div>
-            <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-teal-200 mx-auto">
+            <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
             <div class="text-center mt-5 mb-4">
               <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Deepak Rajkumar</h3>
-              <span class="text-sm font-semibold text-[#087e8b] block mt-1">Co-Founder &amp; Chief Technology Officer (CTO)</span>
+              <span class="text-sm font-semibold text-orange-500 block mt-1">Co-Founder &amp; Chief Technology Officer (CTO)</span>
             </div>
             <p class="text-sm text-stone-600 leading-relaxed text-justify">
               Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, developing scalable solutions using software architecture, AI and Industrial IoT to improve factory efficiency, operational visibility, manufacturing processes and overall business performance.
@@ -612,7 +464,7 @@
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto">
         <h2 class="text-3xl sm:text-5xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
-          Designed for <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#087e8b] to-teal-500 italic">Smart Garment Factories</span>
+          Designed for <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 italic">Smart Garment Factories</span>
         </h2>
       </div>
 
@@ -1043,7 +895,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
         <div class="lg:col-span-6 space-y-6">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#087e8b]">Let's Talk</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-orange-400">Let's Talk</span>
           <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
             Make Your Factory Smarter with Track Tech Solution
           </h2>
@@ -1054,11 +906,11 @@
 
           <div class="pt-2 flex flex-col sm:flex-row gap-4">
             <a href="mailto:info@tracktechsolutions.com"
-              class="px-8 py-3.5 rounded-full bg-[#087e8b] hover:bg-[#066570] text-white font-bold text-sm shadow-lg shadow-[#087e8b]/25 hover:scale-105 transition text-center">
+              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
               Talk to Our Team
             </a>
             <a href="tel:+919650613666"
-              class="px-7 py-3.5 rounded-full bg-white border border-stone-200 hover:border-[#087e8b] text-stone-700 hover:text-[#087e8b] font-bold text-sm transition text-center">
+              class="px-7 py-3.5 rounded-full bg-white border border-stone-200 hover:border-orange-500 text-stone-700 hover:text-stone-900 font-bold text-sm transition text-center">
               Call +91 96506 13666
             </a>
           </div>
@@ -1066,29 +918,29 @@
 
         <div class="lg:col-span-6 space-y-4">
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-[#087e8b] font-bold uppercase">Head Office</div>
+            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Head Office</div>
             <div class="text-sm font-semibold text-stone-900">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
           </div>
 
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-[#087e8b] font-bold uppercase">Direct Mail</div>
+            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Direct Mail</div>
             <div class="text-sm font-semibold text-stone-900">
-              <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-[#087e8b] transition">Lebinesh@tracktechsolutions.com</a>
+              <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-400 transition">Lebinesh@tracktechsolutions.com</a>
             </div>
           </div>
 
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-[#087e8b] font-bold uppercase">Phone Telephony</div>
+            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Phone Telephony</div>
             <div class="text-sm font-semibold text-stone-900">
-              <a href="tel:+919650613666" class="hover:text-[#087e8b] transition">+91 96506 13666</a> / 
-              <a href="tel:+919742060606" class="hover:text-[#087e8b] transition">+91 97420 60606</a>
+              <a href="tel:+919650613666" class="hover:text-orange-400 transition">+91 96506 13666</a> / 
+              <a href="tel:+919742060606" class="hover:text-orange-400 transition">+91 97420 60606</a>
             </div>
           </div>
 
           <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-[#087e8b] font-bold uppercase">LinkedIn Company</div>
+            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">LinkedIn Company</div>
             <div class="text-sm font-semibold text-stone-900">
-              <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener" class="hover:text-[#087e8b] transition">linkedin.com/company/track-tech-solution</a>
+              <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener" class="hover:text-orange-400 transition">linkedin.com/company/track-tech-solution</a>
             </div>
           </div>
         </div>
