@@ -178,7 +178,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        1. FLOATING PILL NAVBAR (Modern 2026 SaaS Aesthetic)
   ═══════════════════════════════════════════════════════════════════ -->
-  <div class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
+  <div class="absolute top-5 left-0 right-0 z-50 flex justify-center px-4">
     <nav class="floating-nav w-full max-w-6xl rounded-full px-4 sm:px-6 py-3 flex items-center justify-between">
       
       <!-- Brand Logo -->
@@ -286,7 +286,7 @@
   </div>
 
   <!-- Mobile Dropdown Drawer -->
-  <div id="mobileDrawer" class="fixed inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
+  <div id="mobileDrawer" class="absolute inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
     <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">About</a>
     <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Products</a>
     <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-[#087e8b] border-b border-stone-100">Clients</a>
