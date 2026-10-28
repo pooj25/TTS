@@ -577,8 +577,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Laundry Management is a digital system designed to manage and track garment washing processes efficiently within the garment manufacturing industry. The system enables users to monitor laundry lots, quantities, shades, machine allocation, operator details, and washing process sequences from start to finish. It supports QR code-based scanning to track lot movement, record machine activities, manage shade-wise lot splitting and merging, and monitor work-in-progress (WIP). The system also maintains machine and operator master data, captures reasons for skipped scans, and improves process traceability. By reducing manual recordkeeping, minimizing errors, and providing better visibility into production status and efficiency, Laundry Management helps ensure smooth workflow execution, accurate tracking, and improved operational control.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
-            <div class="md:w-1/2 h-64 md:h-auto">
-              <img src="{{ asset('images/laundry-management.png') }}" alt="Laundry Management" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-auto">
+              <img src="{{ asset('images/laundry-management.png') }}?v=2" alt="Laundry Management" class="w-full h-full object-cover">
             </div>
           </div>
 
@@ -589,8 +589,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Organize sewing aids and jigs by style, line and order. Make availability and readiness visible so teams can reduce setup delays and keep production moving.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
-            <div class="md:w-1/2 h-64 md:h-auto">
-              <img src="{{ asset('images/Jig-management.png') }}" alt="Jig Management" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-auto">
+              <img src="{{ asset('images/Jig-management.png') }}?v=2" alt="Jig Management" class="w-full h-full object-cover">
             </div>
           </div>
 
