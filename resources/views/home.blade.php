@@ -316,18 +316,6 @@
         <p class="text-lg sm:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
           Connect every stage of garment manufacturing with intelligent digital solutions for planning, cutting, production, quality and machine monitoring driving higher productivity, reducing waste and enabling on-time delivery.
         </p>
-
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
-          <a href="#contact"
-            class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-amber-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-sm shadow-xl shadow-orange-500/30 hover:scale-105 transition-all text-center">
-            Schedule Factory Walkthrough
-          </a>
-          <a href="#products"
-            class="w-full sm:w-auto px-7 py-4 rounded-full bg-white/80 hover:bg-orange-50 text-stone-700 hover:text-stone-900 font-semibold text-sm border border-stone-200 hover:border-orange-500 transition-all text-center flex items-center justify-center gap-2">
-            <span>Explore Product Studio</span>
-            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-          </a>
-        </div>
       </div>
 
       <!-- 3D Apparel Video Showcase Screen -->
