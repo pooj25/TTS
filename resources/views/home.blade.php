@@ -302,13 +302,13 @@
     <div class="max-w-5xl mx-auto text-center space-y-8 flex flex-col items-center justify-center my-auto">
       
       <!-- Headline & Introduction -->
-      <div class="inline-flex items-center px-6 py-2 rounded-full text-sm sm:text-base font-semibold bg-white/90 backdrop-blur-md border border-[#087e8b]/25 text-[#087e8b] shadow-sm tracking-normal">
+      <div class="inline-flex items-center px-6 py-2 rounded-full text-sm sm:text-base font-semibold bg-orange-50 border border-orange-200 text-orange-600 shadow-sm tracking-normal">
         Built for Garment Manufacturers
       </div>
 
       <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.16] text-stone-900 font-heading">
         Powering Your Factory's <br class="hidden sm:inline" />
-        <span class="text-[#087e8b]">Digital Transformation</span>
+        <span class="text-orange-500">Digital Transformation</span>
       </h1>
 
       <p class="text-base sm:text-xl lg:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
