@@ -974,36 +974,153 @@
        8. CONTACT & FOOTER SECTION
   ═══════════════════════════════════════════════════════════════════ -->
   <section id="contact" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-10 lg:p-12 border border-stone-200 space-y-8">
+    <div class="max-w-6xl mx-auto glass-card p-6 sm:p-10 lg:p-12 border border-stone-200 rounded-3xl shadow-xl space-y-10">
       
-      <!-- Contact Info Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Head Office</div>
-          <div class="text-sm font-semibold text-stone-900">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
+      <!-- Session Flash Feedback -->
+      @if(session('success'))
+        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold flex items-center gap-2.5 shadow-sm">
+          <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span>{{ session('success') }}</span>
+        </div>
+      @endif
+
+      <!-- 2-Column Layout: Left Demo Form (Orange Theme) | Right Contact Info Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+        <!-- LEFT: Request Your Demo Form (Image 1 in Orange Theme) -->
+        <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-stone-200/90 shadow-sm space-y-6">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900 font-heading">Request Your Demo</h3>
+          </div>
+
+          <form action="{{ route('contact.store') }}" method="POST" class="space-y-4">
+            @csrf
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-stone-700 mb-1.5">Full Name <span class="text-orange-500">*</span></label>
+                <input type="text" name="first_name" required placeholder="John Smith"
+                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-stone-700 mb-1.5">Work Email <span class="text-orange-500">*</span></label>
+                <input type="email" name="email" required placeholder="john@company.com"
+                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-stone-700 mb-1.5">Company <span class="text-orange-500">*</span></label>
+                <input type="text" name="company_name" required placeholder="Your Company"
+                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-stone-700 mb-1.5">Phone Number</label>
+                <input type="tel" name="phone" placeholder="+1 (555) 123-4567"
+                       class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">Your Role</label>
+              <select name="role" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 bg-stone-50/50 text-sm text-stone-900 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                <option value="" disabled selected>Select your role</option>
+                <option value="Factory Owner / Executive">Factory Owner / Executive</option>
+                <option value="Plant / General Manager">Plant / General Manager</option>
+                <option value="Production Manager">Production Manager</option>
+                <option value="Quality Head">Quality Head</option>
+                <option value="Maintenance Lead">Maintenance Lead</option>
+                <option value="Industrial Engineer">Industrial Engineer</option>
+                <option value="IT & Digitalization">IT &amp; Digitalization</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-2">What interests you most? (Select all that apply)</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-stone-700">
+                <label class="flex items-center gap-2 cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="Quality Control" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
+                  <span>Quality Control</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="Production Tracking" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
+                  <span>Production Tracking</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="Machine Maintenance" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
+                  <span>Machine Maintenance</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="Production Planning" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
+                  <span>Production Planning</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="Analytics & Reporting" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
+                  <span>Analytics &amp; Reporting</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer select-none">
+                  <input type="checkbox" name="interests[]" value="Integration Capabilities" class="w-4 h-4 rounded border-stone-300 text-orange-500 focus:ring-orange-500 accent-orange-500">
+                  <span>Integration Capabilities</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit"
+                    class="w-full py-3.5 px-6 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-orange-500/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer mt-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>Schedule My Demo</span>
+            </button>
+          </form>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Direct Mail</div>
-          <div class="text-sm font-semibold text-stone-900">
-            <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-400 transition">Lebinesh@tracktechsolutions.com</a>
+        <!-- RIGHT: Contact Info Cards (Image 2 on the right side) -->
+        <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-500">
+              <span>Connect with us</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-stone-900 font-heading">Make Your Factory Smarter</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              Reach out to our shop-floor digitization specialists directly via office, mail, telephony or LinkedIn.
+            </p>
+          </div>
+
+          <div class="space-y-3.5">
+            <!-- Head Office -->
+            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
+              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">Head Office</div>
+              <div class="text-sm font-semibold text-stone-900 leading-relaxed">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
+            </div>
+
+            <!-- Direct Mail -->
+            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
+              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">Direct Mail</div>
+              <div class="text-sm font-semibold text-stone-900">
+                <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-600 transition">Lebinesh@tracktechsolutions.com</a>
+              </div>
+            </div>
+
+            <!-- Phone Telephony -->
+            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
+              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">Phone Telephony</div>
+              <div class="text-sm font-semibold text-stone-900">
+                <a href="tel:+919650613666" class="hover:text-orange-600 transition">+91 96506 13666</a> / 
+                <a href="tel:+919742060606" class="hover:text-orange-600 transition">+91 97420 60606</a>
+              </div>
+            </div>
+
+            <!-- LinkedIn Company -->
+            <div class="p-5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-sm space-y-1 hover:border-orange-500/40 transition">
+              <div class="text-[11px] font-mono text-orange-500 font-bold uppercase tracking-wider">LinkedIn Company</div>
+              <div class="text-sm font-semibold text-stone-900">
+                <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-600 transition">linkedin.com/company/track-tech-solution</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Phone Telephony</div>
-          <div class="text-sm font-semibold text-stone-900">
-            <a href="tel:+919650613666" class="hover:text-orange-400 transition">+91 96506 13666</a> / 
-            <a href="tel:+919742060606" class="hover:text-orange-400 transition">+91 97420 60606</a>
-          </div>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">LinkedIn Company</div>
-          <div class="text-sm font-semibold text-stone-900">
-            <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener" class="hover:text-orange-400 transition">linkedin.com/company/track-tech-solution</a>
-          </div>
-        </div>
       </div>
 
       <!-- Footer Bottom Bar -->
