@@ -574,7 +574,7 @@
           <div id="panel-laundry" class="prod-panel hidden flex-col md:flex-row">
             <div class="flex-1 p-8 md:p-12 flex flex-col justify-center space-y-5 bg-[#e8f9f6]">
               <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Laundry<br>Management</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Follow garment lots through washing, treatment and finishing. Track process status and quality checks to keep laundry work aligned with order requirements.</p>
+              <p class="text-base text-stone-700 leading-relaxed">Laundry Management is a digital system designed to manage and track garment washing processes efficiently within the garment manufacturing industry. The system enables users to monitor laundry lots, quantities, shades, machine allocation, operator details, and washing process sequences from start to finish. It supports QR code-based scanning to track lot movement, record machine activities, manage shade-wise lot splitting and merging, and monitor work-in-progress (WIP). The system also maintains machine and operator master data, captures reasons for skipped scans, and improves process traceability. By reducing manual recordkeeping, minimizing errors, and providing better visibility into production status and efficiency, Laundry Management helps ensure smooth workflow execution, accurate tracking, and improved operational control.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-lg bg-[#14d5b2] hover:bg-teal-400 text-stone-900 font-bold text-sm transition shadow-sm">Talk to our team</a>
             </div>
             <div class="md:w-1/2 h-64 md:h-auto">
