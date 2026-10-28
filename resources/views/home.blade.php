@@ -270,7 +270,7 @@
 
       <!-- Action Button -->
       <div class="flex items-center gap-2">
-        <a href="#contact"
+        <a href="#demo-form"
           class="bg-[#087e8b] hover:bg-[#066570] text-white text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-2xl shadow-md shadow-[#087e8b]/20 hover:scale-105 transition-all">
           Request for Demo
         </a>
@@ -296,36 +296,171 @@
 
 
   <!-- ═══════════════════════════════════════════════════════════════════
-       2. HERO SECTION (High-Tech 3D Apparel Centerpiece)
+       2. HERO SECTION: REQUEST YOUR DEMO (Full-Width Interactive Demo Page)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="about" class="relative min-h-[85vh] sm:min-h-screen flex flex-col justify-center items-center pt-32 pb-16 sm:pt-36 sm:pb-24 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-5xl mx-auto text-center space-y-8 flex flex-col items-center justify-center my-auto">
+  <section id="about" class="relative min-h-screen flex items-center pt-32 pb-16 sm:pt-36 sm:pb-24 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-7xl mx-auto w-full my-auto">
       
-      <!-- Headline & Introduction -->
-      <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-[#087e8b]/10 backdrop-blur-md border border-[#087e8b]/25 text-[#087e8b] shadow-sm tracking-wide">
-        <span class="w-2 h-2 rounded-full bg-[#087e8b] animate-pulse"></span>
-        Built for Garment Manufacturers
-      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Left Column: Let's Talk & Introduction (Image 1) -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#ea580c] font-sans block">
+            LET'S TALK
+          </span>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-stone-900 tracking-tight leading-[1.12]">
+            Make Your Factory Smarter with Track Tech Solution
+          </h1>
 
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.14] text-stone-900 font-heading">
-        Powering Your Factory's <br class="hidden sm:inline" />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#087e8b] via-teal-600 to-[#14d5b2]">Digital Transformation</span>
-      </h1>
+          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
+            Discover how our integrated digital solutions for shop-floor monitoring, cutting room management, production planning, Time and Action (T&amp;A) and machine maintenance can help you improve efficiency, enhance visibility, and drive operational excellence.
+          </p>
 
-      <p class="text-base sm:text-xl lg:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
-        Connect every stage of garment manufacturing with intelligent digital solutions for planning, cutting, production, quality and machine monitoring driving higher productivity, reducing waste and enabling on-time delivery.
-      </p>
+          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
+            Let's discuss your challenges and find the right solution for your factory.
+          </p>
 
-      <!-- Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-        <a href="#contact"
-          class="bg-[#087e8b] hover:bg-[#066570] text-white font-bold px-8 py-3.5 rounded-2xl shadow-lg shadow-[#087e8b]/25 hover:scale-105 transition-all text-sm sm:text-base">
-          Request for Demo
-        </a>
-        <a href="#products"
-          class="bg-white/90 hover:bg-white text-stone-800 font-bold px-8 py-3.5 rounded-2xl border border-stone-200 shadow-sm hover:border-[#087e8b]/40 hover:text-[#087e8b] transition-all text-sm sm:text-base">
-          Explore Products
-        </a>
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="#demo-form"
+              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
+              Talk to Our Team
+            </a>
+            <a href="tel:+919650613666"
+              class="px-7 py-3.5 rounded-full bg-white border border-stone-200 hover:border-orange-500 text-stone-800 hover:text-stone-950 font-bold text-sm sm:text-base shadow-sm hover:scale-105 transition text-center">
+              Call +91 96506 13666
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Request Your Demo Form Card (Image 2) -->
+        <div class="lg:col-span-6">
+          <div id="demo-form" class="bg-[#f1f5fa] border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-xl">
+            
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading mb-6">
+              Request Your Demo
+            </h2>
+
+            <form action="{{ route('contact.store') }}" method="POST" class="space-y-4">
+              @csrf
+
+              <!-- Row 1: Name and Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
+                    Full Name <span class="text-red-500">*</span>
+                  </label>
+                  <input type="text" name="first_name" required placeholder="John Smith"
+                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
+                </div>
+
+                <div>
+                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
+                    Work Email <span class="text-red-500">*</span>
+                  </label>
+                  <input type="email" name="email" required placeholder="john@company.com"
+                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
+                </div>
+              </div>
+
+              <!-- Row 2: Company and Phone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
+                    Company <span class="text-red-500">*</span>
+                  </label>
+                  <input type="text" name="company_name" required placeholder="Your Company"
+                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
+                </div>
+
+                <div>
+                  <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
+                    Phone Number
+                  </label>
+                  <input type="tel" name="phone" placeholder="+1 (555) 123-4567"
+                    class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
+                </div>
+              </div>
+
+              <!-- Row 3: Role -->
+              <div>
+                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
+                  Your Role
+                </label>
+                <select name="interested_in"
+                  class="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-3 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#0073e7]/20 focus:border-[#0073e7] transition">
+                  <option value="">Select your role</option>
+                  <option value="Executive / Plant Head">Executive / Plant Head</option>
+                  <option value="Production Manager">Production Manager</option>
+                  <option value="Quality Manager">Quality Manager</option>
+                  <option value="Maintenance Head">Maintenance Head</option>
+                  <option value="Industrial Engineer">Industrial Engineer</option>
+                  <option value="IT / Digital Transformation">IT / Digital Transformation</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- Hidden message field to satisfy ContactController validation -->
+              <input type="hidden" name="message" value="Demo Request from Homepage Hero Form">
+
+              <!-- Row 4: Checkboxes -->
+              <div class="pt-1">
+                <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">
+                  What interests you most? (Select all that apply)
+                </label>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
+                  <label class="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" name="interests[]" value="Quality Control" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
+                    <span>Quality Control</span>
+                  </label>
+
+                  <label class="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" name="interests[]" value="Production Tracking" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
+                    <span>Production Tracking</span>
+                  </label>
+
+                  <label class="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" name="interests[]" value="Machine Maintenance" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
+                    <span>Machine Maintenance</span>
+                  </label>
+
+                  <label class="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" name="interests[]" value="Production Planning" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
+                    <span>Production Planning</span>
+                  </label>
+
+                  <label class="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" name="interests[]" value="Analytics & Reporting" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
+                    <span>Analytics &amp; Reporting</span>
+                  </label>
+
+                  <label class="flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" name="interests[]" value="Integration Capabilities" class="w-4 h-4 rounded border-slate-300 text-[#0073e7] focus:ring-[#0073e7]">
+                    <span>Integration Capabilities</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Row 5: Submit Button -->
+              <div class="pt-3">
+                <button type="submit"
+                  class="w-full py-3.5 px-6 rounded-xl bg-[#0073e7] hover:bg-[#005fbe] text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-md shadow-[#0073e7]/25 hover:scale-[1.01] transition-all">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6" stroke-width="2"></line>
+                    <line x1="8" y1="2" x2="8" y2="6" stroke-width="2"></line>
+                    <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"></line>
+                  </svg>
+                  <span>Schedule My Demo</span>
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
       </div>
 
     </div>
