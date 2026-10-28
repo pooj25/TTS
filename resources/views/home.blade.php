@@ -892,59 +892,34 @@
   <section id="contact" class="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
     <div class="max-w-6xl mx-auto glass-card p-8 sm:p-12 lg:p-16 border border-stone-200 space-y-12">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-        
-        <div class="lg:col-span-6 space-y-6">
-          <span class="text-xs font-bold uppercase tracking-widest text-orange-400">Let's Talk</span>
-          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-stone-900 tracking-tight">
-            Make Your Factory Smarter with Track Tech Solution
-          </h2>
-          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
-            Discover how our integrated digital solutions for shop-floor monitoring, cutting room management, production planning, Time and Action (T&A) and machine maintenance can help you improve efficiency, enhance visibility, and drive operational excellence.<br><br>
-            Let's discuss your challenges and find the right solution for your factory.
-          </p>
+      <!-- Contact Info Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
+          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Head Office</div>
+          <div class="text-sm font-semibold text-stone-900">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
+        </div>
 
-          <div class="pt-2 flex flex-col sm:flex-row gap-4">
-            <a href="mailto:info@tracktechsolutions.com"
-              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm shadow-lg shadow-orange-500/25 hover:scale-105 transition text-center">
-              Talk to Our Team
-            </a>
-            <a href="tel:+919650613666"
-              class="px-7 py-3.5 rounded-full bg-white border border-stone-200 hover:border-orange-500 text-stone-700 hover:text-stone-900 font-bold text-sm transition text-center">
-              Call +91 96506 13666
-            </a>
+        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
+          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Direct Mail</div>
+          <div class="text-sm font-semibold text-stone-900">
+            <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-400 transition">Lebinesh@tracktechsolutions.com</a>
           </div>
         </div>
 
-        <div class="lg:col-span-6 space-y-4">
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Head Office</div>
-            <div class="text-sm font-semibold text-stone-900">364, 10/5 Silicon Town, Electronic City Phase 2, Bangalore 560100</div>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Direct Mail</div>
-            <div class="text-sm font-semibold text-stone-900">
-              <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-400 transition">Lebinesh@tracktechsolutions.com</a>
-            </div>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Phone Telephony</div>
-            <div class="text-sm font-semibold text-stone-900">
-              <a href="tel:+919650613666" class="hover:text-orange-400 transition">+91 96506 13666</a> / 
-              <a href="tel:+919742060606" class="hover:text-orange-400 transition">+91 97420 60606</a>
-            </div>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
-            <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">LinkedIn Company</div>
-            <div class="text-sm font-semibold text-stone-900">
-              <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener" class="hover:text-orange-400 transition">linkedin.com/company/track-tech-solution</a>
-            </div>
+        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
+          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">Phone Telephony</div>
+          <div class="text-sm font-semibold text-stone-900">
+            <a href="tel:+919650613666" class="hover:text-orange-400 transition">+91 96506 13666</a> / 
+            <a href="tel:+919742060606" class="hover:text-orange-400 transition">+91 97420 60606</a>
           </div>
         </div>
 
+        <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-1">
+          <div class="text-[11px] font-mono text-orange-400 font-bold uppercase">LinkedIn Company</div>
+          <div class="text-sm font-semibold text-stone-900">
+            <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener" class="hover:text-orange-400 transition">linkedin.com/company/track-tech-solution</a>
+          </div>
+        </div>
       </div>
 
       <!-- Footer Bottom Bar -->
