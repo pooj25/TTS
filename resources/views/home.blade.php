@@ -469,10 +469,20 @@
       </div>
 
       <!-- Products: Full-Width Showcase -->
-      <div class="space-y-8">
+      <div class="space-y-4">
 
         <!-- Full-Width Product Detail Panel -->
-        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-lg min-h-[420px]" id="prod-detail">
+        <div class="relative w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-lg min-h-[420px]" id="prod-detail">
+
+          <!-- Sleek Floating Side Prev / Next Arrows -->
+          <button type="button" onclick="prevProduct()" aria-label="Previous Product"
+                  class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-stone-700 hover:text-orange-600 shadow-md border border-stone-200/80 flex items-center justify-center transition-all hover:scale-110 active:scale-95 backdrop-blur-sm cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button type="button" onclick="nextProduct()" aria-label="Next Product"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-stone-700 hover:text-orange-600 shadow-md border border-stone-200/80 flex items-center justify-center transition-all hover:scale-110 active:scale-95 backdrop-blur-sm cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row">
@@ -624,11 +634,82 @@
           </div>
 
         </div>
+
+        <!-- Sleek, Compact Controls Strip Below Card -->
+        <div class="flex items-center justify-between px-2 pt-1 text-stone-600">
+          <button type="button" onclick="prevProduct()" 
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50/50 shadow-sm transition active:scale-95 cursor-pointer"
+                  aria-label="Previous Product">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            <span>Previous</span>
+          </button>
+
+          <div class="flex items-center gap-2">
+            <span id="prod-counter" class="text-xs font-bold font-mono px-2.5 py-1 rounded-full bg-stone-100 text-stone-700 border border-stone-200">
+              01 / 11
+            </span>
+            <span id="prod-current-title" class="hidden sm:inline-block text-xs font-bold text-stone-700">
+              TrakWel
+            </span>
+          </div>
+
+          <button type="button" onclick="nextProduct()" 
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50/50 shadow-sm transition active:scale-95 cursor-pointer"
+                  aria-label="Next Product">
+            <span>Next</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
       </div>
     </div>
   </section>
 
   <script>
+    const productList = [
+      'trakwel',
+      'fabric-inventory',
+      'cutting-room',
+      'production-tracking',
+      'quality-management',
+      'planwel',
+      'mtrak',
+      'sewiot',
+      'laundry',
+      'jig',
+      'shrinkage'
+    ];
+    const productTitles = {
+      'trakwel': 'TrakWel',
+      'fabric-inventory': 'Fabric Inventory Management',
+      'cutting-room': 'Cutting Room Digitization',
+      'production-tracking': 'Real-Time Production Tracking',
+      'quality-management': 'Quality Management System',
+      'planwel': 'PlanWel',
+      'mtrak': 'mTrak',
+      'sewiot': 'SewIoT',
+      'laundry': 'Laundry Management',
+      'jig': 'Jig Management',
+      'shrinkage': 'Shrinkage Testing App'
+    };
+    var currentProdIndex = 0;
+
+    function updateProductIndicator(key) {
+      var idx = productList.indexOf(key);
+      if (idx !== -1) {
+        currentProdIndex = idx;
+        var counterEl = document.getElementById('prod-counter');
+        var titleEl = document.getElementById('prod-current-title');
+        if (counterEl) {
+          var numStr = (currentProdIndex + 1 < 10 ? '0' : '') + (currentProdIndex + 1);
+          counterEl.textContent = numStr + ' / ' + (productList.length < 10 ? '0' : '') + productList.length;
+        }
+        if (titleEl) {
+          titleEl.textContent = productTitles[key] || '';
+        }
+      }
+    }
+
     function selectProduct(key) {
       // Hide all panels
       document.querySelectorAll('.prod-panel').forEach(function(p) { 
@@ -653,6 +734,18 @@
       if (btn) {
         btn.classList.add('active-prod');
       }
+
+      updateProductIndicator(key);
+    }
+
+    function prevProduct() {
+      currentProdIndex = (currentProdIndex - 1 + productList.length) % productList.length;
+      selectProduct(productList[currentProdIndex]);
+    }
+
+    function nextProduct() {
+      currentProdIndex = (currentProdIndex + 1) % productList.length;
+      selectProduct(productList[currentProdIndex]);
     }
 
     function navigateToProduct(key) {
