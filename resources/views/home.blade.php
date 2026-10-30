@@ -328,7 +328,7 @@
         
         <div class="lg:col-span-6 space-y-6">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
-            <span>Track Tech</span>
+            <span>Track Tech Solution</span>
             <span class="text-slate-500">/</span>
             <span class="text-stone-500">EST. 2019</span>
           </div>
