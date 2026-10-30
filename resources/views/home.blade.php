@@ -460,8 +460,29 @@
       <!-- Products: Full-Width Showcase -->
       <div class="space-y-4">
 
-        <!-- Full-Width Product Detail Panel (Fixed Identical Dimensions) -->
-        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:h-[450px]" id="prod-detail">
+        <!-- Card Container with Floating Side Navigation Buttons (Matching Design) -->
+        <div class="relative">
+
+          <!-- Left Floating Previous Button (Circular Teal with Mint Ring) -->
+          <button type="button" onclick="prevProduct()" 
+                  class="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-[#158390] hover:bg-[#0e6f7b] text-white flex items-center justify-center shadow-lg shadow-[#158390]/30 ring-2 sm:ring-[3px] ring-[#71d5c7] hover:scale-110 active:scale-95 transition-all cursor-pointer"
+                  aria-label="Previous Product">
+            <svg class="w-5 h-5 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Right Floating Next Button (Circular Teal with Mint Ring) -->
+          <button type="button" onclick="nextProduct()" 
+                  class="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-[#158390] hover:bg-[#0e6f7b] text-white flex items-center justify-center shadow-lg shadow-[#158390]/30 ring-2 sm:ring-[3px] ring-[#71d5c7] hover:scale-110 active:scale-95 transition-all cursor-pointer"
+                  aria-label="Next Product">
+            <svg class="w-5 h-5 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+          <!-- Full-Width Product Detail Panel (Fixed Identical Dimensions) -->
+          <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:h-[450px]" id="prod-detail">
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row w-full h-full">
@@ -613,18 +634,19 @@
           </div>
 
         </div>
+      </div>
 
-        <!-- Sleek, Compact Controls Strip Below Card -->
+        <!-- Sleek Indicator & Controls Below Card -->
         <div class="flex items-center justify-between px-2 pt-2 text-stone-600">
           <button type="button" onclick="prevProduct()" 
-                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-teal-700 hover:border-teal-400 hover:bg-teal-50 shadow-sm transition active:scale-95 cursor-pointer"
                   aria-label="Previous Product">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
             <span>Previous</span>
           </button>
 
-          <div class="flex items-center gap-2.5 px-4 py-1.5 bg-white border border-stone-200 rounded-full shadow-sm text-xs">
-            <span id="prod-counter" class="font-bold font-mono text-orange-600">
+          <div class="flex items-center gap-2.5 px-5 py-2 bg-white border border-stone-200 rounded-full shadow-sm text-xs">
+            <span id="prod-counter" class="font-bold font-mono text-teal-700">
               01 / 11
             </span>
             <span class="text-stone-300">|</span>
@@ -634,7 +656,7 @@
           </div>
 
           <button type="button" onclick="nextProduct()" 
-                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-teal-700 hover:border-teal-400 hover:bg-teal-50 shadow-sm transition active:scale-95 cursor-pointer"
                   aria-label="Next Product">
             <span>Next</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
