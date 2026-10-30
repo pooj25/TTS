@@ -527,7 +527,7 @@
           <div id="panel-planwel" class="prod-panel hidden flex-col md:flex-row w-full h-full">
             <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-[#e8f9f6]">
               <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">PlanWel</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Advanced planning and scheduling to balance capacity, manage orders and keep delivery commitments on track with dynamic schedules.</p>
+              <p class="text-base text-stone-700 leading-relaxed">PlanWel is a web-based production planning solution that optimizes factory operations, order allocation, and resource utilization. It includes macro and micro planning, production timeline tracking, KPI dashboards, and real-time insights. The system improves capacity planning, monitors production performance, reduces delays, and ensures efficient operations and on-time delivery.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-stone-100">
