@@ -928,6 +928,9 @@
             <img src="{{ asset('images/clients/shell-apparels.png') }}" alt="Shell Apparels" class="max-h-16 sm:max-h-20 max-w-[130px] sm:max-w-[160px] w-auto h-auto object-contain">
           </div>
 
+          {{-- empty filler cell to complete the 4-column grid --}}
+          <div class="bg-white p-4 h-24 sm:h-28"></div>
+
         </div>
 
       </div>
