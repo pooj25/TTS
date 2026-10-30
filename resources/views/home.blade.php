@@ -932,27 +932,51 @@
 
       </div>
 
-      <!-- Stable Company Facts & Metrics Bar (4 Columns matching Screenshot 2) -->
+      <!-- Company Facts & Metrics Bar — with orange icons -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-0 bg-white/95 glass-card border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-stone-200/90">
-        
-        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
-          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">2</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Countries</span>
+
+        <!-- Countries -->
+        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2">
+          <div class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center ring-1 ring-orange-200">
+            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-500 font-heading">2</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 font-sans">Countries</span>
         </div>
 
-        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
-          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">74+</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Factories</span>
+        <!-- Factories -->
+        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2">
+          <div class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center ring-1 ring-orange-200">
+            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M3 21V9l5-4v4l5-4v4l5-4v16H3z"/><path d="M9 21v-6h6v6"/>
+            </svg>
+          </div>
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-500 font-heading">74+</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 font-sans">Factories</span>
         </div>
 
-        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
-          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">6000+</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Users</span>
+        <!-- Users -->
+        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2">
+          <div class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center ring-1 ring-orange-200">
+            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-500 font-heading">6000+</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 font-sans">Users</span>
         </div>
 
-        <div class="py-3 px-4 sm:py-4 text-center flex flex-col items-center justify-center">
-          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#087e8b] font-heading">36</strong>
-          <span class="text-xs sm:text-sm font-semibold text-stone-700 mt-0.5 font-sans">Professionals</span>
+        <!-- Professionals -->
+        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2">
+          <div class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center ring-1 ring-orange-200">
+            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <strong class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-orange-500 font-heading">36</strong>
+          <span class="text-xs sm:text-sm font-semibold text-stone-600 font-sans">Professionals</span>
         </div>
 
       </div>
