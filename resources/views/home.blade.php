@@ -905,7 +905,7 @@
           </div>
 
           <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/modelama.png') }}" alt="Modelama" class="max-h-14 sm:max-h-18 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
+            <img src="{{ asset('images/clients/modelama.png') }}" alt="Modelama" class="max-h-16 sm:max-h-20 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
           </div>
 
           <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
