@@ -328,7 +328,7 @@
         
         <div class="lg:col-span-6 space-y-6">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
-            <span>Track Tech Solutions</span>
+            <span>Track Tech</span>
             <span class="text-slate-500">/</span>
             <span class="text-stone-500">EST. 2019</span>
           </div>
@@ -357,25 +357,14 @@
           </div>
         </div>
 
-        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
-            <div class="text-orange-400 font-heading font-bold text-lg">01. Floor MES</div>
-            <p class="text-sm text-stone-500 leading-relaxed">Bundle RFID tracking, cutting-to-pack pipelines, and live operator scorecards.</p>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
-            <div class="text-orange-400 font-heading font-bold text-lg">02. Dynamic Gantt</div>
-            <p class="text-sm text-stone-500 leading-relaxed">Fast-react multi-line scheduling, SAM variance management, and milestone forecasting.</p>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
-            <div class="text-orange-400 font-heading font-bold text-lg">03. Machine IoT</div>
-            <p class="text-sm text-stone-500 leading-relaxed">RPM telemetry, vibration sensors, predictive motor alerts, and QR mechanic dispatch.</p>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-white/80 border border-stone-100 space-y-2 hover:border-orange-500/40 transition">
-            <div class="text-orange-400 font-heading font-bold text-lg">04. Quality AI</div>
-            <p class="text-sm text-stone-500 leading-relaxed">Inline stitch defect heatmaps, zero-scrap fabric markers, and automated AQL 1.5 audits.</p>
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/70 cyber-frame">
+            <img src="{{ asset('images/production-tracking.jpg') }}" alt="Track Tech Platform — Real-Time Production Tracking Dashboard" class="w-full h-auto object-cover rounded-2xl">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent rounded-2xl"></div>
+            <div class="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+              <span class="px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-bold shadow">Live Dashboard</span>
+              <span class="text-white/90 text-xs font-semibold drop-shadow">Real-Time Production Tracking — TrakWel MES</span>
+            </div>
           </div>
         </div>
 
@@ -892,47 +881,51 @@
           <span class="text-sm sm:text-base font-bold text-[#087e8b] font-heading">Key Customers</span>
         </div>
 
-        <!-- 5x2 Stable Logo Grid with clean cell borders -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-xl overflow-hidden shadow-sm">
-          
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/shahi.png') }}" alt="Shahi" class="max-h-8 sm:max-h-10 max-w-[120px] sm:max-w-[145px] w-auto h-auto object-contain">
+        <!-- Logo Grid — bigger cells for clear logos -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-xl overflow-hidden shadow-sm">
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/shahi.png') }}" alt="Shahi" class="max-h-12 sm:max-h-16 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/pds.png') }}" alt="PDS" class="max-h-9 sm:max-h-11 max-w-[120px] sm:max-w-[145px] w-auto h-auto object-contain">
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/pds.png') }}" alt="PDS" class="max-h-12 sm:max-h-16 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/texport.png') }}" alt="Texport Overseas" class="max-h-9 sm:max-h-11 max-w-[130px] sm:max-w-[155px] w-auto h-auto object-contain">
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/texport.png') }}" alt="Texport Overseas" class="max-h-12 sm:max-h-16 max-w-[160px] sm:max-w-[190px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-7 sm:max-h-9 max-w-[140px] sm:max-w-[170px] w-auto h-auto object-contain">
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-11 sm:max-h-14 max-w-[160px] sm:max-w-[190px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#modelarna" xlink:href="#modelarna"></use></svg>
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/modelama.png') }}" alt="Modelama" class="max-h-14 sm:max-h-18 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/sahana.png') }}" alt="Sahana" class="max-h-9 sm:max-h-11 max-w-[90px] sm:max-w-[110px] w-auto h-auto object-contain">
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/sahana.png') }}" alt="Sahana" class="max-h-12 sm:max-h-16 max-w-[110px] sm:max-w-[140px] w-auto h-auto object-contain">
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
           </div>
 
-          <div class="bg-white p-3 h-16 sm:h-20 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-10 sm:h-12 max-w-[130px] sm:max-w-[155px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
+          </div>
+
+          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <img src="{{ asset('images/clients/shell-apparels.png') }}" alt="Shell Apparels" class="max-h-16 sm:max-h-20 max-w-[130px] sm:max-w-[160px] w-auto h-auto object-contain">
           </div>
 
         </div>
