@@ -471,7 +471,7 @@
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-stone-100">
-              <img src="{{ asset('images/trakwel.png') }}?v=3" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-cover">
+              <img src="{{ asset('images/trakwel.png') }}?v=4" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-cover">
             </div>
           </div>
 
