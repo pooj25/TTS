@@ -906,7 +906,7 @@
               <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-11 sm:max-h-14 max-w-[160px] sm:max-w-[190px] w-auto h-auto object-contain">
             </div>
             <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-              <img src="{{ asset('images/clients/modelama.png') }}" alt="Modelama" class="max-h-16 sm:max-h-20 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
+              <img src="{{ asset('images/clients/modelama.png') }}?v=2" alt="Modelama" class="max-h-16 sm:max-h-20 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
             </div>
             <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
               <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
