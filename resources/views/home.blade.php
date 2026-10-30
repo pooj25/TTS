@@ -470,8 +470,8 @@
               <p class="text-base text-stone-700 leading-relaxed">TrakWel brings key factory processes into a connected digital workflow, helping teams track material movement, monitor production, manage quality, and access operational information in real time.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-stone-100">
-              <img src="{{ asset('images/trakwel.png') }}?v=4" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/trakwel.png') }}?v=5" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-contain">
             </div>
           </div>
 
