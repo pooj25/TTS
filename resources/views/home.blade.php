@@ -882,54 +882,52 @@
         </div>
 
         <!-- Logo Grid — bigger cells for clear logos -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-[1px] bg-stone-200/90 border border-stone-200/90 rounded-xl overflow-hidden shadow-sm">
+        <div class="border border-stone-200/90 rounded-xl overflow-hidden shadow-sm">
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/shahi.png') }}" alt="Shahi" class="max-h-12 sm:max-h-16 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
+          {{-- Row 1: Shahi · Arvind · PDS · Texport --}}
+          <div class="grid grid-cols-2 sm:grid-cols-4 divide-x divide-stone-200/90 border-b border-stone-200/90">
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <img src="{{ asset('images/clients/shahi.png') }}" alt="Shahi" class="max-h-12 sm:max-h-16 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
+            </div>
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
+            </div>
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <img src="{{ asset('images/clients/pds.png') }}" alt="PDS" class="max-h-12 sm:max-h-16 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
+            </div>
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <img src="{{ asset('images/clients/texport.png') }}" alt="Texport Overseas" class="max-h-12 sm:max-h-16 max-w-[160px] sm:max-w-[190px] w-auto h-auto object-contain">
+            </div>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#arvind" xlink:href="#arvind"></use></svg>
+          {{-- Row 2: Penguin · Modelama · Armstrong · Sahana --}}
+          <div class="grid grid-cols-2 sm:grid-cols-4 divide-x divide-stone-200/90 border-b border-stone-200/90">
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-11 sm:max-h-14 max-w-[160px] sm:max-w-[190px] w-auto h-auto object-contain">
+            </div>
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <img src="{{ asset('images/clients/modelama.png') }}" alt="Modelama" class="max-h-16 sm:max-h-20 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
+            </div>
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
+            </div>
+            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <img src="{{ asset('images/clients/sahana.png') }}" alt="Sahana" class="max-h-12 sm:max-h-16 max-w-[110px] sm:max-w-[140px] w-auto h-auto object-contain">
+            </div>
           </div>
 
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/pds.png') }}" alt="PDS" class="max-h-12 sm:max-h-16 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
+          {{-- Row 3: Trendy Fits · Mehala · Shell Apparels — centered, no empty cell --}}
+          <div class="flex justify-center divide-x divide-stone-200/90 bg-white">
+            <div class="p-4 h-24 sm:h-28 w-1/2 sm:w-1/4 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
+            </div>
+            <div class="p-4 h-24 sm:h-28 w-1/2 sm:w-1/4 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
+            </div>
+            <div class="p-4 h-24 sm:h-28 w-1/2 sm:w-1/4 flex items-center justify-center hover:bg-slate-50 transition-colors">
+              <img src="{{ asset('images/clients/shell-apparels.png') }}" alt="Shell Apparels" class="max-h-16 sm:max-h-20 max-w-[130px] sm:max-w-[160px] w-auto h-auto object-contain">
+            </div>
           </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/texport.png') }}" alt="Texport Overseas" class="max-h-12 sm:max-h-16 max-w-[160px] sm:max-w-[190px] w-auto h-auto object-contain">
-          </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/penguin.png') }}" alt="Penguin Apparels" class="max-h-11 sm:max-h-14 max-w-[160px] sm:max-w-[190px] w-auto h-auto object-contain">
-          </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/modelama.png') }}" alt="Modelama" class="max-h-16 sm:max-h-20 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
-          </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#armstrong" xlink:href="#armstrong"></use></svg>
-          </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/sahana.png') }}" alt="Sahana" class="max-h-12 sm:max-h-16 max-w-[110px] sm:max-w-[140px] w-auto h-auto object-contain">
-          </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
-          </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
-          </div>
-
-          <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
-            <img src="{{ asset('images/clients/shell-apparels.png') }}" alt="Shell Apparels" class="max-h-16 sm:max-h-20 max-w-[130px] sm:max-w-[160px] w-auto h-auto object-contain">
-          </div>
-
-          {{-- empty filler cell to complete the 4-column grid --}}
-          <div class="bg-white p-4 h-24 sm:h-28"></div>
 
         </div>
 
