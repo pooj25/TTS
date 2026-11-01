@@ -591,7 +591,7 @@
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/shrinkage-testing-app.png') }}" alt="Shrinkage Testing App" class="w-full h-full object-cover">
+              <img src="{{ asset('images/shrinkage-testing-app.png') }}?v=2" alt="Shrinkage Testing App" class="w-full h-full object-cover">
             </div>
           </div>
 
