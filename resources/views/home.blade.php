@@ -178,12 +178,12 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        1. FLOATING PILL NAVBAR (Modern 2026 SaaS Aesthetic)
   ═══════════════════════════════════════════════════════════════════ -->
-  <div class="absolute top-5 left-0 right-0 z-50 flex justify-center px-4">
-    <nav class="floating-nav w-full max-w-6xl rounded-full px-4 sm:px-6 py-3 flex items-center justify-between">
+  <div class="absolute top-3 sm:top-5 left-0 right-0 z-50 flex justify-center px-3 sm:px-4">
+    <nav class="floating-nav w-full max-w-6xl rounded-full px-3.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#about" class="flex items-center gap-2.5 group py-0.5">
-        <img src="{{ asset('images/track-tech-full-logo.png') }}" alt="Track Tech Solution Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105">
+      <a href="#about" class="flex items-center gap-2 group py-0.5">
+        <img src="{{ asset('images/track-tech-full-logo.png') }}" alt="Track Tech Solution Logo" class="h-8 sm:h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105">
       </a>
 
       <!-- Desktop Nav Items -->
@@ -197,7 +197,7 @@
             <span>Products</span>
             <svg class="w-3.5 h-3.5 text-stone-500 group-hover:text-orange-500 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </a>
-          <!-- Dropdown Popup (matching 2nd screenshot exactly) -->
+          <!-- Dropdown Popup -->
           <div class="absolute left-0 top-full pt-2 w-72 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
             <div class="bg-white rounded-2xl border border-stone-200 shadow-2xl overflow-hidden border-t-4 border-t-orange-500">
               
@@ -269,14 +269,15 @@
       </div>
 
       <!-- Action Button -->
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1.5 sm:gap-2">
         <a href="#contact"
-          class="bg-orange-500 hover:bg-orange-600 text-white text-sm sm:text-[15px] font-bold px-6 py-2.5 sm:py-3 rounded-2xl shadow-md shadow-orange-500/25 hover:scale-105 transition-all">
-          Request for Demo
+          class="bg-orange-500 hover:bg-orange-600 text-white text-xs sm:text-[15px] font-bold px-3.5 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-md shadow-orange-500/25 hover:scale-105 transition-all whitespace-nowrap">
+          <span class="hidden sm:inline">Request for Demo</span>
+          <span class="sm:hidden">Demo</span>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileNavBtn" class="md:hidden p-2 text-stone-600 hover:text-orange-500" aria-label="Toggle Navigation">
+        <button id="mobileNavBtn" class="md:hidden p-2 rounded-xl text-stone-700 hover:text-orange-500 hover:bg-orange-50 active:scale-95 transition" aria-label="Toggle Navigation">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -285,13 +286,43 @@
     </nav>
   </div>
 
+  <!-- Mobile Menu Backdrop Overlay -->
+  <div id="mobileBackdrop" class="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-40 hidden md:hidden transition-opacity"></div>
+
   <!-- Mobile Dropdown Drawer -->
-  <div id="mobileDrawer" class="absolute inset-x-4 top-20 z-40 hidden md:hidden glass-card p-6 border border-stone-200 shadow-2xl space-y-3">
-    <a href="#about" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">About</a>
-    <a href="#leadership" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Leadership Team</a>
-    <a href="#products" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Products</a>
-    <a href="#clients" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Clients</a>
-    <a href="#contact" class="block py-2.5 text-base font-semibold text-stone-700 hover:text-orange-500">Contact Us</a>
+  <div id="mobileDrawer" class="fixed inset-x-3 sm:inset-x-4 top-16 sm:top-20 z-50 hidden md:hidden glass-card p-5 sm:p-6 border border-stone-200 shadow-2xl space-y-2 max-h-[82vh] overflow-y-auto">
+    <a href="#about" class="block py-2 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">About</a>
+    <a href="#leadership" class="block py-2 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Leadership Team</a>
+    
+    <!-- Mobile Products Accordion -->
+    <div class="border-b border-stone-100 py-1">
+      <div class="flex items-center justify-between py-2 text-base font-semibold text-stone-700 hover:text-orange-500 cursor-pointer" onclick="toggleMobileSub('mobileProductsSub', 'mobileProdArrow')">
+        <span>Products (11)</span>
+        <svg id="mobileProdArrow" class="w-4 h-4 text-stone-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div id="mobileProductsSub" class="hidden pl-2 pb-2 space-y-1 text-sm font-medium text-stone-600">
+        <a href="#products" onclick="navigateToProduct('trakwel')" class="block py-1 hover:text-orange-600">TrakWel</a>
+        <a href="#products" onclick="navigateToProduct('fabric-inventory')" class="block py-1 hover:text-orange-600 pl-3 text-xs text-stone-500">↳ Fabric Inventory</a>
+        <a href="#products" onclick="navigateToProduct('cutting-room')" class="block py-1 hover:text-orange-600 pl-3 text-xs text-stone-500">↳ Cutting Room</a>
+        <a href="#products" onclick="navigateToProduct('production-tracking')" class="block py-1 hover:text-orange-600 pl-3 text-xs text-stone-500">↳ Production Tracking</a>
+        <a href="#products" onclick="navigateToProduct('quality-management')" class="block py-1 hover:text-orange-600 pl-3 text-xs text-stone-500">↳ Quality Management</a>
+        <a href="#products" onclick="navigateToProduct('planwel')" class="block py-1 hover:text-orange-600">PlanWel</a>
+        <a href="#products" onclick="navigateToProduct('mtrak')" class="block py-1 hover:text-orange-600">mTrak</a>
+        <a href="#products" onclick="navigateToProduct('sewiot')" class="block py-1 hover:text-orange-600">SewIoT</a>
+        <a href="#products" onclick="navigateToProduct('laundry')" class="block py-1 hover:text-orange-600">Laundry Management</a>
+        <a href="#products" onclick="navigateToProduct('jig')" class="block py-1 hover:text-orange-600">Jig Management</a>
+        <a href="#products" onclick="navigateToProduct('shrinkage')" class="block py-1 hover:text-orange-600">Shrinkage Testing App</a>
+      </div>
+    </div>
+
+    <a href="#clients" class="block py-2 text-base font-semibold text-stone-700 hover:text-orange-500 border-b border-stone-100">Clients</a>
+    <a href="#contact" class="block py-2 text-base font-semibold text-stone-700 hover:text-orange-500">Contact Us</a>
+    
+    <div class="pt-3">
+      <a href="#contact" class="block text-center w-full py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-md shadow-orange-500/25">
+        Request for Demo
+      </a>
+    </div>
   </div>
 
 
@@ -302,16 +333,16 @@
     <div class="max-w-5xl mx-auto text-center space-y-6 flex flex-col items-center justify-center my-auto">
       
       <!-- Headline & Introduction -->
-      <div class="inline-flex items-center px-6 py-2 rounded-full text-sm sm:text-base font-semibold bg-orange-50 border border-orange-200 text-orange-600 shadow-sm tracking-normal">
+      <div class="inline-flex items-center px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-base font-semibold bg-orange-50 border border-orange-200 text-orange-600 shadow-sm tracking-normal">
         Built for Garment Manufacturers
       </div>
 
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.16] text-stone-900 font-heading">
+      <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.18] text-stone-900 font-heading">
         Powering Your Factory's <br class="hidden sm:inline" />
         <span class="text-orange-500">Digital Transformation</span>
       </h1>
 
-      <p class="text-base sm:text-xl lg:text-2xl text-stone-600 leading-relaxed max-w-3xl mx-auto">
+      <p class="text-sm sm:text-lg lg:text-xl text-stone-600 leading-relaxed max-w-3xl mx-auto px-2">
         Connect every stage of garment manufacturing with intelligent digital solutions for planning, cutting, production, quality and machine monitoring driving higher productivity, reducing waste and enabling on-time delivery.
       </p>
 
@@ -322,29 +353,29 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        4. COMPANY PROFILE SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="company-profile" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-8 sm:p-10 lg:p-12 border border-stone-200">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+  <section id="company-profile" class="relative py-12 sm:py-16 lg:py-20 px-3.5 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto glass-card p-5 sm:p-8 lg:p-12 border border-stone-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <div class="lg:col-span-6 space-y-6">
+        <div class="lg:col-span-6 space-y-4 sm:space-y-6">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
             <span>Track Tech Solution</span>
             <span class="text-slate-500">/</span>
             <span class="text-stone-500">EST. 2019</span>
           </div>
 
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-stone-900 leading-tight">
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold font-heading text-stone-900 leading-tight">
             Digital clarity for the people who make apparel
           </h2>
 
-          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
+          <p class="text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed">
             Track Tech Solutions builds practical digital tools for apparel manufacturing. The platform connects production, quality, planning, materials and factory-floor teams, helping people see what is happening and act while there is still time to improve the outcome.
           </p>
-          <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
+          <p class="text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed">
             Since 2019, the team has focused on bringing useful technology closer to everyday factory work, supporting implementation across more than 74 factories in two countries.
           </p>
 
-          <div class="pt-2 flex items-center gap-6 text-xs font-semibold text-stone-500">
+          <div class="pt-2 flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-semibold text-stone-500">
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-orange-400"></span> 2 Global Countries
             </div>
@@ -361,9 +392,9 @@
           <div class="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/70 cyber-frame">
             <img src="{{ asset('images/production-tracking.jpg') }}" alt="Track Tech Platform — Real-Time Production Tracking Dashboard" class="w-full h-auto object-cover rounded-2xl">
             <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent rounded-2xl"></div>
-            <div class="absolute bottom-4 left-4 right-4 flex items-center gap-3">
-              <span class="px-3 py-1 rounded-full bg-orange-500/90 text-white text-xs font-bold shadow">Live Dashboard</span>
-              <span class="text-white/90 text-xs font-semibold drop-shadow">Real-Time Production Tracking — TrakWel MES</span>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex flex-wrap items-center gap-2 sm:gap-3">
+              <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-orange-500/90 text-white text-[10px] sm:text-xs font-bold shadow">Live Dashboard</span>
+              <span class="text-white/90 text-[11px] sm:text-xs font-semibold drop-shadow">Real-Time Production Tracking — TrakWel MES</span>
             </div>
           </div>
         </div>
@@ -376,25 +407,25 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        3. LEADERSHIP TEAM (Glass Executive Profiles)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="leadership" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
+  <section id="leadership" class="relative py-12 sm:py-16 lg:py-20 px-3.5 sm:px-6 lg:px-8 z-10">
     <div class="max-w-6xl mx-auto">
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
 
         <!-- Gopinath Muniraj -->
-        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between h-full">
           <div>
-            <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
-            <div class="text-center mt-5 mb-4">
-              <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Gopinath Muniraj</h3>
-              <span class="text-sm font-semibold text-orange-500 block mt-1">Founder &amp; Chief Executive Officer (CEO)</span>
+            <img src="{{ asset('images/gopinath.jpg') }}" alt="Gopinath Muniraj" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
+            <div class="text-center mt-4 sm:mt-5 mb-3 sm:mb-4">
+              <h3 class="text-lg sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Gopinath Muniraj</h3>
+              <span class="text-xs sm:text-sm font-semibold text-orange-500 block mt-1">Founder &amp; Chief Executive Officer (CEO)</span>
             </div>
-            <p class="text-sm text-stone-600 leading-relaxed text-justify">
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed text-left sm:text-justify">
               Gopinath Muniraj is a technology entrepreneur with over 20 years of experience in apparel manufacturing. As Founder and CEO of Track Tech Solution, he drives digital transformation through automation, AI and Industrial IoT, helping manufacturers streamline operations, improve productivity, enable data-driven decisions and build smarter, more efficient and connected manufacturing environments.
             </p>
           </div>
-          <div class="pt-6 text-center">
-            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
+          <div class="pt-5 sm:pt-6 text-center">
+            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
               <span>Professional profile</span>
               <span>↗</span>
             </a>
@@ -402,19 +433,19 @@
         </div>
 
         <!-- Lebinesh Balan -->
-        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between h-full">
           <div>
-            <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
-            <div class="text-center mt-5 mb-4">
-              <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Lebinesh Balan</h3>
-              <span class="text-sm font-semibold text-orange-500 block mt-1">Co-Founder &amp; Chief Operating Officer (COO)</span>
+            <img src="{{ asset('images/lebinesh.jpg') }}" alt="Lebinesh Balan" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
+            <div class="text-center mt-4 sm:mt-5 mb-3 sm:mb-4">
+              <h3 class="text-lg sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Lebinesh Balan</h3>
+              <span class="text-xs sm:text-sm font-semibold text-orange-500 block mt-1">Co-Founder &amp; Chief Operating Officer (COO)</span>
             </div>
-            <p class="text-sm text-stone-600 leading-relaxed text-justify">
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed text-left sm:text-justify">
               Lebinesh Balan brings nearly 20 years of experience in digital transformation, particularly in apparel manufacturing. At Track Tech Solution, he leads business strategy, sales, operations and commercial growth, helping manufacturers digitise shop-floor processes, optimise production planning, enhance productivity, strengthen customer partnerships and achieve sustainable business growth through technology-driven innovation.
             </p>
           </div>
-          <div class="pt-6 text-center">
-            <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
+          <div class="pt-5 sm:pt-6 text-center">
+            <a href="https://in.linkedin.com/in/lebinesh-balan-a2521637" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
               <span>LinkedIn profile</span>
               <span>↗</span>
             </a>
@@ -422,21 +453,25 @@
         </div>
 
         <!-- Deepak Rajkumar -->
-        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-7 sm:p-8 flex flex-col justify-between h-full">
+        <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between h-full">
           <div>
-            <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="w-24 h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
-            <div class="text-center mt-5 mb-4">
-              <h3 class="text-xl sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Deepak Rajkumar</h3>
-              <span class="text-sm font-semibold text-orange-500 block mt-1">Co-Founder &amp; Chief Technology Officer (CTO)</span>
+            <img src="{{ asset('images/deepak.jpg') }}" alt="Deepak Rajkumar" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top shadow-md border-2 border-orange-200 mx-auto">
+            <div class="text-center mt-4 sm:mt-5 mb-3 sm:mb-4">
+              <h3 class="text-lg sm:text-2xl font-bold font-heading text-stone-900 leading-snug">Deepak Rajkumar</h3>
+              <span class="text-xs sm:text-sm font-semibold text-orange-500 block mt-1">Co-Founder &amp; Chief Technology Officer (CTO)</span>
             </div>
-            <p class="text-sm text-stone-600 leading-relaxed text-justify">
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed text-left sm:text-justify">
               Deepak is a technology leader with extensive experience in apparel manufacturing and software development. At Track Tech Solution, he leads technology strategy, product engineering and digital transformation, developing scalable solutions using software architecture, AI and Industrial IoT to improve factory efficiency, operational visibility, manufacturing processes and overall business performance.
             </p>
           </div>
-          <div class="pt-6 text-center">
-            <span class="inline-block text-transparent text-sm select-none">&nbsp;</span>
+          <div class="pt-5 sm:pt-6 text-center">
+            <span class="inline-block text-transparent text-xs sm:text-sm select-none">&nbsp;</span>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
 
       </div>
     </div>
@@ -446,198 +481,200 @@
     <!-- ═══════════════════════════════════════════════════════════════════
        5. COMPREHENSIVE SOFTWARE SUITE (From website-tts.vercel.app)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="products" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10">
+  <section id="products" class="relative py-12 sm:py-16 lg:py-20 px-3.5 sm:px-6 lg:px-8 z-10">
     <span id="products-studio" class="absolute -top-10"></span>
-    <div class="max-w-6xl mx-auto space-y-6">
+    <div class="max-w-6xl mx-auto space-y-4 sm:space-y-6">
 
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
+      <div class="text-center max-w-3xl mx-auto px-2">
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
           Designed for <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 italic">Smart Garment Factories</span>
         </h2>
       </div>
 
       <!-- Products: Full-Width Showcase -->
-      <div class="space-y-4">
+      <div class="space-y-3 sm:space-y-4">
 
         <!-- Full-Width Product Detail Panel (Fixed Identical Dimensions) -->
-        <div class="w-full glass-card rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:h-[450px]" id="prod-detail">
+        <div class="w-full glass-card rounded-2xl sm:rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:min-h-[460px] md:h-auto lg:h-[460px] select-none touch-pan-y" id="prod-detail">
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">TrakWel</h2>
-              <p class="text-base text-stone-700 leading-relaxed">TrakWel brings key factory processes into a connected digital workflow, helping teams track material movement, monitor production, manage quality, and access operational information in real time.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">TrakWel</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">TrakWel brings key factory processes into a connected digital workflow, helping teams track material movement, monitor production, manage quality, and access operational information in real time.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/trakwel.png') }}?v=6" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/trakwel.png') }}?v=6" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- fabric-inventory -->
           <div id="panel-fabric-inventory" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Fabric Inventory<br>Management</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Digitise fabric inspection and inventory management with Inspection 4.0 and automatic grouping by shade, width and shrinkage. Gain real-time visibility into stock levels and material consumption, improve fabric traceability and ensure better inventory control.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Fabric Inventory<br class="hidden sm:inline">Management</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Digitise fabric inspection and inventory management with Inspection 4.0 and automatic grouping by shade, width and shrinkage. Gain real-time visibility into stock levels and material consumption, improve fabric traceability and ensure better inventory control.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/fabric-inventory-management.png') }}?v=6" alt="Fabric Inventory Management" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/fabric-inventory-management.png') }}?v=6" alt="Fabric Inventory Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- cutting-room -->
           <div id="panel-cutting-room" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Cutting Room<br>Digitization</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Digitise cut planning, optimize end-bit utilization and streamline fabric reconciliation. Improve cutting-room efficiency, reduce fabric wastage and gain better visibility and control over material usage and cutting operations.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Cutting Room<br class="hidden sm:inline">Digitization</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Digitise cut planning, optimize end-bit utilization and streamline fabric reconciliation. Improve cutting-room efficiency, reduce fabric wastage and gain better visibility and control over material usage and cutting operations.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/cutting-room-digitalization.png') }}?v=6" alt="Cutting Room Digitization" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/cutting-room-digitalization.png') }}?v=6" alt="Cutting Room Digitization" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- production-tracking -->
           <div id="panel-production-tracking" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Real-Time Production<br>Tracking</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Track real time production, monitor efficiency and performance in real time, and compare planned versus actual output. Gain actionable insights into production progress, identify bottlenecks early and improve operational control.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Real-Time Production<br class="hidden sm:inline">Tracking</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Track real time production, monitor efficiency and performance in real time, and compare planned versus actual output. Gain actionable insights into production progress, identify bottlenecks early and improve operational control.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/product-tracking.png') }}?v=6" alt="Real-Time Production Tracking" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/product-tracking.png') }}?v=6" alt="Real-Time Production Tracking" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- quality-management -->
           <div id="panel-quality-management" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Quality Management<br>System</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Monitor defect rates, track rework levels and identify recurring quality issues in real time. Gain actionable insights into defect trends, improve quality control and drive continuous improvement across production.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Quality Management<br class="hidden sm:inline">System</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Monitor defect rates, track rework levels and identify recurring quality issues in real time. Gain actionable insights into defect trends, improve quality control and drive continuous improvement across production.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/quality-control.png') }}?v=6" alt="Quality Management System" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/quality-control.png') }}?v=6" alt="Quality Management System" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- planwel -->
           <div id="panel-planwel" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">PlanWel</h2>
-              <p class="text-base text-stone-700 leading-relaxed">PlanWel is a web-based production planning solution that optimizes factory operations, order allocation, and resource utilization. It includes macro and micro planning, production timeline tracking, KPI dashboards, and real-time insights. The system improves capacity planning, monitors production performance, reduces delays, and ensures efficient operations and on-time delivery.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">PlanWel</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">PlanWel is a web-based production planning solution that optimizes factory operations, order allocation, and resource utilization. It includes macro and micro planning, production timeline tracking, KPI dashboards, and real-time insights. The system improves capacity planning, monitors production performance, reduces delays, and ensures efficient operations and on-time delivery.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/planwel.png') }}?v=6" alt="PlanWel" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/planwel.png') }}?v=6" alt="PlanWel" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- mtrak -->
           <div id="panel-mtrak" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">mTrak</h2>
-              <p class="text-base text-stone-700 leading-relaxed">mTrak helps maintenance teams maintain a central record of factory assets, respond to breakdowns, schedule servicing, assign tasks, and review downtime and maintenance performance through dashboards and reports.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">mTrak</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">mTrak helps maintenance teams maintain a central record of factory assets, respond to breakdowns, schedule servicing, assign tasks, and review downtime and maintenance performance through dashboards and reports.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/mTrak.png') }}?v=6" alt="mTrak" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/mTrak.png') }}?v=6" alt="mTrak" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- sewiot -->
           <div id="panel-sewiot" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">SewIoT</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Sewing IoT connects sewing machines to a real-time data layer, helping factory teams see production progress, understand operator performance, identify non-productive time, and respond to issues sooner.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">SewIoT</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Sewing IoT connects sewing machines to a real-time data layer, helping factory teams see production progress, understand operator performance, identify non-productive time, and respond to issues sooner.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/sew-IoT.png') }}?v=6" alt="SewIoT" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/sew-IoT.png') }}?v=6" alt="SewIoT" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- laundry -->
           <div id="panel-laundry" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Laundry<br>Management</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Laundry Management is a digital system that tracks garment washing processes, including laundry lots, quantities, shades, machine allocation, and operators. It supports QR code scanning, lot splitting and merging, WIP tracking, and machine and operator management. The system improves traceability, reduces manual errors, and ensures efficient workflow and production control.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Laundry<br class="hidden sm:inline">Management</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Laundry Management is a digital system that tracks garment washing processes, including laundry lots, quantities, shades, machine allocation, and operators. It supports QR code scanning, lot splitting and merging, WIP tracking, and machine and operator management. The system improves traceability, reduces manual errors, and ensures efficient workflow and production control.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Laundry Management" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Laundry Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- jig -->
           <div id="panel-jig" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Jig Management</h2>
-              <p class="text-base text-stone-700 leading-relaxed">JIG Management is a digital system for tracking denim pocket jigs, including design codes, sizes, materials, and storage locations. It supports QR code identification, jig allocation, usage, return, and availability tracking. The system reduces manual errors, prevents loss, improves inventory control, and ensures efficient production operations.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Jig Management</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">JIG Management is a digital system for tracking denim pocket jigs, including design codes, sizes, materials, and storage locations. It supports QR code identification, jig allocation, usage, return, and availability tracking. The system reduces manual errors, prevents loss, improves inventory control, and ensures efficient production operations.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/Jig-management.png') }}?v=6" alt="Jig Management" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/Jig-management.png') }}?v=6" alt="Jig Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- shrinkage -->
           <div id="panel-shrinkage" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Shrinkage Testing App</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Record fabric measurements before and after washing, calculate shrinkage and keep test results linked to the material lot for consistent quality decisions.</p>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Shrinkage Testing App</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Record fabric measurements before and after washing, calculate shrinkage and keep test results linked to the material lot for consistent quality decisions.</p>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/shrinkage-testing-app.png') }}?v=6" alt="Shrinkage Testing App" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/shrinkage-testing-app.png') }}?v=6" alt="Shrinkage Testing App" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
           <!-- industry solutions overview panel -->
           <div id="panel-industry" class="prod-panel hidden flex-col md:flex-row w-full h-full">
-            <div class="flex-1 h-full p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-4 bg-white">
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Industry Solutions</h2>
-              <p class="text-base text-stone-700 leading-relaxed">Specialized shop-floor applications tailored for apparel manufacturers. From Laundry Management to Jig tracking and Shrinkage testing, digitise every specialised corner of your manufacturing workflow.</p>
+            <div class="flex-1 p-5 sm:p-8 lg:p-10 flex flex-col justify-center space-y-3 sm:space-y-4 bg-white">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-700 font-heading leading-tight">Industry Solutions</h2>
+              <p class="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">Specialized shop-floor applications tailored for apparel manufacturers. From Laundry Management to Jig tracking and Shrinkage testing, digitise every specialised corner of your manufacturing workflow.</p>
               <div class="flex flex-wrap gap-2 pt-2">
-                <button onclick="selectProduct('laundry')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Laundry Management →</button>
-                <button onclick="selectProduct('jig')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Jig Management →</button>
-                <button onclick="selectProduct('shrinkage')" class="px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Shrinkage Testing App →</button>
+                <button onclick="selectProduct('laundry')" class="px-3.5 sm:px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Laundry Management →</button>
+                <button onclick="selectProduct('jig')" class="px-3.5 sm:px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Jig Management →</button>
+                <button onclick="selectProduct('shrinkage')" class="px-3.5 sm:px-4 py-2 bg-white text-teal-800 text-xs font-bold rounded-lg border border-teal-200 hover:bg-teal-50 transition shadow-sm">Shrinkage Testing App →</button>
               </div>
-              <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20 mt-3">Talk to our team</a>
+              <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20 mt-3">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Industry Solutions" class="w-full h-full object-contain">
+            <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
+              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Industry Solutions" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
         </div>
 
         <!-- Sleek, Compact Controls Strip Below Card -->
-        <div class="flex items-center justify-between px-2 pt-2 text-stone-600">
+        <div class="flex items-center justify-between px-2 pt-2 text-stone-600 gap-2">
           <button type="button" onclick="prevProduct()" 
-                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer"
+                  class="inline-flex items-center gap-1 sm:gap-1.5 px-3 sm:px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer shrink-0"
                   aria-label="Previous Product">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
-            <span>Previous</span>
+            <span class="hidden xs:inline sm:inline">Previous</span>
           </button>
 
-          <div class="flex items-center gap-2.5 px-4 py-1.5 bg-white border border-stone-200 rounded-full shadow-sm text-xs">
-            <span id="prod-counter" class="font-bold font-mono text-orange-600">
+          <div class="flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-1.5 bg-white border border-stone-200 rounded-full shadow-sm text-xs min-w-0 max-w-[65%] sm:max-w-none">
+            <span id="prod-counter" class="font-bold font-mono text-orange-600 shrink-0">
               01 / 11
             </span>
             <span class="text-stone-300">|</span>
-            <span id="prod-current-title" class="font-semibold text-stone-700">
+            <span id="prod-current-title" class="font-semibold text-stone-700 truncate max-w-[110px] sm:max-w-xs md:max-w-md">
               TrakWel
             </span>
           </div>
 
           <button type="button" onclick="nextProduct()" 
-                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer"
+                  class="inline-flex items-center gap-1 sm:gap-1.5 px-3 sm:px-4 py-2 rounded-xl bg-white border border-stone-200 text-xs font-semibold text-stone-700 hover:text-orange-600 hover:border-orange-400 hover:bg-orange-50 shadow-sm transition active:scale-95 cursor-pointer shrink-0"
                   aria-label="Next Product">
-            <span>Next</span>
+            <span class="hidden xs:inline sm:inline">Next</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
           </button>
         </div>
 
@@ -917,14 +954,14 @@
           </div>
 
           {{-- Row 3: Trendy Fits · Mehala · Shell Apparels (3 clients — full width, no empty space) --}}
-          <div class="grid grid-cols-3 gap-[1px]">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-[1px]">
             <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
               <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#trendyfits" xlink:href="#trendyfits"></use></svg>
             </div>
             <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
               <svg class="w-full h-12 sm:h-16 max-w-[160px] sm:max-w-[190px]"><use href="#mehala" xlink:href="#mehala"></use></svg>
             </div>
-            <div class="bg-white p-4 h-24 sm:h-28 flex items-center justify-center hover:bg-slate-50 transition-colors">
+            <div class="bg-white p-4 h-24 sm:h-28 col-span-2 sm:col-span-1 flex items-center justify-center hover:bg-slate-50 transition-colors">
               <img src="{{ asset('images/clients/shell-apparels.png') }}" alt="Shell Apparels" class="max-h-12 sm:max-h-16 max-w-[150px] sm:max-w-[180px] w-auto h-auto object-contain">
             </div>
           </div>
@@ -937,7 +974,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-0 bg-white/95 glass-card border border-stone-200/90 rounded-2xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-stone-200/90">
 
         <!-- Countries -->
-        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2">
+        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2 border-r border-stone-200/90 md:border-r-0">
           <div class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center ring-1 ring-orange-200">
             <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -959,7 +996,7 @@
         </div>
 
         <!-- Users -->
-        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2">
+        <div class="py-5 px-4 sm:py-6 text-center flex flex-col items-center justify-center gap-2 border-r border-stone-200/90 md:border-r-0">
           <div class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center ring-1 ring-orange-200">
             <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
@@ -1018,12 +1055,12 @@
               <div>
                 <label class="block text-xs font-bold text-stone-700 mb-1">Full Name <span class="text-orange-500">*</span></label>
                 <input type="text" name="first_name" required placeholder="John Smith"
-                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-base sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
               <div>
                 <label class="block text-xs font-bold text-stone-700 mb-1">Work Email <span class="text-orange-500">*</span></label>
                 <input type="email" name="email" required placeholder="john@company.com"
-                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-base sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
             </div>
 
@@ -1031,18 +1068,18 @@
               <div>
                 <label class="block text-xs font-bold text-stone-700 mb-1">Company <span class="text-orange-500">*</span></label>
                 <input type="text" name="company_name" required placeholder="Your Company"
-                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-base sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
               <div>
                 <label class="block text-xs font-bold text-stone-700 mb-1">Phone Number</label>
                 <input type="tel" name="phone" placeholder="+1 (555) 123-4567"
-                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+                       class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-base sm:text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
               </div>
             </div>
 
             <div>
               <label class="block text-xs font-bold text-stone-700 mb-1">Your Role</label>
-              <select name="role" class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-xs sm:text-sm text-stone-900 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
+              <select name="role" class="w-full px-3 py-2 rounded-xl border border-stone-200 bg-stone-50/50 text-base sm:text-sm text-stone-900 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition">
                 <option value="" disabled selected>Select your role</option>
                 <option value="Factory Owner / Executive">Factory Owner / Executive</option>
                 <option value="Plant / General Manager">Plant / General Manager</option>
@@ -1152,7 +1189,7 @@
             <!-- Direct Mail -->
             <div class="p-3.5 sm:p-4 rounded-xl bg-white/90 border border-stone-200/80 shadow-sm space-y-0.5 hover:border-orange-500/40 transition">
               <div class="text-[10px] font-mono text-orange-500 font-bold uppercase tracking-wider">Direct Mail</div>
-              <div class="text-xs sm:text-sm font-semibold text-stone-900">
+              <div class="text-xs sm:text-sm font-semibold text-stone-900 break-all sm:break-normal">
                 <a href="mailto:Lebinesh@tracktechsolutions.com" class="hover:text-orange-600 transition">Lebinesh@tracktechsolutions.com</a>
               </div>
             </div>
@@ -1160,16 +1197,17 @@
             <!-- Phone Telephony -->
             <div class="p-3.5 sm:p-4 rounded-xl bg-white/90 border border-stone-200/80 shadow-sm space-y-0.5 hover:border-orange-500/40 transition">
               <div class="text-[10px] font-mono text-orange-500 font-bold uppercase tracking-wider">Phone Telephony</div>
-              <div class="text-xs sm:text-sm font-semibold text-stone-900">
-                <a href="tel:+919650613666" class="hover:text-orange-600 transition">+91 96506 13666</a> / 
-                <a href="tel:+919742060606" class="hover:text-orange-600 transition">+91 97420 60606</a>
+              <div class="text-xs sm:text-sm font-semibold text-stone-900 flex flex-wrap gap-x-2">
+                <a href="tel:+919650613666" class="hover:text-orange-600 transition whitespace-nowrap">+91 96506 13666</a>
+                <span class="text-stone-300">/</span>
+                <a href="tel:+919742060606" class="hover:text-orange-600 transition whitespace-nowrap">+91 97420 60606</a>
               </div>
             </div>
 
             <!-- LinkedIn Company -->
             <div class="p-3.5 sm:p-4 rounded-xl bg-white/90 border border-stone-200/80 shadow-sm space-y-0.5 hover:border-orange-500/40 transition">
               <div class="text-[10px] font-mono text-orange-500 font-bold uppercase tracking-wider">LinkedIn Company</div>
-              <div class="text-xs sm:text-sm font-semibold text-stone-900">
+              <div class="text-xs sm:text-sm font-semibold text-stone-900 break-all sm:break-normal">
                 <a href="https://www.linkedin.com/company/track-tech-solution/" target="_blank" rel="noopener noreferrer" class="hover:text-orange-600 transition">linkedin.com/company/track-tech-solution</a>
               </div>
             </div>
@@ -1180,11 +1218,11 @@
 
       <!-- Footer Bottom Bar -->
       <div class="pt-5 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-        <div class="flex items-center gap-3">
-          <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Logo" class="w-6 h-6 object-contain opacity-70">
+        <div class="flex items-center gap-2.5 text-center sm:text-left">
+          <img src="{{ asset('assets/img/track-tech-logo-clean.png') }}" alt="Logo" class="w-5 h-5 object-contain opacity-70 shrink-0">
           <span>&copy; {{ date('Y') }} Track Tech Solution. All rights reserved. Made in India.</span>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-6">
           <a href="#about" class="hover:text-stone-600 transition">Home</a>
           <a href="#leadership" class="hover:text-stone-600 transition">Leadership Team</a>
           <a href="#products" class="hover:text-stone-600 transition">Products</a>
@@ -1197,10 +1235,10 @@
   </section>
 
   <!-- Floating WhatsApp Quick Button -->
-  <a class="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-stone-900 shadow-xl shadow-emerald-500/30 hover:scale-110 transition-transform flex items-center justify-center"
+  <a class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 p-3 sm:p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-stone-900 shadow-xl shadow-emerald-500/30 hover:scale-110 transition-transform flex items-center justify-center"
     href="https://wa.me/919650613666?text=Hello%20Track%20Tech%20Solution%2C%20I%27d%20like%20to%20know%20more%20about%20your%20solutions."
     target="_blank" rel="noopener" aria-label="Chat with Track Tech Solution on WhatsApp">
-    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+    <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24">
       <path d="M20 4.1A9.9 9.9 0 0 0 12.9 2C7.4 1.5 2.5 5.5 2 11a9.9 9.9 0 0 0 1.4 5.9L2 22l5.2-1.4A10 10 0 1 0 20 4.1Z" />
       <path d="M8.2 7.5c.2-.4.5-.4.8-.4h.6c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c.7 1.3 1.7 2.3 3 3l.7-.6c.2-.2.4-.2.6-.1l1.8.8c.3.1.4.3.4.5v.6c0 .3 0 .6-.4.8-.4.2-1.1.4-1.7.3-1.5-.2-3.1-1-4.5-2.4-1.4-1.4-2.2-3-2.4-4.5-.1-.6.1-1.3.3-1.7Z" fill="#fff" />
     </svg>
@@ -1211,43 +1249,82 @@
        JAVASCRIPT FOR INTERACTIVE STUDIO & MOBILE NAV
   ═══════════════════════════════════════════════════════════════════ -->
   <script>
-    // Products suite loaded dynamically
-        };
-        container.appendChild(btn);
-      });
-    }
-
-    function updateDisplay() {
-      const data = productsData[activeKey];
-      if (!data) return;
-      document.getElementById('studioProductNumber').innerText = data.number;
-      document.getElementById('studioProductTitle').innerText = data.title;
-      document.getElementById('studioProductDesc').innerText = data.desc;
-      document.getElementById('studioStage1').innerText = data.stage1;
-      document.getElementById('studioStage2').innerText = data.stage2;
-      document.getElementById('studioStage3').innerText = data.stage3;
-      document.getElementById('studioImage').src = data.img;
-      document.getElementById('studioUrlMock').innerText = data.url;
-    }
-
-    renderTabs();
-    updateDisplay();
-
-    // Mobile Drawer Toggle
+    // Mobile Drawer Toggle & Backdrop
     const mobileBtn = document.getElementById('mobileNavBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileBackdrop = document.getElementById('mobileBackdrop');
+
+    function openMobileDrawer() {
+      if (mobileDrawer) mobileDrawer.classList.remove('hidden');
+      if (mobileBackdrop) mobileBackdrop.classList.remove('hidden');
+    }
+
+    function closeMobileDrawer() {
+      if (mobileDrawer) mobileDrawer.classList.add('hidden');
+      if (mobileBackdrop) mobileBackdrop.classList.add('hidden');
+    }
+
     if (mobileBtn && mobileDrawer) {
-      mobileBtn.onclick = () => {
-        mobileDrawer.classList.toggle('hidden');
+      mobileBtn.onclick = (e) => {
+        e.stopPropagation();
+        if (mobileDrawer.classList.contains('hidden')) {
+          openMobileDrawer();
+        } else {
+          closeMobileDrawer();
+        }
       };
+      if (mobileBackdrop) {
+        mobileBackdrop.onclick = closeMobileDrawer;
+      }
       mobileDrawer.querySelectorAll('a').forEach(a => {
-        a.onclick = () => mobileDrawer.classList.add('hidden');
+        a.onclick = closeMobileDrawer;
       });
     }
 
-    // Cursor Follower Movement
+    function toggleMobileSub(subId, arrowId) {
+      const sub = document.getElementById(subId);
+      const arr = document.getElementById(arrowId);
+      if (sub) {
+        if (sub.classList.contains('hidden')) {
+          sub.classList.remove('hidden');
+          if (arr) arr.classList.add('rotate-180');
+        } else {
+          sub.classList.add('hidden');
+          if (arr) arr.classList.remove('rotate-180');
+        }
+      }
+    }
+
+    // Touch Swipe Support for Products Card on Mobile & Tablets
+    const prodDetailCard = document.getElementById('prod-detail');
+    if (prodDetailCard) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      prodDetailCard.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      prodDetailCard.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const threshold = 40; // minimum swipe distance in px
+        if (touchEndX < touchStartX - threshold) {
+          // Swiped Left -> Next Product
+          nextProduct();
+        } else if (touchEndX > touchStartX + threshold) {
+          // Swiped Right -> Previous Product
+          prevProduct();
+        }
+      }
+    }
+
+    // Cursor Follower Movement (Only for desktops/laptops with fine pointer)
     const cursor = document.getElementById('cursorGlow');
-    if (cursor) {
+    if (cursor && window.matchMedia('(pointer: fine)').matches) {
       window.addEventListener('mousemove', (e) => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
