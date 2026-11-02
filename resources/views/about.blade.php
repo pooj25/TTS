@@ -87,7 +87,7 @@ html {
                 </summary>
                 <div class="border-t border-slate-200/80 px-5 py-6 sm:px-7 sm:pl-[5.5rem]">
                     <p class="text-sm sm:text-base leading-relaxed text-slate-700">Gopinath Muniraj is a technology entrepreneur with over 20 years of experience in apparel manufacturing. As Founder and CEO of Track Tech Solution, he drives digital transformation through automation, AI and Industrial IoT, helping manufacturers streamline operations, improve productivity, enable data-driven decisions and build smarter, more efficient and connected manufacturing environments.</p>
-                    <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-4 text-sm text-sky-700 font-semibold hover:text-sky-800 transition">Professional profile ↗</a>
+                    <a href="https://www.linkedin.com/in/gopinathmuniraj/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-4 text-sm text-sky-700 font-semibold hover:text-sky-800 transition">LinkedIn profile ↗</a>
                 </div>
             </details>
 

@@ -158,6 +158,29 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #f97316;
     }
+
+    /* One-Page-At-A-Time Snap & Strict Viewport Isolation (Never bleed across pages) */
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (min-width: 1024px) {
+      html {
+        scroll-snap-type: y mandatory;
+      }
+      .snap-section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        min-height: 100vh !important;
+        overflow: hidden !important;
+      }
+    }
+    @media (max-width: 1023px) {
+      .snap-section {
+        min-height: 100dvh;
+      }
+    }
   </style>
 </head>
 
@@ -329,15 +352,15 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        2. HERO SECTION (High-Tech 3D Apparel Centerpiece)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="about" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center items-center pt-28 pb-12 sm:pt-32 sm:pb-16 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-5xl mx-auto text-center space-y-6 flex flex-col items-center justify-center my-auto">
+  <section id="about" class="snap-section relative flex flex-col justify-center items-center pt-24 pb-6 sm:pt-28 sm:pb-8 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-5xl mx-auto text-center space-y-5 lg:space-y-6 flex flex-col items-center justify-center my-auto">
       
       <!-- Headline & Introduction -->
       <div class="inline-flex items-center px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-base font-semibold bg-orange-50 border border-orange-200 text-orange-600 shadow-sm tracking-normal">
         Built for Garment Manufacturers
       </div>
 
-      <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.18] text-stone-900 font-heading">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.18] text-stone-900 font-heading">
         Powering Your Factory's <br class="hidden sm:inline" />
         <span class="text-orange-500">Digital Transformation</span>
       </h1>
@@ -349,8 +372,8 @@
     </div>
 
     <!-- Scroll down prompt for smooth transition to page 2 -->
-    <a href="#company-profile" class="hidden sm:flex flex-col items-center gap-1.5 text-stone-400 hover:text-orange-500 transition-colors pb-4 mt-auto select-none group" aria-label="Scroll to company profile">
-      <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-500 group-hover:text-orange-500">Explore Overview</span>
+    <a href="#company-profile" class="hidden sm:flex flex-col items-center gap-1 text-stone-400 hover:text-orange-500 transition-colors pb-3 mt-auto select-none group" aria-label="Scroll to company profile">
+      <span class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-widest text-stone-500 group-hover:text-orange-500">Explore Overview</span>
       <svg class="w-4 h-4 animate-bounce text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
     </a>
   </section>
@@ -359,29 +382,29 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        4. COMPANY PROFILE SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="company-profile" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-16">
-    <div class="max-w-6xl mx-auto w-full glass-card p-5 sm:p-8 lg:p-12 border border-stone-200">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+  <section id="company-profile" class="snap-section relative flex flex-col justify-center py-8 sm:py-12 lg:py-0 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-0">
+    <div class="max-w-6xl mx-auto w-full glass-card p-5 sm:p-7 lg:p-9 border border-stone-200 my-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         
-        <div class="lg:col-span-6 space-y-4 sm:space-y-6">
+        <div class="lg:col-span-6 space-y-3 sm:space-y-4">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-400">
             <span>Track Tech Solution</span>
             <span class="text-slate-500">/</span>
             <span class="text-stone-500">EST. 2019</span>
           </div>
 
-          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold font-heading text-stone-900 leading-tight">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold font-heading text-stone-900 leading-tight">
             Digital clarity for the people who make apparel
           </h2>
 
-          <p class="text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p class="text-stone-600 text-xs sm:text-sm lg:text-base leading-relaxed">
             Track Tech Solutions builds practical digital tools for apparel manufacturing. The platform connects production, quality, planning, materials and factory-floor teams, helping people see what is happening and act while there is still time to improve the outcome.
           </p>
-          <p class="text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p class="text-stone-600 text-xs sm:text-sm lg:text-base leading-relaxed">
             Since 2019, the team has focused on bringing useful technology closer to everyday factory work, supporting implementation across more than 74 factories in two countries.
           </p>
 
-          <div class="pt-2 flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-semibold text-stone-500">
+          <div class="pt-1 flex flex-wrap items-center gap-3 sm:gap-6 text-xs font-semibold text-stone-500">
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-orange-400"></span> 2 Global Countries
             </div>
@@ -396,7 +419,7 @@
 
         <div class="lg:col-span-6">
           <div class="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/70 cyber-frame">
-            <img src="{{ asset('images/production-tracking.jpg') }}" alt="Track Tech Platform — Real-Time Production Tracking Dashboard" class="w-full h-auto object-cover rounded-2xl">
+            <img src="{{ asset('images/production-tracking.jpg') }}" alt="Track Tech Platform — Real-Time Production Tracking Dashboard" class="w-full h-auto object-cover rounded-2xl max-h-[300px] xl:max-h-[350px]">
             <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent rounded-2xl"></div>
             <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex flex-wrap items-center gap-2 sm:gap-3">
               <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-orange-500/90 text-white text-[10px] sm:text-xs font-bold shadow">Live Dashboard</span>
@@ -413,10 +436,10 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        3. LEADERSHIP TEAM (Glass Executive Profiles)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="leadership" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-16">
-    <div class="max-w-6xl mx-auto w-full">
+  <section id="leadership" class="snap-section relative flex flex-col justify-center py-8 sm:py-12 lg:py-0 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-0">
+    <div class="max-w-6xl mx-auto w-full my-auto space-y-4 lg:space-y-5">
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 items-stretch">
 
         <!-- Gopinath Muniraj -->
         <div class="bg-white/95 backdrop-blur-md rounded-2xl border border-stone-200/80 shadow-xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between h-full">
@@ -483,22 +506,22 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        5. COMPREHENSIVE SOFTWARE SUITE (From website-tts.vercel.app)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="products" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-16">
+  <section id="products" class="snap-section relative flex flex-col justify-center py-8 sm:py-12 lg:py-0 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-0">
     <span id="products-studio" class="absolute -top-10"></span>
-    <div class="max-w-6xl mx-auto w-full space-y-4 sm:space-y-6">
+    <div class="max-w-6xl mx-auto w-full space-y-2.5 sm:space-y-3.5 my-auto">
 
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto px-2">
-        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-900 font-heading tracking-tight leading-tight">
           Designed for <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 italic">Smart Garment Factories</span>
         </h2>
       </div>
 
       <!-- Products: Full-Width Showcase -->
-      <div class="space-y-3 sm:space-y-4">
+      <div class="space-y-2 sm:space-y-3">
 
         <!-- Full-Width Product Detail Panel (Fixed Identical Dimensions) -->
-        <div class="w-full glass-card rounded-2xl sm:rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:min-h-[480px] md:h-auto lg:h-[480px] select-none touch-pan-y" id="prod-detail">
+        <div class="w-full glass-card rounded-2xl sm:rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:min-h-[400px] md:h-auto lg:h-[420px] xl:h-[450px] select-none touch-pan-y" id="prod-detail">
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row w-full h-full">
@@ -803,8 +826,8 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        6. KEY CUSTOMERS & DIRECTORY (Stable Grid & Metrics)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="clients" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-16">
-    <div class="max-w-6xl mx-auto w-full space-y-6">
+  <section id="clients" class="snap-section relative flex flex-col justify-center py-8 sm:py-12 lg:py-0 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-0">
+    <div class="max-w-6xl mx-auto w-full space-y-3 sm:space-y-4 my-auto">
       
       <!-- Section Title -->
       <div class="text-center max-w-4xl mx-auto pb-1">
@@ -1028,8 +1051,8 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        8. CONTACT & FOOTER SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="contact" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-10 sm:py-14 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-16">
-    <div class="max-w-6xl mx-auto w-full glass-card p-5 sm:p-7 lg:p-8 border border-stone-200 rounded-3xl shadow-xl space-y-6">
+  <section id="contact" class="snap-section relative flex flex-col justify-center py-6 sm:py-8 lg:py-0 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-0">
+    <div class="max-w-6xl mx-auto w-full glass-card p-4 sm:p-6 lg:p-6 border border-stone-200 rounded-3xl shadow-xl space-y-3 sm:space-y-4 my-auto">
       
       <!-- Session Flash Feedback -->
       @if(session('success'))
