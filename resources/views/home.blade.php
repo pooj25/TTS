@@ -471,7 +471,7 @@
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
-              <img src="{{ asset('images/trakwel.png') }}?v=5" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-contain">
+              <img src="{{ asset('images/trakwel.png') }}?v=6" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -482,8 +482,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Digitise fabric inspection and inventory management with Inspection 4.0 and automatic grouping by shade, width and shrinkage. Gain real-time visibility into stock levels and material consumption, improve fabric traceability and ensure better inventory control.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/fabric-inventory-management.png') }}" alt="Fabric Inventory Management" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/fabric-inventory-management.png') }}?v=6" alt="Fabric Inventory Management" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -494,8 +494,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Digitise cut planning, optimize end-bit utilization and streamline fabric reconciliation. Improve cutting-room efficiency, reduce fabric wastage and gain better visibility and control over material usage and cutting operations.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/cutting-room-digitalization.png') }}" alt="Cutting Room Digitization" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/cutting-room-digitalization.png') }}?v=6" alt="Cutting Room Digitization" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -506,8 +506,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Track real time production, monitor efficiency and performance in real time, and compare planned versus actual output. Gain actionable insights into production progress, identify bottlenecks early and improve operational control.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/product-tracking.png') }}" alt="Real-Time Production Tracking" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/product-tracking.png') }}?v=6" alt="Real-Time Production Tracking" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -518,8 +518,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Monitor defect rates, track rework levels and identify recurring quality issues in real time. Gain actionable insights into defect trends, improve quality control and drive continuous improvement across production.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/quality-control.png') }}" alt="Quality Management System" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/quality-control.png') }}?v=6" alt="Quality Management System" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -530,8 +530,8 @@
               <p class="text-base text-stone-700 leading-relaxed">PlanWel is a web-based production planning solution that optimizes factory operations, order allocation, and resource utilization. It includes macro and micro planning, production timeline tracking, KPI dashboards, and real-time insights. The system improves capacity planning, monitors production performance, reduces delays, and ensures efficient operations and on-time delivery.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/planwel.png') }}" alt="PlanWel" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/planwel.png') }}?v=6" alt="PlanWel" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -542,8 +542,8 @@
               <p class="text-base text-stone-700 leading-relaxed">mTrak helps maintenance teams maintain a central record of factory assets, respond to breakdowns, schedule servicing, assign tasks, and review downtime and maintenance performance through dashboards and reports.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/mTrak.png') }}" alt="mTrak" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/mTrak.png') }}?v=6" alt="mTrak" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -554,8 +554,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Sewing IoT connects sewing machines to a real-time data layer, helping factory teams see production progress, understand operator performance, identify non-productive time, and respond to issues sooner.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/sew-IoT.png') }}" alt="SewIoT" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/sew-IoT.png') }}?v=6" alt="SewIoT" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -566,8 +566,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Laundry Management is a digital system that tracks garment washing processes, including laundry lots, quantities, shades, machine allocation, and operators. It supports QR code scanning, lot splitting and merging, WIP tracking, and machine and operator management. The system improves traceability, reduces manual errors, and ensures efficient workflow and production control.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/laundry-management.png') }}?v=2" alt="Laundry Management" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Laundry Management" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -578,8 +578,8 @@
               <p class="text-base text-stone-700 leading-relaxed">JIG Management is a digital system for tracking denim pocket jigs, including design codes, sizes, materials, and storage locations. It supports QR code identification, jig allocation, usage, return, and availability tracking. The system reduces manual errors, prevents loss, improves inventory control, and ensures efficient production operations.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/Jig-management.png') }}?v=2" alt="Jig Management" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/Jig-management.png') }}?v=6" alt="Jig Management" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -590,8 +590,8 @@
               <p class="text-base text-stone-700 leading-relaxed">Record fabric measurements before and after washing, calculate shrinkage and keep test results linked to the material lot for consistent quality decisions.</p>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/shrinkage-testing-app.png') }}?v=2" alt="Shrinkage Testing App" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/shrinkage-testing-app.png') }}?v=6" alt="Shrinkage Testing App" class="w-full h-full object-contain">
             </div>
           </div>
 
@@ -607,8 +607,8 @@
               </div>
               <a href="#contact" class="inline-block w-fit px-7 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20 mt-3">Talk to our team</a>
             </div>
-            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white">
-              <img src="{{ asset('images/laundry-management.png') }}" alt="Industry Solutions" class="w-full h-full object-cover">
+            <div class="md:w-3/5 h-64 md:h-full overflow-hidden flex items-center justify-center bg-white p-2">
+              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Industry Solutions" class="w-full h-full object-contain">
             </div>
           </div>
 
