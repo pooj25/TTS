@@ -329,7 +329,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        2. HERO SECTION (High-Tech 3D Apparel Centerpiece)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="about" class="relative flex flex-col justify-center items-center pt-32 pb-16 sm:pt-36 sm:pb-20 px-4 sm:px-6 lg:px-8 z-10">
+  <section id="about" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center items-center pt-28 pb-12 sm:pt-32 sm:pb-16 px-4 sm:px-6 lg:px-8 z-10">
     <div class="max-w-5xl mx-auto text-center space-y-6 flex flex-col items-center justify-center my-auto">
       
       <!-- Headline & Introduction -->
@@ -347,14 +347,20 @@
       </p>
 
     </div>
+
+    <!-- Scroll down prompt for smooth transition to page 2 -->
+    <a href="#company-profile" class="hidden sm:flex flex-col items-center gap-1.5 text-stone-400 hover:text-orange-500 transition-colors pb-4 mt-auto select-none group" aria-label="Scroll to company profile">
+      <span class="text-[11px] font-semibold uppercase tracking-widest text-stone-500 group-hover:text-orange-500">Explore Overview</span>
+      <svg class="w-4 h-4 animate-bounce text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </a>
   </section>
 
 
   <!-- ═══════════════════════════════════════════════════════════════════
        4. COMPANY PROFILE SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="company-profile" class="relative py-12 sm:py-16 lg:py-20 px-3.5 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-5 sm:p-8 lg:p-12 border border-stone-200">
+  <section id="company-profile" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-16">
+    <div class="max-w-6xl mx-auto w-full glass-card p-5 sm:p-8 lg:p-12 border border-stone-200">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
         <div class="lg:col-span-6 space-y-4 sm:space-y-6">
@@ -407,8 +413,8 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        3. LEADERSHIP TEAM (Glass Executive Profiles)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="leadership" class="relative py-12 sm:py-16 lg:py-20 px-3.5 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto">
+  <section id="leadership" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-16">
+    <div class="max-w-6xl mx-auto w-full">
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
 
@@ -425,8 +431,8 @@
             </p>
           </div>
           <div class="pt-5 sm:pt-6 text-center">
-            <a href="https://rocketreach.co/gopinath-muniraj-email_598095225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
-              <span>Professional profile</span>
+            <a href="https://www.linkedin.com/in/gopinathmuniraj/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-orange-500 hover:text-orange-600 transition">
+              <span>LinkedIn profile</span>
               <span>↗</span>
             </a>
           </div>
@@ -473,17 +479,13 @@
     </div>
   </section>
 
-      </div>
-    </div>
-  </section>
 
-
-    <!-- ═══════════════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════════════
        5. COMPREHENSIVE SOFTWARE SUITE (From website-tts.vercel.app)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="products" class="relative py-12 sm:py-16 lg:py-20 px-3.5 sm:px-6 lg:px-8 z-10">
+  <section id="products" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-3.5 sm:px-6 lg:px-8 z-10 scroll-mt-16">
     <span id="products-studio" class="absolute -top-10"></span>
-    <div class="max-w-6xl mx-auto space-y-4 sm:space-y-6">
+    <div class="max-w-6xl mx-auto w-full space-y-4 sm:space-y-6">
 
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto px-2">
@@ -800,10 +802,10 @@
 
 
 
-    <!-- ═══════════════════════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════════════
        6. KEY CUSTOMERS & DIRECTORY (Stable Grid & Metrics)
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="clients" class="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10 flex flex-col justify-center">
+  <section id="clients" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-16 sm:py-20 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-16">
     <div class="max-w-6xl mx-auto w-full space-y-6">
       
       <!-- Section Title -->
@@ -1028,8 +1030,8 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        8. CONTACT & FOOTER SECTION
   ═══════════════════════════════════════════════════════════════════ -->
-  <section id="contact" class="relative py-8 sm:py-10 px-4 sm:px-6 lg:px-8 z-10">
-    <div class="max-w-6xl mx-auto glass-card p-5 sm:p-7 lg:p-8 border border-stone-200 rounded-3xl shadow-xl space-y-6">
+  <section id="contact" class="relative min-h-screen min-h-[100dvh] flex flex-col justify-center py-10 sm:py-14 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-16">
+    <div class="max-w-6xl mx-auto w-full glass-card p-5 sm:p-7 lg:p-8 border border-stone-200 rounded-3xl shadow-xl space-y-6">
       
       <!-- Session Flash Feedback -->
       @if(session('success'))
