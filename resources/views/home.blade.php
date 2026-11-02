@@ -498,7 +498,7 @@
       <div class="space-y-3 sm:space-y-4">
 
         <!-- Full-Width Product Detail Panel (Fixed Identical Dimensions) -->
-        <div class="w-full glass-card rounded-2xl sm:rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:min-h-[460px] md:h-auto lg:h-[460px] select-none touch-pan-y" id="prod-detail">
+        <div class="w-full glass-card rounded-2xl sm:rounded-3xl border border-stone-200 overflow-hidden shadow-xl md:min-h-[480px] md:h-auto lg:h-[480px] select-none touch-pan-y" id="prod-detail">
 
           <!-- trakwel (default visible) -->
           <div id="panel-trakwel" class="prod-panel flex flex-col md:flex-row w-full h-full">
@@ -508,7 +508,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/trakwel.png') }}?v=6" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/trakwel.png') }}?v=tts_hd" alt="TrakWel - Smart Manufacturing" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -520,7 +520,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/fabric-inventory-management.png') }}?v=6" alt="Fabric Inventory Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/fabric-inventory-management.png') }}?v=tts_hd" alt="Fabric Inventory Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -532,7 +532,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/cutting-room-digitalization.png') }}?v=6" alt="Cutting Room Digitization" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/cutting-room-digitalization.png') }}?v=tts_hd" alt="Cutting Room Digitization" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -544,7 +544,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/product-tracking.png') }}?v=6" alt="Real-Time Production Tracking" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/product-tracking.png') }}?v=tts_hd" alt="Real-Time Production Tracking" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -556,7 +556,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/quality-control.png') }}?v=6" alt="Quality Management System" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/quality-control.png') }}?v=tts_hd" alt="Quality Management System" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -568,7 +568,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/planwel.png') }}?v=6" alt="PlanWel" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/planwel.png') }}?v=tts_hd" alt="PlanWel" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -580,7 +580,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/mTrak.png') }}?v=6" alt="mTrak" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/mTrak.png') }}?v=tts_hd" alt="mTrak" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -592,7 +592,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/sew-IoT.png') }}?v=6" alt="SewIoT" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/sew-IoT.png') }}?v=tts_hd" alt="SewIoT" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -604,7 +604,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Laundry Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/laundry-management.png') }}?v=tts_hd" alt="Laundry Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -616,7 +616,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/Jig-management.png') }}?v=6" alt="Jig Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/Jig-management.png') }}?v=tts_hd" alt="Jig Management" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -628,7 +628,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/shrinkage-testing-app.png') }}?v=6" alt="Shrinkage Testing App" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/shrinkage-testing-app.png') }}?v=tts_hd" alt="Shrinkage Testing App" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -645,7 +645,7 @@
               <a href="#contact" class="inline-block w-fit px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-orange-500/20 mt-3">Talk to our team</a>
             </div>
             <div class="md:w-3/5 h-60 sm:h-72 md:h-full overflow-hidden flex items-center justify-center bg-white p-2 sm:p-3">
-              <img src="{{ asset('images/laundry-management.png') }}?v=6" alt="Industry Solutions" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
+              <img src="{{ asset('images/laundry-management.png') }}?v=tts_hd" alt="Industry Solutions" class="w-full h-full object-contain max-h-[300px] sm:max-h-[360px] md:max-h-none">
             </div>
           </div>
 
@@ -675,8 +675,6 @@
                   aria-label="Next Product">
             <span class="hidden xs:inline sm:inline">Next</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-          </button>
-        </div>
           </button>
         </div>
 
